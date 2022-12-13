@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
+<head>
+  
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="[golang array]">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="A quick review of array in Go.">
+  <meta property="og:url" content="/blog/articles/working-with-array-in-go">
+  <meta property="og:title" content="Working with array in Go">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="A quick review of array in Go.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Working with array in Go</title>
+  
+    <link rel="canonical" href="/blog/articles/working-with-array-in-go">
+  
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript>
+
+  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script>
+
+</head>
+<body class="min-h-screen body" id="app">
+  
+<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+  <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
+    <a href="/" class="font-semibold">PTHETHANH</a>
+    <div class="flex space-x-8">
+      <a href="/" class="item">Blog</a>
+      
+        <a href="/draft" class="hover:text-header-hover cursor-pointer">Private</a>
+      
+      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
+      
+        <a href="/blog/new-article" class="hover:text-header-hover  cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+  <nav class="md:hidden w-full">
+    <div class="flex h-14 justify-between items-center px-2">
+      <svg v-show="!openTopMenu" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg v-show="openTopMenu" xmlns="http://www.w3.org/2000/svg" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" v-cloak>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <a href="/" class="font-bold">PTHETHANH</a>
+      <div></div>
+    </div>
+    <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
+      
+        <a @click="closeTopMenu" href="/draft" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Private</a>
+      
+      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
+      
+        <a @click="closeTopMenu" href="/blog/new-article" class="pl-4 py-2 w-full border-b border-default cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+</header>
+
+  <div class="w-full pb-14" @click="closeTopMenu">
+    
+  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+    <article class="w-full pt-10 md:pt-14 pb-20">
+      <div class="w-full mb-10">
+        <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">Working with array in Go</h1>
+        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Mon 23 Sep 2019 <span> /  read</span></div>
+          <div class="flex space-x-2">
+            
+              <a href="/blog/articles/working-with-array-in-go/edit" aria-label="Edit article">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Array in Go is just a data structure that hold a collection of elements of any type. Each element can be accessed by its index. Length of array is fixed at compile time and its size is a part of its type.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>The type&nbsp;[n]T<span>&nbsp;</span>is an array of&nbsp;n&nbsp;values of type&nbsp;T.&nbsp;It can be declared as full declaration statement or in a short-hand format, with or without init values.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Array also can be declared in form of<span>&nbsp;</span>[...]T<span>&nbsp;</span>where its size will be determined by the compiler.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>var holidays = [7]bool{}
+seasons := [4]string{&#34;Spring&#34;, &#34;Summer&#34;, &#34;Autumn&#34;, &#34;Winter&#34;}
+weekDays := [7]int{1, 2, 3, 4, 5, 6, 7}
+fruits := [...]string{&#34;apple&#34;, &#34;guava&#34;, &#34;orange&#34;} // type [3]string
+visited := [10]bool{1: true, 3: true, 5: true, 7: true, 9: true}
+sudoku := [9][9]int{}</code></pre>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p><b>Size of array is a part of its type and it is determined at the compile time</b></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>That means you cannot extend its size at run-time and cannot assign it to another type at run-time:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>fruits := [...]string{&#34;apple&#34;, &#34;guava&#34;, &#34;orange&#34;} // type: [3]string
+moreFruits := [4]string{&#34;grapes&#34;}                 // type: [4]string
+
+moreFruits = fruits // compile error</code></pre>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p><b>Arrays are comparable if they have same type</b></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>firstArr := [3]int{1, 2, 3}    // type: [3]int
+secondArr := [3]int{1, 2, 3}   // type: [3]int
+thirdArr := [4]int{1, 2, 3, 4} // type: [4]int
+
+fmt.Println(firstArr == secondArr) // true
+
+fmt.Println(secondArr == thirdArr) // compile error</code></pre>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p><b>Each elements can be accessed by index or range over the array. Access index out of the array will cause a panic</b></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>var weekDays [7]string
+weekDays[0] = &#34;Sunday&#34;
+weekDays[1] = &#34;Monday&#34;
+weekDays[2] = &#34;Tuesday&#34;
+weekDays[3] = &#34;Wednesday&#34;
+weekDays[4] = &#34;Thursday&#34;
+weekDays[5] = &#34;Friday&#34;
+weekDays[6] = &#34;Saturday&#34;
+
+fmt.Println(weekDays[5])
+fmt.Println(&#34;Days in a week:&#34;)
+for _, day := range weekDays {
+	fmt.Printf(&#34;\t%s\n&#34;, day)
+}
+
+// fmt.Println(weekDays[7]) // panic: index out of bound</code></pre>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p><b>Passing an array to a method will create a copy of the original array</b></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>This means what you do with the copied array will not affect to the original array.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>package main
+
+import &#34;fmt&#34;
+
+func main() {
+	fruits := [3]string{&#34;apple&#34;, &#34;orange&#34;}
+	addGuava(fruits) // doesn&#39;t change values of variable &#34;fruits&#34;
+}
+
+func addGuava(fruits [3]string) {
+	fruits[2] = &#34;guava&#34;
+}
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/0gvmO5kI8Je">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Passing the pointer of the array to a function if you want to change its value in that function:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>package main
+
+import &#34;fmt&#34;
+
+func main() {
+	fruits := [3]string{&#34;apple&#34;, &#34;orange&#34;}
+	addGuava(&amp;fruits) // change value of variable  &#34;fruits&#34;
+}
+
+func addGuava(fruits *[3]string) {
+	fruits[2] = &#34;guava&#34;
+}
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/r21hKN4XYtB">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p><b>Assign or range statement on an array will also create a copy of the original array</b></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>arr := [4]int{0, 1, 2, 3}
+newArr := arr
+
+fmt.Printf(&#34;%p != %p&#34;, &amp;arr, &amp;newArr) // 0xc000126000 != 0xc000126020
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/dKM5RnCZmx5">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Interact with value of array while ranging over it will not affect the original value:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>arr := [4]int{0, 1, 2, 3}
+for _, v := range arr {
+	v &#43;= 100 // will not affect the original array values
+}
+fmt.Println(arr) // [0, 1, 2, 3]
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/s-Kirtqypzc">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If you want to change value of original array while ranging over it, use index instead:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>arr := [4]int{0, 1, 2, 3}
+for i := 0; i &lt; len(arr); i&#43;&#43; {
+	arr[i] &#43;= 100
+}
+fmt.Println(arr) // [100 101 102 103]
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/pX-VH25RpKy">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p><b>Pointer of index and value inside range statement will be reused.</b></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Notice that the pointers of<span>&nbsp;</span><code class="inline-code">i</code><span>&nbsp;</span>and<span>&nbsp;</span><code class="inline-code">v</code><span>&nbsp;</span>are the same in the result:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>arr := [3]int{1, 2, 3}
+for i, v := range arr {
+	fmt.Printf(&#34;i=%d, v=%d, &amp;i=%p, &amp;v: %p\n&#34;, i, v, &amp;i, &amp;v) // i, v point to the same addresses for each iteration
+}
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/nr9FGRWrm8g">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>This will cause a problem if you use goroutine inside the for loop as below. Notice that only the last element is printed.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>arr := [3]int{1, 2, 3}
+for i, v := range arr {
+	go func() {
+		fmt.Printf(&#34;i=%d, v=%d, &amp;i=%p, &amp;v: %p\n&#34;, i, v, &amp;i, &amp;v)
+	}()
+}
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/Xx4yyrkRR6q">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Define local variable to avoid the variables are captured is one way to avoid the above problem:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>arr := [3]int{1, 2, 3}
+for i, v := range arr {
+	i, v := i, v
+	go func() {
+		fmt.Printf(&#34;i=%d, v=%d, &amp;i=%p, &amp;v: %p\n&#34;, i, v, &amp;i, &amp;v)
+	}()
+}
+</code></pre>
+                
+                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/QBOXcLHNItH">Playground</a>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p><b>When do you use array?</b></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Normally, array is used when the number of element is fixed at compile time. Example:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>Used in parsing network package where the length of the package is fixed. Example: TCP, UDP, DHCP, DNS&nbsp; packages, ...
+    
+    </li>
+
+                    
+                        
+    <li>Used in hashing, encryption algorithms: MD5, Base64, Base58,...
+    
+    </li>
+
+                    
+                        
+    <li>Represent a collection of fixed length elements like: days in a week, months in a year, ...
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+</div>
+      </div>
+    </article>
+    
+  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fworking-with-array-in-go" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+      <span>Post</span>
+    </a>
+    <a aria-label="Tweet It" href="https://twitter.com/share?url=%2fblog%2farticles%2fworking-with-array-in-go&text=A%20quick%20review%20of%20array%20in%20Go." class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+      </svg>
+      <span>Tweet</span>
+    </a>
+    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fblog%2farticles%2fworking-with-array-in-go" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+      </svg>
+      <span>Share</span>
+    </a>
+  </div>
+
+    
+  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+    <div class="flex md:flex-col w-full md:w-1/5">
+      <div>Next In</div>
+      <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
+    </div>
+    <div class="hidden md:flex border-l border-default px-1"></div>
+    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
+      <div class="w-full md:w-1/2 mt-2 md:mt-0">
+        <a href="/blog/articles/effective-options" class="font-bold capitalize">Effective Options</a>
+        <p class="mt-2 line-clamp-3 md:line-clamp-4 font-serif">How to organize API options effectively in Go.</p>
+      </div>
+      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/blog/articles/effective-options">
+        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  
+<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
+    <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
+    <div class="flex space-x-3">
+      <a href="http://github.com/pthethanh" rel="noopener"  aria-label="Thanh Pham's github" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" xml:space="preserve">
+          <path d="M36,71c-15.3,0-22.2-8.2-10.5-2.4c1.7,0.3,2.4-0.8,2.4-1.7c0-0.8,0-3,0-5.9c-9.6,2.1-11.7-4.6-11.7-4.6 c-1.6-4-3.9-5.1-3.9-5.1c-3.1-2.2,0.2-2.1,0.2-2.1c3.5,0.2,5.3,3.6,5.3,3.6C21,58.1,26,56.5,28,55.6c0.3-2.2,1.2-3.8,2.2-4.6 c-7.7-0.9-15.8-3.9-15.8-17.1c0-3.8,1.4-6.9,3.6-9.3c-0.4-0.9-1.5-4.4,0.3-9.2c0,0,2.9-0.9,9.5,3.6c2.8-0.8,5.7-1.2,8.7-1.2 c2.9,0,5.9,0.4,8.7,1.2c6.6-4.5,9.5-3.6,9.5-3.6c1.9,4.8,0.7,8.3,0.3,9.2c2.2,2.4,3.6,5.5,3.6,9.3c0,13.3-8.1,16.3-15.8,17.1 c1.2,1.1,2.4,3.2,2.4,6.4c0,4.6,0,8.4,0,9.5c0,0.9,0.6,2,2.4,1.7C55.8,64.1,51.3,71,36,71" />
+          <g><path d="M36,0C16.2,0,0,16.2,0,36s16.2,36,36,36s36-16.2,36-36C72,16.2,55.8,0,36,0z M36,69.5 c-18.5,0-33.5-15-33.5-33.5S17.5,2.5,36,2.5s33.5,15,33.5,33.5S54.5,69.5,36,69.5z" /></g>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/pthethanh"  aria-label="Thanh Pham's LinkedIn" rel="noopener" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  
+  <template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template>
+
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name": "Working with array in Go",
+      "headline": "Working with array in Go",
+      "identifier":"working-with-array-in-go",
+      "keywords":["golang","array"],
+      "image": [],
+      "author": "Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name": "pthethanh",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pthethanh.github.io//static/images/favicon.ico"
+        }
+      },
+      "url": "/blog/articles/working-with-array-in-go",
+      "mainEntityOfPage": "https://pthethanh.github.io/",
+      "datePublished": {"seconds":1569230770,"nanos":454000000},
+      "dateModified": {},
+      "description": "A quick review of array in Go."
+    }
+  </script>
+
+</body>
+</html>

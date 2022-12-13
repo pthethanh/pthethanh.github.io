@@ -1,8 +1,430 @@
-<html>
-  <head>
-    <link rel="stylesheet" href="/static/index.css" />
-  </head>
-  <body>
-    <h1>Hello thanh</h1>
-  </body>
+<!doctype html>
+<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
+<head>
+  
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="thanh pham golang,Thanh Pham,golang,pthethanh,Thanh Pham Golang,Go Programming Language,Go Interview,Golang Interview">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="pthethanh - ideas worth sharing.">
+  <meta property="og:url" content="https://pthethanh.github.io/">
+  <meta property="og:title" content="pthethanh - ideas worth sharing.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="pthethanh - ideas worth sharing.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>pthethanh - ideas worth sharing.</title>
+  
+    <link rel="canonical" href="https://pthethanh.github.io/">
+  
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript>
+
+  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script>
+
+</head>
+<body class="min-h-screen body" id="app">
+  
+<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+  <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
+    <a href="/" class="font-semibold">PTHETHANH</a>
+    <div class="flex space-x-8">
+      <a href="/" class="item">Blog</a>
+      
+        <a href="/draft" class="hover:text-header-hover cursor-pointer">Private</a>
+      
+      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
+      
+        <a href="/blog/new-article" class="hover:text-header-hover  cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+  <nav class="md:hidden w-full">
+    <div class="flex h-14 justify-between items-center px-2">
+      <svg v-show="!openTopMenu" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg v-show="openTopMenu" xmlns="http://www.w3.org/2000/svg" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" v-cloak>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <a href="/" class="font-bold">PTHETHANH</a>
+      <div></div>
+    </div>
+    <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
+      
+        <a @click="closeTopMenu" href="/draft" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Private</a>
+      
+      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
+      
+        <a @click="closeTopMenu" href="/blog/new-article" class="pl-4 py-2 w-full border-b border-default cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+</header>
+
+  <div class="w-full pb-14" @click="closeTopMenu">
+    
+  <div class="w-full mx-auto md:max-w-xl space-y-4 font-serif min-h-screen pt-14">
+    
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/nov-27-2022-14-06" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/nov-27-2022-14-06" class="text-lg font-sans font-semibold heading">3 Life Lessons</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=Others" aria-label="Tag Others" >Others</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">3 important lessons of my life.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/the-right-thing" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/the-right-thing" class="text-lg font-sans font-semibold heading">The Right Thing</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=xaml" aria-label="Tag xaml" >xaml</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">What is the right thing to do?</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/go-generics" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/go-generics" class="text-lg font-sans font-semibold heading">Go Generics</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">Some of my very first feelings about Go generics.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/show-up" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/show-up" class="text-lg font-sans font-semibold heading">Show Up</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=xaml" aria-label="Tag xaml" >xaml</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">The manager&#39;s duty is not to criticize but to help people to grow</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/page-speed" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/page-speed" class="text-lg font-sans font-semibold heading">Page Speed Insights</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=web-development" aria-label="Tag web-development" >web-development</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">Some notes for improving score in Google Page Speed Insights.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/any" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/any" class="text-lg font-sans font-semibold heading">any</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">any is an official alias for interface{}</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/reading" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/reading" class="text-lg font-sans font-semibold heading">Reading</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=xaml" aria-label="Tag xaml" >xaml</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">The joy of reading is the greatest gift I&#39;ve ever been given.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/effective-options" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/effective-options" class="text-lg font-sans font-semibold heading">Effective Options</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">How to organize API options effectively in Go.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/they-dont-even-know-the-fundamentals" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/they-dont-even-know-the-fundamentals" class="text-lg font-sans font-semibold heading">They Don&#39;t Even Know The Fundamentals</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=xaml" aria-label="Tag xaml" >xaml</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">Students nowadays want to work on &#34;4.0&#34; technologies but don&#39;t even know how to swap 2 numbers.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/go-interface" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/go-interface" class="text-lg font-sans font-semibold heading">Interface{} Explained</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">An explanation of what and how interface works during runtime.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/golang-interface" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/golang-interface" class="text-lg font-sans font-semibold heading">Interface{}</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">An illustration of what and how interface works in Go.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/golang-name-conventions" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/golang-name-conventions" class="text-lg font-sans font-semibold heading">Name Conventions In Go</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">Ground rules for naming to make people fall in love reading your code.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/bad-code" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/bad-code" class="text-lg font-sans font-semibold heading">Bad Code Is Great</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=xaml" aria-label="Tag xaml" >xaml</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">Why bad code is a great opportunity for a third world country developer.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/measure-execution-time" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/measure-execution-time" class="text-lg font-sans font-semibold heading">Measure Execution Time</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A very simple trick to measure execution time in Go.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/100-stars" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/100-stars" class="text-lg font-sans font-semibold heading">100 Stars On GitHub</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=programming" aria-label="Tag programming" >programming</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">The journey how I got my first 100 stars on GitHub.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/useful-docker-commands" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/useful-docker-commands" class="text-lg font-sans font-semibold heading">Useful Docker Commands</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=docker" aria-label="Tag docker" >docker</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">Some useful Docker commands for removing resources by name.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/how-we-work-together" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/how-we-work-together" class="text-lg font-sans font-semibold heading">How We Work Together</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=work" aria-label="Tag work" >work</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">Zappos&#39;s team value with a little customization for my team</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/go-reading-list" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/go-reading-list" class="text-lg font-sans font-semibold heading">Go Reading List</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A list of good articles for learning Go, learn faster and deeper.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/go-interview-questions" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/go-interview-questions" class="text-lg font-sans font-semibold heading">Go Interview Questions</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A list of questions for challenging, evaluating and learning Go faster.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/go-interview-structure" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/go-interview-structure" class="text-lg font-sans font-semibold heading">Go Interview Structure</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">An interview guideline for practicing that increases your chance of passing a Go interview to 97.5%.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/working-with-constant-in-go" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/working-with-constant-in-go" class="text-lg font-sans font-semibold heading">Working with constant in Go</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A quick review of constant in Go</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/working-with-string-in-go" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/working-with-string-in-go" class="text-lg font-sans font-semibold heading">Working with string in Go</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A quick review of string in Go.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/working-with-map-in-go" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/working-with-map-in-go" class="text-lg font-sans font-semibold heading">Working with map in Go</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A quick review of map in Go</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/working-with-slice-in-go" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/working-with-slice-in-go" class="text-lg font-sans font-semibold heading">Working with slice in Go</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A quick review of slice in Go.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+      <article class="w-full cursor-pointer px-2" data-article-path="/blog/articles/working-with-array-in-go" data-content-user-id="85d82ab7-1a10-4798-8b8a-34a82b8f59a1">
+        <a href="/blog/articles/working-with-array-in-go" class="text-lg font-sans font-semibold heading">Working with array in Go</a>
+        <div class="font-sans pt-2">
+          <a class="uppercase text-xs text-tag" href="/blog?tags=golang" aria-label="Tag golang" >golang</a>
+          <div class="flex space-x-2 float-right">
+            
+          </div>
+        </div>
+        <div class="font-serif line-clamp-3 lg:line-clamp-4">A quick review of array in Go.</div>
+      </article>
+      <div class="h-separator"></div>
+    
+  </div>
+
+  </div>
+  
+<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
+    <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
+    <div class="flex space-x-3">
+      <a href="http://github.com/pthethanh" rel="noopener"  aria-label="Thanh Pham's github" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" xml:space="preserve">
+          <path d="M36,71c-15.3,0-22.2-8.2-10.5-2.4c1.7,0.3,2.4-0.8,2.4-1.7c0-0.8,0-3,0-5.9c-9.6,2.1-11.7-4.6-11.7-4.6 c-1.6-4-3.9-5.1-3.9-5.1c-3.1-2.2,0.2-2.1,0.2-2.1c3.5,0.2,5.3,3.6,5.3,3.6C21,58.1,26,56.5,28,55.6c0.3-2.2,1.2-3.8,2.2-4.6 c-7.7-0.9-15.8-3.9-15.8-17.1c0-3.8,1.4-6.9,3.6-9.3c-0.4-0.9-1.5-4.4,0.3-9.2c0,0,2.9-0.9,9.5,3.6c2.8-0.8,5.7-1.2,8.7-1.2 c2.9,0,5.9,0.4,8.7,1.2c6.6-4.5,9.5-3.6,9.5-3.6c1.9,4.8,0.7,8.3,0.3,9.2c2.2,2.4,3.6,5.5,3.6,9.3c0,13.3-8.1,16.3-15.8,17.1 c1.2,1.1,2.4,3.2,2.4,6.4c0,4.6,0,8.4,0,9.5c0,0.9,0.6,2,2.4,1.7C55.8,64.1,51.3,71,36,71" />
+          <g><path d="M36,0C16.2,0,0,16.2,0,36s16.2,36,36,36s36-16.2,36-36C72,16.2,55.8,0,36,0z M36,69.5 c-18.5,0-33.5-15-33.5-33.5S17.5,2.5,36,2.5s33.5,15,33.5,33.5S54.5,69.5,36,69.5z" /></g>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/pthethanh"  aria-label="Thanh Pham's LinkedIn" rel="noopener" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  
+  <template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template>
+
+  
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": "pthethanh",
+      "url": "https://pthethanh.github.io/"
+    }
+  </script>
+
+</body>
 </html>

@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
+<head>
+  
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="[]">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="Students nowadays want to work on &#34;4.0&#34; technologies but don&#39;t even know how to swap 2 numbers.">
+  <meta property="og:url" content="/blog/articles/they-dont-even-know-the-fundamentals">
+  <meta property="og:title" content="They Don&#39;t Even Know The Fundamentals">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="Students nowadays want to work on &#34;4.0&#34; technologies but don&#39;t even know how to swap 2 numbers.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>They Don&#39;t Even Know The Fundamentals</title>
+  
+    <link rel="canonical" href="/blog/articles/they-dont-even-know-the-fundamentals">
+  
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript>
+
+  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script>
+
+</head>
+<body class="min-h-screen body" id="app">
+  
+<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+  <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
+    <a href="/" class="font-semibold">PTHETHANH</a>
+    <div class="flex space-x-8">
+      <a href="/" class="item">Blog</a>
+      
+        <a href="/draft" class="hover:text-header-hover cursor-pointer">Private</a>
+      
+      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
+      
+        <a href="/blog/new-article" class="hover:text-header-hover  cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+  <nav class="md:hidden w-full">
+    <div class="flex h-14 justify-between items-center px-2">
+      <svg v-show="!openTopMenu" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg v-show="openTopMenu" xmlns="http://www.w3.org/2000/svg" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" v-cloak>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <a href="/" class="font-bold">PTHETHANH</a>
+      <div></div>
+    </div>
+    <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
+      
+        <a @click="closeTopMenu" href="/draft" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Private</a>
+      
+      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
+      
+        <a @click="closeTopMenu" href="/blog/new-article" class="pl-4 py-2 w-full border-b border-default cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+</header>
+
+  <div class="w-full pb-14" @click="closeTopMenu">
+    
+  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+    <article class="w-full pt-10 md:pt-14 pb-20">
+      <div class="w-full mb-10">
+        <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">They Don&#39;t Even Know The Fundamentals</h1>
+        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Tue 02 Nov 2021 <span> / 2 seconds read</span></div>
+          <div class="flex space-x-2">
+            
+              <a href="/blog/articles/they-dont-even-know-the-fundamentals/edit" aria-label="Edit article">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+                <picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1635872744/they-dont-even-know-the-fundamentals/photo-1573497620053-ea5300f94f21-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1635872745/they-dont-even-know-the-fundamentals/photo-1573497620053-ea5300f94f21-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1635872745/they-dont-even-know-the-fundamentals/photo-1573497620053-ea5300f94f21-w320.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1635872743/they-dont-even-know-the-fundamentals/photo-1573497620053-ea5300f94f21-worg.jpg" alt="unsplash/Christina">
+                </picture>
+            
+            
+                <div class="w-full text-left text-captions font-sans text-xs">unsplash/Christina</div>
+            
+        
+        
+        
+    
+        
+        
+        
+            <p>"They don't even know the fundamentals!". That's what I often hear from my colleagues after their trips to universities for interviewing students for their projects. I've also experienced this situation myself so many times.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>A lot of students nowadays just want to work on AI/ML, Blockchain projects. They just simply turn around and never sat down for an interview after knowing that we're looking for developers who will work on payment gateway, network management system, eCommerce,...</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Some of them were patient enough to sit down for an interview, but still repeat that they wanted to work on AI/ML, Blockchain,... since "it's the 4.0 revolution now". To be honest, I'm totally fine with that. Everyone has a dream and that's OK.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>But when it came to the technical interview, what I wanted them to do was just "giving a list of numbers, sort them by ascending using an algorithm you knew". That's it! Nothing more and nothing less. Sadly, some didn't even know how to do that! Most of them could explain that we need 2 nested loops and swap numbers if one is bigger than the other. That's cool! It's exactly what they have been taught.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Everything&nbsp;was great until I asked "could you please show me how to swap 2 numbers using a programming&nbsp; language you're most familiar with"? This is the question I've gotten a lot of "umh" "ah" from them so far. A lot of them failed to answer that simple question! They just know there should be a method <code class="inline-code">swap</code> and you need to provide 2 numbers and it's done. Some knew that we can use temporary variable but failed to provide the steps. To be honest, I was very frustrated. If they could answer that simple question, it's likely they would be hired...but a lot of them failed.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>I think having a big dream is cool. Universities can "inject" those dreams in to the students' heads. But at the same time, we also need to teach them to know where they are, and need to tell them that they have to start learning the fundamentals first. Without the fundamental knowledge, one just simply cannot do anything bigger.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+</div>
+      </div>
+    </article>
+    
+  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fthey-dont-even-know-the-fundamentals" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+      <span>Post</span>
+    </a>
+    <a aria-label="Tweet It" href="https://twitter.com/share?url=%2fblog%2farticles%2fthey-dont-even-know-the-fundamentals&text=Students%20nowadays%20want%20to%20work%20on%20%224.0%22%20technologies%20but%20don%27t%20even%20know%20how%20to%20swap%202%20numbers." class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+      </svg>
+      <span>Tweet</span>
+    </a>
+    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fblog%2farticles%2fthey-dont-even-know-the-fundamentals" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+      </svg>
+      <span>Share</span>
+    </a>
+  </div>
+
+    
+  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+    <div class="flex md:flex-col w-full md:w-1/5">
+      <div>Next In</div>
+      <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
+    </div>
+    <div class="hidden md:flex border-l border-default px-1"></div>
+    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
+      <div class="w-full md:w-1/2 mt-2 md:mt-0">
+        <a href="/blog/articles/effective-options" class="font-bold capitalize">Effective Options</a>
+        <p class="mt-2 line-clamp-3 md:line-clamp-4 font-serif">How to organize API options effectively in Go.</p>
+      </div>
+      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/blog/articles/effective-options">
+        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  
+<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
+    <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
+    <div class="flex space-x-3">
+      <a href="http://github.com/pthethanh" rel="noopener"  aria-label="Thanh Pham's github" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" xml:space="preserve">
+          <path d="M36,71c-15.3,0-22.2-8.2-10.5-2.4c1.7,0.3,2.4-0.8,2.4-1.7c0-0.8,0-3,0-5.9c-9.6,2.1-11.7-4.6-11.7-4.6 c-1.6-4-3.9-5.1-3.9-5.1c-3.1-2.2,0.2-2.1,0.2-2.1c3.5,0.2,5.3,3.6,5.3,3.6C21,58.1,26,56.5,28,55.6c0.3-2.2,1.2-3.8,2.2-4.6 c-7.7-0.9-15.8-3.9-15.8-17.1c0-3.8,1.4-6.9,3.6-9.3c-0.4-0.9-1.5-4.4,0.3-9.2c0,0,2.9-0.9,9.5,3.6c2.8-0.8,5.7-1.2,8.7-1.2 c2.9,0,5.9,0.4,8.7,1.2c6.6-4.5,9.5-3.6,9.5-3.6c1.9,4.8,0.7,8.3,0.3,9.2c2.2,2.4,3.6,5.5,3.6,9.3c0,13.3-8.1,16.3-15.8,17.1 c1.2,1.1,2.4,3.2,2.4,6.4c0,4.6,0,8.4,0,9.5c0,0.9,0.6,2,2.4,1.7C55.8,64.1,51.3,71,36,71" />
+          <g><path d="M36,0C16.2,0,0,16.2,0,36s16.2,36,36,36s36-16.2,36-36C72,16.2,55.8,0,36,0z M36,69.5 c-18.5,0-33.5-15-33.5-33.5S17.5,2.5,36,2.5s33.5,15,33.5,33.5S54.5,69.5,36,69.5z" /></g>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/pthethanh"  aria-label="Thanh Pham's LinkedIn" rel="noopener" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  
+  <template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template>
+
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name": "They Don't Even Know The Fundamentals",
+      "headline": "They Don't Even Know The Fundamentals",
+      "identifier":"they-dont-even-know-the-fundamentals",
+      "keywords": null ,
+      "image": [],
+      "author": "Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name": "pthethanh",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pthethanh.github.io//static/images/favicon.ico"
+        }
+      },
+      "url": "/blog/articles/they-dont-even-know-the-fundamentals",
+      "mainEntityOfPage": "https://pthethanh.github.io/",
+      "datePublished": {"seconds":1635847874,"nanos":29000000},
+      "dateModified": {},
+      "description": "Students nowadays want to work on \"4.0\" technologies but don't even know how to swap 2 numbers."
+    }
+  </script>
+
+</body>
+</html>

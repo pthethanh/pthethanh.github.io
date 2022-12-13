@@ -1,0 +1,1258 @@
+<!doctype html>
+<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
+<head>
+  
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="[interview go golang interview questions go interview questions]">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="A list of questions for challenging, evaluating and learning Go faster.">
+  <meta property="og:url" content="/blog/articles/go-interview-questions">
+  <meta property="og:title" content="Go Interview Questions">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="A list of questions for challenging, evaluating and learning Go faster.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Go Interview Questions</title>
+  
+    <link rel="canonical" href="/blog/articles/go-interview-questions">
+  
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript>
+
+  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script>
+
+</head>
+<body class="min-h-screen body" id="app">
+  
+<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+  <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
+    <a href="/" class="font-semibold">PTHETHANH</a>
+    <div class="flex space-x-8">
+      <a href="/" class="item">Blog</a>
+      
+        <a href="/draft" class="hover:text-header-hover cursor-pointer">Private</a>
+      
+      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
+      
+        <a href="/blog/new-article" class="hover:text-header-hover  cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+  <nav class="md:hidden w-full">
+    <div class="flex h-14 justify-between items-center px-2">
+      <svg v-show="!openTopMenu" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg v-show="openTopMenu" xmlns="http://www.w3.org/2000/svg" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" v-cloak>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <a href="/" class="font-bold">PTHETHANH</a>
+      <div></div>
+    </div>
+    <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
+      
+        <a @click="closeTopMenu" href="/draft" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Private</a>
+      
+      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
+      
+        <a @click="closeTopMenu" href="/blog/new-article" class="pl-4 py-2 w-full border-b border-default cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+</header>
+
+  <div class="w-full pb-14" @click="closeTopMenu">
+    
+  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+    <article class="w-full pt-10 md:pt-14 pb-20">
+      <div class="w-full mb-10">
+        <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">Go Interview Questions</h1>
+        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Fri 25 Dec 2020 <span> / 2 seconds read</span></div>
+          <div class="flex space-x-2">
+            
+              <a href="/blog/articles/go-interview-questions/edit" aria-label="Edit article">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+                <picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629014511/pthethanh/articles/go-interview-questions/questions-w1920_bx8tsx.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w1280_wl2gsh.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w640_nfri0d.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w320_tqsj9j.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w320_tqsj9j.webp" alt="">
+                </picture>
+            
+            
+        
+        
+        
+    
+        
+            
+                <div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>A list of questions for challenging, evaluating and learning Go faster.</div>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Learning without testing your knowledge can lead to wrong perception about your expertise level. This article provides you a list of questions for you to evaluate yourself easier.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h2>Go Questions</h2>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>1. Basic</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>What is Go?
+    
+    </li>
+
+                    
+                        
+    <li>Why should you learn Go?
+    
+    </li>
+
+                    
+                        
+    <li>What is Go suitable for?
+    
+    </li>
+
+                    
+                        
+    <li>What are the advantages and disadvantages of Go?
+    
+    </li>
+
+                    
+                        
+    <li>How Go is different from the programming languages that you have used? (Java, C/C++, Python, Rust, NodeJS, JavaScript)
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>2. Array and Slice</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>What are the differences between array and slice?
+    
+    </li>
+
+                    
+                        
+    <li>What are the differences between slice and link list?
+    
+    </li>
+
+                    
+                        
+    <li>How re- slicing process of a slice happen under the hood?
+    
+    </li>
+
+                    
+                        
+    <li>Can you modify array length? Can you append new item into an array?
+    
+    </li>
+
+                    
+                        
+    <li>Explain how different between array/slice in Go and array in C/Java?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>3. String</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>How is string in Go constructed? And what is the different between string in Go with other programming languages?
+    
+    </li>
+
+                    
+                        
+    <li>What is string literal? How is it done in Go?
+    
+    </li>
+
+                    
+                        
+    <li>Explain how you can write multi-line strings in GO?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>4. Goroutine</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>What are the difference between goroutine and OS thread?
+    
+    </li>
+
+                    
+                        
+    <li>Explain what is go routine in GO? How you can stop go routine?
+    
+    </li>
+
+                    
+                        
+    <li>What is a worker pool? And how to do that in Go?
+    
+    </li>
+
+                    
+                        
+    <li>How to stop a worker pool?
+    
+    </li>
+
+                    
+                        
+    <li>What is fan-in, fan-out?
+    
+    </li>
+
+                    
+                        
+    <li>What is sync.WaitGroup used for?
+    
+    </li>
+
+                    
+                        
+    <li>What are the differences between sync.Mutex and semaphore?
+    
+    </li>
+
+                    
+                        
+    <li>What are the differences between concurrency and parallelism?
+    
+    </li>
+
+                    
+                        
+    <li>What are the differences between sharing by communicate vs communicate by sharing?
+    
+    </li>
+
+                    
+                        
+    <li>What is channel? How does it work? What is it used for?
+    
+    </li>
+
+                    
+                        
+    <li>What is context? What is it used for?
+    
+    </li>
+
+                    
+                        
+    <li>Have you used goroutine in your application? Describe it.
+    
+    </li>
+
+                    
+                        
+    <li>Why goroutine is better than thread?
+    
+    </li>
+
+                    
+                        
+    <li>What is goroutine leak in Go? How to prevent it?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>5. Interface</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>Explain Interface in Go
+    
+    </li>
+
+                    
+                        
+    <li>How interface in Go different from interface in other languages?
+    
+    </li>
+
+                    
+                        
+    <li>When should you use interface?
+    
+    </li>
+
+                    
+                        
+    <li>How did you use interface in your previous project?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>6. Other General Questions:</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>Does Go pass by value or pass by references? What are the differences?
+    
+    </li>
+
+                    
+                        
+    <li>What is Go run time?
+    
+    </li>
+
+                    
+                        
+    <li>How does garbage collector work in Go?
+    
+    </li>
+
+                    
+                        
+    <li>What is inside the interface{}?
+    
+    </li>
+
+                    
+                        
+    <li>How to handle gracefully shutdown in Go?
+    
+    </li>
+
+                    
+                        
+    <li>Why would you prefer to use an empty struct{} ? Provide some examples of the good use of the empty struct{} .
+    
+    </li>
+
+                    
+                        
+    <li>How do you compare two structs? What about two interfaces? Provide examples.
+    
+    </li>
+
+                    
+                        
+    <li>How do you implement stack and queue in Go? Provide an example.
+    
+    </li>
+
+                    
+                        
+    <li>What is type assertion and how is it done in Go?
+    
+    </li>
+
+                    
+                        
+    <li>How type conversion is done in Go?
+    
+    </li>
+
+                    
+                        
+    <li>What is the difference, if any, in the following two slice declarations, and which one is more preferable? var a []int and a := []int{}
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h2>Real Experiences Questions</h2>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>1. General:</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>How did you structure your last project in Go? What are the advantages and disadvantages of it?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>2. Config</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>How did you manage configurations of your services in Go?
+    
+    </li>
+
+                    
+                        
+    <li>What kind of libraries did you use for configuration management in Go? Compare them.
+    
+    </li>
+
+                    
+                        
+    <li>How did you manage configurations of your services in Docker, OpenShift, Kubenetes environment?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>3. HTTP</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>Have you ever used any framework for working with HTTP in Go? Compare it with native HTTP library provided by Go.
+    
+    </li>
+
+                    
+                        
+    <li>What is middleware? Have you ever written one?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>4. Logging</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>Explain how did you implement logging component in your last application with Go?
+    
+    </li>
+
+                    
+                        
+    <li>Did you use any libraries for logging in Go? Explain how did you use it and compare with native logging library.
+    
+    </li>
+
+                    
+                        
+    <li>How did you organize logging in containerize environment like Docker, Kubernetes, OpenShift where you have a lot of instances running at the same time?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>5. Deployment:</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>How did you deploy your application?
+    
+    </li>
+
+                    
+                        
+    <li>Have you ever used Docker or any containerize technology for deployment? Describes it.
+    
+    </li>
+
+                    
+                        
+    <li>Have you ever written Docker file? Describes it?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>6. Database:</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>Have you ever used MongoDB? Explain in detail what did you use it for?
+    
+    </li>
+
+                    
+                        
+    <li>Explain what are the differences between NoSQL and SQL? When should you use NoSQL and when not to?
+    
+    </li>
+
+                    
+                        
+    <li>What library did you use to interact with MongoDB in Go? Compare it with other libraries.
+    
+    </li>
+
+                    
+                        
+    <li>How big your data is?
+    
+    </li>
+
+                    
+                        
+    <li>How did you scale your MongoDB for performance?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>7. Search Engine:</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>What did you use Elasticsearch for?
+    
+    </li>
+
+                    
+                        
+    <li>When should you use Elasticsearch and when should you use MongoDB?
+    
+    </li>
+
+                    
+                        
+    <li>What library did you use to interact with Elasticsearch in Go?
+    
+    </li>
+
+                    
+                        
+    <li>How did you handle a lot of indexing in high performance application?
+    
+    </li>
+
+                    
+                        
+    <li>Do you know bulk processor? Did you use it? How does it work?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>8. Message queue:</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>Have you ever used any message queue technology? Describe how did you use it.
+    
+    </li>
+
+                    
+                        
+    <li>Have you ever used Kafka? How is it used in your application? And why did you choose it?
+    
+    </li>
+
+                    
+                        
+    <li>When should you use message queue? Give some example.
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>9. Performance</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+            
+                <ul>
+                    
+                        
+    <li>How many query/second of your application?
+    
+    </li>
+
+                    
+                        
+    <li>How can you measure performance of your application?
+    
+    </li>
+
+                    
+                        
+    <li>How did you scale up your application?
+    
+    </li>
+
+                    
+                </ul>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+    
+</div>
+      </div>
+    </article>
+    
+  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fgo-interview-questions" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+      <span>Post</span>
+    </a>
+    <a aria-label="Tweet It" href="https://twitter.com/share?url=%2fblog%2farticles%2fgo-interview-questions&text=A%20list%20of%20questions%20for%20challenging%2c%20evaluating%20and%20learning%20Go%20faster." class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+      </svg>
+      <span>Tweet</span>
+    </a>
+    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fblog%2farticles%2fgo-interview-questions" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+      </svg>
+      <span>Share</span>
+    </a>
+  </div>
+
+    
+  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+    <div class="flex md:flex-col w-full md:w-1/5">
+      <div>Next In</div>
+      <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
+    </div>
+    <div class="hidden md:flex border-l border-default px-1"></div>
+    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
+      <div class="w-full md:w-1/2 mt-2 md:mt-0">
+        <a href="/blog/articles/go-reading-list" class="font-bold capitalize">Go Reading List</a>
+        <p class="mt-2 line-clamp-3 md:line-clamp-4 font-serif">A list of good articles for learning Go, learn faster and deeper.</p>
+      </div>
+      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/blog/articles/go-reading-list">
+        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  
+<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
+    <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
+    <div class="flex space-x-3">
+      <a href="http://github.com/pthethanh" rel="noopener"  aria-label="Thanh Pham's github" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" xml:space="preserve">
+          <path d="M36,71c-15.3,0-22.2-8.2-10.5-2.4c1.7,0.3,2.4-0.8,2.4-1.7c0-0.8,0-3,0-5.9c-9.6,2.1-11.7-4.6-11.7-4.6 c-1.6-4-3.9-5.1-3.9-5.1c-3.1-2.2,0.2-2.1,0.2-2.1c3.5,0.2,5.3,3.6,5.3,3.6C21,58.1,26,56.5,28,55.6c0.3-2.2,1.2-3.8,2.2-4.6 c-7.7-0.9-15.8-3.9-15.8-17.1c0-3.8,1.4-6.9,3.6-9.3c-0.4-0.9-1.5-4.4,0.3-9.2c0,0,2.9-0.9,9.5,3.6c2.8-0.8,5.7-1.2,8.7-1.2 c2.9,0,5.9,0.4,8.7,1.2c6.6-4.5,9.5-3.6,9.5-3.6c1.9,4.8,0.7,8.3,0.3,9.2c2.2,2.4,3.6,5.5,3.6,9.3c0,13.3-8.1,16.3-15.8,17.1 c1.2,1.1,2.4,3.2,2.4,6.4c0,4.6,0,8.4,0,9.5c0,0.9,0.6,2,2.4,1.7C55.8,64.1,51.3,71,36,71" />
+          <g><path d="M36,0C16.2,0,0,16.2,0,36s16.2,36,36,36s36-16.2,36-36C72,16.2,55.8,0,36,0z M36,69.5 c-18.5,0-33.5-15-33.5-33.5S17.5,2.5,36,2.5s33.5,15,33.5,33.5S54.5,69.5,36,69.5z" /></g>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/pthethanh"  aria-label="Thanh Pham's LinkedIn" rel="noopener" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  
+  <template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template>
+
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name": "Go Interview Questions",
+      "headline": "Go Interview Questions",
+      "identifier":"go-interview-questions",
+      "keywords":["interview","go","golang interview questions","go interview questions"],
+      "image": [],
+      "author": "Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name": "pthethanh",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pthethanh.github.io//static/images/favicon.ico"
+        }
+      },
+      "url": "/blog/articles/go-interview-questions",
+      "mainEntityOfPage": "https://pthethanh.github.io/",
+      "datePublished": {"seconds":1608884748,"nanos":879000000},
+      "dateModified": {"seconds":1618931474,"nanos":559000000},
+      "description": "A list of questions for challenging, evaluating and learning Go faster."
+    }
+  </script>
+
+</body>
+</html>

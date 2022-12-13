@@ -1,0 +1,958 @@
+<!doctype html>
+<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
+<head>
+  
+  <base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="[golang naming conventions in Golang golang name conventions thanh pham golang name conventions in go Naming Conventions for Golang Functions]">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="Ground rules for naming to make people fall in love reading your code.">
+  <meta property="og:url" content="/blog/articles/golang-name-conventions">
+  <meta property="og:title" content="Name Conventions In Go">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="Ground rules for naming to make people fall in love reading your code.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Name Conventions In Go</title>
+  
+    <link rel="canonical" href="/blog/articles/golang-name-conventions">
+  
+  <meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style">
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript>
+
+  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script>
+
+</head>
+<body class="min-h-screen body" id="app">
+  
+<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+  <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
+    <a href="/" class="font-semibold">PTHETHANH</a>
+    <div class="flex space-x-8">
+      <a href="/" class="item">Blog</a>
+      
+        <a href="/draft" class="hover:text-header-hover cursor-pointer">Private</a>
+      
+      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
+      
+        <a href="/blog/new-article" class="hover:text-header-hover  cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+  <nav class="md:hidden w-full">
+    <div class="flex h-14 justify-between items-center px-2">
+      <svg v-show="!openTopMenu" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+      <svg v-show="openTopMenu" xmlns="http://www.w3.org/2000/svg" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" v-cloak>
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+      <a href="/" class="font-bold">PTHETHANH</a>
+      <div></div>
+    </div>
+    <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
+      
+        <a @click="closeTopMenu" href="/draft" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Private</a>
+      
+      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
+      
+        <a @click="closeTopMenu" href="/blog/new-article" class="pl-4 py-2 w-full border-b border-default cursor-pointer">New Article</a>
+      
+    </div>
+  </nav>
+</header>
+
+  <div class="w-full pb-14" @click="closeTopMenu">
+    
+  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+    <article class="w-full pt-10 md:pt-14 pb-20">
+      <div class="w-full mb-10">
+        <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">Name Conventions In Go</h1>
+        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thu 05 Aug 2021 <span> / 2 seconds read</span></div>
+          <div class="flex space-x-2">
+            
+              <a href="/blog/articles/golang-name-conventions/edit" aria-label="Edit article">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+                </svg>
+              </a>
+            
+          </div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div>
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+            
+                <picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629013038/pthethanh/articles/golang-name-conventions/nameconvention-w320_kkha6x.webp 320w,https://res.cloudinary.com/pthethanh/image/upload/v1629013038/pthethanh/articles/golang-name-conventions/nameconvention-w1920_dbhtfw.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629013038/pthethanh/articles/golang-name-conventions/nameconvention-w1280_sbwaio.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629013038/pthethanh/articles/golang-name-conventions/nameconvention-w640_l7sjoa.webp 640w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1630912528/pthethanh/articles/golang-name-conventions/nameconvention_ftarfh.jpg" alt="twomeows/Getty Images">
+                </picture>
+            
+            
+                <div class="w-full text-left text-captions font-sans text-xs">twomeows/Getty Images</div>
+            
+        
+        
+        
+    
+        
+            
+                <div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>The ground rules for naming in Go are: use mixedCaps, keep it short and be consistent.</div>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>As a developer, naming is what we do every day, although it is quite easy most of the time, sometime it's really hard to come&nbsp; up with a good name, especially for fresher developers who are still struggling learning the languages. Some developers end up using <code class="inline-code">i</code>, <code class="inline-code">j</code>, <code class="inline-code">v</code>,... for almost everything. Those are good names in some cases but can be very confusing if being used in an inappropriate context.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Some time developers just want to name their code their own way, this is OK if you work on your side project. But in a project which involve multiple developers, the standard must be respected.&nbsp;Everyone in a same project must follow the same standard, otherwise your code would like like a mess and become super hard to maintain.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>In this post, I would like to provide some simple rules so that you can name your code easier and avoid endless arguments with your colleagues about naming conventions.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>This guideline can be used as a supplement to the name conventions of the Go guideline at <a href="https://golang.org/doc/effective_go#names">effective-go</a>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>Project Name</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Name your project in lowercase, otherwise it would look really weird in the imports. <a href="https://github.com/sirupsen/logrus">Logrus</a>&nbsp;- a very good structured logging library in Go made this mistake at the beginning and they had to fix it a very hard way. You still can see their README mention about the naming problem today.<br></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>The import&nbsp;<code class="inline-code">github.com/sirupsen/logrus</code> is much better than <code class="inline-code">github.com/Sirupsen/logrus</code></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If your project name is long, use dash or underscore to separate the name. Use <code class="inline-code">effective-go</code>&nbsp;or <code class="inline-code">effective_go</code> instead of <code class="inline-code">effectiveGo</code> or <code class="inline-code">EffectiveGo</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>Package</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>For package, use singular noun instead of plural. Use&nbsp;<code class="inline-code">user</code> instead of <code class="inline-code">users</code>&nbsp;, <code class="inline-code">notification</code> instead of <code class="inline-code">notifications</code>&nbsp;.&nbsp;</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Use plural noun in case using singular noun causes collision with existing primitive type names. But this should be used with very careful considerations. Some examples from the standard libraries are&nbsp;<code class="inline-code">bytes</code>&nbsp;, <code class="inline-code">errors</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If your package adds some extension to the current standard libraries, try to use another name instead of using the same name and fool yourselves with import alias. Use&nbsp;<code class="inline-code">contextutil</code>&nbsp;or&nbsp;<code class="inline-code">contextx</code> instead of <code class="inline-code">context</code>&nbsp;, use&nbsp;<code class="inline-code">errorsx</code> instead of <code class="inline-code">errors</code> so that you can use both the packages in your code without defining alias for your imports.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Try to keep package name short, use lower case, never use mixedCaps for package name and even snake_case should be avoided too. Use&nbsp;<code class="inline-code">contextutil</code> instead of <code class="inline-code">contextUtil</code> or <code class="inline-code">context_util</code>&nbsp;. This is similar why Go name its <code class="inline-code">httputil</code> package, and not <code class="inline-code">httpUtil</code> or <code class="inline-code">http_util</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>File Name</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>For file name, try to keep it short, but still meaningful.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>I have seen some developers naming their entry file in Go different from&nbsp;<code class="inline-code">main.go</code>, don't do that! Be different, be intelligent in something that avoid bugs instead.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Use lower case and use snake_case instead of mixedCaps. So, use <code class="inline-code">server.go</code>&nbsp;, <code class="inline-code">notification.go</code> or <code class="inline-code">notification_server.go</code> instead of <code class="inline-code">notificationServer.go</code>.&nbsp;</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Use underscore instead of dash, dash would make your unit test file looks weird. So, use&nbsp;<code class="inline-code">notification_server.go</code>, <code class="inline-code">notification_server_test.go </code>&nbsp;or&nbsp;<code class="inline-code">repository_mongo.go</code> instead of <code class="inline-code">notification-server.go&nbsp;</code>&nbsp;or <code class="inline-code">notification-server_test.go</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If there are multiple files for different purposes in a same package, all the files of a same purpose should be prefixed the same way, that way your code would be perfectly aligned in your IDE and super easy to find.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>Function/Method</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Use mixedCaps for naming your function. Use <code class="inline-code">getArticles</code>&nbsp;or <code class="inline-code">GetArticles</code> instead of <code class="inline-code">get_articles</code> or <code class="inline-code">get-articles</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Name of a function should reflect what it does. Don't naming your function <code class="inline-code">getArticles</code> but inside the function you also modify it.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Try to void the word <code class="inline-code">Get</code> from the getters of a struct. Use <code class="inline-code">Name()</code> and <code class="inline-code">SetName(string)</code> instead of <code class="inline-code">GetName()</code> and <code class="inline-code">SetName(string)</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If a function receives a context, the context must be the first parameter and its name should be <code class="inline-code">ctx</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Use&nbsp;<code class="inline-code">DeleteArticle(ctx context.Context, id string) error</code> instead of <code class="inline-code">DeleteArticle(id string, myCtx context.Context) error</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>For the method receiver, 2 or 3 letter maybe enough for the name. If you prefer more meaningful name, that's OK but remember to try to shorten them.&nbsp; So,&nbsp;<code class="inline-code">srv</code> or <code class="inline-code">svc</code> are better than&nbsp;<code class="inline-code">server</code>, <code class="inline-code">service</code> or <code class="inline-code">myService</code>. <code class="inline-code">r</code> or <code class="inline-code">repo</code> is better than <code class="inline-code">repository</code> or <code class="inline-code">myRepository</code></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If a function requires only one struct as its request param, <code class="inline-code">req</code> is much better than <code class="inline-code">getArticleRequest</code>. If it requires multiple param, concrete names should be provided but tries to keep them short.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If a param of a function is a writer, then <code class="inline-code">w</code> is meaningful enough. If it's a reader, <code class="inline-code">r</code> is a good choice.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>Variable</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Name of variable should be short but should be meaningful enough. So, you can use <code class="inline-code">srv</code> or <code class="inline-code">svc</code> instead of <code class="inline-code">service</code>, <code class="inline-code">server</code> or <code class="inline-code">myService</code>.&nbsp; Use<code class="inline-code">r</code> or <code class="inline-code">repo</code> instead of <code class="inline-code">repository</code> or <code class="inline-code">myRepository</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Use <code class="inline-code">ctx</code> for <code class="inline-code">context.Context</code>. If it's a new context then <code class="inline-code">newCtx</code> is good enough.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Use&nbsp;<code class="inline-code">i</code>, <code class="inline-code">j</code> for your indexing of a loop. But what if you have 3 loops? Please don't! Having 3 loops means you should refactor your code.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Some developers prefer to use <code class="inline-code">rs</code> for naming result of something. This is OK, but in case you have multiple results&nbsp; of different API calls, the name should be&nbsp;more concrete, otherwise it would be really hard to read the code. You can use&nbsp;<code class="inline-code">article</code> if the result is just a single struct represent an article, <code class="inline-code">articles</code> if it's a slice, or&nbsp;&nbsp;<code class="inline-code">searchArticleRs</code>&nbsp;if it's a response struct.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>Constant</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Constant follows the same rule with variables and functions, hence use mixedCaps for naming. No underscore unless it's generated code. So, use&nbsp;<code class="inline-code">StatusActive</code> instead of <code class="inline-code">STATUS_ACTIVE</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>All constants of same type or represent a same values of something should be named with same prefix for easier to remember.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>Error</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Name of error variable should start with <code class="inline-code">Err</code>. Use <code class="inline-code">ErrNotFound</code> instead of <code class="inline-code">NotFoundError</code>. <i>Note that it's <code class="inline-code">Err</code>, not <code class="inline-code">Error</code>.</i></p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>But when it's an error type, <code class="inline-code">Error</code> should be the suffix of the type name. Use&nbsp;<code class="inline-code">NotFoundError</code> instead of <code class="inline-code">ErrorNotFound</code>.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+            
+                <h3>Interfaces</h3>
+            
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>The simplest rule for naming interface is adding <code class="inline-code">er</code>&nbsp;into the name of the action/method it represents.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>Here are some examples from the standard library:</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+        
+        
+            
+                <pre><code>type Writer interface {
+  Write(p []byte) (n int, err error)
+}
+
+type Reader interface {
+  Read(p []byte) (n int, err error)
+}
+
+type ReadWriter interface{
+  Reader
+  Writer
+}</code></pre>
+                
+            
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>The standard guideline is easy but sometime you have big interfaces which includes 4 or 5 or even more actions/methods and it's hard to come up with a good name. My recommendation is naming them base on the meaning of the set of the methods/actions they represent. </p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If it's all about retrieving/updating data for something,&nbsp;<code class="inline-code">DataProvider</code>, <code class="inline-code">DataAdaptor</code>, <code class="inline-code">DataUpdater</code>&nbsp;are good enough. If you want more concrete names,&nbsp;<code class="inline-code">ArticleDataProvider</code>, <code class="inline-code">ArticleGetter</code>, <code class="inline-code">ArticleUpdater</code>, ... are good names to choose.</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        
+        
+        
+            <p>If it's a service that provide a lot of actions for something, maybe <code class="inline-code">Service</code> or <code class="inline-code">Server</code> are good suffixes for the&nbsp; name. So you can use <code class="inline-code">ArticleService</code>, <code class="inline-code">ArticleServer</code>, ...</p>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+</div>
+      </div>
+    </article>
+    
+  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fgolang-name-conventions" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+      <span>Post</span>
+    </a>
+    <a aria-label="Tweet It" href="https://twitter.com/share?url=%2fblog%2farticles%2fgolang-name-conventions&text=Ground%20rules%20for%20naming%20to%20make%20people%20fall%20in%20love%20reading%20your%20code." class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+      </svg>
+      <span>Tweet</span>
+    </a>
+    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fblog%2farticles%2fgolang-name-conventions" class="flex flex-col items-center">
+      <svg class="icon" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+      </svg>
+      <span>Share</span>
+    </a>
+  </div>
+
+    
+  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+    <div class="flex md:flex-col w-full md:w-1/5">
+      <div>Next In</div>
+      <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
+    </div>
+    <div class="hidden md:flex border-l border-default px-1"></div>
+    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
+      <div class="w-full md:w-1/2 mt-2 md:mt-0">
+        <a href="/blog/articles/go-interface" class="font-bold capitalize">Interface{} Explained</a>
+        <p class="mt-2 line-clamp-3 md:line-clamp-4 font-serif">An explanation of what and how interface works during runtime.</p>
+      </div>
+      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/blog/articles/go-interface">
+        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
+      </a>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+  
+<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
+    <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
+    <div class="flex space-x-3">
+      <a href="http://github.com/pthethanh" rel="noopener"  aria-label="Thanh Pham's github" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" xml:space="preserve">
+          <path d="M36,71c-15.3,0-22.2-8.2-10.5-2.4c1.7,0.3,2.4-0.8,2.4-1.7c0-0.8,0-3,0-5.9c-9.6,2.1-11.7-4.6-11.7-4.6 c-1.6-4-3.9-5.1-3.9-5.1c-3.1-2.2,0.2-2.1,0.2-2.1c3.5,0.2,5.3,3.6,5.3,3.6C21,58.1,26,56.5,28,55.6c0.3-2.2,1.2-3.8,2.2-4.6 c-7.7-0.9-15.8-3.9-15.8-17.1c0-3.8,1.4-6.9,3.6-9.3c-0.4-0.9-1.5-4.4,0.3-9.2c0,0,2.9-0.9,9.5,3.6c2.8-0.8,5.7-1.2,8.7-1.2 c2.9,0,5.9,0.4,8.7,1.2c6.6-4.5,9.5-3.6,9.5-3.6c1.9,4.8,0.7,8.3,0.3,9.2c2.2,2.4,3.6,5.5,3.6,9.3c0,13.3-8.1,16.3-15.8,17.1 c1.2,1.1,2.4,3.2,2.4,6.4c0,4.6,0,8.4,0,9.5c0,0.9,0.6,2,2.4,1.7C55.8,64.1,51.3,71,36,71" />
+          <g><path d="M36,0C16.2,0,0,16.2,0,36s16.2,36,36,36s36-16.2,36-36C72,16.2,55.8,0,36,0z M36,69.5 c-18.5,0-33.5-15-33.5-33.5S17.5,2.5,36,2.5s33.5,15,33.5,33.5S54.5,69.5,36,69.5z" /></g>
+        </svg>
+      </a>
+      <a href="https://www.linkedin.com/in/pthethanh"  aria-label="Thanh Pham's LinkedIn" rel="noopener" target="_blank">
+        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+        </svg>
+      </a>
+    </div>
+  </div>
+</footer>
+
+  
+  <template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template>
+
+  
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name": "Name Conventions In Go",
+      "headline": "Name Conventions In Go",
+      "identifier":"golang-name-conventions",
+      "keywords":["golang","naming conventions in Golang","golang name conventions","thanh pham golang","name conventions in go","Naming Conventions for Golang Functions"],
+      "image": [],
+      "author": "Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name": "pthethanh",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://pthethanh.github.io//static/images/favicon.ico"
+        }
+      },
+      "url": "/blog/articles/golang-name-conventions",
+      "mainEntityOfPage": "https://pthethanh.github.io/",
+      "datePublished": {"seconds":1628138825,"nanos":17000000},
+      "dateModified": {},
+      "description": "The ground rules for naming in Go are: use mixedCaps, keep it short and be consistent."
+    }
+  </script>
+
+</body>
+</html>
