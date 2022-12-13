@@ -48,12 +48,8 @@
     <div class="flex space-x-8">
       <a href="/" class="item">Blog</a>
       
-        <a href="/draft" class="hover:text-header-hover cursor-pointer">Private</a>
-      
       <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
       <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
-      
-        <a href="/blog/new-article" class="hover:text-header-hover  cursor-pointer">New Article</a>
       
     </div>
   </nav>
@@ -71,12 +67,8 @@
     <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
       <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
       
-        <a @click="closeTopMenu" href="/draft" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Private</a>
-      
       <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
       <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
-      
-        <a @click="closeTopMenu" href="/blog/new-article" class="pl-4 py-2 w-full border-b border-default cursor-pointer">New Article</a>
       
     </div>
   </nav>
