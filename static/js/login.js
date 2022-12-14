@@ -1,1 +1,73 @@
-const login={user:{email:"",password:""},dirty:!1,errors:{},processing:!1,validatePassword(){return!this.dirty||(this.errors.password="",""!==this.user.password||(this.errors.password="Password is required.",!1))},validateEmail(){return!this.dirty||(this.errors.email="",""===this.user.email?(this.errors.email="Email is required",!1):!!isValidEmail(this.user.email)||(this.errors.email="Email is invalid",!1))},validate(){return this.dirty=!0,this.validateEmail()&&this.validatePassword()},auth(){this.processing=!0,this.errors.server="",this.validate()?fetch("/auth/login",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(this.user)}).then(r=>r.json()).then(r=>{console.log("code",r),200!=r.status&&r.status<500?this.errors.server="Invalid email or password!":void 0===r.error||""===r.error?goTo(getQueryParam("redirect","/")):this.errors.server="Server Error: "+r.error}).catch(r=>{this.errors.server="Server Error: "+r}).finally(()=>{this.processing=!1}):this.processing=!1}};
+const login = {
+  user: {
+    email: '',
+    password: ''
+  },
+  dirty: false,
+  errors: {},
+  processing: false,
+  validatePassword() {
+    if (!this.dirty) {
+      return true
+    }
+    this.errors.password = ''
+    if (this.user.password === '') {
+      this.errors.password = 'Password is required.'
+      return false
+    }
+    return true
+  },
+  validateEmail() {
+    if (!this.dirty) {
+      return true
+    }
+    this.errors.email = ''
+    if (this.user.email === '') {
+      this.errors.email = 'Email is required'
+      return false
+    }
+    if (!isValidEmail(this.user.email)) {
+      this.errors.email = 'Email is invalid'
+      return false
+    }
+    return true
+  },
+  validate() {
+    this.dirty = true
+    return this.validateEmail() && this.validatePassword()
+  },
+  auth() {
+    this.processing = true
+    this.errors.server = ''
+    if (!this.validate()) {
+      this.processing = false
+      return
+    }
+    fetch('/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(this.user)
+      })
+      .then((response) => response.json())
+      .then((data) => {
+        console.log('code', data)
+        if (data.status != 200 && data.status < 500) {
+          this.errors.server = 'Invalid email or password!'
+          return
+        }
+        if (data.error !== undefined && data.error !== '') {
+          this.errors.server = 'Server Error: ' + data.error
+          return
+        }
+        goTo(getQueryParam('redirect', '/'))
+      })
+      .catch((err) => {
+        this.errors.server = 'Server Error: ' + err
+      })
+      .finally(() => {
+        this.processing = false
+      })
+  }
+}

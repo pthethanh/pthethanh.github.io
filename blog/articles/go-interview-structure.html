@@ -1,8 +1,6 @@
 <!doctype html>
-<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
-<head>
-  
-  <base href="/">
+<html lang="en" domain="https://pthethanh.github.io" v-scope="app">
+<head><base href="/">
   <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -17,41 +15,32 @@
   <meta property="og:description" content="An interview guideline for practicing that increases your chance of passing a Go interview to 97.5%.">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Go Interview Structure</title>
-  
-    <link rel="canonical" href="/blog/articles/go-interview-structure">
-  
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>Go Interview Structure</title><link rel="canonical" href="/blog/articles/go-interview-structure"><meta name="referrer" content="no-referrer-when-downgrade">
   <link rel="preconnect" href="/" crossorigin>
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
-  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style">
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
-  </noscript>
-
-  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
   <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script async defer src="/static/js/index.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-</head>
-<body class="min-h-screen body" id="app">
-  
-<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
   <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
     <a href="/" class="font-semibold">PTHETHANH</a>
     <div class="flex space-x-8">
-      <a href="/" class="item">Blog</a>
-      
-      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
-      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
-      
-    </div>
+      <a href="/" class="item">Blog</a><a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a></div>
   </nav>
   <nav class="md:hidden w-full">
     <div class="flex h-14 justify-between items-center px-2">
@@ -65,853 +54,26 @@
       <div></div>
     </div>
     <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
-      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
-      
-      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
-      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
-      
-    </div>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a><a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a></div>
   </nav>
-</header>
-
-  <div class="w-full pb-14" @click="closeTopMenu">
-    
-  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-20">
     <article class="w-full pt-10 md:pt-14 pb-20">
       <div class="w-full mb-10">
         <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">Go Interview Structure</h1>
-        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="font-medium text-gray-600 mb-2">byThanh Pham</div>
         <div class="flex justify-between">
-          <div class="text-sm lg:text-base font-medium text-gray-600">Fri 25 Dec 2020 <span> / 1 minute 2 seconds read</span></div>
-          <div class="flex space-x-2">
-            
-          </div>
+          <div class="text-sm lg:text-base font-medium text-gray-600">Fri 25 Dec 2020<span> /1 minute 2 secondsread</span></div>
+          <div class="flex space-x-2"></div>
         </div>
       </div>
       <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
-        <div>
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            
-                <picture class="object-center object-cover w-full">
+        <div><picture class="object-center object-cover w-full">
                     <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629014592/pthethanh/articles/go-interview-structure/interview-w1920_t92p0t.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629014592/pthethanh/articles/go-interview-structure/interview-w1280_d8rdds.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629014592/pthethanh/articles/go-interview-structure/interview-w640_frnkhq.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629014592/pthethanh/articles/go-interview-structure/interview-w320_vtzn6j.webp 320w" type="image/webp">
                     <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1630912386/pthethanh/articles/go-interview-structure/interview_qsmlw2.jpg" alt="Steven Coutts Photography/Getty Images">
-                </picture>
-            
-            
-                <div class="w-full text-left text-captions font-sans text-xs">Steven Coutts Photography/Getty Images</div>
-            
-        
-        
-        
-    
-        
-            
-                <div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>An interview guideline for practicing that increases your chance of passing a Go interview to 97.5% even you're a young non-native English speaker developer. Note that this structure is designed for my team where I know the interviewer quite well.</div>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Answer interview's questions in a structure fashion has never been easy even with experienced developers. This is even more challenged with non-native English speakers like Vietnamese young developers. Sometime candidates talk too much or too little, or even make bad impression to interviewers by saying things they shouldn't say,... Those little things often lead to a failed interview.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>For young and non-native English speaker developers in Vietnam, we need a simple structure so that they can learn and practice themselves. I created and applied successfully the interview structure below for more than 50 developers for Go developer position. Most of them are fresh graduate with less than 1 year of experience and the success rate of the interviews is more than 97.5%.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>If you're a young Vietnamese developer who are trying to pass a Go interview, this guideline is for you. The guideline is provided as a template with some very basic rules so that you can use it for practicing with your mentors and easier to make your own styles.&nbsp;</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h2>General Notices</h2>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Although the rules listed below are very basic, but a lot of people makes those mistakes. Hence make sure you are very clear the below rules before your interview:&nbsp;</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>Be respectful to the interviewers.
-    
-    </li>
-
-                    
-                        
-    <li>Listen to the questions carefully.
-    
-    </li>
-
-                    
-                        
-    <li>Be clear about your role and what you did in the projects.
-    
-    </li>
-
-                    
-                        
-    <li>Don't just say "I know it" and stop. Instead, talk about your real experiences with the technologies in your past projects in full context. And if possible, provide your analysis or comparison with similar technologies.
-    
-    </li>
-
-                    
-                        
-    <li>Don't assume that interviewers know your projects or familiar with the domains/technologies in your projects. Instead, provide them a full context of what/when/why and how did you use it.
-    
-    </li>
-
-                    
-                        
-    <li>Don't use "we". Instead, use "I" when talking about your experiences.
-    
-    </li>
-
-                    
-                        
-    <li>Don't argue with interviewers about why they use a specific technology instead of another one. Instead, ask them about the context that led to the decision of using it.
-    
-    </li>
-
-                    
-                        
-    <li>If you don't know a specific technology, don't just say "I don't know". Instead, admit that you have not had a chance to work with it and talk about your experiences with similar technologies.
-    
-    </li>
-
-                    
-                        
-    <li>Be honest, be nice and smile.
-    
-    </li>
-
-                    
-                        
-    <li>Practice makes perfect.
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Introduce Yourself And Projects You've Worked</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>There are a plenty of ways to introduce yourself and an overview on what you have worked on. Through my experiences as mentors for more than a hundred of developers, providing enough key information is very important in the introduction.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>I suggest to talk a very overview about your self and at most 2 or 3 relevant projects that you have worked on.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>Your Name, might be age?
-    
-    </li>
-
-                    
-                        
-    <li>How many years in software development?
-    
-    </li>
-
-                    
-                        
-    <li>Whether you are a back-end/front-end/full-stack or DevOps developer?
-    
-    </li>
-
-                    
-                        
-    <li>What programming languages, technologies you are good at?
-    
-    </li>
-
-                    
-                        
-    <li>Tell them at most 2 or 3 relevant projects you've worked on:- Type of project: web, desktop, mobile, API, microservice application?- An overview about the goal/purpose or main features of the project.- Technologies are used in the project.- Your role/what you did in the project.
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Describes A Project In Detail</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>When talking about the detail of a project, the general guideline is to go from "overview" to "detail". Talking about the overview first to make sure the interviewers know the big picture of the project, and talking about the detail to show them your deep knowledge of the project.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>Type: web, desktop, micro-service, API application, CLI,...
-    
-    </li>
-
-                    
-                        
-    <li>Your role: fix bug/implement new features. What features did you worked on?
-    
-    </li>
-
-                    
-                        
-    <li>Architect: describe in detail back-end/front-end/database technologies, deployment, how components communicates to each other. Technologies used in the project,...
-    
-    </li>
-
-                    
-                        
-    <li>Structure: how did you structure the project? how many modules? How each module is structured?...
-    
-    </li>
-
-                    
-                        
-    <li>Library: names of some big libraries, why did you choose that libraries instead of others.
-    
-    </li>
-
-                    
-                        
-    <li>Deployment: Docker/Docker Compose, Kubernetes? How did u write Docker file, Docker compose file, Kubernetes?..
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Talk About The Exam</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Some customers request candidate to take a coding exam before the interview, hence you must be clear on what you've done.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>Summary the exercises requirements and your solution.
-    
-    </li>
-
-                    
-                        
-    <li>Calculate the big O notation for the exercises.
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Other Technologies</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Some interviewers might interested in relevant technologies and the list of the technologies can be varied depend on project's requirements. </p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>The ground rules for answer these questions is that you must know how you used those technologies in detail. If you don't know, just admit that you don't know. If you know some similar technologies, talk about them to the interviewers so that he/she can understand that you can learn it quickly.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Some interviewers also interested some fundamental information like:&nbsp;</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ol>
-                    
-                        
-    <li>What version of the technology you are using?
-    
-    </li>
-
-                    
-                        
-    <li>What did you use the technologies for? And why?
-    
-    </li>
-
-                    
-                        
-    <li>Why don't you use technology X instead of technology Y.
-    
-    </li>
-
-                    
-                        
-    <li>What library did you use in your project? Why did you choose it instead of another?
-    
-    </li>
-
-                    
-                </ol>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>In most of the interviews for Go position that I'm the mentor, they often ask for below technologies:</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>Docker
-    
-    </li>
-
-                    
-                        
-    <li>Kafka
-    
-    </li>
-
-                    
-                        
-    <li>Elastic search
-    
-    </li>
-
-                    
-                        
-    <li>Logging
-    
-    </li>
-
-                    
-                        
-    <li>MongoDB
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Questions About Go</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Although there are many questions an interview can ask a candidate about Go, I found more than 95% interviewers ask below questions when it comes to Go specific questions.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>Compare Go vs Java, C, Python, C++, JavaScript?
-    
-    </li>
-
-                    
-                        
-    <li>What are the differences between array and slice?
-    
-    </li>
-
-                    
-                        
-    <li>What are the differences between Goroutine and Thread?
-    
-    </li>
-
-                    
-                        
-    <li>How did you structure your code in Go?
-    
-    </li>
-
-                    
-                        
-    <li>What framework/library did you use in your project?
-    
-    </li>
-
-                    
-                        
-    <li>How did you measure performance of your application?
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Reverse Interview</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>What do you want to ask the interviewer?
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Final Notes</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li>Don't stop until they say so. Don't just say yes and no, talk more about your experiences in detail so that the interviewer understand you and your work.
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>What next?</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>If you want to read more about common interview process, I recommend you to take a look at this page:&nbsp;<a href="https://techinterviewhandbook.org/introduction">https://techinterviewhandbook.org</a></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-</div>
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Steven Coutts Photography/Getty Images</div><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>An interview guideline for practicing that increases your chance of passing a Go interview to 97.5% even you're a young non-native English speaker developer. Note that this structure is designed for my team where I know the interviewer quite well.</div><p>Answer interview's questions in a structure fashion has never been easy even with experienced developers. This is even more challenged with non-native English speakers like Vietnamese young developers. Sometime candidates talk too much or too little, or even make bad impression to interviewers by saying things they shouldn't say,... Those little things often lead to a failed interview.</p><p>For young and non-native English speaker developers in Vietnam, we need a simple structure so that they can learn and practice themselves. I created and applied successfully the interview structure below for more than 50 developers for Go developer position. Most of them are fresh graduate with less than 1 year of experience and the success rate of the interviews is more than 97.5%.</p><p>If you're a young Vietnamese developer who are trying to pass a Go interview, this guideline is for you. The guideline is provided as a template with some very basic rules so that you can use it for practicing with your mentors and easier to make your own styles.&nbsp;</p><h2>General Notices</h2><p>Although the rules listed below are very basic, but a lot of people makes those mistakes. Hence make sure you are very clear the below rules before your interview:&nbsp;</p><ul><li>Be respectful to the interviewers.</li><li>Listen to the questions carefully.</li><li>Be clear about your role and what you did in the projects.</li><li>Don't just say "I know it" and stop. Instead, talk about your real experiences with the technologies in your past projects in full context. And if possible, provide your analysis or comparison with similar technologies.</li><li>Don't assume that interviewers know your projects or familiar with the domains/technologies in your projects. Instead, provide them a full context of what/when/why and how did you use it.</li><li>Don't use "we". Instead, use "I" when talking about your experiences.</li><li>Don't argue with interviewers about why they use a specific technology instead of another one. Instead, ask them about the context that led to the decision of using it.</li><li>If you don't know a specific technology, don't just say "I don't know". Instead, admit that you have not had a chance to work with it and talk about your experiences with similar technologies.</li><li>Be honest, be nice and smile.</li><li>Practice makes perfect.</li></ul><h3>Introduce Yourself And Projects You've Worked</h3><p>There are a plenty of ways to introduce yourself and an overview on what you have worked on. Through my experiences as mentors for more than a hundred of developers, providing enough key information is very important in the introduction.</p><p>I suggest to talk a very overview about your self and at most 2 or 3 relevant projects that you have worked on.</p><ul><li>Your Name, might be age?</li><li>How many years in software development?</li><li>Whether you are a back-end/front-end/full-stack or DevOps developer?</li><li>What programming languages, technologies you are good at?</li><li>Tell them at most 2 or 3 relevant projects you've worked on:- Type of project: web, desktop, mobile, API, microservice application?- An overview about the goal/purpose or main features of the project.- Technologies are used in the project.- Your role/what you did in the project.</li></ul><h3>Describes A Project In Detail</h3><p>When talking about the detail of a project, the general guideline is to go from "overview" to "detail". Talking about the overview first to make sure the interviewers know the big picture of the project, and talking about the detail to show them your deep knowledge of the project.</p><ul><li>Type: web, desktop, micro-service, API application, CLI,...</li><li>Your role: fix bug/implement new features. What features did you worked on?</li><li>Architect: describe in detail back-end/front-end/database technologies, deployment, how components communicates to each other. Technologies used in the project,...</li><li>Structure: how did you structure the project? how many modules? How each module is structured?...</li><li>Library: names of some big libraries, why did you choose that libraries instead of others.</li><li>Deployment: Docker/Docker Compose, Kubernetes? How did u write Docker file, Docker compose file, Kubernetes?..</li></ul><h3>Talk About The Exam</h3><p>Some customers request candidate to take a coding exam before the interview, hence you must be clear on what you've done.</p><ul><li>Summary the exercises requirements and your solution.</li><li>Calculate the big O notation for the exercises.</li></ul><h3>Other Technologies</h3><p>Some interviewers might interested in relevant technologies and the list of the technologies can be varied depend on project's requirements. </p><p>The ground rules for answer these questions is that you must know how you used those technologies in detail. If you don't know, just admit that you don't know. If you know some similar technologies, talk about them to the interviewers so that he/she can understand that you can learn it quickly.</p><p>Some interviewers also interested some fundamental information like:&nbsp;</p><ol><li>What version of the technology you are using?</li><li>What did you use the technologies for? And why?</li><li>Why don't you use technology X instead of technology Y.</li><li>What library did you use in your project? Why did you choose it instead of another?</li></ol><p>In most of the interviews for Go position that I'm the mentor, they often ask for below technologies:</p><ul><li>Docker</li><li>Kafka</li><li>Elastic search</li><li>Logging</li><li>MongoDB</li></ul><h3>Questions About Go</h3><p>Although there are many questions an interview can ask a candidate about Go, I found more than 95% interviewers ask below questions when it comes to Go specific questions.</p><ul><li>Compare Go vs Java, C, Python, C++, JavaScript?</li><li>What are the differences between array and slice?</li><li>What are the differences between Goroutine and Thread?</li><li>How did you structure your code in Go?</li><li>What framework/library did you use in your project?</li><li>How did you measure performance of your application?</li></ul><h3>Reverse Interview</h3><ul><li>What do you want to ask the interviewer?</li></ul><h3>Final Notes</h3><ul><li>Don't stop until they say so. Don't just say yes and no, talk more about your experiences in detail so that the interviewer understand you and your work.</li></ul><h3>What next?</h3><p>If you want to read more about common interview process, I recommend you to take a look at this page:&nbsp;<a href="https://techinterviewhandbook.org/introduction">https://techinterviewhandbook.org</a></p></div>
       </div>
-    </article>
-    
-  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    </article><div class="flex justify-between pt-4 pb-10 border-t border-default">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fgo-interview-structure" class="flex flex-col items-center">
       <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -931,10 +93,7 @@
       </svg>
       <span>Share</span>
     </a>
-  </div>
-
-    
-  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
     <div class="flex md:flex-col w-full md:w-1/5">
       <div>Next In</div>
       <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
@@ -949,13 +108,7 @@
         <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
       </a>
     </div>
-  </div>
-
-  </div>
-
-  </div>
-  
-<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  </div></div></div><footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
   <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
     <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
     <div class="flex space-x-3">
@@ -973,40 +126,30 @@
       </a>
     </div>
   </div>
-</footer>
-
-  
-  <template id="loading-paragraph">
+</footer><template id="loading-paragraph">
     <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
-  </template>
-
-  
-  <script type="application/ld+json">
+  </template><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "name": "Go Interview Structure",
-      "headline": "Go Interview Structure",
+      "name":"Go Interview Structure",
+      "headline":"Go Interview Structure",
       "identifier":"go-interview-structure",
-      "keywords":["interview","go","interview structure","golang","golang interview","phong van go","phong van golang"],
+      "keywords":"interview,go,interview structure,golang,golang interview,phong van go,phong van golang",
       "image": [],
-      "author": "Thanh Pham",
+      "author":"Thanh Pham",
       "genre": "",
       "publisher": {
         "@type": "Organization",
-        "name": "pthethanh",
+        "name":"pthethanh",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://pthethanh.github.io//static/images/favicon.ico"
-        }
+          "url":"https://pthethanh.github.io/static/images/favicon.ico"}
       },
-      "url": "/blog/articles/go-interview-structure",
-      "mainEntityOfPage": "https://pthethanh.github.io/",
-      "datePublished": {"seconds":1608884622,"nanos":159000000},
-      "dateModified": {"seconds":1623053468,"nanos":893000000},
-      "description": "An interview guideline for practicing that increases your chance of passing a Go interview to 97.5% even you're a young non-native English speaker developer. Note that this structure is designed for my team where I know the interviewer quite well."
-    }
-  </script>
-
-</body>
+      "url":"/blog/articles/go-interview-structure",
+      "mainEntityOfPage":"https://pthethanh.github.io",
+      "datePublished":{"seconds":1608884622,"nanos":159000000},
+      "dateModified":{"seconds":1623053468,"nanos":893000000},
+      "description":"An interview guideline for practicing that increases your chance of passing a Go interview to 97.5% even you're a young non-native English speaker developer. Note that this structure is designed for my team where I know the interviewer quite well."}
+  </script></body>
 </html>

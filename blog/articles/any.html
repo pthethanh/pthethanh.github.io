@@ -1,8 +1,6 @@
 <!doctype html>
-<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
-<head>
-  
-  <base href="/">
+<html lang="en" domain="https://pthethanh.github.io" v-scope="app">
+<head><base href="/">
   <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -17,41 +15,32 @@
   <meta property="og:description" content="any is an official alias for interface{}">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <title>any</title>
-  
-    <link rel="canonical" href="/blog/articles/any">
-  
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>any</title><link rel="canonical" href="/blog/articles/any"><meta name="referrer" content="no-referrer-when-downgrade">
   <link rel="preconnect" href="/" crossorigin>
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
-  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style">
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
-  </noscript>
-
-  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
   <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script async defer src="/static/js/index.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-</head>
-<body class="min-h-screen body" id="app">
-  
-<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
   <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
     <a href="/" class="font-semibold">PTHETHANH</a>
     <div class="flex space-x-8">
-      <a href="/" class="item">Blog</a>
-      
-      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
-      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
-      
-    </div>
+      <a href="/" class="item">Blog</a><a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a></div>
   </nav>
   <nav class="md:hidden w-full">
     <div class="flex h-14 justify-between items-center px-2">
@@ -65,294 +54,35 @@
       <div></div>
     </div>
     <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
-      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
-      
-      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
-      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
-      
-    </div>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a><a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a></div>
   </nav>
-</header>
-
-  <div class="w-full pb-14" @click="closeTopMenu">
-    
-  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-20">
     <article class="w-full pt-10 md:pt-14 pb-20">
       <div class="w-full mb-10">
         <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">any</h1>
-        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="font-medium text-gray-600 mb-2">byThanh Pham</div>
         <div class="flex justify-between">
-          <div class="text-sm lg:text-base font-medium text-gray-600">Wed 23 Mar 2022 <span> /  read</span></div>
-          <div class="flex space-x-2">
-            
-          </div>
+          <div class="text-sm lg:text-base font-medium text-gray-600">Wed 23 Mar 2022<span> /read</span></div>
+          <div class="flex space-x-2"></div>
         </div>
       </div>
       <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
-        <div>
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>The introduction of <code class="inline-code">any</code>as an alias for<code class="inline-code">interface{}</code>&nbsp;is one of the most interesting changes in Go 1.18, beside generics and fuzzing.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>For a long time people complained a lot about the name <code class="inline-code">interface{}</code> which is quite confusing for beginners, and the introduction of <code class="inline-code">any </code>completely resolved that issue.&nbsp;According to the Go team, <code class="inline-code">any</code>&nbsp;is equal to<code class="inline-code"> interface{}</code> in all ways. That means you can replace <code class="inline-code">interface{}</code> by <code class="inline-code">any </code>in any case. Any is easier to understand and easier to write as well.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>So, instead of writing:</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>func Print(s ...interface{}) {
+        <div><p>The introduction of <code class="inline-code">any</code>as an alias for<code class="inline-code">interface{}</code>&nbsp;is one of the most interesting changes in Go 1.18, beside generics and fuzzing.</p><p>For a long time people complained a lot about the name <code class="inline-code">interface{}</code> which is quite confusing for beginners, and the introduction of <code class="inline-code">any </code>completely resolved that issue.&nbsp;According to the Go team, <code class="inline-code">any</code>&nbsp;is equal to<code class="inline-code"> interface{}</code> in all ways. That means you can replace <code class="inline-code">interface{}</code> by <code class="inline-code">any </code>in any case. Any is easier to understand and easier to write as well.</p><p>So, instead of writing:</p><pre><code>func Print(s ...interface{}) {
 	for _, v := range s {
 		fmt.Print(v)
 	}
-}</code></pre>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>You now can write:</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>func Print(s ...any) {
+}</code></pre><p>You now can write:</p><pre><code>func Print(s ...any) {
 	for _, v := range s {
 		fmt.Print(v)
 	}
-}</code></pre>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Or with generics:</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>func Print[T any](s ...T) {
+}</code></pre><p>Or with generics:</p><pre><code>func Print[T any](s ...T) {
 	for _, v := range s {
 		fmt.Print(v)
 	}
-}</code></pre>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>It's clear to see that "print any" is much easier to understand than "print interface{}". </p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>And for those who want to replace <code class="inline-code">interface{}</code> by <code class="inline-code">any </code>in legacy code, you can use <code class="inline-code">gofmt </code>to quickly do it for you:</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>gofmt -r &#34;interface{} -&gt; any&#34; -w .</code></pre>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>It's cool! But you might ask "But any is just interface{}?". The answer is "Yes, in all ways!". No magic here! It's just the name that makes more sense!</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>type any = interface{}</code></pre>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-</div>
+}</code></pre><p>It's clear to see that "print any" is much easier to understand than "print interface{}". </p><p>And for those who want to replace <code class="inline-code">interface{}</code> by <code class="inline-code">any </code>in legacy code, you can use <code class="inline-code">gofmt </code>to quickly do it for you:</p><pre><code>gofmt -r &#34;interface{} -&gt; any&#34; -w .</code></pre><p>It's cool! But you might ask "But any is just interface{}?". The answer is "Yes, in all ways!". No magic here! It's just the name that makes more sense!</p><pre><code>type any = interface{}</code></pre></div>
       </div>
-    </article>
-    
-  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    </article><div class="flex justify-between pt-4 pb-10 border-t border-default">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fany" class="flex flex-col items-center">
       <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -372,10 +102,7 @@
       </svg>
       <span>Share</span>
     </a>
-  </div>
-
-    
-  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
     <div class="flex md:flex-col w-full md:w-1/5">
       <div>Next In</div>
       <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
@@ -390,13 +117,7 @@
         <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
       </a>
     </div>
-  </div>
-
-  </div>
-
-  </div>
-  
-<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  </div></div></div><footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
   <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
     <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
     <div class="flex space-x-3">
@@ -414,40 +135,30 @@
       </a>
     </div>
   </div>
-</footer>
-
-  
-  <template id="loading-paragraph">
+</footer><template id="loading-paragraph">
     <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
-  </template>
-
-  
-  <script type="application/ld+json">
+  </template><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "name": "any",
-      "headline": "any",
+      "name":"any",
+      "headline":"any",
       "identifier":"any",
-      "keywords":["golang"," any"],
+      "keywords":"golang, any",
       "image": [],
-      "author": "Thanh Pham",
+      "author":"Thanh Pham",
       "genre": "",
       "publisher": {
         "@type": "Organization",
-        "name": "pthethanh",
+        "name":"pthethanh",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://pthethanh.github.io//static/images/favicon.ico"
-        }
+          "url":"https://pthethanh.github.io/static/images/favicon.ico"}
       },
-      "url": "/blog/articles/any",
-      "mainEntityOfPage": "https://pthethanh.github.io/",
-      "datePublished": {"seconds":1647944069,"nanos":662000000},
-      "dateModified": {},
-      "description": "any is an official alias for interface{}"
-    }
-  </script>
-
-</body>
+      "url":"/blog/articles/any",
+      "mainEntityOfPage":"https://pthethanh.github.io",
+      "datePublished":{"seconds":1647944069,"nanos":662000000},
+      "dateModified":{},
+      "description":"any is an official alias for interface{}"}
+  </script></body>
 </html>

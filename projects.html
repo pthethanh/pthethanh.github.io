@@ -1,8 +1,6 @@
 <!doctype html>
-<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
-<head>
-  
-  <base href="/">
+<html lang="en" domain="https://pthethanh.github.io" v-scope="app">
+<head><base href="/">
   <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -10,48 +8,39 @@
   <meta name="author" content="Thanh Pham">
   <meta name="image" content="https://res.cloudinary.com/pthethanh/image/upload/v1631959188/pthethanh/projects/preview_56660-worg.jpg">
   <meta name="description" content="pthethanh - ideas worth sharing.">
-  <meta property="og:url" content="https://pthethanh.github.io/">
+  <meta property="og:url" content="https://pthethanh.github.io">
   <meta property="og:title" content="Projects">
   <meta property="og:type" content="article">
   <meta property="og:image" content="https://res.cloudinary.com/pthethanh/image/upload/v1631959188/pthethanh/projects/preview_56660-worg.jpg">
   <meta property="og:description" content="pthethanh - ideas worth sharing.">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Projects</title>
-  
-    <link rel="canonical" href="https://pthethanh.github.io/">
-  
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>Projects</title><link rel="canonical" href="https://pthethanh.github.io"><meta name="referrer" content="no-referrer-when-downgrade">
   <link rel="preconnect" href="/" crossorigin>
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
-  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style">
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
-  </noscript>
-
-  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
   <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script async defer src="/static/js/index.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-</head>
-<body class="min-h-screen body" id="app">
-  
-<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
   <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
     <a href="/" class="font-semibold">PTHETHANH</a>
     <div class="flex space-x-8">
-      <a href="/" class="item">Blog</a>
-      
-      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
-      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
-      
-    </div>
+      <a href="/" class="item">Blog</a><a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a></div>
   </nav>
   <nav class="md:hidden w-full">
     <div class="flex h-14 justify-between items-center px-2">
@@ -65,18 +54,10 @@
       <div></div>
     </div>
     <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
-      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
-      
-      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
-      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
-      
-    </div>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a><a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a></div>
   </nav>
-</header>
-
-  <div class="w-full pb-14" @click="closeTopMenu">
-    
-<div class="w-full max-w-xl mx-auto px-2 min-h-screen prose lg:prose-lg pt-10">
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="w-full max-w-xl mx-auto px-2 min-h-screen prose lg:prose-lg pt-10">
   <div class="font-serif">
     <div class="pg-headline">Projects</div>
     <p>
@@ -84,27 +65,13 @@
       <a class="link" href="https://github.com/pthethanh">repository</a>
     </p>
     <p>Below are some of key projects I'm currently shared:</p>
-    <ul>
-      
-        <li><a class="link" href="https://github.com/pthethanh/micro">micro</a>: A micro tool kit for building microservices using Go &amp; gRPC.</li>
-      
-        <li><a class="link" href="https://github.com/pthethanh/tiny">tiny</a>: A tiny helper for building tiny website with Go html/template.</li>
-      
-        <li><a class="link" href="https://github.com/pthethanh/robusta">robusta</a>: A small project I did just for learning Go but became a standard project structure for most of new Go developers in my company.</li>
-      
-        <li><a class="link" href="https://github.com/golovers/effective-go">effective-go</a>: A collection of best practices I&#39;ve collected from different sources and from my own experiences.</li>
-      
-    </ul>
+    <ul><li><a class="link" href="https://github.com/pthethanh/micro">micro</a>:A micro tool kit for building microservices using Go &amp; gRPC.</li><li><a class="link" href="https://github.com/pthethanh/tiny">tiny</a>:A tiny helper for building tiny website with Go html/template.</li><li><a class="link" href="https://github.com/pthethanh/robusta">robusta</a>:A small project I did just for learning Go but became a standard project structure for most of new Go developers in my company.</li><li><a class="link" href="https://github.com/golovers/effective-go">effective-go</a>:A collection of best practices I&#39;ve collected from different sources and from my own experiences.</li></ul>
     <p>
       Apart from the above small projects, there are also some other little things on my GitHub
       <a class="link" href="https://github.com/pthethanh">repository</a>, hope you find something useful there.
     </p>
   </div>
-</div>
-
-  </div>
-  
-<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+</div></div><footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
   <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
     <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
     <div class="flex space-x-3">
@@ -122,22 +89,13 @@
       </a>
     </div>
   </div>
-</footer>
-
-  
-  <template id="loading-paragraph">
+</footer><template id="loading-paragraph">
     <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
-  </template>
-
-  
-  <script type="application/ld+json">
+  </template><script type="application/ld+json">
     {
       "@context": "http://schema.org",
       "@type": "WebSite",
-      "name": "pthethanh",
-      "url": "https://pthethanh.github.io/"
-    }
-  </script>
-
-</body>
+      "name":"pthethanh",
+      "url":"https://pthethanh.github.io"}
+  </script></body>
 </html>

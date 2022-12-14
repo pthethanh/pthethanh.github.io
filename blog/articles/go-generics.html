@@ -1,8 +1,6 @@
 <!doctype html>
-<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
-<head>
-  
-  <base href="/">
+<html lang="en" domain="https://pthethanh.github.io" v-scope="app">
+<head><base href="/">
   <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -17,41 +15,32 @@
   <meta property="og:description" content="Some of my very first feelings about Go generics.">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Go Generics</title>
-  
-    <link rel="canonical" href="/blog/articles/go-generics">
-  
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>Go Generics</title><link rel="canonical" href="/blog/articles/go-generics"><meta name="referrer" content="no-referrer-when-downgrade">
   <link rel="preconnect" href="/" crossorigin>
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
-  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style">
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
-  </noscript>
-
-  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
   <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script async defer src="/static/js/index.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-</head>
-<body class="min-h-screen body" id="app">
-  
-<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
   <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
     <a href="/" class="font-semibold">PTHETHANH</a>
     <div class="flex space-x-8">
-      <a href="/" class="item">Blog</a>
-      
-      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
-      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
-      
-    </div>
+      <a href="/" class="item">Blog</a><a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a></div>
   </nav>
   <nav class="md:hidden w-full">
     <div class="flex h-14 justify-between items-center px-2">
@@ -65,157 +54,24 @@
       <div></div>
     </div>
     <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
-      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
-      
-      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
-      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
-      
-    </div>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a><a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a></div>
   </nav>
-</header>
-
-  <div class="w-full pb-14" @click="closeTopMenu">
-    
-  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-20">
     <article class="w-full pt-10 md:pt-14 pb-20">
       <div class="w-full mb-10">
         <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">Go Generics</h1>
-        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="font-medium text-gray-600 mb-2">byThanh Pham</div>
         <div class="flex justify-between">
-          <div class="text-sm lg:text-base font-medium text-gray-600">Thu 02 Jun 2022 <span> / 2 seconds read</span></div>
-          <div class="flex space-x-2">
-            
-          </div>
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thu 02 Jun 2022<span> /2 secondsread</span></div>
+          <div class="flex space-x-2"></div>
         </div>
       </div>
       <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
-        <div>
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            
-                <picture class="object-center object-cover w-full">
+        <div><picture class="object-center object-cover w-full">
                     <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1654158994/pthethanh/go-generics/generictypes-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1654158994/pthethanh/go-generics/generictypes-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1654158995/pthethanh/go-generics/generictypes-w320.webp 320w,https://res.cloudinary.com/pthethanh/image/upload/v1654158995/pthethanh/go-generics/generictypes-w160.webp 160w" type="image/webp">
                     <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1654158993/pthethanh/go-generics/generictypes-worg.png" alt="Go Generics/Type Parameters by programmingpercy">
-                </picture>
-            
-            
-                <div class="w-full text-left text-captions font-sans text-xs">Go Generics/Type Parameters by programmingpercy</div>
-            
-        
-        
-        
-    
-        
-            
-                <div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp; functions are supported, but methods are not - which causes a lot of limitations.</div>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>This post is just my very first feelings about the generics feature of Go after some simple experimentation, it's not a full picture of what generics in Go looks like, if you want to see the full picture, check this very long <a href="https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md">spec</a>.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>The Good Things</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Now you don't need to write function like max again and again for different data types:</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>func max[T constraints.Ordered](a T, b T) T {
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Go Generics/Type Parameters by programmingpercy</div><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp; functions are supported, but methods are not - which causes a lot of limitations.</div><p>This post is just my very first feelings about the generics feature of Go after some simple experimentation, it's not a full picture of what generics in Go looks like, if you want to see the full picture, check this very long <a href="https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md">spec</a>.</p><h3>The Good Things</h3><p>Now you don't need to write function like max again and again for different data types:</p><pre><code>func max[T constraints.Ordered](a T, b T) T {
 	if a &gt; b {
 		return a
 	}
@@ -224,40 +80,7 @@
 
 max(1, 2) // 2
 max(4.5, 3.9) // 4.5
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/tK0F9f80aef">Playground</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>And you can write a generics tree which can be only achieved in the past using interface{}</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>type tree[T any] struct {
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/tK0F9f80aef">Playground</a><p>And you can write a generics tree which can be only achieved in the past using interface{}</p><pre><code>type tree[T any] struct {
 	Left  *tree[T]
 	Right *tree[T]
 	Value T
@@ -265,40 +88,7 @@ max(4.5, 3.9) // 4.5
 
 t := tree[int]{}
 t1 := tree[string]{}
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/0M5bDzPIWMp">Playground</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Typed parameters can be named or unnamed</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>// Index returns the index of e in s, or -1 if not found.
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/0M5bDzPIWMp">Playground</a><p>Typed parameters can be named or unnamed</p><pre><code>// Index returns the index of e in s, or -1 if not found.
 func Index[T interface{ Equal(T) bool }](s []T, e T) int {
 	for i, v := range s {
 		if e.Equal(v) {
@@ -321,40 +111,7 @@ func Index1[T Equaler[T]](s []T, e T) int {
 type Equaler[T any] interface {
 	Equal(T) bool
 }
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/NzoNjfZL6js">Playground</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>We can also union multiple types together</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>type numbers interface {
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/NzoNjfZL6js">Playground</a><p>We can also union multiple types together</p><pre><code>type numbers interface {
 	int | int8 | int32 | int64 | float32 | float64
 }
 
@@ -367,40 +124,7 @@ func min[T numbers](a, b T) T {
 
 min(2,3) // 2
 min(2.4, 0.5) // 0.5
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/lJmPmrvECin">Playground</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>&nbsp;~ operator can be used to "include" all underlying types</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>type degree int
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/lJmPmrvECin">Playground</a><p>&nbsp;~ operator can be used to "include" all underlying types</p><pre><code>type degree int
 
 type numbers interface {
 	~int | ~int8 | ~int32 | ~int64 | ~float32 | ~float64
@@ -415,40 +139,7 @@ func min[T numbers](a, b T) T {
 
 min(degree(2), degree(3)) // 2
 min(2.4, 0.5) // 0.5
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/hFn6dXMqNUg">Playground</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>comparable interface can be used for writing comparable functions:</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>func equal[T comparable](a, b T) bool {
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/hFn6dXMqNUg">Playground</a><p>comparable interface can be used for writing comparable functions:</p><pre><code>func equal[T comparable](a, b T) bool {
 	return a == b
 }
 
@@ -456,98 +147,7 @@ equal(degree(2), degree(3)) // false
 equal(degree(2), degree(2)) // true
 equal(2.4, 0.5) // false
 equal(2.3, 2.3) // true
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/CvT6p2CVbgp">Playground</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>The Limitations</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p><b>Methods cannot be generics</b></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>What does it mean when methods cannot be generics? It means you will not be able to write a map or reduce API like Java. The main reason for not supporting this feature is because of typed parameters only known by the compiler, the runtime has no ideas about type parameters and this introduces some complexity for the instantiation during run time . </p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>You can see the full explanation from the Go team&nbsp;<a href="https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#No-parameterized-methods">here</a>, it's pretty much well explained. But I personally don't really agree with them when they say "one of the main roles of methods is to permit types to implement interfaces" and used this to argue about not including generics on methods. To me, methods are more important than just to "implement" an interface.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>So any alternative way for writing map/reduce like API? Yes, use functions instead.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/CvT6p2CVbgp">Playground</a><h3>The Limitations</h3><p><b>Methods cannot be generics</b></p><p>What does it mean when methods cannot be generics? It means you will not be able to write a map or reduce API like Java. The main reason for not supporting this feature is because of typed parameters only known by the compiler, the runtime has no ideas about type parameters and this introduces some complexity for the instantiation during run time . </p><p>You can see the full explanation from the Go team&nbsp;<a href="https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#No-parameterized-methods">here</a>, it's pretty much well explained. But I personally don't really agree with them when they say "one of the main roles of methods is to permit types to implement interfaces" and used this to argue about not including generics on methods. To me, methods are more important than just to "implement" an interface.</p><p>So any alternative way for writing map/reduce like API? Yes, use functions instead.</p><pre><code>
 // Map turns a []T1 to a []T2 using a mapping function.
 // This function has two type parameters, T1 and T2.
 // This works with slices of any type.
@@ -567,162 +167,16 @@ func Reduce[T1, T2 any](s []T1, initializer T2, f func(T2, T1) T2) T2 {
 	}
 	return r
 }
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.googlesource.com/proposal/&#43;/HEAD/design/43651-type-parameters.md#map_reduce_filter">More Detail</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p><b>Mixed types cannot be inferred as any</b></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Typed parameters mean all parameters must be the same type. And the inference rule of Go is that it will check the type of the first parameter, others must follow the same. What does it mean? It means if you don't declare the first parameter as <code class="inline-code">any </code>explicitly, it will never be inferred as <code class="inline-code">any</code>.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-            
-                <pre><code>func Print[T any](t ...T) {}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.googlesource.com/proposal/&#43;/HEAD/design/43651-type-parameters.md#map_reduce_filter">More Detail</a><p><b>Mixed types cannot be inferred as any</b></p><p>Typed parameters mean all parameters must be the same type. And the inference rule of Go is that it will check the type of the first parameter, others must follow the same. What does it mean? It means if you don't declare the first parameter as <code class="inline-code">any </code>explicitly, it will never be inferred as <code class="inline-code">any</code>.</p><pre><code>func Print[T any](t ...T) {}
 
 //
 var a any = 1
 Print(a, &#34;2&#34;) // VALID as all parameters will be inferred as &#34;any&#34;.
 Print[any](1, &#34;2&#34;) // VALID as we provided the type parameter as &#34;any&#34;.
 Print(1, &#34;2&#34;) // INVALID since its expect all parameters as int and &#34;2&#34; is not an int.
-</code></pre>
-                
-                    <a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/X-uugX8IHSJ">Playground</a>
-                
-            
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Although we can provide the type parameter when calling the method, but it is kind of inconvenient.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p><b>[T ~[]any] and [S ~[]T, T any] Are Different</b></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>This is not really a limitation, it is just a mistake people who first started with generics often face. The difference between the two declarations is the first one declares&nbsp;<code class="inline-code">any </code>as a specific type, the latter declares it as a parameter type.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>[T ~[]any] only accepts []any, but [S ~[]T, T any] will accept any kind of slices, such as: []int, []string, []any,...</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p><b>Interfaces with methods can be used as a typed parameters, but cannot be "union"</b></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>Yes, it is. But what's the point of having union interfaces? I don't really know the usage of this case.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-</div>
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/X-uugX8IHSJ">Playground</a><p>Although we can provide the type parameter when calling the method, but it is kind of inconvenient.</p><p><b>[T ~[]any] and [S ~[]T, T any] Are Different</b></p><p>This is not really a limitation, it is just a mistake people who first started with generics often face. The difference between the two declarations is the first one declares&nbsp;<code class="inline-code">any </code>as a specific type, the latter declares it as a parameter type.</p><p>[T ~[]any] only accepts []any, but [S ~[]T, T any] will accept any kind of slices, such as: []int, []string, []any,...</p><p><b>Interfaces with methods can be used as a typed parameters, but cannot be "union"</b></p><p>Yes, it is. But what's the point of having union interfaces? I don't really know the usage of this case.</p></div>
       </div>
-    </article>
-    
-  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    </article><div class="flex justify-between pt-4 pb-10 border-t border-default">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fgo-generics" class="flex flex-col items-center">
       <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -742,10 +196,7 @@ Print(1, &#34;2&#34;) // INVALID since its expect all parameters as int and &#34
       </svg>
       <span>Share</span>
     </a>
-  </div>
-
-    
-  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
     <div class="flex md:flex-col w-full md:w-1/5">
       <div>Next In</div>
       <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
@@ -760,13 +211,7 @@ Print(1, &#34;2&#34;) // INVALID since its expect all parameters as int and &#34
         <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
       </a>
     </div>
-  </div>
-
-  </div>
-
-  </div>
-  
-<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  </div></div></div><footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
   <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
     <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
     <div class="flex space-x-3">
@@ -784,40 +229,30 @@ Print(1, &#34;2&#34;) // INVALID since its expect all parameters as int and &#34
       </a>
     </div>
   </div>
-</footer>
-
-  
-  <template id="loading-paragraph">
+</footer><template id="loading-paragraph">
     <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
-  </template>
-
-  
-  <script type="application/ld+json">
+  </template><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "name": "Go Generics",
-      "headline": "Go Generics",
+      "name":"Go Generics",
+      "headline":"Go Generics",
       "identifier":"go-generics",
-      "keywords":["golang","go 1.18 generics","go 1.18 type parameters","go generics","go type paramethers","thanh pham golang","go 1.18 generics good vs bad"],
+      "keywords":"golang,go 1.18 generics,go 1.18 type parameters,go generics,go type paramethers,thanh pham golang,go 1.18 generics good vs bad",
       "image": [],
-      "author": "Thanh Pham",
+      "author":"Thanh Pham",
       "genre": "",
       "publisher": {
         "@type": "Organization",
-        "name": "pthethanh",
+        "name":"pthethanh",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://pthethanh.github.io//static/images/favicon.ico"
-        }
+          "url":"https://pthethanh.github.io/static/images/favicon.ico"}
       },
-      "url": "/blog/articles/go-generics",
-      "mainEntityOfPage": "https://pthethanh.github.io/",
-      "datePublished": {"seconds":1652428074,"nanos":386000000},
-      "dateModified": {},
-      "description": "Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types \u0026amp; functions are supported, but methods are not - which causes a lot of limitations."
-    }
-  </script>
-
-</body>
+      "url":"/blog/articles/go-generics",
+      "mainEntityOfPage":"https://pthethanh.github.io",
+      "datePublished":{"seconds":1652428074,"nanos":386000000},
+      "dateModified":{},
+      "description":"Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types \u0026amp; functions are supported, but methods are not - which causes a lot of limitations."}
+  </script></body>
 </html>

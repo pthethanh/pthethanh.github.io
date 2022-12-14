@@ -1,8 +1,6 @@
 <!doctype html>
-<html lang="en" domain="https://pthethanh.github.io/" v-scope="app">
-<head>
-  
-  <base href="/">
+<html lang="en" domain="https://pthethanh.github.io" v-scope="app">
+<head><base href="/">
   <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
@@ -17,41 +15,32 @@
   <meta property="og:description" content="A list of good articles for learning Go, learn faster and deeper.">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <title>Go Reading List</title>
-  
-    <link rel="canonical" href="/blog/articles/go-reading-list">
-  
-  <meta name="referrer" content="no-referrer-when-downgrade">
+  <title>Go Reading List</title><link rel="canonical" href="/blog/articles/go-reading-list"><meta name="referrer" content="no-referrer-when-downgrade">
   <link rel="preconnect" href="/" crossorigin>
-  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
-  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
-  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style">
-  
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png?v=v0.3.4">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png?v=v0.3.4">
+  <link href="/static/css/index.css?v=v0.3.4" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
   <noscript>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
-  </noscript>
-
-  <script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
   <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
-  <script async defer src="/static/js/index.js"></script>
+  <script async defer src="/static/js/index.js?v=v0.3.4"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-</head>
-<body class="min-h-screen body" id="app">
-  
-<header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
   <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
     <a href="/" class="font-semibold">PTHETHANH</a>
     <div class="flex space-x-8">
-      <a href="/" class="item">Blog</a>
-      
-      <a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
-      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a>
-      
-    </div>
+      <a href="/" class="item">Blog</a><a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
+      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a></div>
   </nav>
   <nav class="md:hidden w-full">
     <div class="flex h-14 justify-between items-center px-2">
@@ -65,975 +54,26 @@
       <div></div>
     </div>
     <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
-      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a>
-      
-      <a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
-      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a>
-      
-    </div>
+      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a><a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
+      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a></div>
   </nav>
-</header>
-
-  <div class="w-full pb-14" @click="closeTopMenu">
-    
-  <div class="container w-full max-w-xl mx-auto px-2 pb-20">
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-20">
     <article class="w-full pt-10 md:pt-14 pb-20">
       <div class="w-full mb-10">
         <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">Go Reading List</h1>
-        <div class="font-medium text-gray-600 mb-2">by Thanh Pham</div>
+        <div class="font-medium text-gray-600 mb-2">byThanh Pham</div>
         <div class="flex justify-between">
-          <div class="text-sm lg:text-base font-medium text-gray-600">Fri 25 Dec 2020 <span> / 2 seconds read</span></div>
-          <div class="flex space-x-2">
-            
-          </div>
+          <div class="text-sm lg:text-base font-medium text-gray-600">Fri 25 Dec 2020<span> /2 secondsread</span></div>
+          <div class="flex space-x-2"></div>
         </div>
       </div>
       <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
-        <div>
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-            
-                <picture class="object-center object-cover w-full">
+        <div><picture class="object-center object-cover w-full">
                     <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629014396/pthethanh/articles/go-reading-list/reading-w1920_bcgukd.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629014396/pthethanh/articles/go-reading-list/reading-w1280_g0zkkg.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629014396/pthethanh/articles/go-reading-list/reading-w640_uypm4u.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629014395/pthethanh/articles/go-reading-list/reading-w320_w6bwr6.webp 320w" type="image/webp">
                     <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1630913004/pthethanh/articles/go-reading-list/reading_sss4pr.jpg" alt="Unsplash">
-                </picture>
-            
-            
-                <div class="w-full text-left text-captions font-sans text-xs">Unsplash</div>
-            
-        
-        
-        
-    
-        
-        
-        
-            <p>Not knowing what resources to read and how to get started might lead to long and challenged journey on learning a new programming language. This article show you a list of articles you should read when learning Go from basic to advanced.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p>The best way to start is reading the top 4 resources of the Beginner section, do some basic exercises and then continue to read the Intermediate and Advanced sections while working on an intermediate project.</p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h2>Beginner</h2>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://tour.golang.org/welcome/1">The Tour of Go</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://gobyexample.com/">Go by example</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://golang.org/doc/install">Install Go</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://golang.org/doc/code.html">How to write Go code</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://github.com/golovers/effective-go">Effective Go and Go idiomatic</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://golang.org/doc/faq">Go FAQ</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://talks.golang.org/">Go Talks</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://github.com/avelino/awesome-go">Go Awesome</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h2>Intermediate</h2>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Array, Slice</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/go-slices-usage-and-internals">Go slices usage and internals</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/slices">Slices</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Strings</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/strings">Strings</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Functions</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/defer-panic-and-recover">Defer, Panic, and Recover</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/functions-codewalk">First Class Functions in Go</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Errors</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/errors-are-values">Errors are values</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/error-handling-and-go">Error handling in Go</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/go1.13-errors">Error handling in Go 1.13</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Interface</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/gif-decoder-exercise-in-go-interfaces">Gift decoder exercise in Go interface</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/laws-of-reflection/">Law of Reflection</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>HTTP</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://godoc.org/net/http">HTTP package in Go doc</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/http-tracing">HTTP Tracing</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Context</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/context">Context</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/context-and-structs">Contexts and structs</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Testing</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://godoc.org/testing">Testing package</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://godoc.org/net/http/httptest">HTTP Testing</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://godoc.org/testing">Table driven testing</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/subtests">Using Subtests and Sub - benchmarks</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Database</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="http://go-database-sql.org">Go database tutorial</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="http://jmoiron.github.io/sqlx/">SQLX</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Goroutines</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/share-memory-by-communicating">Sharing by communicating</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/concurrency-is-not-parallelism">Concurrency is not parallelism</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/context">Go Concurrency Patterns: Context</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/go-concurrency-patterns-timing-out-and">Go concurrency patterns timing out, moving on</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/pipelines">Go Concurrency Patterns: Pipelines and cancellation</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/race-detector">Introducing the Go Race Detector</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/io2013-talk-concurrency">Advanced Go Concurrency Patterns</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Generics</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://go.dev/doc/tutorial/generics">Generics Tutorial</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://go.dev/blog/intro-generics">Introduction To Generics</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://go.googlesource.com/proposal/+/HEAD/design/43651-type-parameters.md">Generics Proposal</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://go.dev/blog/when-generics">When To Use Generics</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Go Modules</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://blog.golang.org/using-go-modules">Using Go Modules Series</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h3>Advanced</h3>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://go.dev/ref/spec">Go Spec</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://go-proverbs.github.io">Go Proverbs</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/laws-of-reflection">Laws of reflection</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://research.swtch.com/interfaces">Interface</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/profiling-go-programs">Profiling Go programs</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://blog.golang.org/ismmkeynote">Getting to Go: The Journey of Go's Garbage Collector</a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://golang.org/doc/asm">A Quick Guide to Go's Assembler</a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-            
-                <h2>Books</h2>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-            <p><i>Note: to be fair with the authors, please buy the books if you can.</i></p>
-        
-        
-        
-        
-        
-        
-        
-        
-        
-    
-        
-        
-        
-        
-            
-                <ul>
-                    
-                        
-    <li><a href="https://drive.google.com/open?id=1-PNY3PXfwKnaOdFHeOx0JuC8NnCVQmgF" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">The Go Programming Language - Donovan, Alan A. A</span></a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://drive.google.com/open?id=1QhsqRZOsO9zd3aEiq_OE8nKDNEqxVV40" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Go in Practice</span></a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://github.com/astaxie/build-web-application-with-golang" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Build web application with Go</span></a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://drive.google.com/open?id=1lW8EniL8LkLtbCxRIvc_x3ELZCjPcYho" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Go Advanced Programming</span></a>
-    
-    </li>
-
-                    
-                        
-    <li><a href="https://checkmarx.gitbooks.io/go-scp/" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Go programming language secure coding practices guide (FREE)</span></a>
-    
-    </li>
-
-                    
-                </ul>
-            
-        
-        
-        
-        
-        
-        
-        
-        
-    
-</div>
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Unsplash</div><p>Not knowing what resources to read and how to get started might lead to long and challenged journey on learning a new programming language. This article show you a list of articles you should read when learning Go from basic to advanced.</p><p>The best way to start is reading the top 4 resources of the Beginner section, do some basic exercises and then continue to read the Intermediate and Advanced sections while working on an intermediate project.</p><h2>Beginner</h2><ul><li><a href="https://tour.golang.org/welcome/1">The Tour of Go</a></li><li><a href="https://gobyexample.com/">Go by example</a></li><li><a href="https://golang.org/doc/install">Install Go</a></li><li><a href="https://golang.org/doc/code.html">How to write Go code</a></li><li><a href="https://github.com/golovers/effective-go">Effective Go and Go idiomatic</a></li><li><a href="https://golang.org/doc/faq">Go FAQ</a></li><li><a href="https://talks.golang.org/">Go Talks</a></li><li><a href="https://github.com/avelino/awesome-go">Go Awesome</a></li></ul><h2>Intermediate</h2><h3>Array, Slice</h3><ul><li><a href="https://blog.golang.org/go-slices-usage-and-internals">Go slices usage and internals</a></li><li><a href="https://blog.golang.org/slices">Slices</a></li></ul><h3>Strings</h3><ul><li><a href="https://blog.golang.org/strings">Strings</a></li></ul><h3>Functions</h3><ul><li><a href="https://blog.golang.org/defer-panic-and-recover">Defer, Panic, and Recover</a></li><li><a href="https://blog.golang.org/functions-codewalk">First Class Functions in Go</a></li></ul><h3>Errors</h3><ul><li><a href="https://blog.golang.org/errors-are-values">Errors are values</a></li><li><a href="https://blog.golang.org/error-handling-and-go">Error handling in Go</a></li><li><a href="https://blog.golang.org/go1.13-errors">Error handling in Go 1.13</a></li></ul><h3>Interface</h3><ul><li><a href="https://blog.golang.org/gif-decoder-exercise-in-go-interfaces">Gift decoder exercise in Go interface</a></li><li><a href="https://blog.golang.org/laws-of-reflection/">Law of Reflection</a></li></ul><h3>HTTP</h3><ul><li><a href="https://godoc.org/net/http">HTTP package in Go doc</a></li><li><a href="https://blog.golang.org/http-tracing">HTTP Tracing</a></li></ul><h3>Context</h3><ul><li><a href="https://blog.golang.org/context">Context</a></li><li><a href="https://blog.golang.org/context-and-structs">Contexts and structs</a></li></ul><h3>Testing</h3><ul><li><a href="https://godoc.org/testing">Testing package</a></li><li><a href="https://godoc.org/net/http/httptest">HTTP Testing</a></li><li><a href="https://godoc.org/testing">Table driven testing</a></li><li><a href="https://blog.golang.org/subtests">Using Subtests and Sub - benchmarks</a></li></ul><h3>Database</h3><ul><li><a href="http://go-database-sql.org">Go database tutorial</a></li><li><a href="http://jmoiron.github.io/sqlx/">SQLX</a></li></ul><h3>Goroutines</h3><ul><li><a href="https://blog.golang.org/share-memory-by-communicating">Sharing by communicating</a></li><li><a href="https://blog.golang.org/concurrency-is-not-parallelism">Concurrency is not parallelism</a></li><li><a href="https://blog.golang.org/context">Go Concurrency Patterns: Context</a></li><li><a href="https://blog.golang.org/go-concurrency-patterns-timing-out-and">Go concurrency patterns timing out, moving on</a></li><li><a href="https://blog.golang.org/pipelines">Go Concurrency Patterns: Pipelines and cancellation</a></li><li><a href="https://blog.golang.org/race-detector">Introducing the Go Race Detector</a></li><li><a href="https://blog.golang.org/io2013-talk-concurrency">Advanced Go Concurrency Patterns</a></li></ul><h3>Generics</h3><ul><li><a href="https://go.dev/doc/tutorial/generics">Generics Tutorial</a></li><li><a href="https://go.dev/blog/intro-generics">Introduction To Generics</a></li><li><a href="https://go.googlesource.com/proposal/+/HEAD/design/43651-type-parameters.md">Generics Proposal</a></li><li><a href="https://go.dev/blog/when-generics">When To Use Generics</a></li></ul><h3>Go Modules</h3><ul><li><a href="https://blog.golang.org/using-go-modules">Using Go Modules Series</a></li></ul><h3>Advanced</h3><ul><li><a href="https://go.dev/ref/spec">Go Spec</a></li><li><a href="https://go-proverbs.github.io">Go Proverbs</a></li><li><a href="https://blog.golang.org/laws-of-reflection">Laws of reflection</a></li><li><a href="https://research.swtch.com/interfaces">Interface</a></li><li><a href="https://blog.golang.org/profiling-go-programs">Profiling Go programs</a></li><li><a href="https://blog.golang.org/ismmkeynote">Getting to Go: The Journey of Go's Garbage Collector</a></li><li><a href="https://golang.org/doc/asm">A Quick Guide to Go's Assembler</a></li></ul><h2>Books</h2><p><i>Note: to be fair with the authors, please buy the books if you can.</i></p><ul><li><a href="https://drive.google.com/open?id=1-PNY3PXfwKnaOdFHeOx0JuC8NnCVQmgF" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">The Go Programming Language - Donovan, Alan A. A</span></a></li><li><a href="https://drive.google.com/open?id=1QhsqRZOsO9zd3aEiq_OE8nKDNEqxVV40" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Go in Practice</span></a></li><li><a href="https://github.com/astaxie/build-web-application-with-golang" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Build web application with Go</span></a></li><li><a href="https://drive.google.com/open?id=1lW8EniL8LkLtbCxRIvc_x3ELZCjPcYho" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Go Advanced Programming</span></a></li><li><a href="https://checkmarx.gitbooks.io/go-scp/" target="_blank"><span class="el-link--inner" style="box-sizing: inherit;">Go programming language secure coding practices guide (FREE)</span></a></li></ul></div>
       </div>
-    </article>
-    
-  <div class="flex justify-between pt-4 pb-10 border-t border-default">
+    </article><div class="flex justify-between pt-4 pb-10 border-t border-default">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fgo-reading-list" class="flex flex-col items-center">
       <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -1053,10 +93,7 @@
       </svg>
       <span>Share</span>
     </a>
-  </div>
-
-    
-  <div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
+  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
     <div class="flex md:flex-col w-full md:w-1/5">
       <div>Next In</div>
       <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
@@ -1071,13 +108,7 @@
         <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
       </a>
     </div>
-  </div>
-
-  </div>
-
-  </div>
-  
-<footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
+  </div></div></div><footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
   <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
     <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
     <div class="flex space-x-3">
@@ -1095,40 +126,30 @@
       </a>
     </div>
   </div>
-</footer>
-
-  
-  <template id="loading-paragraph">
+</footer><template id="loading-paragraph">
     <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
-  </template>
-
-  
-  <script type="application/ld+json">
+  </template><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "name": "Go Reading List",
-      "headline": "Go Reading List",
+      "name":"Go Reading List",
+      "headline":"Go Reading List",
       "identifier":"go-reading-list",
-      "keywords":["reading list","golang","interview"],
+      "keywords":"reading list,golang,interview",
       "image": [],
-      "author": "Thanh Pham",
+      "author":"Thanh Pham",
       "genre": "",
       "publisher": {
         "@type": "Organization",
-        "name": "pthethanh",
+        "name":"pthethanh",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://pthethanh.github.io//static/images/favicon.ico"
-        }
+          "url":"https://pthethanh.github.io/static/images/favicon.ico"}
       },
-      "url": "/blog/articles/go-reading-list",
-      "mainEntityOfPage": "https://pthethanh.github.io/",
-      "datePublished": {"seconds":1608884834,"nanos":460000000},
-      "dateModified": {"seconds":1621930555,"nanos":31000000},
-      "description": "A list of good articles for learning Go, learn faster and deeper."
-    }
-  </script>
-
-</body>
+      "url":"/blog/articles/go-reading-list",
+      "mainEntityOfPage":"https://pthethanh.github.io",
+      "datePublished":{"seconds":1608884834,"nanos":460000000},
+      "dateModified":{"seconds":1621930555,"nanos":31000000},
+      "description":"A list of good articles for learning Go, learn faster and deeper."}
+  </script></body>
 </html>
