@@ -35,35 +35,25 @@
 
       gtag('config', 'G-9X9G2YCR2X');
     </script></head>
-<body class="min-h-screen body" id="app"><header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
-  <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
-    <a href="/" class="font-semibold">The Fortune Days</a>
-    <div class="flex space-x-8">
-      <a href="/" class="item">Blog</a><a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
-      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a></div>
-  </nav>
-  <nav class="md:hidden w-full">
-    <div class="flex h-14 justify-between items-center px-2">
-      <svg v-show="!openTopMenu" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg v-show="openTopMenu" xmlns="http://www.w3.org/2000/svg" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" v-cloak>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-      <a href="/" class="font-bold">The Fortune Days</a>
-      <div></div>
+<body class="min-h-screen body" id="app"><header id="header">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+    <div>
+      <a href="/" class="font-serif">THE FORTUNE DAYS</a>
     </div>
-    <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
-      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a><a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
-      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a></div>
+    <div>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </a>
+    </div>
   </nav>
-</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-20">
-    <article class="w-full pt-10 md:pt-14 pb-20">
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
       <div class="w-full mb-10">
-        <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">100 Stars On GitHub</h1>
-        <div class="font-medium text-gray-600 mb-2">byThanh Pham</div>
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">100 Stars On GitHub</h1>
         <div class="flex justify-between">
-          <div class="text-sm lg:text-base font-medium text-gray-600">Fri 15 Jan 2021<span> /2 secondsread</span></div>
+          <div class="text-sm lg:text-base font-medium text-gray-600">Fri 15 Jan 2021</div>
           <div class="flex space-x-2"></div>
         </div>
       </div>
@@ -73,59 +63,16 @@
                     <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://github.githubassets.com/images/modules/explore/social.jpg" alt="Github">
                 </picture><div class="w-full text-left text-captions font-sans text-xs">Github</div><h2>Shape Your Goals</h2><p>When I was started more than 1 year ago, I didn't know how to get started. There are a lot of questions came to my head at the time. What should I build? What is the standard of a repository on GitHub? How do people know about my works? How other professional developers are doing? Even a very basic question that I need to answer to myself at the time is "Is it worthy to spend time on GitHub? Spend time for building something for free?". There was also a feeling that no one will read my code because I'm not an expert on this....&nbsp;</p><p>To be honest, it's tired to answer those questions even to yourselves. But those are very important questions, since it will help you to know your purpose and keep you keen to your goal for a long time.</p><p>Fortunately, I finally determined 2 of my goals:</p><ul><li>Build to learn: continuous improvement, be hungry to knowledges.</li><li>Share to learn: feedback is great way to know where you are and best channel ever to learn.</li></ul><p>But there is a another bigger goal that I says to no one until today: one day, one of my opensource project will be used in a successful project.&nbsp;I tricked myself to this beautiful dream to make myself keep going. Most people give up at this stage, hence please be strong and your effort will be worth it.</p><p>I started my journey by posting a document about <a href="https://github.com/golovers/effective-go">effective-go</a> that I have previously collected from different sources. It's a list of idiomatic and best practices that I applied to my projects. My purpose of posting it is just for easier to share with my team, but turn out it is where I get most of the stars.</p><p>On the journey, I have a lot of difficulties and also many lessons for me as well. The first lesson is "It's just a chance to learn and discover ideas"</p><h2>Just A Chance To Learn And Discover Ideas</h2><p>You're not always working on the project you love, not always work on the technologies you love. This happens all the time when you work on a outsourcing companies where you are staffed to many projects during a very short time and the technologies depend on your customers' decisions. Hence working on a side project is great way to explore new ideas, new technologies. That's a great way to keep up to date with the technology world where new technologies emerged every seconds.</p><h2>A Tool To Motivate Yourselves</h2><p>You might not admit this but working on customer projects sucks sometime. The reasons can be the technologies are too old or you are not interested in the technologies used in the project, worked too long on the project and want to find something new.</p><p>Start a side project is a good way to motivate yourselves. Getting some new friends in the field, getting some new stars, learn some new good ways doing things will be a big motivation and can save your career. You might also discover some new ways to do things better and can contribute back to the projects you are working. By contribute more, your influences in the project will be raised and that's a way to leverage your career into the next level.</p><h2>Connect With More People On The Same Field</h2><p>Working on a same team, same company too long? Meet old friends every day? Some time you feel just f**king old and hence starting a new field, on new platform and making friend with someone out side the company will be a salvation for you. You might hear something new from your new friends about the way they work, about the new technologies they use and that would be awesome.</p><h2>How To Get There?</h2><ol><li>Start with something you love: if not you will give up very shortly.</li><li>Do it yourselves and alone: it's hard to find a co-founder and hard to keep up the relationship for more than 6 months for a side-opensource project. Better start with yourselves first.</li><li>Be persistence: good things need time to build, try to be persistence with what you build and commit to build it until you complete it.</li><li>Stars is a tool to motivate yourself: it's not something you will impress your employer.</li><li>Well document: update README, topic, project descriptions,... accordingly. Without a good README, no ones care your project.</li><li>A live demo is everything: people is lazy, they love seeing something works.</li><li>Share it and ask for feedback from your friends or from other popular channels like Facebook, Reddit,...</li><li>Build projects around your lib/framework</li></ol><h2>Dangerous Paths To Avoid</h2><ol><li>Stars is actually not the goal: Learning and having fun is.</li><li>Getting stars to impress employers: please no. They don't give a f**k about GitHub stars. Showing your projects to them might hurt you back.</li><li>Afraid to share: nothing wrong to share your project with others. See "<a href="http://www.paulgraham.com/early.html">early work</a>" from Paul Graham if you think your projects are lame.</li><li>Some people advertise their project just to get more stars: please don't do it, advertise for feedback instead.</li><li>Never ask for stars, ask for feedback instead.</li></ol></div>
       </div>
-    </article><div class="flex justify-between pt-4 pb-10 border-t border-default">
-    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2f100-stars" class="flex flex-col items-center">
-      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-      </svg>
-      <span>Post</span>
-    </a>
-    <a aria-label="Tweet It" href="https://twitter.com/share?url=%2fblog%2farticles%2f100-stars&text=The%20journey%20how%20I%20got%20my%20first%20100%20stars%20on%20GitHub." class="flex flex-col items-center">
-      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-      </svg>
-      <span>Tweet</span>
-    </a>
-    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fblog%2farticles%2f100-stars" class="flex flex-col items-center">
-      <svg class="icon" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
-        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-        <circle cx="4" cy="4" r="2" stroke="none"></circle>
-      </svg>
-      <span>Share</span>
-    </a>
-  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
-    <div class="flex md:flex-col w-full md:w-1/5">
-      <div>Next In</div>
-      <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
-    </div>
-    <div class="hidden md:flex border-l border-default px-1"></div>
-    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
-      <div class="w-full md:w-1/2 mt-2 md:mt-0">
-        <a href="/blog/articles/effective-options" class="font-bold capitalize">Effective Options</a>
-        <p class="mt-2 line-clamp-3 md:line-clamp-4 font-serif">How to organize API options effectively in Go.</p>
-      </div>
-      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/blog/articles/effective-options">
-        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
-      </a>
-    </div>
-  </div></div></div><footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
-  <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
-    <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
-    <div class="flex space-x-3">
-      <a href="http://github.com/pthethanh" rel="noopener"  aria-label="Thanh Pham's github" target="_blank">
-        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" xml:space="preserve">
-          <path d="M36,71c-15.3,0-22.2-8.2-10.5-2.4c1.7,0.3,2.4-0.8,2.4-1.7c0-0.8,0-3,0-5.9c-9.6,2.1-11.7-4.6-11.7-4.6 c-1.6-4-3.9-5.1-3.9-5.1c-3.1-2.2,0.2-2.1,0.2-2.1c3.5,0.2,5.3,3.6,5.3,3.6C21,58.1,26,56.5,28,55.6c0.3-2.2,1.2-3.8,2.2-4.6 c-7.7-0.9-15.8-3.9-15.8-17.1c0-3.8,1.4-6.9,3.6-9.3c-0.4-0.9-1.5-4.4,0.3-9.2c0,0,2.9-0.9,9.5,3.6c2.8-0.8,5.7-1.2,8.7-1.2 c2.9,0,5.9,0.4,8.7,1.2c6.6-4.5,9.5-3.6,9.5-3.6c1.9,4.8,0.7,8.3,0.3,9.2c2.2,2.4,3.6,5.5,3.6,9.3c0,13.3-8.1,16.3-15.8,17.1 c1.2,1.1,2.4,3.2,2.4,6.4c0,4.6,0,8.4,0,9.5c0,0.9,0.6,2,2.4,1.7C55.8,64.1,51.3,71,36,71" />
-          <g><path d="M36,0C16.2,0,0,16.2,0,36s16.2,36,36,36s36-16.2,36-36C72,16.2,55.8,0,36,0z M36,69.5 c-18.5,0-33.5-15-33.5-33.5S17.5,2.5,36,2.5s33.5,15,33.5,33.5S54.5,69.5,36,69.5z" /></g>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/in/pthethanh"  aria-label="Thanh Pham's LinkedIn" rel="noopener" target="_blank">
-        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
-          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/blog/articles/effective-options" class="font-bold capitalize">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
         </svg>
       </a>
     </div>
-  </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light">
 </footer><template id="loading-paragraph">
     <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
   </template><script type="application/ld+json">

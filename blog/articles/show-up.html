@@ -35,35 +35,25 @@
 
       gtag('config', 'G-9X9G2YCR2X');
     </script></head>
-<body class="min-h-screen body" id="app"><header id="header" class="flex w-full items-center justify-center bg-header-bg text-header sticky z-50">
-  <nav class="hidden md:flex w-full h-14 max-w-screen-md justify-between items-center px-2">
-    <a href="/" class="font-semibold">The Fortune Days</a>
-    <div class="flex space-x-8">
-      <a href="/" class="item">Blog</a><a href="/projects" class="hover:text-header-hover cursor-pointer">Projects</a>
-      <a href="/about" class="hover:text-header-hover cursor-pointer">About</a></div>
-  </nav>
-  <nav class="md:hidden w-full">
-    <div class="flex h-14 justify-between items-center px-2">
-      <svg v-show="!openTopMenu" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-      </svg>
-      <svg v-show="openTopMenu" xmlns="http://www.w3.org/2000/svg" @click="toggleTopMenu" class="h-5 w-5 cursor-pointer" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" v-cloak>
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-      <a href="/" class="font-bold">The Fortune Days</a>
-      <div></div>
+<body class="min-h-screen body" id="app"><header id="header">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+    <div>
+      <a href="/" class="font-serif">THE FORTUNE DAYS</a>
     </div>
-    <div v-show="openTopMenu" class="md:hidden flex flex-col w-full shadow-md" v-cloak>
-      <a @click="closeTopMenu" href="/" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Blog</a><a @click="closeTopMenu" href="/projects" class="pl-4 py-2 w-full border-b border-default cursor-pointer">Projects</a>
-      <a @click="closeTopMenu" href="/about" class="pl-4 py-2 w-full border-b border-default cursor-pointer">About</a></div>
+    <div>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </a>
+    </div>
   </nav>
-</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-20">
-    <article class="w-full pt-10 md:pt-14 pb-20">
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
       <div class="w-full mb-10">
-        <h1 class="heading font-bold mb-2 text-3xl lg:text-4xl">Show Up</h1>
-        <div class="font-medium text-gray-600 mb-2">byThanh Pham</div>
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Show Up</h1>
         <div class="flex justify-between">
-          <div class="text-sm lg:text-base font-medium text-gray-600">Thu 05 May 2022<span> /2 secondsread</span></div>
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thu 05 May 2022</div>
           <div class="flex space-x-2"></div>
         </div>
       </div>
@@ -73,59 +63,16 @@
                     <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1651741709/pthethanh/show-up/Planting-trees-960x640-worg.jpg" alt="Planting trees">
                 </picture><div class="w-full text-left text-captions font-sans text-xs">Planting trees</div><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>Sometimes, actions that look like showing up[1] are just protective actions from someone who loves something so much. One just does what he can to protect what he believes in... and the manager's duty is not to criticize but to help them to grow.</div><p>Back in 2010 when I first started the developer job at HCM city, I was assigned to a Java project and I loved it so much. I loved the way it was designed. I loved each line of its code and became aggressive with anyone who tries to put bad code into the project. That was a big project, there were many good developers and also some not so good. Some of them put bad code into the areas that I was responsible for.</p><p>After so many times, I became angry and as a result, I fired an email to the entire team to complain. There were people who shared the same feelings with me but also there were some people who disagreed, especially the senior ones. The disagreements were not about what I wrote, but about their ego. My manager at the time asked me to write an email to apologize to the entire team (especially the seniors ones) because he thought I tried to show up[1]. At the time, a junior developer speaking something big like that was just simply unacceptable!</p><p>I felt uncomfortable with that kind of request, but finally wrote the email as he wanted. But from that day, my view about him and the team changed. I think I should be somehow aware of my aggressiveness and should find another way to say so that people feel easier to accept. But I also expect my manager to at least know what are the differences between showing up and the protective actions when someone loves something so much.</p><p>Later, the project got the same complaint from the customer and it’s well accepted, everyone rushed into fixing the issues, no one had ever complained simply because that’s from the customer.</p><p>I became a manager some years later and there were a couple of valued lessons I learned from that day and still use them till today.</p><p>The first thing is the way we say something is even more important than what we say.</p><p>Secondly, I believe understanding the motivations behind the actions, will help a manager very much in defining appropriate actions to help his people to grow. And the only way to achieve this is to "empathize" with them.</p><p>Thirdly, I believe there’s nothing wrong with showing up. And as a manager, our duty is not to criticize but to encourage, provide help and create an environment for them to grow.</p><hr class="delimiter" /><p>[1] show up: this is the word that many people in my company use for talking about people who try to show their strength with others to get "attention" from their upper managers for promotion or other purposes.</p></div>
       </div>
-    </article><div class="flex justify-between pt-4 pb-10 border-t border-default">
-    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=%2fblog%2farticles%2fshow-up" class="flex flex-col items-center">
-      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-      </svg>
-      <span>Post</span>
-    </a>
-    <a aria-label="Tweet It" href="https://twitter.com/share?url=%2fblog%2farticles%2fshow-up&text=The%20manager%27s%20duty%20is%20not%20to%20criticize%20but%20to%20help%20people%20to%20grow" class="flex flex-col items-center">
-      <svg class="icon" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-      </svg>
-      <span>Tweet</span>
-    </a>
-    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=%2fblog%2farticles%2fshow-up" class="flex flex-col items-center">
-      <svg class="icon" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
-        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-        <circle cx="4" cy="4" r="2" stroke="none"></circle>
-      </svg>
-      <span>Share</span>
-    </a>
-  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default">
-    <div class="flex md:flex-col w-full md:w-1/5">
-      <div>Next In</div>
-      <a aria-label="More on this tag" href="/blog?tags=golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
-    </div>
-    <div class="hidden md:flex border-l border-default px-1"></div>
-    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
-      <div class="w-full md:w-1/2 mt-2 md:mt-0">
-        <a href="/blog/articles/effective-options" class="font-bold capitalize">Effective Options</a>
-        <p class="mt-2 line-clamp-3 md:line-clamp-4 font-serif">How to organize API options effectively in Go.</p>
-      </div>
-      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/blog/articles/effective-options">
-        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
-      </a>
-    </div>
-  </div></div></div><footer class="flex w-full py-10 justify-center font-light bg-footer-bg text-footer">
-  <div class="flex flex-col space-y-2 md:flex-row md:space-y-0 w-full max-w-screen-md px-2 justify-between items-center">
-    <div class="text-center">Copyright © 2020 Thanh Pham. All rights reserved.</div>
-    <div class="flex space-x-3">
-      <a href="http://github.com/pthethanh" rel="noopener"  aria-label="Thanh Pham's github" target="_blank">
-        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 72 72" xml:space="preserve">
-          <path d="M36,71c-15.3,0-22.2-8.2-10.5-2.4c1.7,0.3,2.4-0.8,2.4-1.7c0-0.8,0-3,0-5.9c-9.6,2.1-11.7-4.6-11.7-4.6 c-1.6-4-3.9-5.1-3.9-5.1c-3.1-2.2,0.2-2.1,0.2-2.1c3.5,0.2,5.3,3.6,5.3,3.6C21,58.1,26,56.5,28,55.6c0.3-2.2,1.2-3.8,2.2-4.6 c-7.7-0.9-15.8-3.9-15.8-17.1c0-3.8,1.4-6.9,3.6-9.3c-0.4-0.9-1.5-4.4,0.3-9.2c0,0,2.9-0.9,9.5,3.6c2.8-0.8,5.7-1.2,8.7-1.2 c2.9,0,5.9,0.4,8.7,1.2c6.6-4.5,9.5-3.6,9.5-3.6c1.9,4.8,0.7,8.3,0.3,9.2c2.2,2.4,3.6,5.5,3.6,9.3c0,13.3-8.1,16.3-15.8,17.1 c1.2,1.1,2.4,3.2,2.4,6.4c0,4.6,0,8.4,0,9.5c0,0.9,0.6,2,2.4,1.7C55.8,64.1,51.3,71,36,71" />
-          <g><path d="M36,0C16.2,0,0,16.2,0,36s16.2,36,36,36s36-16.2,36-36C72,16.2,55.8,0,36,0z M36,69.5 c-18.5,0-33.5-15-33.5-33.5S17.5,2.5,36,2.5s33.5,15,33.5,33.5S54.5,69.5,36,69.5z" /></g>
-        </svg>
-      </a>
-      <a href="https://www.linkedin.com/in/pthethanh"  aria-label="Thanh Pham's LinkedIn" rel="noopener" target="_blank">
-        <svg class="h-5 w-5 text-footer hover:text-footer-hover cursor-pointer" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
-          <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-          <circle cx="4" cy="4" r="2" stroke="none"></circle>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/blog/articles/effective-options" class="font-bold capitalize">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
         </svg>
       </a>
     </div>
-  </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light">
 </footer><template id="loading-paragraph">
     <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
   </template><script type="application/ld+json">
