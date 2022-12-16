@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="Go,measure time in go,measure execution time golang,golang measure time ,golang measure execution time,record time,time recorder in Go,record time in Go,execution time">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="Measuring time is a very important step to optimize performance or identify a performance issue. This article shows you how easy implementing it in Go.">
+  <meta property="og:url" content="/articles/measure-execution-time">
+  <meta property="og:title" content="Measure Execution Time">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="Measuring time is a very important step to optimize performance or identify a performance issue. This article shows you how easy implementing it in Go.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Measure Execution Time</title><link rel="canonical" href="/articles/measure-execution-time"><meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
+  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+    <div>
+      <a href="/" class="font-serif font-semibold">THE FORTUNE DAYS</a>
+    </div>
+    <div>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
+      <div class="w-full mb-10">
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Measure Execution Time</h1>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Mon 19 Apr 2021</div>
+          <div class="flex space-x-2"></div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div><picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629013999/pthethanh/articles/measure-execution-time/time-w1920_c8q1pm.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629013999/pthethanh/articles/measure-execution-time/time-w1280_uzowh9.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629013999/pthethanh/articles/measure-execution-time/time-w640_vko4j8.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/time-w320_ug8tgo.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1630912836/pthethanh/articles/measure-execution-time/time-min_djsodg.jpg" alt="Malvestida Magazine/Unsplash">
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Malvestida Magazine/Unsplash</div><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>Measuring time is a very important step to optimize performance or identify a performance issue. This article shows you how easy implementing it in Go.</div><p>In Go, the simplest way to measure execution time is using the combination of <code class="inline-code">time.Now()</code> and <code class="inline-code">time.Since()</code>. <code class="inline-code">time.Now() </code>records the current time and <code class="inline-code">time.Since()</code> calculates the total time since a specific time.</p><p>For measure execution time of a block of code, we just need to do:</p><pre><code>t := time.Now()
+// Do something
+d := time.Since(t)</code></pre><p>If we want to measure the execution time of the whole function, the simplest way is to wrap it with a <code class="inline-code">defer</code>:</p><pre><code>func doSomething() {
+	t := time.Now()
+	defer func() {
+		d := time.Since(t)
+		fmt.Printf(&#34;Execution time: %v\n&#34;, d)
+	}()
+	// Do something
+}</code></pre><p>The above block of code is even better if we break the time measurement logic into a utilities function so that it can be reused across our code base:</p><pre><code>func measureTime(context string, t time.Time) {
+	d := time.Since(t)
+	fmt.Printf(&#34;Execution time of %s: %v\n&#34;, context, d)
+}
+
+func doSomething() {
+	defer measureTime(&#34;doSomething&#34;,time.Now())
+	// Do something
+}</code></pre><h2>Multiple Steps</h2><p>In reality, our function or block of code may have multiple steps inside and we may want to measure their performance. The code can be run consecutively or concurrently. But let consider the below function which has multiple execution steps run consecutively first:</p><pre><code>func doSomething() {
+	doStep1()
+	doStep2()
+	doStep3()
+}</code></pre><p>The execution flow would looks like this:</p><picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629013999/pthethanh/articles/measure-execution-time/time-function-w1920_acwt5a.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/time-function-w1280_la6vys.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/time-function-w640_vhri9z.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/time-function-w320_fmk1do.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/time-function-w320_fmk1do.webp" alt="Execution Flow/Thanh Pham">
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Execution Flow/Thanh Pham</div><p>Apply the same principle as our very first example, the time measurement&nbsp;code would look like this:</p><pre><code>func doSomething() {
+	t := time.Now()
+	defer measureTime(&#34;doSomething&#34;, t)
+
+	doStep1()
+	measureTime(&#34;doStep1&#34;, t)
+
+	t = time.Now()
+	doStep2()
+	measureTime(&#34;doStep2&#34;, t)
+
+	t = time.Now()
+	doStep3()
+	measureTime(&#34;doStep3&#34;, t)
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/xBVzw4z1C2b">Code</a><h2>Concurrency</h2><p>What if our code uses goroutine? Consider the below function where <code class="inline-code">doStep2</code> runs inside a goroutine:</p><pre><code>func doSomething() {
+	doStep1()
+	go func() {
+		doStep2()
+	}()
+	doStep3()
+}
+</code></pre><p>We can see that after <code class="inline-code">doStep1</code>&nbsp;,&nbsp;<code class="inline-code">doStep2 </code>and <code class="inline-code">doStep3</code> will run concurrently. The execution flow would look like:</p><picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/time-concurrent-w1920_f3reiz.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/time-concurrent-w1280_hveinn.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629013997/pthethanh/articles/measure-execution-time/time-concurrent-w640_t3zux9.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629013997/pthethanh/articles/measure-execution-time/time-concurrent-w320_jefdmi.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1629013997/pthethanh/articles/measure-execution-time/time-concurrent-w320_jefdmi.webp" alt="Concurrent Execution Flow/Thanh Pham">
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Concurrent Execution Flow/Thanh Pham</div><p>Base on the execution flow, <code class="inline-code">doStep2 </code>and <code class="inline-code">doStep3 </code>start at the same time (almost). Hence we can do this:</p><pre><code>func doSomething() {
+	t := time.Now()
+	defer measureTime(&#34;doSomething&#34;, t)
+
+	doStep1()
+	measureTime(&#34;doStep1&#34;, t)
+
+	t = time.Now()
+	go func() {
+		doStep2()
+		measureTime(&#34;doStep2&#34;, t)
+	}()
+
+	doStep3()
+	measureTime(&#34;doStep3&#34;, t)
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/y-cJRQR2fEj">Code</a><h2>Production Recommendation</h2><p>The <code class="inline-code">measureTime</code> utilities function is cool but still has some inconvenient when using in production. We might not only want to log the information but also want to save it into database or send it to some monitoring services. Hence we need a better helper utilities to serve those purposes. Luckily, building a helper in this case is&nbsp;very easy.</p><p>Let call a function or a block of code as an <code class="inline-code">execution context</code>, each execution context may have one or multiple steps - which we will call as a&nbsp;<code class="inline-code">span</code><b>. </b>The execution context would look like this<b>:</b></p><picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629013998/pthethanh/articles/measure-execution-time/execution-context-w1920_yn64qc.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629013997/pthethanh/articles/measure-execution-time/execution-context-w1280_hrr4qn.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629013997/pthethanh/articles/measure-execution-time/execution-context-w640_gmonok.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629013997/pthethanh/articles/measure-execution-time/execution-context-w320_wmzcyr.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1629013997/pthethanh/articles/measure-execution-time/execution-context-w320_wmzcyr.webp" alt="Execution Context/Thanh Pham">
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Execution Context/Thanh Pham</div><p>Base on the above execution flow, we can model information of a execution context as below:</p><pre><code>type Record struct {
+    // Context is name of the context.
+	Context  string                   `json:&#34;context&#34;`
+    // Duration hold execution time of the whole context.
+	Duration time.Duration            `json:&#34;duration&#34;`
+    // Spans hold the execution time of each span in the context.
+	Spans    map[string]time.Duration `json:&#34;spans&#34;`
+    // Meta hold metadata of the context for tracing purpose.
+	Meta     map[string]interface{}   `json:&#34;meta&#34;`
+}</code></pre><p>Let call our helper as <code class="inline-code">TimeRecorder</code>. The <code class="inline-code">TimeRecorder </code>would need to serve for both consecutive or concurrent execution contextes. Hence it should look like:</p><pre><code>type TimeRecorder interface {
+	// Done records the execution time of the given span since the last time Done was called.
+	// Done updates the internal clock of the recorder.
+	Done(span string)
+
+	// Last return the last recorded time of the internal clock of the recorder.
+	// Last is normally used with DoneSince.
+	Last() time.Time
+	
+	// DoneSince records the execution time of the given span since the given time.
+	// Note that DoneSince doesn&#39;t update the internal clock of the recorder.
+	// Normally it is used in case there is a span run concurrently with the others.
+	DoneSince(span string, t time.Time)
+
+	// Info return time execution info of the context and detail
+	// of the recorded spans at the moment.
+	Info() Record
+}</code></pre><p>A simple implementation of the <code class="inline-code">TimeRecorder </code>can be found in this <a href="https://github.com/pthethanh/micro/blob/master/util/timeutil/recorder.go">repo</a>.</p><p>By using the library above, our code in case of consecutive run would look much simpler:</p><pre><code>func doSomething() {
+	r := timeutil.NewRecorder(&#34;doSomething&#34;)
+	defer func() { fmt.Println(r.Info()) }()
+
+	doStep1()
+	r.Done(&#34;doStep1&#34;)
+
+	doStep2()
+	r.Done(&#34;doStep2&#34;)
+
+	doStep3()
+	r.Done(&#34;doStep3&#34;)
+}</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/JN0decXRX_D">Playground</a><p>And in case of concurrency, the code would look much simpler too:</p><pre><code>func doSomething() {
+	r := timeutil.NewRecorder(&#34;doSomething&#34;)
+	defer func() { fmt.Println(r.Info()) }()
+
+	doStep1()
+	r.Done(&#34;doStep1&#34;)
+
+	last := r.Last()
+	go func() {
+		doStep2()
+		r.DoneSince(&#34;doStep2&#34;, last)
+	}()
+
+	doStep3()
+	r.Done(&#34;doStep3&#34;)
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/dM0T8_mGAZU">Playground</a><p>The result would look like:</p><pre><code>context:doSomething, duration:4s, spans:map[doStep1:1s doStep2:2s doStep3:3s], meta:map[]</code></pre><h2>Summary</h2><p>With just some very basic technique we are able build a very useful time measurement helper in Go. You can take this to further steps by integrate it into a middleware to measure performance of a REST API call or gRPC call.</p><p>For any discussion, please leave comments below.</p></div>
+      </div>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/articles/golang-name-conventions">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
+      </a>
+    </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light">
+</footer><template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name":"Measure Execution Time",
+      "headline":"Measure Execution Time",
+      "identifier":"measure-execution-time",
+      "keywords":"Go,measure time in go,measure execution time golang,golang measure time ,golang measure execution time,record time,time recorder in Go,record time in Go,execution time",
+      "image": [],
+      "author":"Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name":"The Fortune Days",
+        "logo": {
+          "@type": "ImageObject",
+          "url":"https://thefortunedays.com/static/images/favicon.ico"}
+      },
+      "url":"/articles/measure-execution-time",
+      "mainEntityOfPage":"https://thefortunedays.com",
+      "datePublished":{"seconds":1618824465,"nanos":426000000},
+      "dateModified":{"seconds":1621234376,"nanos":322000000},
+      "description":"Measuring time is a very important step to optimize performance or identify a performance issue. This article shows you how easy implementing it in Go."}
+  </script></body>
+</html>

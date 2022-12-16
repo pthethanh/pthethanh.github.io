@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="go,options,golang,expose golang api as option,effective option,pthethanh,thanh pham golang,pthethanh effect options,pthethanh effective options,go effective options">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users.">
+  <meta property="og:url" content="/articles/effective-options">
+  <meta property="og:title" content="Effective Options">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Effective Options</title><link rel="canonical" href="/articles/effective-options"><meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
+  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+    <div>
+      <a href="/" class="font-serif font-semibold">THE FORTUNE DAYS</a>
+    </div>
+    <div>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
+      <div class="w-full mb-10">
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Effective Options</h1>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Sun 07 Nov 2021</div>
+          <div class="flex space-x-2"></div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div><picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1636264048/effective-options/options-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1636264049/effective-options/options-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1636264049/effective-options/options-w320.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1636264047/effective-options/options-worg.jpg" alt="unsplash/Victoriano Izquierdo">
+                </picture><div class="w-full text-left text-captions font-sans text-xs">unsplash/Victoriano Izquierdo</div><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users.</div><p>When building a library, we normally try to think how the other developers would use our code and try to provide as many APIs as possible. But sometimes, exposing too many APIs would be very confusing. Or even worse, we failed to provide what our users need, but exposing too many APIs that they don't even need. Hence organizing what we expose and how they should be exposed is really important.</p><p>Normally, what we expose to the end users are either constructors or methods.&nbsp;Some parameters are required and some are optional. Since we want to expose as many APIs as we can for the end users, we will end up having a lot of variants of the same API.</p><p>Consider the struct below, where <code class="inline-code">host</code> is required but others are optional:</p><pre><code>type Cache struct {
+	host         string
+	username     string
+	password     string
+	readTimeout  time.Duration
+	writeTimeout time.Duration
+}</code></pre><p>The easiest way is to expose everything in 1 single constructor, but it's very confusing for users since it's hard to know which ones are required and which ones are optional. Hence we might end up having multiple versions of the constructor as below:</p><pre><code>New(host string) *Cache
+New(host string, readTimeout time.Duration) *Cache
+New(host, username, password string) *Cache
+New(host, username, password string, readTimeout, writeTimeout time.Duration) *Cache
+....</code></pre><p>Unfortunately, Go doesn't support method overloading, hence we have to give each of them a different names:</p><pre><code>func New(host string) *Cache
+func NewWithReadTimeout(host string, readTimeout time.Duration) *Cache
+func NewWithUserPass(host, username, password string) *Cache
+func NewWithUserPassAndTimeouts(host, username, password string, readTimeout, writeTimeout time.Duration) *Cache
+....</code></pre><p>Imagine having 20 optional parameters, naming them is really a nightmare and we might fall into some really bad names.&nbsp;We definitely need a better approach, and some one might suggest using setters.</p><h3>Setters</h3><p>With setters, we can improve it a little bit to distinguish the required and optional parameters by putting the required parameters in the constructor&nbsp;<code class="inline-code">New</code>&nbsp;and other optional parameters can be provided by setters. The below block of code show how nice the code is with the setters approach:</p><pre><code>func New(host string) *Cache
+func (c *Cache) SetUserPass(user, pass string)
+func (c *Cache) SetReadTimeout(d time.Duration)
+func (c *Cache) SetWriteTimeout(d time.Duration)</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/Vk_QyLaUR65">Playground</a><p>The code looks just beautiful! We can see setters can resolve the problem we have previously with our constructors. But how can we apply it to functions and methods? Consider the below method of the <code class="inline-code">Cache</code> service, where the <code class="inline-code">ttl</code> is optional.</p><pre><code>func (c *Cache) Set(k string, v interface{}, ttl time.Duration) error</code></pre><p>The API looks OK but there is just one thing ugly. That is even if you don't want to use TTL, you still need to pass a value into the function. What bothers the developer is that he doesn't know whether he should pass -1, or 0 in case he doesn't want his data to be expired. This can be addressed with good documentation or even by adding 2 version of the method:</p><pre><code>Set(k string, v interface{}) error
+SetWithTTL(k string, v interface{}, ttl time.Duration) error</code></pre><p>But what if we have many options besides TTL? For example, Set command can be able to use its own token for authentication? This solution would lead us to defining a lot of variants of the set commands like what we faced with our constructor.</p><p>One solution to address the above problem is provide them a parameter struct where the developer can set the parameters he needs. Apply the same approach as what we have done for constructors:</p><pre><code>type SetRequest struct {
+	k   string
+	v   interface{}
+	ttl time.Duration
+	tok string
+}
+
+func NewSetRequest(k string, v interface{}) *SetRequest {
+	return &amp;SetRequest{
+		k: k,
+		v: v,
+	}
+}
+
+func (r *SetRequest) SetTTL(ttl time.Duration) {
+	r.ttl = ttl
+}
+
+func (r *SetRequest) SetToken(tok string) {
+	r.tok = tok
+}
+
+func (c *Cache) Set(r *SetRequest) error {
+	// TODO implement me.
+	// if r.ttl &gt; 0 {...}
+	// if r.tok != &#34;&#34; {...}
+	return nil
+}</code></pre><p>And this is how our end users use it:</p><pre><code>c := New(&#34;localhost:8000&#34;)
+c.SetUserPass(&#34;user1&#34;, &#34;pass&#34;)
+c.SetReadTimeout(5 * time.Second)
+
+// set with TTL only
+r := NewSetRequest(&#34;name&#34;, &#34;Jack&#34;)
+r.SetTTL(5 * time.Second)
+_ = c.Set(r)
+
+// set with ttl and token
+r1 := NewSetRequest(&#34;age&#34;, 22)
+r1.SetTTL(5 * time.Second)
+r1.SetToken(&#34;abcd&#34;)
+_ = c.Set(r1)
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/az5mODuwnAy">Playground</a><p>The above code is OK but not really beautiful, since we have to create a new SetRequest and set its properties in separate lines which sometimes I feel so uncomfortable to do. We can do it even better, with builders.</p><h3>Builders</h3><p>The idea of builders is quite simple, a setter of a struct return itself:</p><pre><code>func NewSetRequest(k string, v interface{}) *SetRequest {
+	return &amp;SetRequest{
+		k: k,
+		v: v,
+	}
+}
+
+func (r *SetRequest) SetTTL(ttl time.Duration) *SetRequest {
+	r.ttl = ttl
+	return r
+}
+
+func (r *SetRequest) SetToken(tok string) *SetRequest {
+	r.tok = tok
+	return r
+}</code></pre><p>The same thing can be applied to constructor. And here is how we use it:</p><pre><code>c := New(&#34;localhost:8000&#34;).SetUserPass(&#34;user1&#34;, &#34;pass&#34;).SetReadTimeout(5 * time.Second)
+
+// set with TTL only
+r := NewSetRequest(&#34;name&#34;, &#34;Jack&#34;).SetTTL(5 * time.Second)
+_ = c.Set(r)
+
+// set with ttl and token
+r1 := NewSetRequest(&#34;age&#34;, 22).SetTTL(5 * time.Second).SetToken(&#34;abcd&#34;)
+_ = c.Set(r1)
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/a8Gsb4PGAYy">Playground</a><p>The above code looks just beautiful. But there is still one thing I don't really like: that is the prefix "Set" before every single setter. Sometimes I just remove the prefix "Set" from the builders' names, but someone will argue that it violates the&nbsp; name convention. To be honest, in case of a builder, sometimes I don't care and just remove the prefix from the names to make it more beautiful when using:</p><pre><code>c := New(&#34;localhost:8000&#34;).UserPass(&#34;user1&#34;, &#34;pass&#34;).ReadTimeout(5 * time.Second)
+
+// set with TTL only
+r := NewSetRequest(&#34;name&#34;, &#34;Jack&#34;).TTL(5 * time.Second)
+_ = c.Set(r)
+
+// set with ttl and token
+r1 := NewSetRequest(&#34;age&#34;, 22).TTL(5 * time.Second).Token(&#34;abcd&#34;)
+_ = c.Set(r1)</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/vwo3N8jMjWv">Playground</a><p>It looks better but to be honest, I don't really like constructing request param and setting everything like that. We can do it better with options as a function.</p><h3>Options As Functions</h3><p>The idea of options as functions is pretty simple, options are setting up via functions.&nbsp;We force people to provide required parameters directly in the constructor or directly in the method/function, and optionally provide the advanced options using variadic parameters.</p><p>Instead of using setters, we will use functions for setting up the struct, here is how we do with the constructor, the same can be applied for methods/functions as well:</p><pre><code>type Option func(*Cache)
+
+func New(host string, opts ...Option) *Cache {
+	c := &amp;Cache{host: host}
+	for _, opt := range opts {
+		opt(c)
+	}
+	return c
+}
+
+func UserPass(user, pass string) Option {
+	return func(c *Cache) {
+		c.username = user
+		c.password = pass
+	}
+}
+
+func ReadTimeout(d time.Duration) Option {
+	return func(c *Cache) {
+		c.readTimeout = d
+	}
+}
+
+func WriteTimeout(d time.Duration) Option {
+	return func(c *Cache) {
+		c.writeTimeout = d
+	}
+}</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/HLkzdwq6LVF">Playground</a><p>And here is how we use it:</p><pre><code>c := New(&#34;localhost:8000&#34;, UserPass(&#34;user1&#34;, &#34;pass&#34;), ReadTimeout(5*time.Second))
+_ = c.Set(&#34;name&#34;, &#34;Jack&#34;)
+_ = c.Set(&#34;name&#34;, &#34;Jack&#34;, TTL(5*time.Second))
+_ = c.Set(&#34;age&#34;, 22, TTL(5*time.Second), Token(&#34;abcd&#34;))</code></pre><p>Just simply beautiful! No more confusing, required parameters are forced to provide, optional parameters are provided as needed.</p><p>I think this approach is simple enough to implement and I'm currently using it for production code. But there is still another interesting approach, that is to provide options as an interface.</p><h3>Options As An Interface</h3><p>The idea of options as an interface is that everything can be considered as an option if it implements our option interface, so instead of using functions, we will use interface as following:</p><pre><code>type Option interface {
+	apply(*Cache)
+}
+
+type optionFunc func(*Cache)
+
+func (f optionFunc) apply(c *Cache) {
+	f(c)
+}
+
+func New(host string, opts ...Option) *Cache {
+	c := &amp;Cache{host: host}
+	for _, opt := range opts {
+		opt.apply(c)
+	}
+	return c
+}
+
+func UserPass(user, pass string) Option {
+	return optionFunc(func(c *Cache) {
+		c.username = user
+		c.password = pass
+	})
+}
+
+func ReadTimeout(d time.Duration) Option {
+	return optionFunc(func(c *Cache) {
+		c.readTimeout = d
+	})
+}
+
+func WriteTimeout(d time.Duration) Option {
+	return optionFunc(func(c *Cache) {
+		c.writeTimeout = d
+	})
+}</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/v25vpjS_-Gs">Playground</a><p>This approach produces the same APIs for the end users as the previous one:</p><pre><code>c := New(&#34;localhost:8000&#34;, UserPass(&#34;user1&#34;, &#34;pass&#34;), ReadTimeout(5*time.Second))
+_ = c.Set(&#34;name&#34;, &#34;Jack&#34;)
+_ = c.Set(&#34;name&#34;, &#34;Jack&#34;, TTL(5*time.Second))
+_ = c.Set(&#34;age&#34;, 22, TTL(5*time.Second), Token(&#34;abcd&#34;))</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/v25vpjS_-Gs">Playground</a><p>Although this approach looks a little bit more complicated than the options as functions approach, but it uses an interface hence it will be more flexible for end users to extend our library to have more customized options as their needs.</p><h3>Summary</h3><p>All the provided above approaches proved that everyone can write beautiful APIs with just a little effort. Some of you might like <code class="inline-code">builders</code>, but I would suggest you use <code class="inline-code">options as functions</code> or <code class="inline-code">options as an interface</code>&nbsp;since they are more beautiful and more flexible than the previous ones.</p><p>For more examples, look at&nbsp;packages&nbsp;<a href="https://github.com/pthethanh/micro/tree/master/cache">cache</a>, <a href="https://github.com/pthethanh/micro/tree/master/broker">broker</a> or <a href="https://github.com/pthethanh/micro/tree/master/server">server</a>&nbsp;of my <a href="https://github.com/pthethanh/micro">micro</a> toolkit.</p></div>
+      </div>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/articles/go-interface">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
+      </a>
+    </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light">
+</footer><template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name":"Effective Options",
+      "headline":"Effective Options",
+      "identifier":"effective-options",
+      "keywords":"go,options,golang,expose golang api as option,effective option,pthethanh,thanh pham golang,pthethanh effect options,pthethanh effective options,go effective options",
+      "image": [],
+      "author":"Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name":"The Fortune Days",
+        "logo": {
+          "@type": "ImageObject",
+          "url":"https://thefortunedays.com/static/images/favicon.ico"}
+      },
+      "url":"/articles/effective-options",
+      "mainEntityOfPage":"https://thefortunedays.com",
+      "datePublished":{"seconds":1636251957,"nanos":634000000},
+      "dateModified":{},
+      "description":"Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users."}
+  </script></body>
+</html>

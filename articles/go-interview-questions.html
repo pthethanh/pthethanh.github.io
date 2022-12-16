@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="interview,go,golang interview questions,go interview questions">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="A list of questions for challenging, evaluating and learning Go faster.">
+  <meta property="og:url" content="/articles/go-interview-questions">
+  <meta property="og:title" content="Go Interview Questions">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="A list of questions for challenging, evaluating and learning Go faster.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Go Interview Questions</title><link rel="canonical" href="/articles/go-interview-questions"><meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
+  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+    <div>
+      <a href="/" class="font-serif font-semibold">THE FORTUNE DAYS</a>
+    </div>
+    <div>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
+      <div class="w-full mb-10">
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Go Interview Questions</h1>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Fri 25 Dec 2020</div>
+          <div class="flex space-x-2"></div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div><picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1629014511/pthethanh/articles/go-interview-questions/questions-w1920_bx8tsx.webp 1920w,https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w1280_wl2gsh.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w640_nfri0d.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w320_tqsj9j.webp 320w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1629014510/pthethanh/articles/go-interview-questions/questions-w320_tqsj9j.webp" alt="">
+                </picture><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>A list of questions for challenging, evaluating and learning Go faster.</div><p>Learning without testing your knowledge can lead to wrong perception about your expertise level. This article provides you a list of questions for you to evaluate yourself easier.</p><h2>Go Questions</h2><h3>1. Basic</h3><ul><li>What is Go?</li><li>Why should you learn Go?</li><li>What is Go suitable for?</li><li>What are the advantages and disadvantages of Go?</li><li>How Go is different from the programming languages that you have used? (Java, C/C++, Python, Rust, NodeJS, JavaScript)</li></ul><h3>2. Array and Slice</h3><ul><li>What are the differences between array and slice?</li><li>What are the differences between slice and link list?</li><li>How re- slicing process of a slice happen under the hood?</li><li>Can you modify array length? Can you append new item into an array?</li><li>Explain how different between array/slice in Go and array in C/Java?</li></ul><h3>3. String</h3><ul><li>How is string in Go constructed? And what is the different between string in Go with other programming languages?</li><li>What is string literal? How is it done in Go?</li><li>Explain how you can write multi-line strings in GO?</li></ul><h3>4. Goroutine</h3><ul><li>What are the difference between goroutine and OS thread?</li><li>Explain what is go routine in GO? How you can stop go routine?</li><li>What is a worker pool? And how to do that in Go?</li><li>How to stop a worker pool?</li><li>What is fan-in, fan-out?</li><li>What is sync.WaitGroup used for?</li><li>What are the differences between sync.Mutex and semaphore?</li><li>What are the differences between concurrency and parallelism?</li><li>What are the differences between sharing by communicate vs communicate by sharing?</li><li>What is channel? How does it work? What is it used for?</li><li>What is context? What is it used for?</li><li>Have you used goroutine in your application? Describe it.</li><li>Why goroutine is better than thread?</li><li>What is goroutine leak in Go? How to prevent it?</li></ul><h3>5. Interface</h3><ul><li>Explain Interface in Go</li><li>How interface in Go different from interface in other languages?</li><li>When should you use interface?</li><li>How did you use interface in your previous project?</li></ul><h3>6. Other General Questions:</h3><ul><li>Does Go pass by value or pass by references? What are the differences?</li><li>What is Go run time?</li><li>How does garbage collector work in Go?</li><li>What is inside the interface{}?</li><li>How to handle gracefully shutdown in Go?</li><li>Why would you prefer to use an empty struct{} ? Provide some examples of the good use of the empty struct{} .</li><li>How do you compare two structs? What about two interfaces? Provide examples.</li><li>How do you implement stack and queue in Go? Provide an example.</li><li>What is type assertion and how is it done in Go?</li><li>How type conversion is done in Go?</li><li>What is the difference, if any, in the following two slice declarations, and which one is more preferable? var a []int and a := []int{}</li></ul><h2>Real Experiences Questions</h2><h3>1. General:</h3><ul><li>How did you structure your last project in Go? What are the advantages and disadvantages of it?</li></ul><h3>2. Config</h3><ul><li>How did you manage configurations of your services in Go?</li><li>What kind of libraries did you use for configuration management in Go? Compare them.</li><li>How did you manage configurations of your services in Docker, OpenShift, Kubenetes environment?</li></ul><h3>3. HTTP</h3><ul><li>Have you ever used any framework for working with HTTP in Go? Compare it with native HTTP library provided by Go.</li><li>What is middleware? Have you ever written one?</li></ul><h3>4. Logging</h3><ul><li>Explain how did you implement logging component in your last application with Go?</li><li>Did you use any libraries for logging in Go? Explain how did you use it and compare with native logging library.</li><li>How did you organize logging in containerize environment like Docker, Kubernetes, OpenShift where you have a lot of instances running at the same time?</li></ul><h3>5. Deployment:</h3><ul><li>How did you deploy your application?</li><li>Have you ever used Docker or any containerize technology for deployment? Describes it.</li><li>Have you ever written Docker file? Describes it?</li></ul><h3>6. Database:</h3><ul><li>Have you ever used MongoDB? Explain in detail what did you use it for?</li><li>Explain what are the differences between NoSQL and SQL? When should you use NoSQL and when not to?</li><li>What library did you use to interact with MongoDB in Go? Compare it with other libraries.</li><li>How big your data is?</li><li>How did you scale your MongoDB for performance?</li></ul><h3>7. Search Engine:</h3><ul><li>What did you use Elasticsearch for?</li><li>When should you use Elasticsearch and when should you use MongoDB?</li><li>What library did you use to interact with Elasticsearch in Go?</li><li>How did you handle a lot of indexing in high performance application?</li><li>Do you know bulk processor? Did you use it? How does it work?</li></ul><h3>8. Message queue:</h3><ul><li>Have you ever used any message queue technology? Describe how did you use it.</li><li>Have you ever used Kafka? How is it used in your application? And why did you choose it?</li><li>When should you use message queue? Give some example.</li></ul><h3>9. Performance</h3><ul><li>How many query/second of your application?</li><li>How can you measure performance of your application?</li><li>How did you scale up your application?</li></ul></div>
+      </div>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/articles/go-reading-list">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
+      </a>
+    </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light">
+</footer><template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name":"Go Interview Questions",
+      "headline":"Go Interview Questions",
+      "identifier":"go-interview-questions",
+      "keywords":"interview,go,golang interview questions,go interview questions",
+      "image": [],
+      "author":"Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name":"The Fortune Days",
+        "logo": {
+          "@type": "ImageObject",
+          "url":"https://thefortunedays.com/static/images/favicon.ico"}
+      },
+      "url":"/articles/go-interview-questions",
+      "mainEntityOfPage":"https://thefortunedays.com",
+      "datePublished":{"seconds":1608884748,"nanos":879000000},
+      "dateModified":{"seconds":1618931474,"nanos":559000000},
+      "description":"A list of questions for challenging, evaluating and learning Go faster."}
+  </script></body>
+</html>

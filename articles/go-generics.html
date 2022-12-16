@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="golang,go 1.18 generics,go 1.18 type parameters,go generics,go type paramethers,thanh pham golang,go 1.18 generics good vs bad">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp;amp; functions are supported, but methods are not - which causes a lot of limitations.">
+  <meta property="og:url" content="/articles/go-generics">
+  <meta property="og:title" content="Go Generics">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp;amp; functions are supported, but methods are not - which causes a lot of limitations.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Go Generics</title><link rel="canonical" href="/articles/go-generics"><meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
+  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+    <div>
+      <a href="/" class="font-serif font-semibold">THE FORTUNE DAYS</a>
+    </div>
+    <div>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
+      <div class="w-full mb-10">
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Go Generics</h1>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Thu 02 Jun 2022</div>
+          <div class="flex space-x-2"></div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div><picture class="object-center object-cover w-full">
+                    <source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1654158994/pthethanh/go-generics/generictypes-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1654158994/pthethanh/go-generics/generictypes-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1654158995/pthethanh/go-generics/generictypes-w320.webp 320w,https://res.cloudinary.com/pthethanh/image/upload/v1654158995/pthethanh/go-generics/generictypes-w160.webp 160w" type="image/webp">
+                    <img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1654158993/pthethanh/go-generics/generictypes-worg.png" alt="Go Generics/Type Parameters by programmingpercy">
+                </picture><div class="w-full text-left text-captions font-sans text-xs">Go Generics/Type Parameters by programmingpercy</div><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp; functions are supported, but methods are not - which causes a lot of limitations.</div><p>This post is just my very first feelings about the generics feature of Go after some simple experimentation, it's not a full picture of what generics in Go looks like, if you want to see the full picture, check this very long <a href="https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md">spec</a>.</p><h3>The Good Things</h3><p>Now you don't need to write function like max again and again for different data types:</p><pre><code>func max[T constraints.Ordered](a T, b T) T {
+	if a &gt; b {
+		return a
+	}
+	return b
+}
+
+max(1, 2) // 2
+max(4.5, 3.9) // 4.5
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/tK0F9f80aef">Playground</a><p>And you can write a generics tree which can be only achieved in the past using interface{}</p><pre><code>type tree[T any] struct {
+	Left  *tree[T]
+	Right *tree[T]
+	Value T
+}
+
+t := tree[int]{}
+t1 := tree[string]{}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/0M5bDzPIWMp">Playground</a><p>Typed parameters can be named or unnamed</p><pre><code>// Index returns the index of e in s, or -1 if not found.
+func Index[T interface{ Equal(T) bool }](s []T, e T) int {
+	for i, v := range s {
+		if e.Equal(v) {
+			return i
+		}
+	}
+	return -1
+}
+
+// Index returns the index of e in s, or -1 if not found.
+func Index1[T Equaler[T]](s []T, e T) int {
+	for i, v := range s {
+		if e.Equal(v) {
+			return i
+		}
+	}
+	return -1
+}
+
+type Equaler[T any] interface {
+	Equal(T) bool
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/NzoNjfZL6js">Playground</a><p>We can also union multiple types together</p><pre><code>type numbers interface {
+	int | int8 | int32 | int64 | float32 | float64
+}
+
+func min[T numbers](a, b T) T {
+	if a &gt; b {
+		return b
+	}
+	return a
+}
+
+min(2,3) // 2
+min(2.4, 0.5) // 0.5
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/lJmPmrvECin">Playground</a><p>&nbsp;~ operator can be used to "include" all underlying types</p><pre><code>type degree int
+
+type numbers interface {
+	~int | ~int8 | ~int32 | ~int64 | ~float32 | ~float64
+}
+
+func min[T numbers](a, b T) T {
+	if a &gt; b {
+		return b
+	}
+	return a
+}
+
+min(degree(2), degree(3)) // 2
+min(2.4, 0.5) // 0.5
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/hFn6dXMqNUg">Playground</a><p>comparable interface can be used for writing comparable functions:</p><pre><code>func equal[T comparable](a, b T) bool {
+	return a == b
+}
+
+equal(degree(2), degree(3)) // false
+equal(degree(2), degree(2)) // true
+equal(2.4, 0.5) // false
+equal(2.3, 2.3) // true
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/CvT6p2CVbgp">Playground</a><h3>The Limitations</h3><p><b>Methods cannot be generics</b></p><p>What does it mean when methods cannot be generics? It means you will not be able to write a map or reduce API like Java. The main reason for not supporting this feature is because of typed parameters only known by the compiler, the runtime has no ideas about type parameters and this introduces some complexity for the instantiation during run time . </p><p>You can see the full explanation from the Go team&nbsp;<a href="https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md#No-parameterized-methods">here</a>, it's pretty much well explained. But I personally don't really agree with them when they say "one of the main roles of methods is to permit types to implement interfaces" and used this to argue about not including generics on methods. To me, methods are more important than just to "implement" an interface.</p><p>So any alternative way for writing map/reduce like API? Yes, use functions instead.</p><pre><code>
+// Map turns a []T1 to a []T2 using a mapping function.
+// This function has two type parameters, T1 and T2.
+// This works with slices of any type.
+func Map[T1, T2 any](s []T1, f func(T1) T2) []T2 {
+	r := make([]T2, len(s))
+	for i, v := range s {
+		r[i] = f(v)
+	}
+	return r
+}
+
+// Reduce reduces a []T1 to a single value using a reduction function.
+func Reduce[T1, T2 any](s []T1, initializer T2, f func(T2, T1) T2) T2 {
+	r := initializer
+	for _, v := range s {
+		r = f(r, v)
+	}
+	return r
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.googlesource.com/proposal/&#43;/HEAD/design/43651-type-parameters.md#map_reduce_filter">More Detail</a><p><b>Mixed types cannot be inferred as any</b></p><p>Typed parameters mean all parameters must be the same type. And the inference rule of Go is that it will check the type of the first parameter, others must follow the same. What does it mean? It means if you don't declare the first parameter as <code class="inline-code">any </code>explicitly, it will never be inferred as <code class="inline-code">any</code>.</p><pre><code>func Print[T any](t ...T) {}
+
+//
+var a any = 1
+Print(a, &#34;2&#34;) // VALID as all parameters will be inferred as &#34;any&#34;.
+Print[any](1, &#34;2&#34;) // VALID as we provided the type parameter as &#34;any&#34;.
+Print(1, &#34;2&#34;) // INVALID since its expect all parameters as int and &#34;2&#34; is not an int.
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/X-uugX8IHSJ">Playground</a><p>Although we can provide the type parameter when calling the method, but it is kind of inconvenient.</p><p><b>[T ~[]any] and [S ~[]T, T any] Are Different</b></p><p>This is not really a limitation, it is just a mistake people who first started with generics often face. The difference between the two declarations is the first one declares&nbsp;<code class="inline-code">any </code>as a specific type, the latter declares it as a parameter type.</p><p>[T ~[]any] only accepts []any, but [S ~[]T, T any] will accept any kind of slices, such as: []int, []string, []any,...</p><p><b>Interfaces with methods can be used as a typed parameters, but cannot be "union"</b></p><p>Yes, it is. But what's the point of having union interfaces? I don't really know the usage of this case.</p></div>
+      </div>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/articles/effective-options">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
+      </a>
+    </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light">
+</footer><template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name":"Go Generics",
+      "headline":"Go Generics",
+      "identifier":"go-generics",
+      "keywords":"golang,go 1.18 generics,go 1.18 type parameters,go generics,go type paramethers,thanh pham golang,go 1.18 generics good vs bad",
+      "image": [],
+      "author":"Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name":"The Fortune Days",
+        "logo": {
+          "@type": "ImageObject",
+          "url":"https://thefortunedays.com/static/images/favicon.ico"}
+      },
+      "url":"/articles/go-generics",
+      "mainEntityOfPage":"https://thefortunedays.com",
+      "datePublished":{"seconds":1652428074,"nanos":386000000},
+      "dateModified":{},
+      "description":"Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types \u0026amp; functions are supported, but methods are not - which causes a lot of limitations."}
+  </script></body>
+</html>

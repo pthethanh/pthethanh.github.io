@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="golang,array">
+  <meta name="author" content="Thanh Pham">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="A quick review of array in Go.">
+  <meta property="og:url" content="/articles/working-with-array-in-go">
+  <meta property="og:title" content="Working with array in Go">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="A quick review of array in Go.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Working with array in Go</title><link rel="canonical" href="/articles/working-with-array-in-go"><meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
+  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9X9G2YCR2X');
+    </script></head>
+<body class="min-h-screen body" id="app"><header id="header">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+    <div>
+      <a href="/" class="font-serif font-semibold">THE FORTUNE DAYS</a>
+    </div>
+    <div>
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+      </a>
+    </div>
+  </nav>
+</header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
+      <div class="w-full mb-10">
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Working with array in Go</h1>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Mon 23 Sep 2019</div>
+          <div class="flex space-x-2"></div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div><p>Array in Go is just a data structure that hold a collection of elements of any type. Each element can be accessed by its index. Length of array is fixed at compile time and its size is a part of its type.</p><p>The type&nbsp;[n]T<span>&nbsp;</span>is an array of&nbsp;n&nbsp;values of type&nbsp;T.&nbsp;It can be declared as full declaration statement or in a short-hand format, with or without init values.</p><p>Array also can be declared in form of<span>&nbsp;</span>[...]T<span>&nbsp;</span>where its size will be determined by the compiler.</p><pre><code>var holidays = [7]bool{}
+seasons := [4]string{&#34;Spring&#34;, &#34;Summer&#34;, &#34;Autumn&#34;, &#34;Winter&#34;}
+weekDays := [7]int{1, 2, 3, 4, 5, 6, 7}
+fruits := [...]string{&#34;apple&#34;, &#34;guava&#34;, &#34;orange&#34;} // type [3]string
+visited := [10]bool{1: true, 3: true, 5: true, 7: true, 9: true}
+sudoku := [9][9]int{}</code></pre><p><b>Size of array is a part of its type and it is determined at the compile time</b></p><p>That means you cannot extend its size at run-time and cannot assign it to another type at run-time:</p><pre><code>fruits := [...]string{&#34;apple&#34;, &#34;guava&#34;, &#34;orange&#34;} // type: [3]string
+moreFruits := [4]string{&#34;grapes&#34;}                 // type: [4]string
+
+moreFruits = fruits // compile error</code></pre><p><b>Arrays are comparable if they have same type</b></p><pre><code>firstArr := [3]int{1, 2, 3}    // type: [3]int
+secondArr := [3]int{1, 2, 3}   // type: [3]int
+thirdArr := [4]int{1, 2, 3, 4} // type: [4]int
+
+fmt.Println(firstArr == secondArr) // true
+
+fmt.Println(secondArr == thirdArr) // compile error</code></pre><p><b>Each elements can be accessed by index or range over the array. Access index out of the array will cause a panic</b></p><pre><code>var weekDays [7]string
+weekDays[0] = &#34;Sunday&#34;
+weekDays[1] = &#34;Monday&#34;
+weekDays[2] = &#34;Tuesday&#34;
+weekDays[3] = &#34;Wednesday&#34;
+weekDays[4] = &#34;Thursday&#34;
+weekDays[5] = &#34;Friday&#34;
+weekDays[6] = &#34;Saturday&#34;
+
+fmt.Println(weekDays[5])
+fmt.Println(&#34;Days in a week:&#34;)
+for _, day := range weekDays {
+	fmt.Printf(&#34;\t%s\n&#34;, day)
+}
+
+// fmt.Println(weekDays[7]) // panic: index out of bound</code></pre><p><b>Passing an array to a method will create a copy of the original array</b></p><p>This means what you do with the copied array will not affect to the original array.</p><pre><code>package main
+
+import &#34;fmt&#34;
+
+func main() {
+	fruits := [3]string{&#34;apple&#34;, &#34;orange&#34;}
+	addGuava(fruits) // doesn&#39;t change values of variable &#34;fruits&#34;
+}
+
+func addGuava(fruits [3]string) {
+	fruits[2] = &#34;guava&#34;
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/0gvmO5kI8Je">Playground</a><p>Passing the pointer of the array to a function if you want to change its value in that function:</p><pre><code>package main
+
+import &#34;fmt&#34;
+
+func main() {
+	fruits := [3]string{&#34;apple&#34;, &#34;orange&#34;}
+	addGuava(&amp;fruits) // change value of variable  &#34;fruits&#34;
+}
+
+func addGuava(fruits *[3]string) {
+	fruits[2] = &#34;guava&#34;
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/r21hKN4XYtB">Playground</a><p><b>Assign or range statement on an array will also create a copy of the original array</b></p><pre><code>arr := [4]int{0, 1, 2, 3}
+newArr := arr
+
+fmt.Printf(&#34;%p != %p&#34;, &amp;arr, &amp;newArr) // 0xc000126000 != 0xc000126020
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/dKM5RnCZmx5">Playground</a><p>Interact with value of array while ranging over it will not affect the original value:</p><pre><code>arr := [4]int{0, 1, 2, 3}
+for _, v := range arr {
+	v &#43;= 100 // will not affect the original array values
+}
+fmt.Println(arr) // [0, 1, 2, 3]
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/s-Kirtqypzc">Playground</a><p>If you want to change value of original array while ranging over it, use index instead:</p><pre><code>arr := [4]int{0, 1, 2, 3}
+for i := 0; i &lt; len(arr); i&#43;&#43; {
+	arr[i] &#43;= 100
+}
+fmt.Println(arr) // [100 101 102 103]
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/pX-VH25RpKy">Playground</a><p><b>Pointer of index and value inside range statement will be reused.</b></p><p>Notice that the pointers of<span>&nbsp;</span><code class="inline-code">i</code><span>&nbsp;</span>and<span>&nbsp;</span><code class="inline-code">v</code><span>&nbsp;</span>are the same in the result:</p><pre><code>arr := [3]int{1, 2, 3}
+for i, v := range arr {
+	fmt.Printf(&#34;i=%d, v=%d, &amp;i=%p, &amp;v: %p\n&#34;, i, v, &amp;i, &amp;v) // i, v point to the same addresses for each iteration
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/nr9FGRWrm8g">Playground</a><p>This will cause a problem if you use goroutine inside the for loop as below. Notice that only the last element is printed.</p><pre><code>arr := [3]int{1, 2, 3}
+for i, v := range arr {
+	go func() {
+		fmt.Printf(&#34;i=%d, v=%d, &amp;i=%p, &amp;v: %p\n&#34;, i, v, &amp;i, &amp;v)
+	}()
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/Xx4yyrkRR6q">Playground</a><p>Define local variable to avoid the variables are captured is one way to avoid the above problem:</p><pre><code>arr := [3]int{1, 2, 3}
+for i, v := range arr {
+	i, v := i, v
+	go func() {
+		fmt.Printf(&#34;i=%d, v=%d, &amp;i=%p, &amp;v: %p\n&#34;, i, v, &amp;i, &amp;v)
+	}()
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/QBOXcLHNItH">Playground</a><p><b>When do you use array?</b></p><p>Normally, array is used when the number of element is fixed at compile time. Example:</p><ul><li>Used in parsing network package where the length of the package is fixed. Example: TCP, UDP, DHCP, DNS&nbsp; packages, ...</li><li>Used in hashing, encryption algorithms: MD5, Base64, Base58,...</li><li>Represent a collection of fixed length elements like: days in a week, months in a year, ...</li></ul></div>
+      </div>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/articles/effective-options">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
+      </a>
+    </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light">
+</footer><template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name":"Working with array in Go",
+      "headline":"Working with array in Go",
+      "identifier":"working-with-array-in-go",
+      "keywords":"golang,array",
+      "image": [],
+      "author":"Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name":"The Fortune Days",
+        "logo": {
+          "@type": "ImageObject",
+          "url":"https://thefortunedays.com/static/images/favicon.ico"}
+      },
+      "url":"/articles/working-with-array-in-go",
+      "mainEntityOfPage":"https://thefortunedays.com",
+      "datePublished":{"seconds":1569230770,"nanos":454000000},
+      "dateModified":{},
+      "description":"A quick review of array in Go."}
+  </script></body>
+</html>

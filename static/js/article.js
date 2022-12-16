@@ -128,7 +128,7 @@ const article = {
         this.message = 'Saved'
         this.article.article_id = data.article_id
         this.article.id = data.id
-        window.history.pushState({}, null, '/blog/articles/' + this.article.article_id + '/edit')
+        window.history.pushState({}, null, '/articles/' + this.article.article_id + '/edit')
       })
       .catch((err) => {
         this.message = 'Error: ' + err
