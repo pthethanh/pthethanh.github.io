@@ -9,13 +9,13 @@
   <meta name="image" content="/static/images/header.jpg">
   <meta name="description" content="3 important lessons of my life.">
   <meta property="og:url" content="/articles/3-lessons">
-  <meta property="og:title" content="3 Life Lessons">
+  <meta property="og:title" content="3 Important Lessons">
   <meta property="og:type" content="article">
   <meta property="og:image" content="/static/images/header.jpg">
   <meta property="og:description" content="3 important lessons of my life.">
   <meta property="og:locale" content="en_GB">
   <meta name="twitter:card" content="summary_large_image">
-  <title>3 Life Lessons</title><link rel="canonical" href="/articles/3-lessons"><meta name="referrer" content="no-referrer-when-downgrade">
+  <title>3 Important Lessons</title><link rel="canonical" href="/articles/3-lessons"><meta name="referrer" content="no-referrer-when-downgrade">
   <link rel="preconnect" href="/" crossorigin>
   <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
@@ -36,29 +36,32 @@
       gtag('config', 'G-9X9G2YCR2X');
     </script></head>
 <body class="min-h-screen body" id="app"><header id="header">
-  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100">
+  <nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100 font-serif ">
     <div>
-      <a href="/" class="font-serif font-semibold">THE FORTUNE DAYS</a>
+      <a href="/" class="font-semibold">THE FORTUNE DAYS</a>
     </div>
-    <div>
-      <a href="/">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-        </svg>
-      </a>
+    <div class="flex space-x-8">
+      <div class="flex space-x-2" v-show="showMenu">
+        <a href="/">Home</a>
+        <a href="/articles">Articles</a>
+        <a href="/about">About</a>
+      </div>
+      <svg @click="showMenu=!showMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 cursor-pointer">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
     </div>
   </nav>
 </header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
     <article class="w-full pt-10 md:pt-14 pb-5">
       <div class="w-full mb-10">
-        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">3 Life Lessons</h1>
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">3 Important Lessons</h1>
         <div class="flex justify-between">
           <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Mon 12 Dec 2022</div>
           <div class="flex space-x-2"></div>
         </div>
       </div>
       <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
-        <div><p>There are some good lessons in my life but sometimes I just forget them. So maybe putting them here is a good way to remember.</p><p>The first lesson is there is no such thing called a perfect moment. You gotta do what you need to do at the time you think there is a need. Don't wait until everything is perfect, because that moment will never come and you will be late for everything.</p><p>The second lesson is you are only able to solve a problem if you accept it as what it is. Accept it is a problem, a challenge that you need and only you can solve it. Not your colleagues, not your manager, not anyone else... it must be you. Only when you accept that's a problem, you will start finding solutions to solve it. If you keep refusing it's a problem that you are facing, you will not think of any solution and hence the problem remained the same forever.</p><p>The third lesson is don't believe what people say at work, observe what they do. Words lie, actions don't.</p></div>
+        <div><p>There are some good lessons in my life but sometimes I just forget them. So maybe putting them here is a good way to remember.</p><p>The first lesson is there is no such thing called a perfect moment. You gotta do what you need to do at the time you think there is a need. Don't wait until everything is perfect, because that moment will never come and you will be late for everything.</p><p>The second lesson is you are only able to solve a problem if you accept it as what it is. Accept it is a problem, a challenge that you need and only you can solve it. Not your colleagues, not your manager, not anyone else... it must be you. Only when you accept that's a problem, you will start finding solutions to solve it. If you keep refusing it's a problem that you are facing, you will not think of any solution and hence the problem remained the same forever.</p><p>The third lesson is words lie, actions don't.</p></div>
       </div>
     </article>
     <div class="flex px-2 py-5 justify-between">
@@ -76,8 +79,8 @@
     {
       "@context": "https://schema.org",
       "@type": "Article",
-      "name":"3 Life Lessons",
-      "headline":"3 Life Lessons",
+      "name":"3 Important Lessons",
+      "headline":"3 Important Lessons",
       "identifier":"3-lessons",
       "keywords":"",
       "image": [],
