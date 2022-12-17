@@ -1,181 +1,181 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thefortunedays.com/</loc>
-    <lastmod>2022-12-17T11:11:53+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:52+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/about</loc>
-    <lastmod>2022-12-17T11:11:53+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:52+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles</loc>
-    <lastmod>2022-12-17T11:11:53+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:52+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/tags/golang</loc>
-    <lastmod>2022-12-17T11:11:53+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:52+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/tags/xaml</loc>
-    <lastmod>2022-12-17T11:11:53+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:52+07:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/3-lessons</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/the-right-thing</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-generics</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/page-speed</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/show-up</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/any</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/reading</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/effective-options</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/they-dont-even-know-the-fundamentals</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-interface</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/golang-interface</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/golang-name-conventions</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/bad-code</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/measure-execution-time</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/100-stars</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/useful-docker-commands</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/how-we-work-together</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-reading-list</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-interview-questions</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-interview-structure</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-constant-in-go</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-string-in-go</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-map-in-go</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-slice-in-go</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-array-in-go</loc>
-    <lastmod>2022-12-17T11:11:55+07:00</lastmod>
+    <lastmod>2022-12-17T22:01:55+07:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
