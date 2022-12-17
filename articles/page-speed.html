@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/"><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="keywords" content="web development,thanh pham golang,page speed insights"><meta name="author" content="Thanh Pham"><meta name="image" content="/static/images/header.jpg"><meta name="description" content="The smaller size of HTML, JS, CSS and Images the better the performance."><meta property="og:url" content="/articles/page-speed"><meta property="og:title" content="Page Speed Insights"><meta property="og:type" content="article"><meta property="og:image" content="/static/images/header.jpg"><meta property="og:description" content="The smaller size of HTML, JS, CSS and Images the better the performance."><meta property="og:locale" content="en_GB"><meta name="twitter:card" content="summary_large_image"><title>Page Speed Insights</title><link rel="canonical" href="/articles/page-speed"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="preconnect" href="/" crossorigin><link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png"><link rel="apple-touch-icon" href="/static/images/favicon-32x32.png"><link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"></noscript><script async defer="defer" src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script><script async defer="defer" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script><script async defer="defer" src="/static/js/index.js"></script></head>
+<body class="min-h-screen body" id="app"><header id="header" class="sticky z-50 bg-white"><nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100 font-serif"><div><a href="/" class="font-semibold">THE FORTUNE DAYS</a></div><div class="flex space-x-8"><div class="flex space-x-2" v-show="showMenu"><a href="/" class="hidden md:block">Home</a> <a href="/articles">Articles</a> <a href="/about">About</a></div><svg @click="showMenu=!showMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 cursor-pointer"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></div></nav></header><div class="w-full pb-14" @click="closeTopMenu"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
+      <div class="w-full mb-10">
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Page Speed Insights</h1>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Thu 12 May 2022</div>
+          <div class="flex space-x-2"></div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div><picture class="object-center object-cover w-full"><source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1652354230/pthethanh/page-speed/page%20speed-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1652354230/pthethanh/page-speed/page%20speed-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1652354231/pthethanh/page-speed/page%20speed-w320.webp 320w,https://res.cloudinary.com/pthethanh/image/upload/v1652354232/pthethanh/page-speed/page%20speed-w160.webp 160w" type="image/webp"><img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1652354229/pthethanh/page-speed/page%20speed-worg.png" alt="Page Speed Insights score of https://pthethanh.herokuapp.com/"></picture><div class="w-full text-left text-captions font-sans text-xs">Page Speed Insights score of https://pthethanh.herokuapp.com/</div><div class="text-sm lg:text-base font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>The smaller size of HTML, JS, CSS and Images the better the performance.</div><p>Web page performance is one of the most important things in web development. The better performance means the better user experiences and the better business.&nbsp;</p><p>There are a lot of factors that impact the speed of web pages but in this post, I just list some major factors that impact the most to the performance of a web page and quickly show some solutions to address them. </p><p>Actually, these are just my notes during the journey of improving performance of this blog, but hopefully someone can be benefited from this too.</p><h3>HTML, JS, CSS</h3><p>The best way to make web pages load fast is to reduce and minimize sizes of all relevant documents transferred from the web server. This includes HTML, JS, CSS, Images, Font,...</p><p>For HTML and CSS, we can use a lot of HTML/CSS optimizer and also enable compression mechanisms (gzip) on the server to reduce the size of the document. This alone contributes a lot to the web page performance.</p><p>For this blog, I use&nbsp;<code class="inline-code">minify-html</code> for HTML,&nbsp;<code class="inline-code">minify-js </code>for JS and <code class="inline-code">TailwindCSS minifier</code>for CSS.</p><p>Below is the records of one of article in this blog:</p><picture class="object-center object-cover w-full"><source sizes="50vw" srcset="https://res.cloudinary.com/pthethanh/image/upload/v1652359401/pthethanh/page-speed/request%20count-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1652359401/pthethanh/page-speed/request%20count-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1652359402/pthethanh/page-speed/request%20count-w320.webp 320w,https://res.cloudinary.com/pthethanh/image/upload/v1652359402/pthethanh/page-speed/request%20count-w160.webp 160w" type="webp"><img decoding="async" loading="lazy" width="359" height="240" class="object-center object-cover bg-none w-full" src="https://res.cloudinary.com/pthethanh/image/upload/v1652359400/pthethanh/page-speed/request%20count-worg.png" alt="Request count and transfer sizes of this blog"></picture><div class="w-full text-left text-captions font-sans text-xs">Request count and transfer sizes of this blog</div><h3>Web Fonts</h3><p>Web Fonts can cause a lot of issues for web performance, such as: blocking resources, heavy font sizes, cumulative layout shift.</p><p>If you're using Google Web Fonts, you don't really need to do anything since they are already optimized very well. The only thing you need to do is to <code class="inline-code">preload</code> it in advance to avoid blocking resource issues.</p><pre><code>&lt;link rel=&#34;preconnect&#34; href=&#34;https://fonts.gstatic.com&#34; crossorigin /&gt;
+&lt;link rel=&#34;preload&#34; as=&#34;style&#34; href=&#34;https://fonts.googleapis.com/css?family=Lobster&#34; /&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css?family=Lobster&#34; media=&#34;print&#34; onload=&#34;this.media=&#39;all&#39;&#34; /&gt;
+&lt;noscript&gt;
+  &lt;link rel=&#34;stylesheet&#34; href=&#34;https://fonts.googleapis.com/css?family=Lobster&#34; /&gt;
+&lt;/noscript&gt;
+</code></pre><p>If you use remote web fonts from other sites, Google Page Speed Insights might complain about the cache period of the fonts and hence reduce the score. To fix this problem, consider hosting the web fonts locally with a longer cache period..</p><p>If you're using other types of fonts, consider using <code class="inline-code">woff2</code> for smaller size. Also sometimes fonts are composed of multiple languages and you don't really need them, consider using <code class="inline-code">fonttools</code> to create the subsets you need and use <code class="inline-code">unicode-range</code> of web fonts to tell the browsers to load a specific font only when needed.</p><pre><code>
+fonttools subset latest.woff2 --unicodes=&#34;U&#43;0102-0103,U&#43;0110-0111,U&#43;0128-0129,U&#43;0168-0169,U&#43;01A0-01A1,U&#43;01AF-01B0,U&#43;1EA0-1EF9,U&#43;20AB,U&#43;0000-00FF,U&#43;0131,U&#43;0152-0153,U&#43;02BB-02BC,U&#43;02C6,U&#43;02DA,U&#43;02DC,U&#43;2000-206F,U&#43;2074,U&#43;20AC,U&#43;2122,U&#43;2191,U&#43;2193,U&#43;2212,U&#43;2215,U&#43;FEFF,U&#43;FFFD&#34; --flavor=&#34;woff2&#34;</code></pre><pre><code>
+/* vietnamese */
+@font-face {
+  font-family: &#39;Lobster&#39;;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zo2mM5Ez.woff2) format(&#39;woff2&#39;);
+  unicode-range: U&#43;0102-0103, U&#43;0110-0111, U&#43;0128-0129, U&#43;0168-0169, U&#43;01A0-01A1, U&#43;01AF-01B0, U&#43;1EA0-1EF9, U&#43;20AB;
+}
+/* latin */
+@font-face {
+  font-family: &#39;Lobster&#39;;
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/lobster/v27/neILzCirqoswsqX9zoKmMw.woff2) format(&#39;woff2&#39;);
+  unicode-range: U&#43;0000-00FF, U&#43;0131, U&#43;0152-0153, U&#43;02BB-02BC, U&#43;02C6, U&#43;02DA, U&#43;02DC, U&#43;2000-206F, U&#43;2074, U&#43;20AC, U&#43;2122, U&#43;2191, U&#43;2193, U&#43;2212, U&#43;2215, U&#43;FEFF, U&#43;FFFD;
+}</code></pre><p>For a complete example of the final web font, see:&nbsp;https://fonts.googleapis.com/css?family=Lobster</p><p>Web font is also a big contributor for the cumulative layout shift, especially for the above-of-the-fold content. To reduce this problem, consider using <code class="inline-code">font-display: optional </code>for your web fonts. This prevents both font blocking and layout shift.</p><pre><code>@font-face {
+    font-family: SegoeUI;
+    src:
+        local(&#34;Segoe UI&#34;),
+        url(./west-european/normal/latest.woff2) format(&#34;woff2&#34;),
+        url(./west-european/normal/latest.woff) format(&#34;woff&#34;),
+        url(./west-european/normal/latest.ttf) format(&#34;truetype&#34;);
+    font-weight: 400;
+    font-display: optional;
+}
+</code></pre><p>Take advantage of system fonts is also a good trick to improve the performance of the web page:</p><pre><code>Sans-serif
+font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+
+Serif
+font-family: Iowan Old Style, Apple Garamond, Baskerville, Times New Roman, Droid Serif, Times, Source Serif Pro, serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+
+Mono
+font-family: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace;</code></pre><h3>Images</h3><p>For image, consider to use WEBP or AVIF for smaller sizes. Use suitable image sizes for each purpose and for each type of display using picture tag with srcset and sizes.</p><p>Image might cause issues with layout shift, hence consider to set its size (set for mobile) to a fixed number. Enable <code class="inline-code">async decoding</code> and <code class="inline-code">lazy loading</code> for better performance. But for the above-of-the-fold image, lazy loading should be disabled because we want it to be loaded as fast as it can to reduce the First Content Paint time.</p><p>For the above-of-the-fold image, disable lazy loading, set the size fits the sizes of mobile.</p><pre><code>&lt;picture class=&#34;object-center object-cover w-full&#34;&gt;
+  &lt;source sizes=&#34;50vw&#34; srcset=&#34;https://res.cloudinary.com/pthethanh/image/upload/v1636264048/effective-options/options-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1636264049/effective-options/options-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1636264049/effective-options/options-w320.webp 320w&#34; type=&#34;image/webp&#34;&gt;
+  &lt;img decoding=&#34;async&#34; width=&#34;359&#34; height=&#34;240&#34; class=&#34;object-center object-cover bg-none w-full mb-2&#34; src=&#34;https://res.cloudinary.com/pthethanh/image/upload/v1636264047/effective-options/options-worg.jpg&#34; alt=&#34;unsplash/Victoriano Izquierdo&#34;&gt;
+&lt;/picture&gt;</code></pre><p>For other types images in the article, enable lazy loading to avoid resource blocking issues.</p><pre><code>&lt;picture class=&#34;object-center object-cover w-full&#34;&gt;
+  &lt;source sizes=&#34;50vw&#34; srcset=&#34;https://res.cloudinary.com/pthethanh/image/upload/v1636264048/effective-options/options-w1280.webp 1280w,https://res.cloudinary.com/pthethanh/image/upload/v1636264049/effective-options/options-w640.webp 640w,https://res.cloudinary.com/pthethanh/image/upload/v1636264049/effective-options/options-w320.webp 320w&#34; type=&#34;image/webp&#34;&gt;
+  &lt;img decoding=&#34;async&#34; loading=&#34;lazy&#34; width=&#34;359&#34; height=&#34;240&#34; class=&#34;object-center object-cover bg-none w-full mb-2&#34; src=&#34;https://res.cloudinary.com/pthethanh/image/upload/v1636264047/effective-options/options-worg.jpg&#34; alt=&#34;unsplash/Victoriano Izquierdo&#34;&gt;
+&lt;/picture&gt;</code></pre><h3>Requests Count</h3><p>Keep the number of requests from browsers to the server low and remove all the unnecessary requests. Always keep response content  small to improve performance.</p><p>...to be continued...</p></div>
+      </div>
+    </article>
+    <div class="flex px-2 py-5 justify-between">
+      <div></div>
+      <a href="/articles/effective-options">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
+      </a>
+    </div>
+  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light"></footer><template id="loading-paragraph"><div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div></template><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name":"Page Speed Insights",
+      "headline":"Page Speed Insights",
+      "identifier":"page-speed",
+      "keywords":"web development,thanh pham golang,page speed insights",
+      "image": [],
+      "author":"Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name":"The Fortune Days",
+        "logo": {
+          "@type": "ImageObject",
+          "url":"https://thefortunedays.com/static/images/favicon.ico"}
+      },
+      "url":"/articles/page-speed",
+      "mainEntityOfPage":"https://thefortunedays.com",
+      "datePublished":{"seconds":1650096752,"nanos":973000000},
+      "dateModified":{},
+      "description":"The smaller size of HTML, JS, CSS and Images the better the performance."}
+  </script></body>
+</html>
