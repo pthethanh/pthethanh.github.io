@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/">
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="The Fortune Days,thanh pham golang,Thanh Pham,golang,pthethanh,Thanh Pham Golang,Go Programming Language,Go Interview,Golang Interview">
+  <meta name="author" content="thefortunedays">
+  <meta name="image" content="/static/images/header.jpg">
+  <meta name="description" content="The Fortune Days - good memories remained.">
+  <meta property="og:url" content="https://thefortunedays.com">
+  <meta property="og:title" content="The Fortune Days">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="/static/images/header.jpg">
+  <meta property="og:description" content="The Fortune Days - good memories remained.">
+  <meta property="og:locale" content="en_GB">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>The Fortune Days</title><link rel="canonical" href="https://thefortunedays.com"><meta name="referrer" content="no-referrer-when-downgrade">
+  <link rel="preconnect" href="/" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" href="/static/images/favicon-32x32.png">
+  <link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'" />
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" />
+  </noscript><script async defer src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script>
+  <script async defer src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+  <script async defer src="/static/js/index.js"></script></head>
+<body class="body"><div class="relative flex justify-center w-full" v-scope="article">
+  <div class="grid grid-cols-1 justify-center justify-items-center bg-white w-full max-w-2xl mx-2 space-y-2"  @vue:mounted="init('b611560d-f36a-4627-8417-773b6ff67ad1')">
+    <div class="flex justify-between bg-white z-40 w-full pt-2 space-x-4">
+      <a href="/">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="icon">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 15.75L3 12m0 0l3.75-3.75M3 12h18" />
+        </svg>
+      </a>
+      <div class="flex justify-end  w-full space-x-4">
+        <button @click="deleteArticle">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+          </svg>
+        </button>
+        <button @click="makePrivate">
+          <svg xmlns="http://www.w3.org/2000/svg" class="icon" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21" />
+          </svg>
+        </button>
+        <button @click="save">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+            <path d="M7.707 10.293a1 1 0 10-1.414 1.414l3 3a1 1 0 001.414 0l3-3a1 1 0 00-1.414-1.414L11 11.586V6h5a2 2 0 012 2v7a2 2 0 01-2 2H4a2 2 0 01-2-2V8a2 2 0 012-2h5v5.586l-1.293-1.293zM9 4a1 1 0 012 0v2H9V4z" />
+          </svg>
+        </button>
+        <button class="btn btn-primary btn-sm" @click="publish">
+          <svg class="icon" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24">
+            <path fill="currentcolor" d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div class="text-sm" v-text="message" v-cloak></div>
+    <div id="editor" class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify max-w-6xl min-h-screen py-2 pl-2 bg-white"></div>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/editorjs@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/quote@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/simple-image@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/marker@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/code@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/inline-code@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/paragraph@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/embed@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/raw"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/header@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/editorjs-text-color-plugin@1.1.22/dist/bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@editorjs/nested-list@latest"></script>
+<script src="/static/js/editor/delimiter.js"></script>
+<script src="/static/js/editor/any.js"></script>
+<script src="/static/js/editor/anytext.js"></script>
+<script src="/static/js/article.js"></script>
+<style>
+  .ce-block__content {
+    background-color: white;
+  }
+</style><template id="loading-paragraph">
+    <div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div>
+  </template><script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name":"The Fortune Days",
+      "url":"https://thefortunedays.com"}
+  </script></body>
+</html>
