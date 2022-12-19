@@ -176,16 +176,42 @@ _ = c.Set(&#34;name&#34;, &#34;Jack&#34;)
 _ = c.Set(&#34;name&#34;, &#34;Jack&#34;, TTL(5*time.Second))
 _ = c.Set(&#34;age&#34;, 22, TTL(5*time.Second), Token(&#34;abcd&#34;))</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/v25vpjS_-Gs">Playground</a><p>Although this approach looks a little bit more complicated than the options as functions approach, but it uses an interface hence it will be more flexible for end users to extend our library to have more customized options as their needs.</p><h3>Summary</h3><p>All the provided above approaches proved that everyone can write beautiful APIs with just a little effort. Some of you might like <code class="inline-code">builders</code>, but I would suggest you use <code class="inline-code">options as functions</code> or <code class="inline-code">options as an interface</code>&nbsp;since they are more beautiful and more flexible than the previous ones.</p><p>For more examples, look at&nbsp;packages&nbsp;<a href="https://github.com/pthethanh/micro/tree/master/cache">cache</a>, <a href="https://github.com/pthethanh/micro/tree/master/broker">broker</a> or <a href="https://github.com/pthethanh/micro/tree/master/server">server</a>&nbsp;of my <a href="https://github.com/pthethanh/micro">micro</a> toolkit.</p></div>
       </div>
-    </article>
-    <div class="flex px-2 py-5 justify-between">
-      <div></div>
-      <a href="/articles/go-interface">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
-        </svg>
+    </article><div class="flex justify-between pt-4 pb-10 border-t border-default font-serif">
+    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2fthefortunedays.com%2farticles%2feffective-options" class="flex flex-col items-center">
+      <svg class="h-6 w-6" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+      <span>Post</span>
+    </a>
+    <a aria-label="Tweet It" href="https://twitter.com/share?url=https%3a%2fthefortunedays.com%2farticles%2feffective-options&text=How%20to%20organize%20API%20options%20effectively%20in%20Go." class="flex flex-col items-center">
+      <svg class="h-6 w-6" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+      </svg>
+      <span>Tweet</span>
+    </a>
+    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2fthefortunedays.com%2farticles%2feffective-options" class="flex flex-col items-center">
+      <svg class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+      </svg>
+      <span>Share</span>
+    </a>
+  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default font-serif">
+    <div class="flex md:flex-col w-full md:w-1/5">
+      <div>Next In</div>
+      <a aria-label="More on this tag" href="/articles/tags/golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
+    </div>
+    <div class="hidden md:flex border-l border-default px-1"></div>
+    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
+      <div class="w-full md:w-1/2 mt-2 md:mt-0">
+        <a href="/articles/go-interface" class="font-bold capitalize">Interface{} Explained</a>
+        <p class="mt-2 line-clamp-3 font-serif">Interface values are stored as eface &amp; iface during runtime. Go keeps track of struct &amp; interface mapping in an internal list called itabTable. This list is built both at compile time and at runtime and will be used for checking if a struct implements an interface.</p>
+      </div>
+      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/articles/go-interface">
+        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/header_thumbnail.webp" alt="" />
       </a>
     </div>
-  </div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light"></footer><template id="loading-paragraph"><div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div></template><script type="application/ld+json">
+  </div></div></div><footer class="flex w-full pt-10 pb-2 justify-between font-light"></footer><template id="loading-paragraph"><div v-for="i in count" class="bg-gray-300 h-4 rounded-md mt-1" :class="{'w-full':!(i > 0 && i===count),'w-3/4':(i > 1 && i===count)}"></div></template><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
