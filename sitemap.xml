@@ -1,181 +1,303 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thefortunedays.com/</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:18+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:52+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/about</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:18+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:52+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:18+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:52+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/tags/golang</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:18+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:52+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/tags/xaml</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:18+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:52+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/3-lessons</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/the-right-thing</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-generics</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://thefortunedays.com/articles/page-speed</loc>
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <loc>https://thefortunedays.com/articles/show-up</loc>
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
+<<<<<<< HEAD
     <loc>https://thefortunedays.com/articles/show-up</loc>
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <loc>https://thefortunedays.com/articles/page-speed</loc>
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/any</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/reading</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/effective-options</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/they-dont-even-know-the-fundamentals</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-interface</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/golang-interface</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/golang-name-conventions</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/bad-code</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/measure-execution-time</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/100-stars</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/useful-docker-commands</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/how-we-work-together</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-reading-list</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-interview-questions</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/go-interview-structure</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-constant-in-go</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-string-in-go</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-map-in-go</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-slice-in-go</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
   <url>
     <loc>https://thefortunedays.com/articles/working-with-array-in-go</loc>
+<<<<<<< HEAD
     <lastmod>2022-12-19T13:24:20+07:00</lastmod>
+=======
+    <lastmod>2022-12-18T09:27:54+07:00</lastmod>
+>>>>>>> b315a07a90b5e6d914204cb52051191c0c215fc8
     <changefreq>daily</changefreq>
     <priority>1</priority>
   </url>
