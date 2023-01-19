@@ -8,7 +8,7 @@
 <body class="min-h-screen body" id="app"><header id="header" class="sticky z-50 bg-white"><nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100 font-serif"><div><a href="/" class="font-semibold">THE FORTUNE DAYS</a></div><div class="flex space-x-5 md:space-x-8"><div class="flex space-x-2 text-sm md:text-base" v-show="showMenu"><a href="/" class="hidden md:block">Home</a> <a href="/articles">Articles</a> <a href="/about">About</a></div><svg @click="showMenu=!showMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 cursor-pointer"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></div></nav></header><div class="w-full pb-14"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
     <article class="w-full pt-10 md:pt-14 pb-5">
       <div class="w-full mb-10">
-        <h1 class="mb-2 text-3xl lg:text-4xl font-serif">Effective Options</h1>
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif font-semibold">Effective Options</h1>
         <div class="flex justify-between">
           <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Sun 07 Nov 2021</div>
           <div class="flex space-x-2"></div>
@@ -176,7 +176,7 @@ _ = c.Set(&#34;name&#34;, &#34;Jack&#34;)
 _ = c.Set(&#34;name&#34;, &#34;Jack&#34;, TTL(5*time.Second))
 _ = c.Set(&#34;age&#34;, 22, TTL(5*time.Second), Token(&#34;abcd&#34;))</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://play.golang.org/p/v25vpjS_-Gs">Playground</a><p>Although this approach looks a little bit more complicated than the options as functions approach, but it uses an interface hence it will be more flexible for end users to extend our library to have more customized options as their needs.</p><h3>Summary</h3><p>All the provided above approaches proved that everyone can write beautiful APIs with just a little effort. Some of you might like <code class="inline-code">builders</code>, but I would suggest you use <code class="inline-code">options as functions</code> or <code class="inline-code">options as an interface</code>&nbsp;since they are more beautiful and more flexible than the previous ones.</p><p>For more examples, look at&nbsp;packages&nbsp;<a href="https://github.com/pthethanh/micro/tree/master/cache">cache</a>, <a href="https://github.com/pthethanh/micro/tree/master/broker">broker</a> or <a href="https://github.com/pthethanh/micro/tree/master/server">server</a>&nbsp;of my <a href="https://github.com/pthethanh/micro">micro</a> toolkit.</p></div>
       </div>
-    </article><div class="flex justify-between pt-4 pb-10 border-t border-default font-serif">
+    </article><div class="flex justify-between pt-4 pb-10 border-t border-default font-sans">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fthefortunedays.com%2farticles%2feffective-options" class="flex flex-col items-center">
       <svg class="h-6 w-6" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
         <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
@@ -198,20 +198,20 @@ _ = c.Set(&#34;age&#34;, 22, TTL(5*time.Second), Token(&#34;abcd&#34;))</code></
     </a>
   </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default font-serif">
     <div class="flex md:flex-col w-full md:w-1/5">
-      <div>Next In</div>
+      <div class="font-sans">Next In</div>
       <a aria-label="More on this tag" href="/articles/tags/golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
     </div>
     <div class="hidden md:flex border-l border-default px-1"></div>
     <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
       <div class="w-full md:w-1/2 mt-2 md:mt-0">
-        <a href="/articles/go-interface" class="font-bold capitalize">Interface{} Explained</a>
+        <a href="/articles/go-interface" class="font-semibold capitalize">Interface{} Explained</a>
         <p class="mt-2 line-clamp-3 font-serif">Interface values are stored as eface &amp; iface during runtime. Go keeps track of struct &amp; interface mapping in an internal list called itabTable. This list is built both at compile time and at runtime and will be used for checking if a struct implements an interface.</p>
       </div>
       <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/articles/go-interface">
         <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/golang.webp" alt="" />
       </a>
     </div>
-  </div></div></div><footer class="flex w-full font-light justify-center border-t border-gray-100 align-middle"><div class="text-xs text-gray-500 py-8 font-serif">Copyright © 2020 - Thanh Pham. All rights reserved.</div></footer><script type="application/ld+json">
+  </div></div></div><footer class="flex w-full font-light justify-center border-t border-gray-100 align-middle"><div class="text-xs text-gray-500 py-8 font-sans">Copyright © 2020 - Thanh Pham. All rights reserved.</div></footer><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
