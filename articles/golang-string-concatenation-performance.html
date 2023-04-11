@@ -18,13 +18,13 @@
         </div>
       </div>
       <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
-        <div><div class="text-xs lg:text-sm font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>strings.Builder gives very good performance in general, but we can improve it even better.</div><picture class="object-center object-cover w-full"><source sizes="50vw" srcset="/static/images/articles/golang-string-concat-performance/concat-w160.webp w160,/static/images/articles/golang-string-concat-performance/concat-w320.webp w320,/static/images/articles/golang-string-concat-performance/concat-w640.webp w640,/static/images/articles/golang-string-concat-performance/concat-w1280.webp w1280" type="webp"><img width="359" height="240" class="object-center object-cover bg-none w-full" src="/static/images/articles/golang-string-concat-performance/concat-worg.png" alt="string concatenation performance" style='background-image: url("data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAUAAgA0JaQAAxZQtGgAAP79wsgOdj4OrBpvIM9AAAAA");background-repeat: no-repeat; background-size: cover'></picture><div class="w-full text-left text-captions font-sans text-xs">string concatenation performance</div><p>String concatenation is a basic task that every developer does every single day but a lot of us don't care much about its performance. This article is a result of my curiosity on this topic.</p><p>The very normal approach that some developers do is using normal concatenation like this:</p><pre><code>func concatNormal(ss ...string) string {
+        <div><div class="text-xs lg:text-sm font-sans mb-5 mt-5"><span class="font-bold pr-2">Summary.</span>strings.Builder gives very good performance in general, but we can improve it even better.</div><picture class="object-center object-cover w-full"><source sizes="50vw" srcset="/static/images/articles/golang-string-concat-performance/concat-w160.webp w160,/static/images/articles/golang-string-concat-performance/concat-w320.webp w320,/static/images/articles/golang-string-concat-performance/concat-w640.webp w640,/static/images/articles/golang-string-concat-performance/concat-w1280.webp w1280" type="webp"><img width="359" height="240" class="object-center object-cover bg-none w-full" src="/static/images/articles/golang-string-concat-performance/concat-worg.png" alt="string concatenation performance" style='background-image: url("data:image/webp;base64,UklGRjQAAABXRUJQVlA4ICgAAACwAQCdASoIAAUAAgA0JaQAAxZQtGgAAP79wsgOdj4OrBpvIM9AAAAA");background-repeat: no-repeat; background-size: cover'></picture><div class="w-full text-left text-captions font-sans text-xs">string concatenation performance</div><p>String concatenation is a basic task that every developer does every single day, but a lot of us don't care much about its performance. This article is a result of my curiosity about this topic.</p><p>The very normal approach that some developers take is to use normal concatenation like this:</p><pre><code>func concatNormal(ss ...string) string {
 	rs := ss[0]
 	for i := 1; i &lt; len(ss); i&#43;&#43; {
 		rs &#43;= ss[i] // cause memory allocation
 	}
 	return rs
-}</code></pre><p>But this approach gives the worst performance. The statement `rs += ss[i]` will allocate new memory each time it is called. And we all know that allocation reduces the performance of function calls. Hence, we have to avoid it as much as we can.</p><p>The simple way to avoid multiple allocations is to allocate it in advance and make sure we allocate enough memory to avoid any additional allocations during the function calls. Go `strings.Builder` follows this approach. It maintains a byte buffer and exposes the `Grow(int)` method so that we can use it to grow the underlying buffer. The code using string builder will look like this:</p><pre><code>func concatStringBuilder(ss ...string) string {
+}</code></pre><p>But this approach gives the worst performance. The statement `rs += ss[i]` will allocate new memory each time it is called. And we all know that allocation reduces the performance of function calls. Hence, we have to avoid it as much as we can.</p><p>The simple way to avoid multiple allocations is to allocate them in advance and make sure we allocate enough memory to avoid any additional allocations during the function calls. Go `strings.Builder` follows this approach. It maintains a byte buffer and exposes the `Grow(int)` method so that we can use it to grow the underlying buffer. The code using the string builder will look like this:</p><pre><code>func concatStringBuilder(ss ...string) string {
 	length := len(ss)
 	if length == 0 {
 		return &#34;&#34;
@@ -41,15 +41,18 @@
 		b.WriteString(ss[i])
 	}
 	return b.String()
-}</code></pre><p>Based on my testing the `strings.Builder` gives very good performance and should be used in general cases. But if you want to save some nanoseconds, we can improve it even more. If we look at the implementation of the strings.Builder, we can see that before every single call, it has a copy check for pointer receiver:</p><pre><code>// WriteString appends the contents of s to b&#39;s buffer.
+}</code></pre><p>Based on my testing, the `strings.Builder` gives very good performance and should be used in general cases. But if you want to save some nanoseconds, we can improve it even more. If we look at the implementation of the strings.Builder, we can see that before every single call, it has a copy check for pointer receiver:</p><pre><code>// WriteString appends the contents of s to b&#39;s buffer.
 // It returns the length of s and a nil error.
 func (b *Builder) WriteString(s string) (int, error) {
 	b.copyCheck()
 	b.buf = append(b.buf, s...)
 	return len(s), nil
-}</code></pre><p>In our case, we don't really need this as we have a function instead of a method of a struct. We can eliminate those checks and can have a simple function as below, just similar to what the strings.Builder tries to do:</p><pre><code>func concatFast(ss ...string) string {
-	n := 0
+}</code></pre><p>In our case, we don't really need this as we have a function instead of a method of a struct. We can eliminate those checks and have a simple function like the one below, similar to what the strings.Builder tries to do:</p><pre><code>func concatFast(ss ...string) string {
 	length := len(ss)
+	if length == 0 {
+		return &#34;&#34;
+	}
+	n := 0
 	for i := 0; i &lt; length; i&#43;&#43; {
 		n &#43;= len(ss[i])
 	}
@@ -60,15 +63,21 @@ func (b *Builder) WriteString(s string) (int, error) {
 	}
 	// below statement causes a memory allocation.
 	return string(b)
-}</code></pre><p>The above function looks good as we calculated and allocated the buffer to the exact size of the output string, but there's still a problem. The last statement `string(b)` causes a memory allocation and hence reduces performance of the function call. Let see the benchmark below, the concatFast has 2 allocations instead of 1 and its performance is slower than the strings.Builder:</p><pre><code>goos: windows
+}</code></pre><p>The above function looks good, as we calculated and allocated the buffer to the exact size of the output string, but there's still a problem. The last statement, `string(b)` causes a memory allocation and hence reduces the performance of the function call. Let's see the benchmark below, the concatFast has 2 allocations instead of 1, and its performance is slower than the strings.Builder:</p><pre><code>goos: windows
 goarch: amd64
-pkg: github.com
+pkg: github.com/pthethanh/mux
 cpu: 12th Gen Intel(R) Core(TM) i7-1255U
-BenchmarkFast-12                                 2335849               505.7 ns/op           576 B/op          2 allocs/op
-BenchmarkStringBuilder-12                        3566547               402.4 ns/op           288 B/op          1 allocs/op</code></pre><p>Is there any way to avoid that allocation? You might wonder! Yes, there is a way to avoid that allocation by using `unsafe` package, and this is exactly the way strings.Builder does:</p><pre><code>func (b *Builder) String() string {
+BenchmarkFast-12                                 7439719               148.8 ns/op           576 B/op          2 allocs/op
+BenchmarkStringBuilder-12                       12180452                99.43 ns/op          288 B/op          1 allocs/op
+PASS
+ok</code></pre><p>Is there any way to avoid that allocation? You might wonder! Yes, there is a way to avoid that allocation by using `unsafe` package, and this is exactly the way strings.Builder does:</p><pre><code>func (b *Builder) String() string {
 	return unsafe.String(unsafe.SliceData(b.buf), len(b.buf))
-}</code></pre><p>This hack is pretty good and we can apply it to our function, our code would look like:</p><pre><code>func concatFast(ss ...string) string {
+}</code></pre><p>This hack is pretty good and we can apply it to our function, our code would look like:</p><pre><code>func concatFastImproved(ss ...string) string {
 	length := len(ss)
+	if length == 0 {
+		return &#34;&#34;
+	}
+	// create &amp; allocate the memory in advance.
 	n := 0
 	for i := 0; i &lt; length; i&#43;&#43; {
 		n &#43;= len(ss[i])
@@ -77,43 +86,21 @@ BenchmarkStringBuilder-12                        3566547               402.4 ns/
 	for i := 0; i &lt; length; i&#43;&#43; {
 		b = append(b, ss[i]...)
 	}
-	// below statement doesn&#39;t cause any memory allocation
 	return unsafe.String(unsafe.SliceData(b), n)
-}</code></pre><p>The above method looks pretty good and gives better performance. But what else can we do to improve it even better?</p><p>We all know that if we have 2 or more strings, the normal concatenation like `return string1 + string2` will give the best performance over the others. We can take advantage of this for common cases, our function would look like below and it gives a better performance:</p><pre><code>func concatFastImproved(ss ...string) string {
-	length := len(ss)
-	switch length {
-	case 0:
-		return &#34;&#34;
-	case 1:
-		return ss[0]
-	case 2:
-		return ss[0] &#43; ss[1]
-	case 3:
-		return ss[0] &#43; ss[1] &#43; ss[2]
-	default:
-		// create &amp; allocate the memory in advance.
-		n := 0
-		for i := 0; i &lt; length; i&#43;&#43; {
-			n &#43;= len(ss[i])
-		}
-		b := make([]byte, 0, n)
-		for i := 0; i &lt; length; i&#43;&#43; {
-			b = append(b, ss[i]...)
-		}
-		return unsafe.String(unsafe.SliceData(b), n)
-	}
-}</code></pre><p>An alternative to the `append` is using `copy`, it would give a similar performance. Other solutions like assigning byte by index or using `bytes.Buffer` give much worse performance than `append`. Below is the benchmark of all solutions:</p><pre><code>goos: windows
+}</code></pre><p>The above method looks pretty good and gives better performance compared to strings.Builder.&nbsp;An alternative to `append` is `copy`, using `copy` would give a similar performance. Other solutions include assigning bytes by index or using `bytes.Buffer` give much worse performance than `append`. Below is the benchmark for all solutions:</p><pre><code>goos: windows
 goarch: amd64
 pkg: github.com
 cpu: 12th Gen Intel(R) Core(TM) i7-1255U
-BenchmarkStringBuilderWithoutGrow-12             1359319               748.5 ns/op           984 B/op          5 allocs/op
-BenchmarkNormal-12                                729620              1473 ns/op            1520 B/op          9 allocs/op
-BenchmarkFast-12                                 2335849               505.7 ns/op           576 B/op          2 allocs/op
-BenchmarkFastImproved-12                         3746292               375.0 ns/op           288 B/op          1 allocs/op
-BenchmarkStringBuilder-12                        3566547               402.4 ns/op           288 B/op          1 allocs/op
-BenchmarkBytesBuffer-12                          1000000              1109 ns/op             576 B/op          2 allocs/op
-BenchmarkCopy-12                                 2410460               440.0 ns/op           288 B/op          1 allocs/op
-BenchmarkAssignIndex-12                          1000000              1303 ns/op             288 B/op          1 allocs/op</code></pre><p>All the code is available here in the <a href="https://go.dev/play/p/H1aFLQ-RPVC">playground</a>.</p><p>So, the rules for good performance we can learn from this are:</p><ul><li>Avoid memory allocation as much as we can.</li><li>Whenever a slice is used, try to allocate enough memory for it in advance.</li><li>Take advantage of built-in functions like `append`, `copy`,...</li><li>Sometimes `unsafe` package can provide some pretty good hacks for better performance, but they should be used with care. </li><li>Try to run benchmark with multiple cases, small, medium, big to see the differences and improve the code from there.</li><li>There are a lot of things we can learn from the Go SDK code like strings.Builder in this case.</li></ul></div>
+BenchmarkStringBuilderWithoutGrow-12             4615256               282.6 ns/op           984 B/op          5 allocs/op
+BenchmarkNormal-12                               2684505               416.5 ns/op          1520 B/op          9 allocs/op
+BenchmarkFast-12                                 7439719               148.8 ns/op           576 B/op          2 allocs/op
+BenchmarkFastImproved-12                        13688362                86.48 ns/op          288 B/op          1 allocs/op
+BenchmarkStringBuilder-12                       12180452                99.43 ns/op          288 B/op          1 allocs/op
+BenchmarkBytesBuffer-12                          6184144               188.8 ns/op           576 B/op          2 allocs/op
+BenchmarkCopy-12                                11419587                99.98 ns/op          288 B/op          1 allocs/op
+BenchmarkAssignIndex-12                          4118612               276.2 ns/op           288 B/op          1 allocs/op
+PASS
+ok</code></pre><p>All the code is available here in the <a href="https://go.dev/play/p/YOIEhJdaOY2">playground</a>.</p><p>So, the rules for good performance we can learn from this are:</p><ul><li>Avoid memory allocation as much as we can.</li><li>Whenever a slice is used, try to allocate enough memory for it in advance.</li><li>Take advantage of built-in functions like `append`, `copy`,...</li><li>Sometimes `unsafe` package can provide some pretty good hacks for better performance, but they should be used with care. </li><li>Try to run benchmark with multiple cases, small, medium, large inputs to see the differences and improve the code from there.</li><li>There are a lot of things we can learn from the Go SDK code like strings.Builder in this case.</li></ul></div>
       </div>
     </article><div class="flex justify-between pt-4 pb-10 border-t border-default font-sans">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fthefortunedays.com%2farticles%2fgolang-string-concatenation-performance" class="flex flex-col items-center">
