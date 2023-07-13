@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" domain="https://thefortunedays.com" v-scope="app">
+<head><base href="/"><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="keywords" content=""><meta name="author" content="Thanh Pham"><meta name="image" content="/static/images/articles/go-map-hash/go-map-hash.gif"><meta name="description" content="How to implement hash code in Go"><meta property="og:url" content="https://thefortunedays.com/articles/go-map-hash"><meta property="og:title" content="Go Map Hash"><meta property="og:type" content="article"><meta property="og:image" content="/static/images/articles/go-map-hash/go-map-hash.gif"><meta property="og:description" content="How to implement hash code in Go"><meta property="og:locale" content="en_GB"><meta name="twitter:card" content="summary_large_image"><title>Go Map Hash</title><link rel="canonical" href="https://thefortunedays.com/articles/go-map-hash"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="preconnect" href="/" crossorigin><link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png"><link rel="apple-touch-icon" href="/static/images/favicon-32x32.png"><link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"></noscript><script async defer="defer" src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script><script async defer="defer" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script><script async defer="defer" src="/static/js/index.js"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025327352745846" crossorigin="anonymous"></script></head>
+<body class="min-h-screen body" id="app"><header id="header" class="sticky z-50 bg-white"><nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100 font-serif"><a href="/" class="flex space-x-2 items-center"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048" class="h-8 w-8"><title>The Fortune Days</title><style>.s1 { fill:black;stroke: url(#g1);stroke-width: 0;stroke-dasharray: 0,0 } 
+          .s2 { fill:black;stroke: url(#g2);stroke-width: 0;stroke-dasharray: 0,0 } 
+          .s3 { fill:black;stroke: url(#g3);stroke-width: 0;stroke-dasharray: 0,0 } 
+          .s4 { fill:black;stroke: url(#g4);stroke-width: 0;stroke-dasharray: 0,0 }</style><g id="logo"><g id="logo"><path id="bk" fill-rule="evenodd" class="s1" d="m1090.5 1071.3l111.5 189.6 232.5-3.8-194.1-332 65.7-113.7 335 575h-501l-119.9-207.3-69.8-120.7-220.2 1.5-113 202.9 385.1-1.9 72.6 125.5h-666.9l257.8-442.6h229.3 139.7l108.8-191.1-119.6-199.1-190.9 333.8h-134.4l325.8-559.4 248.9 427.2-113 195.3z"/><path id="Rectangle 2 copy 3" fill-rule="evenodd" class="s2" d="m950.4 1058.4l-220.2 1.5-113 202.9 385.1-1.9 72.6 125.5h-666.9l257.8-442.6h229.3 139.7z"/><path id="Rectangle 2 copy 4" fill-rule="evenodd" class="s3" d="m1090.5 1071.3l111.5 189.6 232.5-3.8-194.1-332 65.7-113.7 335 575h-501l-119.9-207.3-69.8-120.7z"/><path id="Rectangle 2 copy 5" fill-rule="evenodd" class="s4" d="m1090.5 1071.3l-55.7-127.5 108.8-191.1-119.6-199.1-190.9 333.8h-134.4l325.8-559.4 248.9 427.2-113 195.3z"/></g></g></svg><div :class="showMenu ? 'hidden md:block font-semibold': 'font-semibold'" v-cloak>THE FORTUNE DAYS</div></a><div class="flex space-x-5 md:space-x-8 items-center"><div class="flex space-x-2 text-sm md:text-base" v-show="showMenu" v-cloak><a class="transition duration-500 ease-in-out" href="/">Home</a> <a class="transition duration-500 ease-in-out" href="/articles">Articles</a> <a class="transition duration-500 ease-in-out" href="/about">About</a></div><svg @click="showMenu=!showMenu" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6 cursor-pointer"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg></div></nav></header><div class="w-full pb-14"><div class="container w-full max-w-xl mx-auto px-2 pb-10">
+    <article class="w-full pt-10 md:pt-14 pb-5">
+      <div class="w-full mb-10">
+        <h1 class="mb-2 text-3xl lg:text-4xl font-serif font-semibold">Go Map Hash</h1>
+        <div class="flex justify-between">
+          <div class="text-sm lg:text-base font-medium text-gray-600">Thanh Pham / Sat 10 Jun 2023</div>
+          <div class="flex space-x-2"></div>
+        </div>
+      </div>
+      <div class="prose prose-img:mb-2 lg:prose-lg prose-img:lg:mb-2 font-serif text-justify">
+        <div><picture class="object-center object-cover w-full"><source sizes="50vw" srcset="" type="image/webp"><img width="359" height="240" class="object-center object-cover bg-none w-full" src="/static/images/articles/go-map-hash/go-map-hash.gif" alt="Hash Function" style='background-image: url("data:");background-repeat: no-repeat; background-size: cover'></picture><div class="w-full text-left text-captions font-sans text-xs">Hash Function</div><p>Map implementation is one of the interesting features in Go, it accepts anything as key, from string to numbers or even complex structs. And the magic thing is it is able to calculate the hash code of the given key effectively without the need to provide any hash code function. I feel this is really interesting and it stimulates my curiosity every single time I use map.</p><p>I would like to know how it's implemented and whether I can use the same implementation for some other contexts. But unfortunately, Go doesn't expose the hash code implementation for us to use directly. If you have enough knowledge about Go compiler and Go runtime you still can investigate and copy the implementation. I actually tried but found it's quite challenging and requires a lot of effort. It requires a lot of understanding about the compiler and runtime and also requires understanding of assembly code - which I feel is a little bit scary [1].</p><p>Luckily, go have another package that helps to simplify the implementation of hash code for map. It is the package `maphash`. With the `maphash` package, we can easily implement the hash code the primitive types like string or numbers:</p><pre><code>var h maphash.Hash
+h.SetSeed(maphash.MakeSeed())
+h.WriteString(&#34;hello&#34;)
+hashCode := h.Sum64() // 10811116414953202048
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/08MZh66HNxJ">Playground</a><pre><code>number := 12.3
+var h maphash.Hash
+h.SetSeed(maphash.MakeSeed())
+binary.Write(&amp;h, binary.BigEndian, number)
+hashCode := h.Sum64() // 4236663090134902550
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/2YSIZsOWhio">Playground</a><p>But what if we have a key of the map is a struct that includes fields of different types like below:</p><pre><code>type Employee struct {
+	Name      string
+	Age       int
+	Address   string
+	BirthDate time.Time
+}</code></pre><p>How can we implement the hash code? You might think that we just need to convert everything into string and contact them together to form a key? But it will cause some problems, the 2 following employees will have the same same key and hence the same hash code:</p><pre><code>e1 := Employee{
+	Name: &#34;Jack&#34;,
+	Age:  15,
+}
+// Key: Jack15
+
+e2 := Employee{
+	Name: &#34;Jack1&#34;,
+	Age:  5,
+}
+// Key: Jack15
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/Ul9X8P6XmkJ">Playground</a><p>You can argue that we can add a separator between the fields... but then we need to identify which ones are safe to use. And if the separator collides with the value of the key?</p><p>Because of those complexities, we need another simple mechanism to apply. But unfortunately there is no guideline from Go on how to implement the hash code. Hence the best way I can imagine is to use the similar mechanism that I used to use while working with Java. This mechanism uses 2 primes numbers, one as the init of the hash code and another one as a multiply factor for the hash code. It is quite popular in the Java community. The steps can be described as below:</p><ol><li>Let call the hash code we want to calculate is `sum`</li><li>Init `sum` with value is a prime number. i.e. 7: `sum = 7`</li><li>For every single field `n` of the given struct, calculate its hash code `sum_n`.<ol><li>If type of the field is kind of byte or string, write directly to the `maphash.Hash`</li><li>If type of the field is boolean, number, or slice values of them, use `binary.Write` to write to the `maphash.Hash`</li><li>If it's time, get its binary value by calling `MarshalBinary()` and write to the `maphash.Hash`. Or you can simply get the `UnixNano()` and uses `binary.Write` for it.</li><li>If you have a slice or map of types, iterate over it and apply the same principle to calculate its sum.</li></ol></li><li>Combine the `sum_n` with the total sum by multiple it with the multiply factor (which is also another prime number), i.e 31: `sum = sum * 31 + sum_n`</li><li>Perform step #3 and #4 for all the fields of the struct that should be used for comparing the struct.</li></ol><p>Applying the above rules, we can have the hash code for the struct `Employee` as below:</p><pre><code>var seed = maphash.MakeSeed()
+
+func hashEmployee(e Employee) uint64 {
+	var h maphash.Hash
+	h.SetSeed(seed)
+	sum := uint64(7)
+
+	h.WriteString(e.Name)
+	sum = sum*31 &#43; h.Sum64()
+
+	h.Reset()
+	binary.Write(&amp;h, binary.LittleEndian, int64(e.Age))
+	sum = sum*31 &#43; h.Sum64()
+
+	h.Reset()
+	h.WriteString(e.Address)
+	sum = sum*31 &#43; h.Sum64()
+
+	h.Reset()
+	b, _ := e.BirthDate.MarshalBinary()
+	h.Write(b)
+	sum = sum*31 &#43; h.Sum64()
+
+	return sum
+}
+
+hashEmployee(e1) // 4034376227000349563
+hashEmployee(e2) // 9233382178721626727
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/nj0IPwvY3lw">Playground</a><p>I think this mechanism is quite easy to use and its performance is acceptable.</p><hr class="delimiter"><p>[1] You can take a look at the implementation of map in Go at <a href="https://github.com/golang/go/blob/master/src/runtime/map.go">map.go</a>,&nbsp;<a href="https://github.com/golang/go/blob/master/src/runtime/map_fast32.go">map_fast32.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/map_fast64.go">map_fast64.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/map_faststr.go">map_faststr.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/alg.go">alg.go</a> and some relevant assembly code files can be found in the same run time package.&nbsp;&nbsp;</p></div>
+      </div>
+    </article><div class="flex justify-between pt-4 pb-10 border-t border-default font-sans">
+    <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fthefortunedays.com%2farticles%2fgo-map-hash" class="flex flex-col items-center">
+      <svg class="h-6 w-6" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+      </svg>
+      <span>Post</span>
+    </a>
+    <a aria-label="Tweet It" href="https://twitter.com/share?url=https%3a%2f%2fthefortunedays.com%2farticles%2fgo-map-hash&text=How%20to%20implement%20hash%20code%20in%20Go" class="flex flex-col items-center">
+      <svg class="h-6 w-6" fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
+        <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
+      </svg>
+      <span>Tweet</span>
+    </a>
+    <a aria-label="Share on LinkedIn" href="https://www.linkedin.com/sharing/share-offsite/?url=https%3a%2f%2fthefortunedays.com%2farticles%2fgo-map-hash" class="flex flex-col items-center">
+      <svg class="h-6 w-6" fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="0" viewBox="0 0 24 24">
+        <path stroke="none" d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
+        <circle cx="4" cy="4" r="2" stroke="none"></circle>
+      </svg>
+      <span>Share</span>
+    </a>
+  </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default font-serif">
+    <div class="flex md:flex-col w-full md:w-1/5">
+      <div class="font-sans">Next In</div>
+      <a aria-label="More on this tag" href="/articles/tags/golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
+    </div>
+    <div class="hidden md:flex border-l border-default px-1"></div>
+    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
+      <div class="w-full md:w-1/2 mt-2 md:mt-0">
+        <a href="/articles/effective-options" class="font-semibold capitalize">Effective Options</a>
+        <p class="mt-2 line-clamp-3 font-serif">Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users.</p>
+      </div>
+      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/articles/effective-options">
+        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/articles/effective-options/options-w320.webp" alt="unsplash/Victoriano Izquierdo" />
+      </a>
+    </div>
+  </div></div></div><footer class="flex w-full font-light justify-center border-t border-gray-100 align-middle"><div class="text-xs text-gray-500 py-8 font-sans">Copyright © 2020 - Thanh Pham. All rights reserved.</div></footer><script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "name":"Go Map Hash",
+      "headline":"Go Map Hash",
+      "identifier":"go-map-hash",
+      "keywords":"",
+      "image": [],
+      "author":"Thanh Pham",
+      "genre": "",
+      "publisher": {
+        "@type": "Organization",
+        "name":"The Fortune Days",
+        "logo": {
+          "@type": "ImageObject",
+          "url":"https://thefortunedays.com/static/images/favicon.ico"}
+      },
+      "url":"https://thefortunedays.com/articles/go-map-hash",
+      "mainEntityOfPage":"https://thefortunedays.com",
+      "datePublished":{"seconds":1689175030,"nanos":36000000},
+      "dateModified":{},
+      "description":"How to implement hash code in Go"}
+  </script></body>
+</html>
