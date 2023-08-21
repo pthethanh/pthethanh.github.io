@@ -1,6 +1,10 @@
 <!doctype html>
 <html lang="en" domain="https://thefortunedays.com" v-scope="app">
-<head><base href="/"><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="keywords" content=""><meta name="author" content="Thanh Pham"><meta name="image" content="/static/images/articles/go-map-hash/go-map-hash.gif"><meta name="description" content="How to implement hash code in Go"><meta property="og:url" content="https://thefortunedays.com/articles/go-map-hash"><meta property="og:title" content="Go Map Hash"><meta property="og:type" content="article"><meta property="og:image" content="/static/images/articles/go-map-hash/go-map-hash.gif"><meta property="og:description" content="How to implement hash code in Go"><meta property="og:locale" content="en_GB"><meta name="twitter:card" content="summary_large_image"><title>Go Map Hash</title><link rel="canonical" href="https://thefortunedays.com/articles/go-map-hash"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="preconnect" href="/" crossorigin><link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png"><link rel="apple-touch-icon" href="/static/images/favicon-32x32.png"><link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"></noscript><script async defer="defer" src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script><script async defer="defer" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script><script async defer="defer" src="/static/js/index.js"></script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025327352745846" crossorigin="anonymous"></script></head>
+<head><base href="/"><meta charset="utf-8"><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name="keywords" content=""><meta name="author" content="Thanh Pham"><meta name="image" content="/static/images/articles/go-map-hash/go-map-hash.gif"><meta name="description" content="How to implement hash code in Go"><meta property="og:url" content="https://thefortunedays.com/articles/go-map-hash"><meta property="og:title" content="Go Map Hash"><meta property="og:type" content="article"><meta property="og:image" content="/static/images/articles/go-map-hash/go-map-hash.gif"><meta property="og:description" content="How to implement hash code in Go"><meta property="og:locale" content="en_GB"><meta name="twitter:card" content="summary_large_image"><title>Go Map Hash</title><link rel="canonical" href="https://thefortunedays.com/articles/go-map-hash"><meta name="referrer" content="no-referrer-when-downgrade"><link rel="preconnect" href="/" crossorigin><link rel="icon" type="image/png" sizes="32x32" href="/static/images/favicon-32x32.png"><link rel="icon" type="image/png" sizes="16x16" href="/static/images/favicon-16x16.png"><link rel="apple-touch-icon" href="/static/images/favicon-32x32.png"><link href="/static/css/index.css" rel="stylesheet" rel="preload" as="style"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&family=Spectral&display=swap"></noscript><script async defer="defer" src="https://unpkg.com/petite-vue@0.4.1/dist/petite-vue.iife.js"></script><script async defer="defer" src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script><script async defer="defer" src="/static/js/index.js"></script><script async src="https://www.googletagmanager.com/gtag/js?id=G-9X9G2YCR2X"></script><script>window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-9X9G2YCR2X');</script><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4025327352745846" crossorigin="anonymous"></script></head>
 <body class="min-h-screen body" id="app"><header id="header" class="sticky z-50 bg-white"><nav class="flex justify-between px-2 lg:px-5 py-4 border-b border-gray-100 font-serif"><a href="/" class="flex space-x-2 items-center"><svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048" class="h-8 w-8"><title>The Fortune Days</title><style>.s1 { fill:black;stroke: url(#g1);stroke-width: 0;stroke-dasharray: 0,0 } 
           .s2 { fill:black;stroke: url(#g2);stroke-width: 0;stroke-dasharray: 0,0 } 
           .s3 { fill:black;stroke: url(#g3);stroke-width: 0;stroke-dasharray: 0,0 } 
@@ -90,21 +94,21 @@ hashEmployee(e2) // 9233382178721626727
       <span>Share</span>
     </a>
   </div><div class="flex flex-col md:flex-row py-8  border-t border-b border-default font-serif">
-    <div class="flex md:flex-col w-full md:w-1/5">
-      <div class="font-sans">Next In</div>
-      <a aria-label="More on this tag" href="/articles/tags/golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
-    </div>
-    <div class="hidden md:flex border-l border-default px-1"></div>
-    <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
-      <div class="w-full md:w-1/2 mt-2 md:mt-0">
-        <a href="/articles/golang-string-concatenation-performance" class="font-semibold capitalize">Go String Concat Performance</a>
-        <p class="mt-2 line-clamp-3 font-serif">strings.Builder gives very good performance in general, but we can improve it even better.</p>
+      <div class="flex md:flex-col w-full md:w-1/5">
+        <div class="font-sans">Next In</div>
+        <a aria-label="More on this tag" href="/articles/tags/golang" class="font-bold capitalize ml-2 md:mt-2 md:ml-0">golang</a>
       </div>
-      <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/articles/golang-string-concatenation-performance">
-        <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/articles/golang-string-concat-performance/concat-w160.webp" alt="Go string concatenation performance comparison" />
-      </a>
-    </div>
-  </div></div></div><footer class="flex w-full font-light justify-center border-t border-gray-100 align-middle"><div class="text-xs text-gray-500 py-8 font-sans">Copyright © 2020 - Thanh Pham. All rights reserved.</div></footer><script type="application/ld+json">
+      <div class="hidden md:flex border-l border-default px-1"></div>
+      <div class="w-full md:w-4/5 flex flex-col-reverse md:flex-row">
+        <div class="w-full md:w-1/2 mt-2 md:mt-0">
+          <a href="/articles/golang-string-concatenation-performance" class="font-semibold capitalize">Go String Concat Performance</a>
+          <p class="mt-2 line-clamp-3 font-serif">strings.Builder gives very good performance in general, but we can improve it even better.</p>
+        </div>
+        <a aria-label="Next article" class="mt-2 md:pl-2 md:mt-0 md:w-1/2" href="/articles/golang-string-concatenation-performance">
+          <img decoding="async" loading="lazy" width="240" height="120" class="object-cover object-center w-ful" src="/static/images/articles/golang-string-concat-performance/concat-w160.webp" alt="Go string concatenation performance comparison" />
+        </a>
+      </div>
+    </div></div></div><footer class="flex w-full font-light justify-center border-t border-gray-100 align-middle"><div class="text-xs text-gray-500 py-8 font-sans">Copyright © 2020 - Thanh Pham. All rights reserved.</div></footer><script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Article",
