@@ -24,7 +24,7 @@ go 1.21.0</code></pre><p>Since your module name already included Git full qualif
 
 go 1.21.0
 
-require gitlab.mycompany.com/my-module v0.0.1</code></pre><h3>Init Module With Custom Name</h3><p>If for some reasons, you don't want to include the full qualify domain name in your module name, you can define your module with custom name as below:</p><pre><code>module my-module
+require gitlab.mycompany.com/my-module v0.0.1</code></pre><h3>Init Module With Custom Name</h3><p>If for some reasons, you don't want to include the full qualify domain name in your module name, you can define your module as below:</p><pre><code>module my-module
 
 go 1.21.0</code></pre><p>And to use it, you need to tell Go Module where to download your module. One of the solution is using `replace` directive:</p><pre><code>module my-application
 
@@ -32,7 +32,13 @@ go 1.21.0
 
 require my-module v0.0.1
 
-replace my-module =&gt; gitlab.mycompany.com/my-module v0.0.1</code></pre><h3>Local Development</h3><p>The first step is to tell Go Module that your module is private so that it doesn't use its proxy or checksum database against your module.</p><p>This can be done by using the `GOPRIVATE` environment variable. And if your company Git server doesn't use certified certificates, you might consider to use `GOINSECURE` to ignore certificates verification issues while downloading the module: &nbsp;</p><pre><code>go env -w GOPRIVATE=gitlab.mycompany.com/*
+replace my-module =&gt; gitlab.mycompany.com/my-module v0.0.1</code></pre><p>And if during the development, you want to use local/unpublished code of `my-module` right away in other module for testing, you can also use the `replace` directive to point directly to where the module is located:</p><pre><code>module my-application
+
+go 1.21.0
+
+require my-module v0.0.1
+
+replace my-module =&gt; ../relative/or/absolute/path/to/my-module</code></pre><h3>Local Development</h3><p>To build the code locally, the first step is to tell Go Module that your module is private so that it doesn't use its proxy or checksum database against your module.</p><p>This can be done by using the `GOPRIVATE` environment variable. And if your company Git server doesn't use certified certificates, you might consider to use `GOINSECURE` to ignore certificates verification issues while downloading the module: &nbsp;</p><pre><code>go env -w GOPRIVATE=gitlab.mycompany.com/*
 go env -w GOINSECURE=gitlab.mycompany.com/*</code></pre><p>Go Module uses Git under the hood. Hence you need to set up your Git client to allow downloading your module without prompting for username/password. This can be done by set an environment variable named `NETRC` or a file `.netrc` at your home directory:</p><pre><code>machine &lt;url&gt; login &lt;username&gt; password &lt;token&gt;</code></pre><p>After finishing this step, you're ready to `go get` your private module</p><h3>CI/CD</h3><p>You can apply the same steps of local development to the CI/CD pipeline. Below is an example of using GitLab CI:</p><pre><code>variables:
   GOPRIVATE: gitlab.mycompany.com/*
   GOINSECURE: gitlab.mycompany.com/*
