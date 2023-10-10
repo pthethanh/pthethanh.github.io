@@ -71,7 +71,7 @@ Do(ctx, func() { /*do something*/ })
 // Don&#39;t want to cancel it at all
 ctx = context.WithoutCancel(context.Background())
 Do(ctx, func() { /*do something*/ })
-</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/KigLcJd1t0b">Playground</a><h3>Generics</h3><p>If the function has return values, a similar thing can be done by changing the channel value, and if it's timeout, we want to return error to indicate that the function was failed because of timeout:</p><pre><code>func Do[T any](ctx context.Context, f func() (T, error)) (t T, err error) {
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/KigLcJd1t0b">Playground</a><h3>Generics</h3><p>If the function has return values, a similar thing can be done by changing the channel value, and if it's timeout, we want to return error to indicate that the function was failed because of timeout. In this case we can use it with context.Cause as below:</p><pre><code>func Do[T any](ctx context.Context, f func() (T, error)) (t T, err error) {
 	type v struct {
 		t T
 		e error
@@ -86,12 +86,13 @@ Do(ctx, func() { /*do something*/ })
 	case v := &lt;-c:
 		return v.t, v.e
 	case &lt;-ctx.Done():
-		return t, ctx.Err()
+		return t, context.Cause(ctx)
 	}
-}</code></pre><p>With this generic version of the function, we can use it with many different functions with different return types:</p><pre><code>Do(ctx, func() (int, error) { return 0, nil })
+}
+</code></pre><p>With this generic version of the function, we can use it with many different functions with different return types:</p><pre><code>Do(ctx, func() (int, error) { return 0, nil })
 Do(ctx, func() ([]int, error) { return []int{}, nil })
 Do(ctx, func() (string, error) { return &#34;&#34;, nil })
-</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/7Vr8OdpBOoc">Playground</a><h3>Conclusion</h3><p>With just a simple combination of channel and context, but we could make a very powerful tool for cancellable functions. You can based on the above suggestion implementations to make your own versions. And I believe that you will find that it's even more powerful than what I have shown you so far.</p></div>
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/1uBsPg_PqGe">Playground</a><h3>Conclusion</h3><p>With just a simple combination of channel and context, but we could make a very powerful tool for cancellable functions. You can based on the above suggestion implementations to make your own versions. And I believe that you will find that it's even more powerful than what I have shown you so far.</p></div>
       </div>
     </article><div class="flex justify-between pt-4 pb-10 border-t border-default font-sans">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fthefortunedays.com%2farticles%2fgo-cancellable-functions" class="flex flex-col items-center">
