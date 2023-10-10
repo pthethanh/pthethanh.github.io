@@ -71,7 +71,57 @@ func hashEmployee(e Employee) uint64 {
 
 hashEmployee(e1) // 4034376227000349563
 hashEmployee(e2) // 9233382178721626727
-</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/nj0IPwvY3lw">Playground</a><p>I think this mechanism is quite easy to use and its performance is acceptable for production code.</p><hr class="delimiter"><p>[1] You can take a look at the implementation of map in Go at <a href="https://github.com/golang/go/blob/master/src/runtime/map.go">map.go</a>,&nbsp;<a href="https://github.com/golang/go/blob/master/src/runtime/map_fast32.go">map_fast32.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/map_fast64.go">map_fast64.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/map_faststr.go">map_faststr.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/alg.go">alg.go</a> and some relevant assembly code files can be found in the same run time package.&nbsp;&nbsp;</p></div>
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/nj0IPwvY3lw">Playground</a><p>I think this mechanism is quite easy to use and its performance is acceptable for production code.</p><h3>Hack</h3><p>If you are not happy with the performance of the above hash mechanism and still want to use the Go internal hash implementation, below is an unsafe hack that you might want to consider:</p><pre><code>func UnsafeHashOf[T comparable]() func(seed maphash.Seed, v T) uint64 {
+	h := getHashFunc[T](map[T]struct{}{})
+	return func(seed maphash.Seed, v T) uint64 {
+		return h.Sum64(seed, v)
+	}
+}
+
+// internal/abi/type.go -&gt; Type
+type abiType struct {
+	Size_       uintptr
+	PtrBytes    uintptr // number of (prefix) bytes in the type that can contain pointers
+	Hash        uint32  // hash of type; avoids computation in hash tables
+	TFlag       uint8   // extra type information flags
+	Align_      uint8   // alignment of variable with this type
+	FieldAlign_ uint8   // alignment of struct field with this type
+	Kind_       uint8   // enumeration for C
+	// function for comparing objects of this type
+	// (ptr to object A, ptr to object B) -&gt; ==?
+	Equal func(unsafe.Pointer, unsafe.Pointer) bool
+	// GCData stores the GC type data for the garbage collector.
+	// If the KindGCProg bit is set in kind, GCData is a GC program.
+	// Otherwise it is a ptrmask bitmap. See mbitmap.go for details.
+	GCData    *byte
+	Str       int32 // string form
+	PtrToThis int32 // type for pointer to this type, may be zero
+}
+
+// internal/abi/type.go -&gt; MapType
+type abiMapType[T comparable] struct {
+	abiType
+	Key    *abiType
+	Elem   *abiType
+	Bucket *abiType // internal type representing a hash bucket
+	// function for hashing keys (ptr to key, seed) -&gt; hash
+	Hasher     hashFunc[T]
+	KeySize    uint8  // size of key slot
+	ValueSize  uint8  // size of elem slot
+	BucketSize uint16 // size of bucket
+	Flags      uint32
+}
+
+type hashFunc[T comparable] func(value *T, seed maphash.Seed) uintptr
+
+func (h hashFunc[T]) Sum64(seed maphash.Seed, v T) uint64 { return uint64(h(&amp;v, seed)) }
+
+type emptyInterface struct{ typ *abiType }
+
+func getHashFunc[T comparable](v interface{}) hashFunc[T] {
+	return (*abiMapType[T])(unsafe.Pointer((*emptyInterface)(unsafe.Pointer(&amp;v)).typ)).Hasher
+}
+</code></pre><a target="_blank" class="flex w-full justify-end text-right font-sans text-sm -mt-6" href="https://go.dev/play/p/KamuMXsaIHD">Playground</a><p>Please note that the above hack is not safe and will be broken if Go change its internal types.</p><hr class="delimiter"><p>[1] You can take a look at the implementation of map in Go at <a href="https://github.com/golang/go/blob/master/src/runtime/map.go">map.go</a>,&nbsp;<a href="https://github.com/golang/go/blob/master/src/runtime/map_fast32.go">map_fast32.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/map_fast64.go">map_fast64.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/map_faststr.go">map_faststr.go</a>, <a href="https://github.com/golang/go/blob/master/src/runtime/alg.go">alg.go</a> and some relevant assembly code files can be found in the same run time package.&nbsp;&nbsp;</p></div>
       </div>
     </article><div class="flex justify-between pt-4 pb-10 border-t border-default font-sans">
     <a aria-label="Post To FaceBook" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fthefortunedays.com%2farticles%2fgo-map-hash" class="flex flex-col items-center">
