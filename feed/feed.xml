@@ -5,7 +5,7 @@
 	
 	<link href="https://thefortunedays.com/feed/feed.xml" rel="self"/>
 	<link href="https://thefortunedays.com"/>
-	<updated>2023-10-01T07:00:00+07:00</updated>
+	<updated>2024-03-10T07:00:00+07:00</updated>
 	<id>https://thefortunedays.com</id>
 	<author>
 		<name>Thanh Pham</name>
@@ -1427,6 +1427,128 @@
 &lt;p&gt;&lt;a href=&quot;https://go.dev/play/p/1uBsPg_PqGe&quot;&gt;Playground&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&quot;conclusion&quot;&gt;Conclusion &lt;a class=&quot;direct-link&quot; href=&quot;#conclusion&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;With just a simple combination of channel and context, but we could make a very powerful tool for cancellable functions. You can based on the above suggestion implementations to make your own versions. And I believe that you will find that it&#39;s even more powerful than what I have shown you so far.&lt;/p&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Getting Started With Apache Spark</title>
+		<link href="https://thefortunedays.com/articles/getting-started-with-apache-spark/"/>
+		<updated>2024-03-10T07:00:00+07:00</updated>
+		<id>https://thefortunedays.com/articles/getting-started-with-apache-spark/</id>
+		<content type="html">
+		  &lt;p&gt;This blog post is a summary of my presentation on Apache Spark Overview with a basic Kafka streaming application. It includes some basic steps to create and deploy a simple Spark application. This is not a comprehensive tutorial, so for more information, please visit the Apache Spark &lt;a href=&quot;https://spark.apache.org/docs/latest/&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;prerequisite&quot;&gt;Prerequisite &lt;a class=&quot;direct-link&quot; href=&quot;#prerequisite&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;https://www.docker.com/&quot;&gt;Docker&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/&quot;&gt;Minikube&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;apache-spark-overview&quot;&gt;Apache Spark Overview &lt;a class=&quot;direct-link&quot; href=&quot;#apache-spark-overview&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/img/remote/articles/getting-started-with-apache-spark/Spark.jpg&quot; alt=&quot;Introduction to Apache Spark&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;build-spark-application&quot;&gt;Build Spark Application &lt;a class=&quot;direct-link&quot; href=&quot;#build-spark-application&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;Main.scala&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-scala&quot;&gt;&lt;code class=&quot;language-scala&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;apache&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sql&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;SparkSession&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;object&lt;/span&gt; Main &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; main&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Array&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;Unit&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; spark&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;SparkSession &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; SparkSession&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;builder&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;appName&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hello-spark&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getOrCreate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;implicits&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;_&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; kafkaOpts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Map&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.bootstrap.servers&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;kafka:9092&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;subscribe&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.sasl.mechanism&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;PLAIN&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.security.protocol&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;SASL_PLAINTEXT&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.sasl.jaas.config&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;user1&quot; password=&quot;kk3gaqZRly&quot;;&quot;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; df &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; spark&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;readStream&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;format&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;kafka&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;kafkaOpts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;load&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; ds &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;selectExpr&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;CAST(key AS STRING)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;CAST(value AS STRING)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;as&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br&gt;&lt;br&gt;    ds&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;writeStream&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;format&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;console&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;outputMode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;append&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token comment&quot;&gt;//.trigger(Trigger.Continuous(1))&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;start&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;awaitTermination&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;build.sbt&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;ThisBuild / version :&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;0.1.0-SNAPSHOT&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;ThisBuild / scalaVersion :&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;2.12.18&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;libraryDependencies &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;org.apache.spark&quot;&lt;/span&gt; %% &lt;span class=&quot;token string&quot;&gt;&quot;spark-core&quot;&lt;/span&gt; % &lt;span class=&quot;token string&quot;&gt;&quot;3.5.1&quot;&lt;/span&gt;&lt;br&gt;libraryDependencies &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;org.apache.spark&quot;&lt;/span&gt; %% &lt;span class=&quot;token string&quot;&gt;&quot;spark-sql&quot;&lt;/span&gt; % &lt;span class=&quot;token string&quot;&gt;&quot;3.5.1&quot;&lt;/span&gt;&lt;br&gt;libraryDependencies &lt;span class=&quot;token operator&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;org.apache.spark&quot;&lt;/span&gt; %% &lt;span class=&quot;token string&quot;&gt;&quot;spark-sql-kafka-0-10&quot;&lt;/span&gt; % &lt;span class=&quot;token string&quot;&gt;&quot;3.5.1&quot;&lt;/span&gt; % Test&lt;br&gt;&lt;br&gt;Compile / run / mainClass :&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Some&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Main&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;br&gt;lazy val root &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;project &lt;span class=&quot;token keyword&quot;&gt;in&lt;/span&gt; file&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;))&lt;/span&gt;&lt;br&gt;  .settings&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;br&gt;    name :&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;hello-spark&quot;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;Dockerfile&lt;/code&gt;&lt;/p&gt;
+&lt;pre class=&quot;language-dockerfile&quot;&gt;&lt;code class=&quot;language-dockerfile&quot;&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ARG&lt;/span&gt; SCALA_VERSION=2.12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ARG&lt;/span&gt; ARG_JAR_NAME=hello-spark_2.12-0.1.0-SNAPSHOT.jar&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ARG&lt;/span&gt; ARG_MAIN_CLASS=Main&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; sbtscala/scala-sbt:graalvm-ce-22.3.3-b1-java17_1.9.9_2.12.18 &lt;span class=&quot;token keyword&quot;&gt;as&lt;/span&gt; build&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;WORKDIR&lt;/span&gt; /app&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;COPY&lt;/span&gt; . .&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;RUN&lt;/span&gt; sbt package&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;FROM&lt;/span&gt; apache/spark:3.5.1-scala2.12-java17-ubuntu&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ARG&lt;/span&gt; ARG_JAR_NAME&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ARG&lt;/span&gt; ARG_MAIN_CLASS&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;ARG&lt;/span&gt; SCALA_VERSION&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token instruction&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;COPY&lt;/span&gt; &lt;span class=&quot;token options&quot;&gt;&lt;span class=&quot;token property&quot;&gt;--from&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;build&lt;/span&gt;&lt;/span&gt; /app/target/scala-&lt;span class=&quot;token variable&quot;&gt;${SCALA_VERSION}&lt;/span&gt;/&lt;span class=&quot;token variable&quot;&gt;${ARG_JAR_NAME}&lt;/span&gt; /app/work/application.jar&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Build application Docker image&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;eval $(minikube -p minikube docker-env)
+docker build -t hello-spark:latest .
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;deploy-kafka&quot;&gt;Deploy Kafka &lt;a class=&quot;direct-link&quot; href=&quot;#deploy-kafka&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;helm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; kafka oci://registry-1.docker.io/bitnamicharts/kafka&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notice the notes after you installed Kafka, it includes information for authenticate with Kafka cluster. Otherwise you can check the &lt;code&gt;server.properties&lt;/code&gt;:&lt;/p&gt;
+&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;kubectl &lt;span class=&quot;token builtin class-name&quot;&gt;exec&lt;/span&gt; kafka-controller-0 -- &lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; /opt/bitnami/kafka/config/server.properties&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Let run Kafka-client to create topic and test our Kafka cluster.&lt;/p&gt;
+&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;kubectl run kafka-client --rm -ti --image bitnami/kafka:3.6.1-debian-12-r12 -- &lt;span class=&quot;token function&quot;&gt;bash&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token builtin class-name&quot;&gt;cd&lt;/span&gt; /opt/bitnami/kafka/bin&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token function&quot;&gt;cat&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&gt;&gt;&lt;/span&gt; client.conf &lt;span class=&quot;token operator&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;EOF&lt;br&gt;security.protocol=SASL_PLAINTEXT&lt;br&gt;sasl.mechanism=PLAIN&lt;br&gt;sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;user1&quot; password=&quot;kk3gaqZRly&quot;;&lt;br&gt;EOF&lt;/span&gt;&lt;br&gt;&lt;br&gt;kafka-topics.sh --create --topic &lt;span class=&quot;token builtin class-name&quot;&gt;test&lt;/span&gt; --bootstrap-server kafka:9092 --command-config client.conf&lt;br&gt;&lt;br&gt;kafka-console-producer.sh --topic &lt;span class=&quot;token builtin class-name&quot;&gt;test&lt;/span&gt; --request-required-acks all --bootstrap-server kafka:9092 --producer.config client.conf&lt;br&gt;&lt;br&gt;kafka-console-consumer.sh --topic &lt;span class=&quot;token builtin class-name&quot;&gt;test&lt;/span&gt; --bootstrap-server kafka:9092 --consumer.config client.conf&lt;br&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h2 id=&quot;deployment&quot;&gt;Deployment &lt;a class=&quot;direct-link&quot; href=&quot;#deployment&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Deploy Spark application to Kubernetes cluster require a ServiceAccount, hence we need to create it first:&lt;/p&gt;
+&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;kubectl create serviceaccount sparksubmit&lt;br&gt;kubectl create clusterrolebinding sparksubmit-role --clusterrole&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;edit --serviceaccount&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;default:sparksubmit --namespace&lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt;default&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Deploy a Spark application to Kubernetes can be done by 2 ways:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Using spark-submit&lt;/li&gt;
+&lt;li&gt;Using Spark-operator&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;deploy-using-spark-submit&quot;&gt;Deploy using spark-submit &lt;a class=&quot;direct-link&quot; href=&quot;#deploy-using-spark-submit&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;In this deployment mode, we submit the application using &lt;code&gt;spark-submit&lt;/code&gt; from outside of the Kubernetes cluster. To install the spark-submit, you can download and setup the Apache Spark on your machine or pipeline:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;wget https://www.apache.org/dyn/closer.lua/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz
+tar -xzf spark-3.5.0-bin-hadoop3.tgz -C ~/bin
+
+export PATH=$PATH:~/bin/spark-3.5.0-bin-hadoop3
+export PATH=$PATH:/home/pthethanh/bin/spark-3.5.0-bin-hadoop3/bin
+export SPARK_HOME=/home/pthethanh/bin/spark-3.5.0-bin-hadoop3
+export HADOOP_HOME=/home/pthethanh/bin/spark-3.5.0-bin-hadoop3
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that for testing the Spark application locally, you also must install Java (17) and Scala (2.12) on your local machine.&lt;/p&gt;
+&lt;p&gt;After installed &lt;code&gt;spark-submit&lt;/code&gt;, go ahead to submit the Spark application:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;spark-submit &#92;
+--master k8s://https://127.0.0.1:32769 &#92;
+--deploy-mode cluster &#92;
+--name hello-spark &#92;
+--class Main &#92;
+--conf spark.kubernetes.namespace=default &#92;
+--conf spark.kubernetes.container.image=hello-spark:latest &#92;
+--packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1 &#92;
+--conf spark.driver.extraJavaOptions=&amp;quot;-Divy.cache.dir=/tmp -Divy.home=/tmp&amp;quot; &#92;
+--conf spark.kubernetes.authenticate.driver.serviceAccountName=sparksubmit &#92;
+--conf spark.kubernetes.authenticate.submission.caCertFile=~/.minikube/ca.crt &#92;
+local:///app/work/application.jar
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Notes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run &lt;code&gt;kubectl cluster-info&lt;/code&gt; to get the URL of your K8S cluster.&lt;/li&gt;
+&lt;li&gt;Replace the &lt;code&gt;caCertFile&lt;/code&gt; to your certificate file.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After deployed, you would see the driver and executors got deployed in your K8S:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pod
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once the driver and the executors are up and running, you can start the Spark UI to see the application detail as well as start sending some events to Kafka and check for the output from log of the driver.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl port-forward hello-spark-driver-xxx 4040:4040
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;If you would like to kill the application, just run spark-submit with &lt;code&gt;-kill&lt;/code&gt; option:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;spark-submit --kill hello-spark-d5358c8e1cd2e8b0-driver --master k8s://https://127.0.0.1:32769
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3 id=&quot;deploy-using-spark-operator&quot;&gt;Deploy using Spark-Operator &lt;a class=&quot;direct-link&quot; href=&quot;#deploy-using-spark-operator&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Deploy Spark application using Spark operator is recommended for production. In this deployment model, we will install &lt;code&gt;spark-operator&lt;/code&gt; inside K8S cluster, spark-operator will listen on any application deployed to the K8S with application kind as &lt;code&gt;SparkApplication&lt;/code&gt; and will help us to submit Spark application to the K8S for us.&lt;/p&gt;
+&lt;p&gt;You can read more detail on using spark-operator at their &lt;a href=&quot;https://googlecloudplatform.github.io/spark-on-k8s-operator/docs/user-guide.html&quot;&gt;user-guide&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Install spark-operator:&lt;/p&gt;
+&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;helm repo &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; spark-operator https://googlecloudplatform.github.io/spark-on-k8s-operator&lt;br&gt;helm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; spark-operator spark-operator/spark-operator --namespace spark-operator --create-namespace&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create deployment file &lt;code&gt;spark-application.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: sparkoperator.k8s.io/v1beta2
+kind: SparkApplication
+metadata:
+  name: hello-spark
+  namespace: default
+spec:
+  type: Scala
+  sparkVersion: 3.5.1
+  mode: cluster
+  image: hello-spark:latest
+  mainClass: Main
+  mainApplicationFile: local:///app/work/application.jar
+  deps:
+    packages:
+      - org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1
+  sparkConf:
+    &amp;quot;spark.driver.extraJavaOptions&amp;quot;: &amp;quot;-Divy.cache.dir=/tmp -Divy.home=/tmp&amp;quot;
+  driver:
+    memory: 512m
+    labels:
+      version: 3.5.1
+    serviceAccount: sparksubmit
+  executor:
+    memory: 512m
+    instances: 3
+    labels:
+      version: 3.5.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Deploy it to the cluster&lt;/p&gt;
+&lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;kubectl apply -f spark-application.yaml&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Wait for sometime for spark-operator to detect and submit the application and then you can start testing the application:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pod
+&lt;/code&gt;&lt;/pre&gt;
 
 			
 		</content>
