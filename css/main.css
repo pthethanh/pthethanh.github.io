@@ -1,7 +1,7 @@
 /* Color customization */
 :root {
-  --primary: #D5003C;
-  --primary-dark:#6A001E;
+  --primary: #0077ED;
+  --primary-dark:#006EDB;
 }
 
 .test-dead-code-elimination-sentinel {
@@ -406,7 +406,7 @@ ul {
     margin-bottom: 1.496rem;
   }
 }
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   h1 {
     font-size: 6.0756rem;
     line-height: 6.72rem;
@@ -454,7 +454,7 @@ ul {
   ul {
     margin-bottom: 1.632rem;
   }
-}
+} */
 th {
   font-weight: 600;
 }
@@ -704,7 +704,7 @@ video {
 body {
   font-family: var(--font-family);
   background: #111113;
-  color: #D1D1D1;
+  color: #F5F5F7;
 }
 section {
   margin-left: auto;
@@ -755,7 +755,7 @@ header nav {
   width: 100vw;
   padding: 0.375em 1.5em;
   /* background: hsla(0, 0%, 100%, 0.9); */
-  background: #111113;
+  background: #434344;
   font-weight: 200;
   text-align: right;
 }
@@ -771,7 +771,7 @@ header nav a {
   text-decoration: none;
   font-family: var(--font-family);
   /* color: #181818; */
-  color: #D1D1D1;
+  color: #ffff;
   margin-left: 1.5em;
 }
 header nav a:first-of-type {
@@ -793,7 +793,7 @@ main {
   /* border-top: 0.5px solid #ccc; */
 }
 footer {
-  background: #151515;
+  background: #282829;
   color: #999;
   padding: 3em;
   text-align: center;
