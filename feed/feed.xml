@@ -1474,12 +1474,12 @@ docker build -t hello-spark:latest .
 &lt;h3 id=&quot;deploy-using-spark-submit&quot;&gt;Deploy using spark-submit &lt;a class=&quot;direct-link&quot; href=&quot;#deploy-using-spark-submit&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;In this deployment mode, we submit the application using &lt;code&gt;spark-submit&lt;/code&gt; from outside of the Kubernetes cluster. To install the spark-submit, you can download and setup the Apache Spark on your machine or pipeline:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;wget https://www.apache.org/dyn/closer.lua/spark/spark-3.5.1/spark-3.5.1-bin-hadoop3.tgz
-tar -xzf spark-3.5.0-bin-hadoop3.tgz -C ~/bin
+tar -xzf spark-3.5.1-bin-hadoop3.tgz -C ~/bin
 
-export PATH=$PATH:~/bin/spark-3.5.0-bin-hadoop3
-export PATH=$PATH:/home/pthethanh/bin/spark-3.5.0-bin-hadoop3/bin
-export SPARK_HOME=/home/pthethanh/bin/spark-3.5.0-bin-hadoop3
-export HADOOP_HOME=/home/pthethanh/bin/spark-3.5.0-bin-hadoop3
+export PATH=$PATH:~/bin/spark-3.5.1-bin-hadoop3
+export PATH=$PATH:~/bin/spark-3.5.1-bin-hadoop3/bin
+export SPARK_HOME=~/bin/spark-3.5.1-bin-hadoop3
+export HADOOP_HOME=~/bin/spark-3.5.1-bin-hadoop3
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Note that for testing the Spark application locally, you also must install Java (17) and Scala (2.12) on your local machine.&lt;/p&gt;
 &lt;p&gt;After installed &lt;code&gt;spark-submit&lt;/code&gt;, go ahead to submit the Spark application:&lt;/p&gt;
@@ -1499,13 +1499,20 @@ local:///app/work/application.jar
 &lt;p&gt;Notes:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Run &lt;code&gt;kubectl cluster-info&lt;/code&gt; to get the URL of your K8S cluster.&lt;/li&gt;
-&lt;li&gt;Replace the &lt;code&gt;caCertFile&lt;/code&gt; to your certificate file.&lt;/li&gt;
+&lt;li&gt;Replace the &lt;code&gt;caCertFile&lt;/code&gt; to your certificate file. If relative path doesn&#39;t work, change to absolute path.&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;After deployed, you would see the driver and executors got deployed in your K8S:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;kubectl get pod
+NAME                                  READY   STATUS    RESTARTS      AGE
+hello-spark-3605288e2b93f981-exec-1   1/1     Running   0             10s
+hello-spark-3605288e2b93f981-exec-2   1/1     Running   0             10s
+hello-spark-6da76b8e2b92dd56-driver   1/1     Running   0             82s
+kafka-controller-0                    1/1     Running   1 (12m ago)   14h
+kafka-controller-1                    1/1     Running   1 (12m ago)   14h
+kafka-controller-2                    1/1     Running   1 (12m ago)   14h
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Once the driver and the executors are up and running, you can start the Spark UI to see the application detail as well as start sending some events to Kafka and check for the output from log of the driver.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;kubectl port-forward hello-spark-driver-xxx 4040:4040
+&lt;pre&gt;&lt;code&gt;kubectl port-forward hello-spark-6da76b8e2b92dd56-driver 4040:4040
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;If you would like to kill the application, just run spark-submit with &lt;code&gt;-kill&lt;/code&gt; option:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;spark-submit --kill hello-spark-d5358c8e1cd2e8b0-driver --master k8s://https://127.0.0.1:32769
