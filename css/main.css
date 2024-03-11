@@ -88,10 +88,6 @@ dl {
   display: block !important;
 }
 
-header aside {
-  font-style: italic;
-}
-
 #nav {
   z-index: 2;
   position: relative;
@@ -1006,12 +1002,17 @@ a {
 }
 .about h1{
   font-family: 'CyberwayRiders';
+  padding-bottom: 1em;
 }
 .home h1{
   font-family: 'CyberwayRiders';
   padding-bottom: 1em;
 }
-
 article h1 {
-  font-family: 'CyberwayRiders';
+  text-align: center;
+}
+article aside {
+  font-style: italic;
+  text-align: center;
+  padding-bottom: 4.25em;
 }
