@@ -122,6 +122,13 @@ header aside {
   src: url("/fonts/Inter-3.19.var.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "CyberwayRiders";
+  font-weight: 100 900;
+  font-style: oblique 0deg 10deg;
+  src: url("/fonts/CyberwayRiders.woff2") format("woff2");
+}
+
 /*
 
 The Bahunya CSS framework https://kimeiga.github.io/bahunya/
@@ -736,7 +743,7 @@ header label {
   display: none;
 }
 header {
-  padding: 4.5em 1.5em 3em;
+  padding: 4em 1.5em 3em;
   width: 37.5em;
   margin: 0 auto;
   text-align: center;
@@ -753,7 +760,7 @@ header nav {
   top: 0;
   left: 0;
   width: 100vw;
-  padding: 0.375em 1.5em;
+  padding: 0.575em 1.5em;
   /* background: hsla(0, 0%, 100%, 0.9); */
   background: #434344;
   font-weight: 200;
@@ -773,6 +780,7 @@ header nav a {
   /* color: #181818; */
   color: #ffff;
   margin-left: 1.5em;
+  font-family: 'CyberwayRiders';
 }
 header nav a:first-of-type {
   margin-left: auto;
@@ -800,6 +808,7 @@ footer {
 }
 footer > * {
   margin: 1.5em;
+  font-family: 'CyberwayRiders';
 }
 footer nav a img {
   vertical-align: middle;
@@ -990,4 +999,19 @@ a {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--primary);
+}
+
+.about {
+  min-height: 63vh;
+}
+.about h1{
+  font-family: 'CyberwayRiders';
+}
+.home h1{
+  font-family: 'CyberwayRiders';
+  padding-bottom: 1em;
+}
+
+article h1 {
+  font-family: 'CyberwayRiders';
 }
