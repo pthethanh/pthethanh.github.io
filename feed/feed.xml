@@ -1522,7 +1522,12 @@ kafka-controller-2                    1/1     Running   1 (12m ago)   14h
 &lt;p&gt;You can read more detail on using spark-operator at their &lt;a href=&quot;https://googlecloudplatform.github.io/spark-on-k8s-operator/docs/user-guide.html&quot;&gt;user-guide&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Install spark-operator:&lt;/p&gt;
 &lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;helm repo &lt;span class=&quot;token function&quot;&gt;add&lt;/span&gt; spark-operator https://googlecloudplatform.github.io/spark-on-k8s-operator&lt;br&gt;helm &lt;span class=&quot;token function&quot;&gt;install&lt;/span&gt; spark-operator spark-operator/spark-operator --namespace spark-operator --create-namespace&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;Create deployment file &lt;code&gt;spark-application.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Check for the deployment status:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;kubectl get pod -n spark-operator
+NAME                              READY   STATUS    RESTARTS      AGE
+spark-operator-675d97df85-c2b9g   1/1     Running   2 (46m ago)   14h
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Create application deployment file &lt;code&gt;spark-application.yaml&lt;/code&gt;&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;apiVersion: sparkoperator.k8s.io/v1beta2
 kind: SparkApplication
 metadata:
@@ -1555,6 +1560,14 @@ spec:
 &lt;pre class=&quot;language-shell&quot;&gt;&lt;code class=&quot;language-shell&quot;&gt;kubectl apply -f spark-application.yaml&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Wait for sometime for spark-operator to detect and submit the application and then you can start testing the application:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;kubectl get pod
+NAME                                  READY   STATUS    RESTARTS      AGE
+hello-spark-driver                    1/1     Running   0             54s
+hello-spark-efd4f18e2bb34946-exec-1   1/1     Running   0             4s
+hello-spark-efd4f18e2bb34946-exec-2   1/1     Running   0             4s
+hello-spark-efd4f18e2bb34946-exec-3   1/1     Running   0             4s
+kafka-controller-0                    1/1     Running   1 (46m ago)   14h
+kafka-controller-1                    1/1     Running   1 (46m ago)   14h
+kafka-controller-2                    1/1     Running   1 (46m ago)   14h
 &lt;/code&gt;&lt;/pre&gt;
 
 			
