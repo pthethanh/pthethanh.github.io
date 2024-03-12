@@ -1,7 +1,18 @@
-/* Color customization */
+/* Color customization 
+https://www.color-hex.com/color-palette/98118
+*/
 :root {
-  --primary: #0077ED;
-  --primary-dark:#006EDB;
+  --primary: #ff577d;
+  --primary-dark:#ff184c;
+
+  --text-color: #F5F5F7;
+  --bg-color: 	#003062;
+
+  --nav-bg-color: #ff577d;
+  --nav-text-color: #fff;
+  
+  --footer-bg-color: #091833;
+  --footer-text-color: #999;
 }
 
 .test-dead-code-elimination-sentinel {
@@ -706,8 +717,8 @@ video {
 }
 body {
   font-family: var(--font-family);
-  background: #111113;
-  color: #F5F5F7;
+  background: var(--bg-color);
+  color: var(--text-color);
 }
 section {
   margin-left: auto;
@@ -758,7 +769,8 @@ header nav {
   width: 100vw;
   padding: 0.575em 1.5em;
   /* background: hsla(0, 0%, 100%, 0.9); */
-  background: #434344;
+  background: var(--nav-bg-color);
+  color: var(--nav-text-color);
   font-weight: 200;
   text-align: right;
 }
@@ -774,7 +786,7 @@ header nav a {
   text-decoration: none;
   font-family: var(--font-family);
   /* color: #181818; */
-  color: #ffff;
+  color: var(--nav-text-color);
   margin-left: 1.5em;
   font-family: 'CyberwayRiders';
 }
@@ -797,8 +809,8 @@ main {
   /* border-top: 0.5px solid #ccc; */
 }
 footer {
-  background: #282829;
-  color: #999;
+  background: var(--footer-bg-color);
+  color: var(--footer-text-color);
   padding: 3em;
   text-align: center;
 }
