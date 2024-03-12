@@ -1010,7 +1010,7 @@ a {
 }
 
 .about {
-  min-height: calc(100vh - 360px);
+  min-height: 80vh;
 }
 .about h1{
   font-family: 'CyberwayRiders';
@@ -1030,7 +1030,7 @@ article aside {
 }
 
 .tags-list {
-  min-height: calc(100vh - 360px);
+  min-height: 80vh;
   text-align: center;
 }
 
@@ -1040,11 +1040,25 @@ article aside {
 }
 
 .tags {
-  min-height: calc(100vh - 360px);
+  min-height: 80vh;
 }
 
 .tags h1{
   font-family: 'CyberwayRiders';
   padding-bottom: 1em;
   text-align: center;
+}
+
+@media (min-width: 600px) {
+  .about {
+    min-height: calc(100vh - 360px);
+  }
+  .tags-list {
+    min-height: calc(100vh - 360px);
+    text-align: center;
+  }
+  .tags {
+    min-height: calc(100vh - 360px);
+  }
+  
 }
