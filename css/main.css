@@ -1010,7 +1010,7 @@ a {
 }
 
 .about {
-  min-height: 63vh;
+  min-height: calc(100vh - 360px);
 }
 .about h1{
   font-family: 'CyberwayRiders';
@@ -1028,8 +1028,9 @@ article aside {
   text-align: center;
   padding-bottom: 4.25em;
 }
+
 .tags-list {
-  min-height: 63vh;
+  min-height: calc(100vh - 360px);
   text-align: center;
 }
 
@@ -1039,11 +1040,7 @@ article aside {
 }
 
 .tags {
-  min-height: 68vh;
-}
-
-.tags {
-  min-height: 68vh;
+  min-height: calc(100vh - 360px);
 }
 
 .tags h1{
