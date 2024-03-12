@@ -81,7 +81,7 @@ share-widget button:active {
 }
 
 dialog {
-  background-color: #8dff80;
+  background-color: 	#0a9cf5;
   position: fixed;
   opacity: 0.9;
   z-index: 1000;
@@ -1027,4 +1027,27 @@ article aside {
   font-style: italic;
   text-align: center;
   padding-bottom: 4.25em;
+}
+.tags-list {
+  min-height: 63vh;
+  text-align: center;
+}
+
+.tags-list h1{
+  font-family: 'CyberwayRiders';
+  padding-bottom: 1em;
+}
+
+.tags {
+  min-height: 68vh;
+}
+
+.tags {
+  min-height: 68vh;
+}
+
+.tags h1{
+  font-family: 'CyberwayRiders';
+  padding-bottom: 1em;
+  text-align: center;
 }
