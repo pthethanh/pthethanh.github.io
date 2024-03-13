@@ -1571,6 +1571,86 @@ kafka-controller-0                    1/1     Running   1 (46m ago)   14h
 kafka-controller-1                    1/1     Running   1 (46m ago)   14h
 kafka-controller-2                    1/1     Running   1 (46m ago)   14h
 &lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;At this step, we&#39;ve done for the very basic Spark application from development to deployment. But as mentioned earlier, we should not put username and password directly in the code but should store them in Vault or Secret. By applying spark-operator, we can easily do this (but remember to enable option &lt;code&gt;enableWebhook=true&lt;/code&gt; when installing spark-operator)&lt;/p&gt;
+&lt;p&gt;Let update the code and the deployment file as below:&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;Main.scala&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;import org.apache.spark.sql.SparkSession
+
+
+
+object Main {
+  def main(args: Array[String]): Unit = {
+    val spark:SparkSession = SparkSession.builder()
+      .appName(&amp;quot;hello-spark&amp;quot;)
+      .getOrCreate()
+
+    import spark.implicits._
+    val user = sys.env.getOrElse(&amp;quot;KAFKA_USER&amp;quot;, &amp;quot;user1&amp;quot;)
+    val pass = sys.env.getOrElse(&amp;quot;KAFKA_PASS&amp;quot;, &amp;quot;xxx&amp;quot;)
+
+    val kafkaOpts = Map[String, String](
+      &amp;quot;kafka.bootstrap.servers&amp;quot;-&amp;gt; &amp;quot;kafka:9092&amp;quot;,
+      &amp;quot;subscribe&amp;quot;-&amp;gt; &amp;quot;test&amp;quot;,
+      &amp;quot;kafka.sasl.mechanism&amp;quot;-&amp;gt; &amp;quot;PLAIN&amp;quot;,
+      &amp;quot;kafka.security.protocol&amp;quot; -&amp;gt; &amp;quot;SASL_PLAINTEXT&amp;quot;,
+      &amp;quot;kafka.sasl.jaas.config&amp;quot;-&amp;gt; s&amp;quot;&amp;quot;&amp;quot;org.apache.kafka.common.security.plain.PlainLoginModule required username=&amp;quot;$user&amp;quot; password=&amp;quot;$pass&amp;quot;;&amp;quot;&amp;quot;&amp;quot;,
+    )
+    val df = spark
+      .readStream
+      .format(&amp;quot;kafka&amp;quot;)
+      .options(kafkaOpts)
+      .load()
+
+    val ds = df.selectExpr(&amp;quot;CAST(key AS STRING)&amp;quot;, &amp;quot;CAST(value AS STRING)&amp;quot;)
+      .as[(String, String)]
+
+    ds.writeStream
+      .format(&amp;quot;console&amp;quot;)
+      .outputMode(&amp;quot;append&amp;quot;)
+      //.trigger(Trigger.Continuous(1))
+      .start()
+      .awaitTermination()
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;code&gt;spark-application.yaml&lt;/code&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;apiVersion: sparkoperator.k8s.io/v1beta2
+kind: SparkApplication
+metadata:
+  name: hello-spark
+  namespace: default
+spec:
+  type: Scala
+  sparkVersion: 3.5.1
+  mode: cluster
+  image: hello-spark:latest
+  mainClass: Main
+  mainApplicationFile: local:///app/work/application.jar
+  deps:
+    packages:
+      - org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.1
+  sparkConf:
+    &amp;quot;spark.driver.extraJavaOptions&amp;quot;: &amp;quot;-Divy.cache.dir=/tmp -Divy.home=/tmp&amp;quot;
+  driver:
+    memory: 512m
+    labels:
+      version: 3.5.1
+    serviceAccount: sparksubmit
+    env:
+      - name: KAFKA_USER
+        value: &amp;quot;user1&amp;quot;
+      - name: KAFKA_PASS
+        valueFrom:
+          secretKeyRef:
+            name: kafka-user-passwords
+            key: client-passwords
+  executor:
+    memory: 512m
+    instances: 3
+    labels:
+      version: 3.5.1
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Note that the secret &lt;code&gt;kafka-user-passwords&lt;/code&gt; is the secret that created by &lt;code&gt;Binami&lt;/code&gt; Kafka helm chart above. If you use another type of chart please double check the name or you can also create a secret yourself and update the deployment file accordingly.&lt;/p&gt;
 
 			
 		</content>
