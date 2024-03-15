@@ -1019,6 +1019,8 @@ a {
 .home h1{
   font-family: 'CyberwayRiders';
   padding-bottom: 1em;
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 42px #0a9cf5;
 }
 article h1 {
   text-align: center;
