@@ -64,6 +64,10 @@
 &lt;/ul&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fworking-with-array-in-go%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Working%20with%20array%20in%20Go.&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -107,6 +111,10 @@
 &lt;p&gt;Explain why you cannot take address of a map element?&lt;/p&gt;
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;p &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;&amp;amp;&lt;/span&gt;m&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;key&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// cause panic&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fworking-with-map-in-go%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Working%20with%20map%20in%20Go.&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -169,6 +177,10 @@
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;package&lt;/span&gt; main&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;fmt&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	arr &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;	s &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; arr&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br&gt;	s1 &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; arr&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br&gt;&lt;br&gt;	s &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;br&gt;	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;s1&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fworking-with-slice-in-go%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Working%20with%20slice%20in%20Go.&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -202,6 +214,10 @@
 &lt;p&gt;&lt;a href=&quot;https://play.golang.org/p/8C8iphVJdar&quot;&gt;Playground&lt;/a&gt;&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fworking-with-string-in-go%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Working%20with%20string%20in%20Go.&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -234,6 +250,10 @@
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;br&gt;	US &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;United State&quot;&lt;/span&gt;&lt;br&gt;	VN &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;Vietnam&quot;&lt;/span&gt;&lt;br&gt;	Other&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;VN:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; VN&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;	fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token function&quot;&gt;Println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;Other:&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; Other&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// Other: Vietnam&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href=&quot;https://go.dev/play/p/IwyASPF6abF&quot;&gt;Playground&lt;/a&gt;&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fworking-with-constant-in-go%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Working%20with%20constant%20in%20Go&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -365,6 +385,10 @@
 &lt;/ul&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-interview-questions%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Go%20Interview%20Questions&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -458,6 +482,10 @@
 &lt;h3 id=&quot;what-next%3F&quot;&gt;What next? &lt;a class=&quot;direct-link&quot; href=&quot;#what-next%3F&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;If you want to read more about common interview process, I recommend you to take a look at this page: &lt;a href=&quot;https://techinterviewhandbook.org/introduction&quot;&gt;https://techinterviewhandbook.org&lt;/a&gt;&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-interview-structure%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Go%20Interview%20Structure&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -573,6 +601,10 @@
 &lt;/ul&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-reading-list%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Go%20Reading%20List&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -626,6 +658,10 @@
 &lt;p&gt;&amp;quot;If you succeed, I feel inspired.&amp;quot; vs. &amp;quot;If you succeed, I feel threatened.&amp;quot;&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fhow-we-work-together%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=How%20We%20Work%20Together&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -654,6 +690,10 @@
 &lt;pre&gt;&lt;code&gt;docker load &amp;lt; image.gz
 &lt;/code&gt;&lt;/pre&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fuseful-docker-commands%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Useful%20Docker%20Commands&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -705,6 +745,10 @@
 &lt;li&gt;Never ask for stars, ask for feedback instead.&lt;/li&gt;
 &lt;/ol&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2F100-stars%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=100%20Stars%20On%20GitHub&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -765,6 +809,10 @@
 &lt;p&gt;For any discussion, please leave comments below.&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fmeasure-execution-time%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Measure%20Execution%20Time&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -784,6 +832,10 @@
 &lt;p&gt;But actually &amp;quot;clean that shit&amp;quot; is not that bad. It&#39;s not the real dirty thing you can imagine, it&#39;s just a state in your mind and you can clean it with your dedication and hard work, to make it better and prettier. And making something better and prettier is a greatest job ever, not just for people in a third world country but also for people in a developed country.&lt;/p&gt;
 &lt;p&gt;So, what can I say? Be positive, makes money and takes care of your family!&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fbad-code%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Bad%20Code%20Is%20Great&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -844,6 +896,10 @@
 &lt;p&gt;If it&#39;s a service that provide a lot of actions for something, maybe &lt;code&gt;Service&lt;/code&gt; or &lt;code&gt;Server&lt;/code&gt; are good suffixes for the name. So you can use &lt;code&gt;ArticleService&lt;/code&gt;, &lt;code&gt;ArticleServer&lt;/code&gt;, ...&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgolang-name-conventions%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Name%20Conventions%20In%20Go&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -855,6 +911,10 @@
 		<content type="html">
 		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/img/remote/articles/golang-interface/interface.svg&quot; alt=&quot;Golang Interface&quot;&gt;&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgolang-interface%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Interface&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -908,6 +968,10 @@
 &lt;p&gt;So, that&#39;s a quick overview of how the interface values are stored and how interface conversion works during the runtime. There are still a lot of interesting things in the Go runtime and we will explore more in the future posts.&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-interface%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Interface%20Explained&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -925,6 +989,10 @@
 &lt;p&gt;Everything was great until I asked &amp;quot;could you please show me how to swap 2 numbers using a programming language you&#39;re most familiar with&amp;quot;? This is the question I&#39;ve gotten a lot of &amp;quot;umh&amp;quot; &amp;quot;ah&amp;quot; from them so far. A lot of them failed to answer that simple question! They just know there should be a method &lt;code&gt;swap&lt;/code&gt; and you need to provide 2 numbers and it&#39;s done. Some knew that we can use temporary variable but failed to provide the steps. To be honest, I was very frustrated. If they could answer that simple question, it&#39;s likely they would be hired...but a lot of them failed.&lt;/p&gt;
 &lt;p&gt;I think having a big dream is cool. Universities can &amp;quot;inject&amp;quot; those dreams in to the students&#39; heads. But at the same time, we also need to teach them to know where they are, and need to tell them that they have to start learning the fundamentals first. Without the fundamental knowledge, one just simply cannot do anything bigger.&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fthey-dont-even-know-the-fundamentals%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=They%20Don&#39;t%20Even%20Know%20The%20Fundamentals&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -993,6 +1061,10 @@
 &lt;p&gt;For more examples, look at packages &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/cache&quot;&gt;cache&lt;/a&gt;, &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/broker&quot;&gt;broker&lt;/a&gt; or &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/server&quot;&gt;server&lt;/a&gt; of my &lt;a href=&quot;https://github.com/pthethanh/micro&quot;&gt;micro&lt;/a&gt; toolkit.&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Feffective-options%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Effective%20Options&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1013,6 +1085,10 @@
 &lt;p&gt;I found the Kindle Paper White is a very good device for reading. The design is super cool and the reading experience is nearly like reading a real book except it doesn&#39;t smell like a book. It&#39;s still more distracting compared to real books but much better compared to phones and computers. It&#39;s the greatest device I&#39;ve ever bought.&lt;/p&gt;
 &lt;p&gt;Regardless of reading on what kind of devices, reading is always interesting and I think the joy of reading is the greatest gift I&#39;ve ever been given. Life is still going on and there&#39;s still time for reading....&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Freading%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Reading&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1037,6 +1113,10 @@
 &lt;p&gt;It&#39;s cool! But you might ask &amp;quot;But any is just interface{}?&amp;quot;. The answer is &amp;quot;Yes, in all ways!&amp;quot;. No magic here! It&#39;s just the name that makes more sense!&lt;/p&gt;
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; any &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token keyword&quot;&gt;interface&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fany%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=any&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1082,6 +1162,10 @@
 &lt;p&gt;Keep the number of requests from browsers to the server low and remove all the unnecessary requests. Always keep response content small to improve performance.&lt;/p&gt;
 &lt;p&gt;...to be continued...&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fpage-speed%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Page%20Speed%20Insights&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1133,6 +1217,10 @@
 &lt;p&gt;Yes, it is. But what&#39;s the point of having union interfaces? I don&#39;t really know the usage of this case.&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-generics%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Go%20Generics&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1151,6 +1239,10 @@
 &lt;p&gt;We might never know what is right but at least, we do it better every single time.&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fthe-right-thing%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=The%20Right%20Thing&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1165,6 +1257,10 @@
 &lt;p&gt;The second lesson is you are only able to solve a problem if you accept it as what it is. Accept it is a problem, a challenge that you need and only you can solve it. Not your colleagues, not your manager, not anyone else... it must be you. Only when you accept that&#39;s a problem, you will start finding solutions to solve it. If you keep refusing it&#39;s a problem that you are facing, you will not think of any solution and hence the problem remained the same forever.&lt;/p&gt;
 &lt;p&gt;The third lesson is words lie, actions don&#39;t.&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2F3-lessons%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=3%20Lessons&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1186,6 +1282,10 @@
 &lt;p&gt;I think I don&#39;t need the power of the dragonfly anymore...&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fdragonfly%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Dragonfly&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1205,6 +1305,10 @@
 &lt;p&gt;Even now, I still can imagine my curious face in those days. The good old days...&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fthe-bus%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=The%20Bus&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1223,6 +1327,10 @@
 &lt;hr&gt;
 &lt;p&gt;[1] I went to India for 2 months for a business trip as a developer in 2011. But my English was bad and I could not communicate with them by speaking. I communicated with people by chatting on Skype. Fortunately, there was a good friend who helped me to translate from normal English to simple English whenever I needed to talk to someone else. And whenever I need to order food, I used my finger to point at the pictures on the menu :))&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Flearning-by-distraction%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Learning%20By%20Distraction&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1286,6 +1394,10 @@
 &lt;/ul&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgolang-string-concatenation-performance%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Go%20String%20Concat%20Performance&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1341,6 +1453,10 @@
 &lt;p&gt;[1] You can take a look at the implementation of map in Go at &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map.go&quot;&gt;map.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map_fast32.go&quot;&gt;map_fast32.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map_fast64.go&quot;&gt;map_fast64.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map_faststr.go&quot;&gt;map_faststr.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/alg.go&quot;&gt;alg.go&lt;/a&gt; and some relevant assembly code files can be found in the same run time package.&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-map-hash%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Go%20Map%20Hash&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1356,6 +1472,10 @@
 &lt;p&gt;This story is very similar to software development. When you do it fast, there are details to be missed, hence bugs and technical debts are always behind you - waiting to be paid.&lt;/p&gt;
 &lt;p&gt;All developers know this but sometimes you don&#39;t have any choice and have to go with the flow. The only difference is that sometimes your stakeholders understand it well and always support you whatever it costs. But you&#39;re not always lucky. And when luck is not your friend, let&#39;s hope that you have enough time to pay your debts.&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Ffast-comes-with-a-cost%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Fast%20Comes%20With%20A%20Cost&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1393,6 +1513,10 @@
 &lt;p&gt;And now your pipeline is ready to download your private module.&lt;/p&gt;
 
 			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-private-module%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Go%20Private%20Module&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
+			
 		</content>
 	</entry>
 	
@@ -1428,6 +1552,10 @@
 &lt;h3 id=&quot;conclusion&quot;&gt;Conclusion &lt;a class=&quot;direct-link&quot; href=&quot;#conclusion&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;With just a simple combination of channel and context, but we could make a very powerful tool for cancellable functions. You can based on the above suggestion implementations to make your own versions. And I believe that you will find that it&#39;s even more powerful than what I have shown you so far.&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgo-cancellable-functions%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Cancellable%20Functions&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
@@ -1509,6 +1637,10 @@
 &lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; sparkoperator.k8s.io/v1beta2&lt;br&gt;&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SparkApplication&lt;br&gt;&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; hello&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;spark&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; default&lt;br&gt;&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Scala&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;sparkVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 3.5.1&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; cluster&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; hello&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;latest&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;mainClass&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Main&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;mainApplicationFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; local&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;///app/work/application.jar&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;deps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;packages&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; org.apache.spark&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;sql&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;kafka&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;0&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;10_2.12&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;3.5.1&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;sparkConf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;&quot;spark.driver.extraJavaOptions&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-Divy.cache.dir=/tmp -Divy.home=/tmp&quot;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 512m&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token key atrule&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 3.5.1&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;serviceAccount&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; sparksubmit&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; KAFKA_USER&lt;br&gt;        &lt;span class=&quot;token key atrule&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;user1&quot;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; KAFKA_PASS&lt;br&gt;        &lt;span class=&quot;token key atrule&quot;&gt;valueFrom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;          &lt;span class=&quot;token key atrule&quot;&gt;secretKeyRef&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;            &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; kafka&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;passwords&lt;br&gt;            &lt;span class=&quot;token key atrule&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;passwords&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 512m&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;instances&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token key atrule&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 3.5.1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Note that the secret &lt;code&gt;kafka-user-passwords&lt;/code&gt; is the secret that created by &lt;code&gt;Binami&lt;/code&gt; Kafka helm chart above. If you use another type of chart please double check the name or you can also create a secret yourself and update the deployment file accordingly.&lt;/p&gt;
 
+			
+				
+				
+				&lt;img src=&quot;https://thefortunedays.com/api/ga?v=1&amp;_v=j83&amp;t=pageview&amp;dr=https%3A%2F%2Frss-feed-reader.com&amp;_s=1&amp;dh=thefortunedays.com&amp;dp=%2Farticles%2Fgetting-started-with-apache-spark%2F&amp;ul=en-us&amp;de=UTF-8&amp;dt=Getting%20Started%20With%20Apache%20Spark&amp;tid=G-9X9G2YCR2X&quot; width=&quot;1&quot; height=&quot;1&quot; style=&quot;display:none&quot; alt=&quot;&quot;&gt;
 			
 		</content>
 	</entry>
