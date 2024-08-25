@@ -789,6 +789,7 @@ header nav a {
   color: var(--nav-text-color);
   margin-left: 1.5em;
   font-family: 'CyberwayRiders';
+  text-shadow: 0 0 7px #fff, 0 0 42px #0a9cf5;
 }
 header nav a:first-of-type {
   margin-left: auto;
@@ -817,6 +818,7 @@ footer {
 footer > * {
   margin: 1.5em;
   font-family: 'CyberwayRiders';
+  text-shadow: 0 0 7px #fff, 0 0 42px #0a9cf5;
 }
 footer nav a img {
   vertical-align: middle;
@@ -1024,6 +1026,8 @@ a {
 }
 article h1 {
   text-align: center;
+  font-family: 'CyberwayRiders';
+  text-shadow: 0 0 7px #fff, 0 0 42px #0a9cf5;
 }
 article aside {
   font-style: italic;
@@ -1051,6 +1055,10 @@ article aside {
   text-align: center;
 }
 
+article h1,h2, h3, h4, h5, h6{
+  font-family: 'CyberwayRiders';
+  text-shadow: 0 0 7px #fff, 0 0 42px #0a9cf5;
+}
 @media (min-width: 600px) {
   .about {
     min-height: calc(100vh - 360px);
