@@ -61,8 +61,8 @@ share-widget {
 }
 
 share-widget div {
-  width: 30px;
-  height: 30px;
+  width: 10px;
+  height: 10px;
   background-image: url("/img/share.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -119,14 +119,6 @@ dl {
 
 #posts li {
   margin-bottom: 0.5em;
-}
-
-/* https://github.com/rsms/inter/blob/master/LICENSE.txt */
-@font-face {
-  font-family: "Inter UI";
-  font-weight: 100 900;
-  font-style: oblique 0deg 10deg;
-  src: url("/fonts/Inter-3.19.var.woff2") format("woff2");
 }
 
 @font-face {
@@ -519,8 +511,8 @@ dt {
   }
 }
 html {
-  font-family: "Inter UI", sans-serif;
-  --font-family: "Inter UI", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  --font-family: "Montserrat", sans-serif;
 }
 form {
   padding: 1.5em 1.5em 0;
