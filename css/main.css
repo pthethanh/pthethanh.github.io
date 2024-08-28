@@ -137,14 +137,12 @@ The Bahunya CSS framework https://kimeiga.github.io/bahunya/
 html {
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
+  font-size: 17.5px;
 }
 body {
   margin: 0;
 }
-h1 {
-  font-size: 2em;
-  margin: 0.67em 0;
-}
+
 hr {
   box-sizing: content-box;
   height: 0;
@@ -275,79 +273,32 @@ summary {
 template {
   display: none;
 }
-h1 {
-  font-size: 3em;
-  line-height: 1.25;
-  margin-bottom: 0.5em;
-}
-h2 {
-  font-size: 2.5em;
-  line-height: 1.2;
-  margin-bottom: 0.6em;
-}
-h3 {
-  font-size: 2em;
-  line-height: 1.125;
-  margin-bottom: 0.75em;
-}
-h4 {
-  font-size: 1.5em;
-  margin-bottom: 1em;
-}
+
+h1,
+h2,
+h3,
 h4,
 h5 {
-  line-height: 1.5em;
-}
-h5 {
-  font-size: 1.25em;
-  margin-bottom: 1.2em;
-}
-h6 {
-  font-size: 1em;
-  line-height: 1.5em;
-  margin-bottom: 1.5em;
-}
-body,
-ol,
-p,
-pre,
-ul {
-  font-size: 1em;
-  line-height: 1.5;
-}
-ol,
-p,
-pre,
-ul {
-  margin-bottom: 1.5em;
+  margin: 3rem 0 1.38rem;
+  line-height: 1.3;
 }
 h1 {
+  font-size: 2.488rem;
+}
+h2 {
   font-size: 2.074rem;
 }
-h1,
-h2 {
-  line-height: 2.4rem;
-  margin-bottom: 1.36rem;
-}
-h2 {
+h3 {
   font-size: 1.728rem;
 }
-h3 {
-  font-size: 1.4rem;
-}
-h3,
 h4 {
-  line-height: 1.6rem;
-  margin-bottom: 1.36rem;
+  font-size: 1.44rem;
 }
-h4 {
+h5 {
   font-size: 1.2rem;
 }
-h5,
 h6 {
   font-size: 1rem;
-  line-height: 1.6rem;
-  margin-bottom: 1.36rem;
 }
 body,
 ol,
@@ -363,55 +314,7 @@ pre,
 ul {
   margin-bottom: 1.36rem;
 }
-@media (min-width: 600px) {
-  h1 {
-    font-size: 4.3978rem;
-    line-height: 4.4rem;
-  }
-  h1,
-  h2 {
-    margin-bottom: 1.496rem;
-  }
-  h2 {
-    font-size: 3.1097rem;
-    line-height: 3.52rem;
-  }
-  h3 {
-    font-size: 2.1989rem;
-    line-height: 2.64rem;
-    margin-bottom: 1.496rem;
-  }
-  h4 {
-    font-size: 1.5554rem;
-  }
-  h4,
-  h5 {
-    line-height: 1.76rem;
-    margin-bottom: 1.496rem;
-  }
-  h5,
-  h6 {
-    font-size: 1.1rem;
-  }
-  h6 {
-    line-height: 1.76rem;
-    margin-bottom: 1.496rem;
-  }
-  body,
-  ol,
-  p,
-  pre,
-  ul {
-    font-size: 1.1rem;
-    line-height: 1.6;
-  }
-  ol,
-  p,
-  pre,
-  ul {
-    margin-bottom: 1.496rem;
-  }
-}
+
 th {
   font-weight: 600;
 }

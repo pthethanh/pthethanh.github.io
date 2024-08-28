@@ -244,8 +244,7 @@
 		<updated>2020-12-25T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/go-interview-questions/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/go-interview-questions/questions-w320_tqsj9j.webp&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Learning without testing your knowledge can lead to wrong perception about your expertise level. This article provides you a list of questions for you to evaluate yourself easier.&lt;/p&gt;
+		  &lt;p&gt;Learning without testing your knowledge can lead to wrong perception about your expertise level. This article provides you a list of questions for you to evaluate yourself easier.&lt;/p&gt;
 &lt;h2 id=&quot;go-questions&quot;&gt;Go Questions &lt;a class=&quot;direct-link&quot; href=&quot;#go-questions&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;h3 id=&quot;1.-basic&quot;&gt;1. Basic &lt;a class=&quot;direct-link&quot; href=&quot;#1.-basic&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;ul&gt;
@@ -582,8 +581,7 @@
 		<updated>2020-12-25T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/how-we-work-together/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/how-we-work-together/teamwork-w320_iz4zbd.webp&quot; alt=&quot;Diversity by Thanh Pham&quot;&gt;&lt;/p&gt;
-&lt;p&gt;We all want to be successful. And this article does nothing more than providing a guidance on how we should work together to bring success to every single member in our team.&lt;/p&gt;
+		  &lt;p&gt;We all want to be successful. And this article does nothing more than providing a guidance on how we should work together to bring success to every single member in our team.&lt;/p&gt;
 &lt;p&gt;Our goal is to help everyone be more efficient at work. We want to help you focusing on the work that matter, achieving your goals and play together as good friends.&lt;/p&gt;
 &lt;p&gt;The values in this document are fleshed out through a simple good vs. bad comparison.&lt;/p&gt;
 &lt;h2 id=&quot;default-to-action&quot;&gt;Default To Action &lt;a class=&quot;direct-link&quot; href=&quot;#default-to-action&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -635,8 +633,7 @@
 		<updated>2021-01-06T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/useful-docker-commands/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/useful-docker-commands/docker-w320_bcdhzb.webp&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Just a collection of useful Docker commands&lt;/p&gt;
+		  &lt;p&gt;Just a collection of useful Docker commands&lt;/p&gt;
 &lt;p&gt;List all Docker images&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;docker images
 &lt;/code&gt;&lt;/pre&gt;
@@ -1002,8 +999,7 @@
 		<updated>2022-01-13T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/reading/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/reading/Reading-a-book-001-worg.jpg&quot; alt=&quot;Reading a book - Chemistry/Getty Images/Digital Vision&quot;&gt;&lt;/p&gt;
-&lt;p&gt;When I was a child, I liked reading books so much. I read everything I have around me. It could be a comic I got from my friends or from my teacher. It could be a novel I got from my brothers or even it&#39;s the Bible I got from my parents - that&#39;s why there&#39;s a time my Mother thought I’d liked to be a priest ^_^.&lt;/p&gt;
+		  &lt;p&gt;When I was a child, I liked reading books so much. I read everything I have around me. It could be a comic I got from my friends or from my teacher. It could be a novel I got from my brothers or even it&#39;s the Bible I got from my parents - that&#39;s why there&#39;s a time my Mother thought I’d liked to be a priest ^_^.&lt;/p&gt;
 &lt;p&gt;I don&#39;t know why I love reading that much. I can stay at home reading from the morning till the afternoon and still not feeling enough. My family was really poor at the time and hence there was no money for buying books, but luckily I got some from friends and teachers. Every time I got a book I tried to read everything in one day and give it back. That was a really great time in my life.&lt;/p&gt;
 &lt;p&gt;The great thing about books is they showed me what I&#39;ve not known before. It opened a whole new world I&#39;ve never seen before. Not only knowledge, but also a whole new level of emotion.&lt;/p&gt;
 &lt;p&gt;Even at the time I was still very young, but the books I&#39;ve read gave me multiple beautiful worlds of emotions. That can be a fun moment when I was reading a comic for kids, it can be a sad moment when a boy failed to protect his love. It can also be an inspirational moment when a boy struggled to fight for his future and then finally made a victory over all the obstacles on his journey. Sometimes, a book is also a window to a new world where I can escape reality and live the dream life for a while. It gives me hope and energy to overcome obstacles on my journey to success in real life.&lt;/p&gt;
@@ -1514,12 +1510,12 @@
 	</entry>
 	
 	<entry>
-		<title>Go Multiple Modules on Github Repository</title>
+		<title>Multiple Go Modules</title>
 		<link href="https://thefortunedays.com/articles/go-multi-modules-repository/"/>
 		<updated>2024-08-25T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/go-multi-modules-repository/</id>
 		<content type="html">
-		  &lt;p&gt;Let assume you want to organize multiple related modules in a single Github repository like the case below and would like to version them separately.&lt;br&gt;
+		  &lt;p&gt;Let assume you want to organize multiple modules in a single Github repository like the case below and would like to version them separately.&lt;br&gt;
 As an example, the &lt;a href=&quot;https://github.com/pthethanh/nano&quot;&gt;nano&lt;/a&gt; project includes different modules: the &lt;code&gt;nano&lt;/code&gt; itself and other sub-modules &lt;code&gt;protoc-gen-nano&lt;/code&gt;, &lt;code&gt;kafka&lt;/code&gt;, &lt;code&gt;cache&lt;/code&gt;.&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;https://github.com/pthethanh/nano
 ├ ...
