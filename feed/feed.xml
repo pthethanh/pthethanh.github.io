@@ -5,7 +5,7 @@
 	
 	<link href="https://thefortunedays.com/feed/feed.xml" rel="self"/>
 	<link href="https://thefortunedays.com"/>
-	<updated>2024-03-10T07:00:00+07:00</updated>
+	<updated>2024-08-25T07:00:00+07:00</updated>
 	<id>https://thefortunedays.com</id>
 	<author>
 		<name>Thanh</name>
@@ -1508,6 +1508,70 @@
 &lt;p&gt;&lt;code&gt;spark-application.yaml&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&quot;language-yaml&quot;&gt;&lt;code class=&quot;language-yaml&quot;&gt;&lt;span class=&quot;token key atrule&quot;&gt;apiVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; sparkoperator.k8s.io/v1beta2&lt;br&gt;&lt;span class=&quot;token key atrule&quot;&gt;kind&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; SparkApplication&lt;br&gt;&lt;span class=&quot;token key atrule&quot;&gt;metadata&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; hello&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;spark&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;namespace&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; default&lt;br&gt;&lt;span class=&quot;token key atrule&quot;&gt;spec&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Scala&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;sparkVersion&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 3.5.1&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;mode&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; cluster&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; hello&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;latest&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;mainClass&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; Main&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;mainApplicationFile&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; local&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;///app/work/application.jar&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;deps&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;packages&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; org.apache.spark&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;sql&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;kafka&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;0&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;10_2.12&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;3.5.1&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;sparkConf&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;&quot;spark.driver.extraJavaOptions&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;-Divy.cache.dir=/tmp -Divy.home=/tmp&quot;&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;driver&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 512m&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token key atrule&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 3.5.1&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;serviceAccount&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; sparksubmit&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;env&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; KAFKA_USER&lt;br&gt;        &lt;span class=&quot;token key atrule&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;user1&quot;&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; KAFKA_PASS&lt;br&gt;        &lt;span class=&quot;token key atrule&quot;&gt;valueFrom&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;          &lt;span class=&quot;token key atrule&quot;&gt;secretKeyRef&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;            &lt;span class=&quot;token key atrule&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; kafka&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;user&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;passwords&lt;br&gt;            &lt;span class=&quot;token key atrule&quot;&gt;key&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; client&lt;span class=&quot;token punctuation&quot;&gt;-&lt;/span&gt;passwords&lt;br&gt;  &lt;span class=&quot;token key atrule&quot;&gt;executor&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;memory&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 512m&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;instances&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;3&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token key atrule&quot;&gt;labels&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token key atrule&quot;&gt;version&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt; 3.5.1&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Note that the secret &lt;code&gt;kafka-user-passwords&lt;/code&gt; is the secret that created by &lt;code&gt;Binami&lt;/code&gt; Kafka helm chart above. If you use another type of chart please double check the name or you can also create a secret yourself and update the deployment file accordingly.&lt;/p&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Go Multiple Modules on Github Repository</title>
+		<link href="https://thefortunedays.com/articles/go-multi-modules-repository/"/>
+		<updated>2024-08-25T07:00:00+07:00</updated>
+		<id>https://thefortunedays.com/articles/go-multi-modules-repository/</id>
+		<content type="html">
+		  &lt;p&gt;Let assume you want to organize multiple related modules in a single Github repository like the case below and would like to version them separately.&lt;br&gt;
+As an example, the &lt;a href=&quot;https://github.com/pthethanh/nano&quot;&gt;nano&lt;/a&gt; project includes different modules: the &lt;code&gt;nano&lt;/code&gt; itself and other sub-modules &lt;code&gt;protoc-gen-nano&lt;/code&gt;, &lt;code&gt;kafka&lt;/code&gt;, &lt;code&gt;cache&lt;/code&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;https://github.com/pthethanh/nano
+├ ...
+├── cmd
+│   └── protoc-gen-nano
+│       ├── go.mod
+│       ├── go.sum
+├── plugins
+│   ├── broker
+│   │   ├── kafka
+│   │   │   ├── go.mod
+│   │   │   ├── go.sum
+│   │   └── nats
+│   │       ├── go.mod
+│   │       ├── go.sum
+│   └── cache
+│       └── ristretto
+│           ├── go.mod
+│           ├── go.sum
+├── go.mod
+├── go.sum
+├── go.work
+├── go.work.sum
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;With the structure above, how can you release a different versions for each modules? Let say &lt;code&gt;nano&lt;/code&gt; at v0.0.1, &lt;code&gt;kafka&lt;/code&gt; at v0.0.2 and so on?&lt;/p&gt;
+&lt;p&gt;Thanks to Go &amp;amp; Github, they support a very simple way to tag/release a version for each module base on their path on github repo. Basically, all you ned to do is to tag a module with the following format:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git tag &amp;lt;relative path module from the root dir&amp;gt;/&amp;lt;version&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This means I can release each module at different version like below:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;// nano at v0.0.1
+git tag -a v0.0.1 -m &amp;quot;Release version v.0.1&amp;quot;
+git push origin v0.0.1
+
+// gen nano at v0.0.2
+git tag -a cmd/protoc-gen-nano/v0.0.2  -m &amp;quot;Release version v.0.2&amp;quot;
+git push origin cmd/protoc-gen-nano/v0.0.2
+
+// kafka at v0.0.3
+git tag -a plugins/broker/kafka/v0.0.3  -m &amp;quot;Release version v.0.3&amp;quot;
+git push origin plugins/broker/kafka/v0.0.3
+
+// nats at v0.0.2
+git tag -a plugins/broker/nats/v0.0.2  -m &amp;quot;Release version v.0.2&amp;quot;
+git push origin plugins/broker/nats/v0.0.2
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Once tagging &amp;amp; releasing done, you can use them in other modules normally:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;require (
+	github.com/pthethanh/nano v0.0.1
+	github.com/pthethanh/nano/plugins/broker/kafka v0.0.3
+)
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;That&#39;s all! Happy coding!&lt;/p&gt;
 
 			
 		</content>
