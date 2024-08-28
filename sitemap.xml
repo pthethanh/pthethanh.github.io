@@ -495,7 +495,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/tags/golang/</loc>
+    <loc>https://thefortunedays.com/tags/thoughts/</loc>
     <lastmod>2024-03-12T10:45:41.000Z</lastmod>
   </url>
   
@@ -510,7 +510,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/tags/thoughts/</loc>
+    <loc>https://thefortunedays.com/tags/golang/</loc>
     <lastmod>2024-03-12T10:45:41.000Z</lastmod>
   </url>
   
@@ -627,6 +627,6 @@
   
   <url>
     <loc>https://thefortunedays.com/articles/go-multi-modules-repository/</loc>
-    <lastmod>2024-08-28T05:25:27.000Z</lastmod>
+    <lastmod>2024-08-28T14:22:30.000Z</lastmod>
   </url>
 </urlset>
