@@ -5,7 +5,7 @@
 	
 	<link href="https://thefortunedays.com/feed/feed.xml" rel="self"/>
 	<link href="https://thefortunedays.com"/>
-	<updated>2024-08-25T07:00:00+07:00</updated>
+	<updated>2025-08-25T07:00:00+07:00</updated>
 	<id>https://thefortunedays.com</id>
 	<author>
 		<name>Thanh</name>
@@ -1568,6 +1568,52 @@ git push origin plugins/broker/nats/v0.0.2
 )
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;That&#39;s all! Happy coding!&lt;/p&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Notes</title>
+		<link href="https://thefortunedays.com/articles/notesx/"/>
+		<updated>2025-08-25T07:00:00+07:00</updated>
+		<id>https://thefortunedays.com/articles/notesx/</id>
+		<content type="html">
+		  &lt;h2 id=&quot;list&quot;&gt;List &lt;a class=&quot;direct-link&quot; href=&quot;#list&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;p&gt;Enterprise data platform&lt;br&gt;
+Customer Data Platform&lt;br&gt;
+Intelligent Search Engine &amp;amp; Chat Bot&lt;/p&gt;
+&lt;p&gt;Low Code Data Platform&lt;/p&gt;
+&lt;h2 id=&quot;enterprise-data-platform&quot;&gt;Enterprise Data Platform &lt;a class=&quot;direct-link&quot; href=&quot;#enterprise-data-platform&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h3 id=&quot;highlight&quot;&gt;Highlight &lt;a class=&quot;direct-link&quot; href=&quot;#highlight&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Scale analytics and AI: Reduce cost and time to insight and enhance confidence and trust in data used for applications, analytics, and AI with a modern data architecture.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Simplify and make data accessible: Access existing data lakes and data warehouses on-premises or in the cloud and integrate them with new data to unlock new insights.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Be resilient, reliable, and scalable: Deliver business continuity and mitigate data-related outages. Start small and scale across use cases and deployments (cloud, hybrid and on-premises).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Manage governance, risk, and compliance: Control data privacy and security locally with built-in governance, metadata management, and security and deploy globally with enterprise-wide governance solutions&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&quot;benefits&quot;&gt;Benefits &lt;a class=&quot;direct-link&quot; href=&quot;#benefits&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
+&lt;p&gt;Since data lakehouse was designed to bring together best features of a data warehouse and a data lake, it yields specific key benefits to its users. This includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reduced data redundancy: The single data storage system allows for a streamlined platform to carry out all business data demands. Data lakehouses also simplify data observability by reducing the amount of data moving through the data pipelines into multiple systems.&lt;br&gt;
+Cost-effective: Since data lakehouses capitalize off of the lower costs of cloud object storage, the operational costs of a data lakehouse are comparatively lower than data warehouses. Additionally, the hybrid architecture of a data lakehouse eliminates the need to maintain multiple data storage systems, making it less expensive to operate.&lt;/li&gt;
+&lt;li&gt;Supports wide variety of workloads: Data lakehouses can address different use cases across the data management lifecycle. It also can support both business intelligence and data visualization workstreams or more complex data science ones.&lt;/li&gt;
+&lt;li&gt;Better governance:  The data lakehouse architecture mitigates the standard governance issues that come with data lakes. For example, as data is ingested and uploaded, it can ensure that the data meets the defined schema requirements, reducing downstream data quality issues.&lt;/li&gt;
+&lt;li&gt;More scale: In traditional data warehouses, compute and storage were coupled together, which drove up operational costs. Data lakehouses separate storage and compute, allowing data teams to access the same data storage while use different computing nodes for different applications. This results in more scalability and flexibility.&lt;/li&gt;
+&lt;li&gt;Streaming support: The data lakehouse is built for business and technology of today and many data sources use real-time streaming directly from devices. The lakehouse system supports this real-time ingestion, which will only become more popular in the future.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;customer-data-platform&quot;&gt;Customer Data Platform &lt;a class=&quot;direct-link&quot; href=&quot;#customer-data-platform&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;intelligent-search-engine-%26-chat-bot&quot;&gt;Intelligent Search Engine &amp;amp; Chat Bot &lt;a class=&quot;direct-link&quot; href=&quot;#intelligent-search-engine-%26-chat-bot&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;data-fabric-%26-data-mesh&quot;&gt;Data Fabric &amp;amp; Data Mesh &lt;a class=&quot;direct-link&quot; href=&quot;#data-fabric-%26-data-mesh&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
+&lt;h2 id=&quot;low-code-data-platform&quot;&gt;Low Code Data Platform &lt;a class=&quot;direct-link&quot; href=&quot;#low-code-data-platform&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 
 			
 		</content>
