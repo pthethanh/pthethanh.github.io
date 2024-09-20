@@ -373,8 +373,7 @@
 		<updated>2020-12-25T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/go-interview-structure/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/go-interview-structure/interview_qsmlw2.jpg&quot; alt=&quot;Steven Coutts Photography/Getty Images&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: An interview guideline for practicing that increases your chance of passing a Go interview to 97.5% even you&#39;re a young non-native English speaker developer. Note that this structure is designed for my team where I know the interviewer quite well.&lt;/p&gt;
+		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: An interview guideline for practicing that increases your chance of passing a Go interview to 97.5% even you&#39;re a young non-native English speaker developer. Note that this structure is designed for my team where I know the interviewer quite well.&lt;/p&gt;
 &lt;p&gt;Answer interview&#39;s questions in a structure fashion has never been easy even with experienced developers. This is even more challenged with non-native English speakers like Vietnamese young developers. Sometime candidates talk too much or too little, or even make bad impression to interviewers by saying things they shouldn&#39;t say,... Those little things often lead to a failed interview.&lt;/p&gt;
 &lt;p&gt;For young and non-native English speaker developers in Vietnam, we need a simple structure so that they can learn and practice themselves. I created and applied successfully the interview structure below for more than 50 developers for Go developer position. Most of them are fresh graduate with less than 1 year of experience and the success rate of the interviews is more than 97.5%.&lt;/p&gt;
 &lt;p&gt;If you&#39;re a young Vietnamese developer who are trying to pass a Go interview, this guideline is for you. The guideline is provided as a template with some very basic rules so that you can use it for practicing with your mentors and easier to make your own styles.&lt;/p&gt;
@@ -467,9 +466,7 @@
 		<updated>2020-12-25T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/go-reading-list/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/go-reading-list/reading_sss4pr.jpg&quot; alt=&quot;Unsplash&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Unsplash&lt;/p&gt;
-&lt;p&gt;Don&#39;t know what resources to read and how to get started might lead to long and challenged journey on learning a new programming language. This article show you a list of articles you should read when learning Go from basic to advanced.&lt;/p&gt;
+		  &lt;p&gt;Don&#39;t know what resources to read and how to get started might lead to long and challenged journey on learning a new programming language. This article show you a list of articles you should read when learning Go from basic to advanced.&lt;/p&gt;
 &lt;p&gt;The best way to start is reading the top 4 resources of the Beginner section, do some basic exercises and then continue to read the Intermediate and Advanced sections while working on an intermediate project.&lt;/p&gt;
 &lt;h2 id=&quot;beginner&quot;&gt;Beginner &lt;a class=&quot;direct-link&quot; href=&quot;#beginner&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;ul&gt;
@@ -662,8 +659,6 @@
 		<id>https://thefortunedays.com/articles/100-stars/</id>
 		<content type="html">
 		  &lt;p&gt;After more than 1 year on &lt;a href=&quot;https://github.com/pthethanh&quot;&gt;GitHub&lt;/a&gt;, I&#39;ve gotten more than 100 stars. In this post, I will tell you what I have learnt from that journey. From my journey, I hope that you can learn something and might do something helpful for your career.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/explore/social.jpg&quot; alt=&quot;Github&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Github&lt;/p&gt;
 &lt;h2 id=&quot;shape-your-goals&quot;&gt;Shape Your Goals &lt;a class=&quot;direct-link&quot; href=&quot;#shape-your-goals&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;When I was started more than 1 year ago, I didn&#39;t know how to get started. There are a lot of questions came to my head at the time. What should I build? What is the standard of a repository on GitHub? How do people know about my works? How other professional developers are doing? Even a very basic question that I need to answer to myself at the time is &amp;quot;Is it worthy to spend time on GitHub? Spend time for building something for free?&amp;quot;. There was also a feeling that no one will read my code because I&#39;m not an expert on this....&lt;/p&gt;
 &lt;p&gt;To be honest, it&#39;s tired to answer those questions even to yourselves. But those are very important questions, since it will help you to know your purpose and keep you keen to your goal for a long time.&lt;/p&gt;
@@ -771,9 +766,7 @@
 		<updated>2021-05-10T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/bad-code/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/bad-code/badcode_g0fm6z.jpg&quot; alt=&quot;Getty Images&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Getty Images&lt;/p&gt;
-&lt;p&gt;**Summary.**People complains a lot about bad code. A lot of &amp;quot;what the food&amp;quot; words come out from a developer when he reviews a bad code. But on the other hand, bad code is a great opportunity for me as a developer in a third world country.&lt;/p&gt;
+		  &lt;p&gt;**Summary.**People complains a lot about bad code. A lot of &amp;quot;what the food&amp;quot; words come out from a developer when he reviews a bad code. But on the other hand, bad code is a great opportunity for me as a developer in a third world country.&lt;/p&gt;
 &lt;p&gt;For people who don&#39;t know what is a bad code. It&#39;s simply a piece of code that when someone looks at it, it makes them feel uncomfortable and eventually produce a lot of &amp;quot;what the food&amp;quot; or &amp;quot;WTF&amp;quot; or whatever a developer can say when he&#39;s angry. The more &amp;quot;WTF&amp;quot; words, the worse the code.&lt;/p&gt;
 &lt;p&gt;Some pieces of bad code may even turn a developer into crazy mode and eventually leave the project because he cannot stand for it anymore...&lt;/p&gt;
 &lt;p&gt;Most of the time bad means &amp;quot;bad&amp;quot; and &amp;quot;no opportunity&amp;quot; but in case of &amp;quot;bad code&amp;quot;, it&#39;s a great opportunity for developers in a third world country like me. It means there are some shits in someone&#39;s products and there is a chance they will hire me to &amp;quot;clean that shit&amp;quot;. And this is where I make money from.&lt;/p&gt;
@@ -791,8 +784,7 @@
 		<updated>2021-08-05T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/golang-name-conventions/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/golang-name-conventions/nameconvention_ftarfh.jpg&quot; alt=&quot;twomeows/Getty Images&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The ground rules for naming in Go are: use mixedCaps, keep it short and be consistent.&lt;/p&gt;
+		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The ground rules for naming in Go are: use mixedCaps, keep it short and be consistent.&lt;/p&gt;
 &lt;p&gt;As a developer, naming is what we do every day, although it is quite easy most of the time, sometime it&#39;s really hard to come up with a good name, especially for fresher developers who are still struggling learning the languages. Some developers end up using &lt;code&gt;i&lt;/code&gt;, &lt;code&gt;j&lt;/code&gt;, &lt;code&gt;v&lt;/code&gt;,... for almost everything. Those are good names in some cases but can be very confusing if being used in an inappropriate context.&lt;/p&gt;
 &lt;p&gt;Some time developers just want to name their code their own way, this is OK if you work on your side project. But in a project which involve multiple developers, the standard must be respected. Everyone in a same project must follow the same standard, otherwise your code would like like a mess and become super hard to maintain.&lt;/p&gt;
 &lt;p&gt;In this post, I would like to provide some simple rules so that you can name your code easier and avoid endless arguments with your colleagues about naming conventions.&lt;/p&gt;
@@ -914,8 +906,7 @@
 		<updated>2021-11-02T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/they-dont-even-know-the-fundamentals/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/they-dont-even-know-the-fundamentals/photo-1573497620053-ea5300f94f21-worg.jpg&quot; alt=&quot;unsplash/Christina&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&amp;quot;They don&#39;t even know the fundamentals!&amp;quot;. That&#39;s what I often hear from my colleagues after their trips to universities for interviewing students for their projects. I&#39;ve also experienced this situation myself so many times.&lt;/p&gt;
+		  &lt;p&gt;&amp;quot;They don&#39;t even know the fundamentals!&amp;quot;. That&#39;s what I often hear from my colleagues after their trips to universities for interviewing students for their projects. I&#39;ve also experienced this situation myself so many times.&lt;/p&gt;
 &lt;p&gt;A lot of students nowadays just want to work on AI/ML, Blockchain projects. They just simply turn around and never sat down for an interview after knowing that we&#39;re looking for developers who will work on payment gateway, network management system, eCommerce,...&lt;/p&gt;
 &lt;p&gt;Some of them were patient enough to sit down for an interview, but still repeat that they wanted to work on AI/ML, Blockchain,... since &amp;quot;it&#39;s the 4.0 revolution now&amp;quot;. To be honest, I&#39;m totally fine with that. Everyone has a dream and that&#39;s OK.&lt;/p&gt;
 &lt;p&gt;But when it came to the technical interview, what I wanted them to do was just &amp;quot;giving a list of numbers, sort them by ascending using an algorithm you knew&amp;quot;. That&#39;s it! Nothing more and nothing less. Sadly, some didn&#39;t even know how to do that! Most of them could explain that we need 2 nested loops and swap numbers if one is bigger than the other. That&#39;s cool! It&#39;s exactly what they have been taught.&lt;/p&gt;
@@ -932,8 +923,7 @@
 		<updated>2021-11-07T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/effective-options/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/effective-options/options-worg.jpg&quot; alt=&quot;unsplash/Victoriano Izquierdo&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users.&lt;/p&gt;
+		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users.&lt;/p&gt;
 &lt;p&gt;When building a library, we normally try to think how the other developers would use our code and try to provide as many APIs as possible. But sometimes, exposing too many APIs would be very confusing. Or even worse, we failed to provide what our users need, but exposing too many APIs that they don&#39;t even need. Hence organizing what we expose and how they should be exposed is really important.&lt;/p&gt;
 &lt;p&gt;Normally, what we expose to the end users are either constructors or methods. Some parameters are required and some are optional. Since we want to expose as many APIs as we can for the end users, we will end up having a lot of variants of the same API.&lt;/p&gt;
 &lt;p&gt;Consider the struct below, where &lt;code&gt;host&lt;/code&gt; is required but others are optional:&lt;/p&gt;
@@ -1043,8 +1033,7 @@
 		<updated>2022-05-12T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/page-speed/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/page-speed/page%20speed-worg.png&quot; alt=&quot;Page Speed Insights score of https://pthethanh.herokuapp.com/&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The smaller size of HTML, JS, CSS and Images the better the performance.&lt;/p&gt;
+		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The smaller size of HTML, JS, CSS and Images the better the performance.&lt;/p&gt;
 &lt;p&gt;Web page performance is one of the most important things in web development. The better performance means the better user experiences and the better business.&lt;/p&gt;
 &lt;p&gt;There are a lot of factors that impact the speed of web pages but in this post, I just list some major factors that impact the most to the performance of a web page and quickly show some solutions to address them.&lt;/p&gt;
 &lt;p&gt;Actually, these are just my notes during the journey of improving performance of this blog, but hopefully someone can be benefited from this too.&lt;/p&gt;
@@ -1052,9 +1041,6 @@
 &lt;p&gt;The best way to make web pages load fast is to reduce and minimize sizes of all relevant documents transferred from the web server. This includes HTML, JS, CSS, Images, Font,...&lt;/p&gt;
 &lt;p&gt;For HTML and CSS, we can use a lot of HTML/CSS optimizer and also enable compression mechanisms (gzip) on the server to reduce the size of the document. This alone contributes a lot to the web page performance.&lt;/p&gt;
 &lt;p&gt;For this blog, I use &lt;code&gt;minify-html&lt;/code&gt; for HTML, &lt;code&gt;minify-js &lt;/code&gt;for JS and &lt;code&gt;TailwindCSS minifier&lt;/code&gt;for CSS.&lt;/p&gt;
-&lt;p&gt;Below is the records of one of article in this blog:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/page-speed/request%20count-worg.png&quot; alt=&quot;Request count and transfer sizes of this blog&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Request count and transfer sizes of this blog&lt;/p&gt;
 &lt;h3 id=&quot;web-fonts&quot;&gt;Web Fonts &lt;a class=&quot;direct-link&quot; href=&quot;#web-fonts&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Web Fonts can cause a lot of issues for web performance, such as: blocking resources, heavy font sizes, cumulative layout shift.&lt;/p&gt;
 &lt;p&gt;If you&#39;re using Google Web Fonts, you don&#39;t really need to do anything since they are already optimized very well. The only thing you need to do is to &lt;code&gt;preload&lt;/code&gt; it in advance to avoid blocking resource issues.&lt;/p&gt;
@@ -1088,8 +1074,7 @@
 		<updated>2022-06-02T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/go-generics/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/go-generics/generictypes-worg.png&quot; alt=&quot;Go Generics/Type Parameters by programmingpercy&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp;amp; functions are supported, but methods are not - which causes a lot of limitations.&lt;/p&gt;
+		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp;amp; functions are supported, but methods are not - which causes a lot of limitations.&lt;/p&gt;
 &lt;p&gt;This post is just my very first feelings about the generics feature of Go after some simple experimentation, it&#39;s not a full picture of what generics in Go looks like, if you want to see the full picture, check this very long &lt;a href=&quot;https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md&quot;&gt;spec&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&quot;the-good-things&quot;&gt;The Good Things &lt;a class=&quot;direct-link&quot; href=&quot;#the-good-things&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;Now you don&#39;t need to write function like max again and again for different data types:&lt;/p&gt;
@@ -1171,9 +1156,7 @@
 		<updated>2022-12-23T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/dragonfly/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/dragonfly/dragonfly-worg.png&quot; alt=&quot;Thanh Pham / It&#39;s a myth in Vietnam that if you let a dragonfly bite your belly button, you will be able to swim&quot;&gt;&lt;/p&gt;
-&lt;p&gt;Thanh Pham / It&#39;s a myth in Vietnam that if you let a dragonfly bite your belly button, you will be able to swim&lt;/p&gt;
-&lt;p&gt;The dragonfly bit the shit out of me, I screamed and really scared but tried to keep calm enough to let it continue its job. &amp;quot;Just one more time and I can swim&amp;quot; - I thought.&lt;/p&gt;
+		  &lt;p&gt;The dragonfly bit the shit out of me, I screamed and really scared but tried to keep calm enough to let it continue its job. &amp;quot;Just one more time and I can swim&amp;quot; - I thought.&lt;/p&gt;
 &lt;p&gt;Just one minute earlier, my brother told me &amp;quot;Let the dragonfly bite your belly button, you will be able to swim&amp;quot;. I was really scared but my belief about the power of the dragonfly remained very strong. I believed I could swim, I believed I could explore the big river out there. I felt like a superman, and started swimming for the first time of my life.&lt;/p&gt;
 &lt;p&gt;Although I drank a lot of water that day, it&#39;s amazing how those simple words can give a young boy such courage to try something he had not known yet. And I wonder if there is still something simple and powerful like that for the &amp;quot;adult&amp;quot; me now, so that I have enough courage to explore the unknown out there. The things that are both scary and interesting - just like the river that day.&lt;/p&gt;
 &lt;p&gt;And I wonder if there is still someone like my brother that day, who cared for me enough to say &amp;quot;Just do it, boy!&amp;quot; when he saw me hesitated to do something? I think one must be very lucky to have this kind of sweet memory and having a person care for him/her that much in life. So, I started thinking I&#39;m a lucky one.&lt;/p&gt;
@@ -1229,8 +1212,7 @@
 		<updated>2023-04-10T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/golang-string-concatenation-performance/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/static/images/articles/golang-string-concat-performance/concat-worg.jpg&quot; alt=&quot;Go string concatenation performance comparison&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: strings.Builder gives very good performance in general, but we can improve it even better.&lt;/p&gt;
+		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: strings.Builder gives very good performance in general, but we can improve it even better.&lt;/p&gt;
 &lt;p&gt;Go string concatenation performance comparison&lt;/p&gt;
 &lt;p&gt;String concatenation is a basic task that I often do as a developer, but I have never considered much about its performance. This article is a result of my curiosity about this topic.&lt;/p&gt;
 &lt;h2 id=&quot;navie&quot;&gt;Navie &lt;a class=&quot;direct-link&quot; href=&quot;#navie&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
