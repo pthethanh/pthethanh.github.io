@@ -1484,7 +1484,7 @@
 	</entry>
 	
 	<entry>
-		<title>Multiple Go Modules</title>
+		<title>Versioning Multiple Go Modules</title>
 		<link href="https://thefortunedays.com/articles/go-multi-modules-repository/"/>
 		<updated>2024-08-25T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/go-multi-modules-repository/</id>

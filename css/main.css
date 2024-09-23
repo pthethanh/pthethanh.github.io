@@ -676,7 +676,7 @@ footer p {
 }
 article {
   max-width: 100%;
-  padding: 1.5em;
+  padding: 0 1.5em;
   width: 37.5em;
   margin: 0 auto;
   min-height: 100vh;
@@ -915,4 +915,35 @@ article h1,h2, h3, h4, h5, h6{
     min-height: calc(100vh - 360px);
   }
   
+}
+
+.home .banner {
+  width: 100%;
+  padding-bottom: 3em;
+}
+
+.post {
+  margin-bottom: 30px;
+}
+.post .title {
+  font-weight: bold;
+  color: var(--primary);
+}
+.post .title .draft {
+  color: yellow;
+}
+.post .description {
+  margin-top: 5px;
+  color: var(--text-color);
+}
+.post .date {
+  margin-top: 5px;
+  font-size: 0.75em;
+  color: #0a9cf5;
+  text-transform: uppercase;
+}
+
+.post .separator {
+  color: #0a9cf5;
+  opacity: 0.15;
 }
