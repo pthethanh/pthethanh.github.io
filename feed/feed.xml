@@ -1199,7 +1199,7 @@
 	</entry>
 	
 	<entry>
-		<title>Go String Concat Performance</title>
+		<title>String Concatenation Performance in Go.</title>
 		<link href="https://thefortunedays.com/articles/golang-string-concatenation-performance/"/>
 		<updated>2023-04-10T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/golang-string-concatenation-performance/</id>
@@ -1484,7 +1484,7 @@
 	</entry>
 	
 	<entry>
-		<title>Versioning Multiple Go Modules</title>
+		<title>Versioning Go Modules</title>
 		<link href="https://thefortunedays.com/articles/go-multi-modules-repository/"/>
 		<updated>2024-08-25T07:00:00+07:00</updated>
 		<id>https://thefortunedays.com/articles/go-multi-modules-repository/</id>
