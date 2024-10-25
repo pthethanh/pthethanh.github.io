@@ -497,8 +497,38 @@
     
   
   <url>
+    <loc>https://thefortunedays.com/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/</loc>
+    <lastmod>2024-09-27T14:16:38.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  <url>
     <loc>https://thefortunedays.com/articles/go-multi-modules-repository/</loc>
     <lastmod>2024-10-01T05:02:40.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  <url>
+    <loc>https://thefortunedays.com/articles/lakehouse/</loc>
+    <lastmod>2024-09-08T14:24:38.000Z</lastmod>
   </url>
   
   
@@ -629,8 +659,8 @@
   
   
   <url>
-    <loc>https://thefortunedays.com/</loc>
-    <lastmod>2024-09-25T05:56:34.443Z</lastmod>
+    <loc>https://thefortunedays.com/about/</loc>
+    <lastmod>2024-10-02T08:30:25.637Z</lastmod>
   </url>
   
   
@@ -642,7 +672,20 @@
   
   
   <url>
-    <loc>https://thefortunedays.com/about/</loc>
-    <lastmod>2024-10-02T08:30:25.637Z</lastmod>
+    <loc>https://thefortunedays.com/</loc>
+    <lastmod>2024-10-17T14:11:48.838Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://thefortunedays.com/articles/dear-god/</loc>
+    <lastmod>2024-10-25T00:00:00.000Z</lastmod>
   </url>
 </urlset>

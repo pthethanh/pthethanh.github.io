@@ -9,6 +9,7 @@
   --nav-bg-color: #ff577d;
   --nav-text-color: #fff;
   --nav-text-shadow: #0a9cf5;
+  --reading-progress: #ff184c;
 
   --footer-bg-color: #091833;
   --footer-text-color: #999;
@@ -101,7 +102,7 @@ dl {
 
 #reading-progress {
   z-index: 1;
-  background-color: var(--primary);
+  background-color: var(--reading-progress);
   width: 100vw;
   position: absolute;
   left: 0;
@@ -990,19 +991,6 @@ a {
   padding-bottom: 1em
 }
 
-.home h1 {
-  font-family: CyberwayRiders;
-  padding-bottom: 1em;
-  color: #fff;
-  text-shadow: 0 0 7px #fff, 0 0 42px var(--heading-text-shadow)
-}
-
-article h1 {
-  text-align: center;
-  font-family: CyberwayRiders;
-  text-shadow: 0 0 7px #fff, 0 0 42px var(--heading-text-shadow);
-  padding-bottom: 1em
-}
 
 .tags-list {
   min-height: 80vh;
@@ -1024,14 +1012,33 @@ article h1 {
   text-align: center
 }
 
-article h1,
-h2,
+article h1 {
+  text-align: center;
+  font-family: CyberwayRiders;
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px var(--heading-text-shadow),
+      0 0 82px var(--heading-text-shadow),
+      0 0 92px var(--heading-text-shadow);
+  padding-bottom: 1em;
+}
+
+article h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: CyberwayRiders;
-  text-shadow: 0 0 7px #fff, 0 0 42px var(--heading-text-shadow);
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px var(--heading-text-shadow),
+      0 0 82px var(--heading-text-shadow);
 }
 
 @media(min-width:600px) {
