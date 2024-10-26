@@ -64,6 +64,10 @@ share-widget div {
   background-position: center
 }
 
+share-widget div:hover {
+  background-color: var(--primary-dark);
+}
+
 .apple share-widget div {
   background-image: url("/img/share-apple.svg")
 }
@@ -80,7 +84,10 @@ dialog {
   background-color: #0a9cf5;
   position: fixed;
   opacity: .9;
-  z-index: 1000
+  z-index: 1000;
+  border: 0.2rem solid #fff;
+  border-radius: 1.25rem;
+  padding: 1.25em;
 }
 
 img[align=left] {
@@ -1068,7 +1075,8 @@ h6 {
 
 .post .title {
   font-weight: 700;
-  color: var(--primary)
+  color: white;
+
 }
 
 .post .title .draft {
