@@ -5,24 +5,65 @@
 
   --text-color: #f5f5f7;
   --bg-color: #003062;
-  
+
   --nav-bg-color: #ff577d;
   --nav-text-color: #fff;
-  --nav-text-shadow: #0a9cf5;
+  --nav-text-shadow: #00e5ff;
   --reading-progress: #ff184c;
 
   --footer-bg-color: #091833;
   --footer-text-color: #999;
-  --footer-text-shadow: #0a9cf5;
-  
+  --footer-text-shadow: #00e5ff;
+
   --code-bg: #e2777a;
   --code: #2d2d2d;
   --mark: #f9c412;
   --hr: #eee;
   --figcaption: #ccc;
-  --heading-text-shadow: #0a9cf5;
+  --heading-text-shadow: #00e5ff;
   --post-date: #0a9cf5;
-  --post-separator: #0a9cf5;;
+  --post-separator: #0a9cf5;
+
+  --box-shadow:
+    0 0 0.1vw 0.2vw #e0f7fa,
+    0 0 0.2vw 0.4vw #00e5ff,
+    0 0 0.6vw 0.2vw #26c6da;
+
+  --neon-effect: 0 0 0 transparent,
+    0 0 20px #00e5ff,
+    0 0 50px #26c6da,
+    0 0 200px #26c6da,
+    0 0 250px #00e5ff,
+    0 0 300px #00e5ff,
+    -250px -100px 100px #00e5ff;
+  
+  --font-family: "Montserrat", sans-serif;
+}
+
+@keyframes neon-blink {
+  44% {
+    opacity: 1;
+  }
+
+  45% {
+    opacity: .7;
+  }
+
+  46% {
+    opacity: 1;
+  }
+
+  98% {
+    opacity: 1;
+  }
+
+  99% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
 
 main img {
@@ -472,8 +513,7 @@ dt {
 }
 
 html {
-  font-family: Montserrat, sans-serif;
-  --font-family: "Montserrat", sans-serif
+  font-family: var(--font-family);
 }
 
 form {
@@ -710,7 +750,8 @@ header nav {
   background: var(--nav-bg-color);
   color: var(--nav-text-color);
   font-weight: 200;
-  text-align: right
+  text-align: right;
+  box-shadow: var(--box-shadow);
 }
 
 header nav h1 {
@@ -724,7 +765,6 @@ header nav h1 {
 header nav a {
   font-weight: 700;
   text-decoration: none;
-  font-family: var(--font-family);
   color: var(--nav-text-color);
   margin-left: 1.5em;
   font-family: CyberwayRiders;
@@ -757,6 +797,10 @@ footer {
   color: var(--footer-text-color);
   padding: 3em;
   text-align: center
+}
+
+footer a {
+  color: var(--footer-text-color);
 }
 
 footer>* {
@@ -1024,12 +1068,13 @@ article h1 {
   font-family: CyberwayRiders;
   color: #fff;
   text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px var(--heading-text-shadow),
-      0 0 82px var(--heading-text-shadow),
-      0 0 92px var(--heading-text-shadow);
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--heading-text-shadow),
+    0 0 82px var(--heading-text-shadow),
+    0 0 92px var(--heading-text-shadow);
+  /* animation: neon-blink 5s infinite alternate; */
   padding-bottom: 1em;
 }
 
@@ -1041,11 +1086,11 @@ h6 {
   font-family: CyberwayRiders;
   color: #fff;
   text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px var(--heading-text-shadow),
-      0 0 82px var(--heading-text-shadow);
+    0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 21px #fff,
+    0 0 42px var(--heading-text-shadow),
+    0 0 82px var(--heading-text-shadow);
 }
 
 @media(min-width:600px) {
@@ -1100,7 +1145,7 @@ h6 {
   opacity: .15
 }
 
-blockquote > p{
+blockquote>p {
   font-size: 1.5rem;
   font-style: italic;
 }
