@@ -25,9 +25,9 @@
   --post-separator: #0a9cf5;
 
   --box-shadow:
-    0 0 0.1vw 0.2vw #e0f7fa,
-    0 0 0.2vw 0.4vw #00e5ff,
-    0 0 0.6vw 0.2vw #26c6da;
+    0 0 0.05vw 0.1vw #e0f7fa,
+    0 0 0.1vw 0.2vw #00e5ff,
+    0 0 0.3vw 0.2vw #26c6da;
 
   --neon-effect: 0 0 0 transparent,
     0 0 20px #00e5ff,
