@@ -525,19 +525,6 @@
   
   
   <url>
-    <loc>https://thefortunedays.com/about/</loc>
-    <lastmod>2024-11-07T09:51:29.227Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-  <url>
     <loc>https://thefortunedays.com/posts/</loc>
     <lastmod>2024-11-07T09:51:29.227Z</lastmod>
   </url>
@@ -631,5 +618,18 @@
   <url>
     <loc>https://thefortunedays.com/tags/lakehouse/</loc>
     <lastmod>2024-11-07T09:51:29.369Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+  <url>
+    <loc>https://thefortunedays.com/about/</loc>
+    <lastmod>2024-11-28T06:07:28.861Z</lastmod>
   </url>
 </urlset>
