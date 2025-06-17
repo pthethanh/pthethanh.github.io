@@ -183,7 +183,7 @@
   
   <url>
     <loc>https://thefortunedays.com/articles/bad-code/</loc>
-    <lastmod>2024-09-23T15:32:53.000Z</lastmod>
+    <lastmod>2024-11-30T09:50:59.000Z</lastmod>
   </url>
   
   
@@ -497,6 +497,21 @@
     
   
   <url>
+    <loc>https://thefortunedays.com/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/</loc>
+    <lastmod>2024-10-28T07:29:04.000Z</lastmod>
+  </url>
+  
+  
+  
+  
+  
+  
+    
+  
+  
+    
+  
+  <url>
     <loc>https://thefortunedays.com/articles/go-multi-modules-repository/</loc>
     <lastmod>2024-10-01T05:02:40.000Z</lastmod>
   </url>
@@ -524,9 +539,11 @@
     
   
   
+    
+  
   <url>
-    <loc>https://thefortunedays.com/posts/</loc>
-    <lastmod>2024-11-07T09:51:29.227Z</lastmod>
+    <loc>https://thefortunedays.com/about/</loc>
+    <lastmod>2025-06-05T06:05:59.000Z</lastmod>
   </url>
   
   
@@ -538,8 +555,8 @@
   
   
   <url>
-    <loc>https://thefortunedays.com/</loc>
-    <lastmod>2024-11-07T09:51:29.337Z</lastmod>
+    <loc>https://thefortunedays.com/posts/</loc>
+    <lastmod>2025-02-06T11:37:06.385Z</lastmod>
   </url>
   
   
@@ -552,7 +569,7 @@
   
   <url>
     <loc>https://thefortunedays.com/page-list/</loc>
-    <lastmod>2024-11-07T09:51:29.337Z</lastmod>
+    <lastmod>2025-02-06T11:37:06.473Z</lastmod>
   </url>
   
   
@@ -565,7 +582,7 @@
   
   <url>
     <loc>https://thefortunedays.com/tags/</loc>
-    <lastmod>2024-11-07T09:51:29.369Z</lastmod>
+    <lastmod>2025-02-06T11:37:06.526Z</lastmod>
   </url>
   
   
@@ -578,7 +595,7 @@
   
   <url>
     <loc>https://thefortunedays.com/tags/golang/</loc>
-    <lastmod>2024-11-07T09:51:29.369Z</lastmod>
+    <lastmod>2025-02-06T11:37:06.541Z</lastmod>
   </url>
   
   
@@ -591,7 +608,7 @@
   
   <url>
     <loc>https://thefortunedays.com/tags/thoughts/</loc>
-    <lastmod>2024-11-07T09:51:29.369Z</lastmod>
+    <lastmod>2025-02-06T11:37:06.541Z</lastmod>
   </url>
   
   
@@ -604,7 +621,7 @@
   
   <url>
     <loc>https://thefortunedays.com/tags/big-data/</loc>
-    <lastmod>2024-11-07T09:51:29.369Z</lastmod>
+    <lastmod>2025-02-06T11:37:06.541Z</lastmod>
   </url>
   
   
@@ -617,7 +634,7 @@
   
   <url>
     <loc>https://thefortunedays.com/tags/lakehouse/</loc>
-    <lastmod>2024-11-07T09:51:29.369Z</lastmod>
+    <lastmod>2025-02-06T11:37:06.541Z</lastmod>
   </url>
   
   
@@ -628,8 +645,10 @@
     
   
   
+    
+  
   <url>
-    <loc>https://thefortunedays.com/about/</loc>
-    <lastmod>2024-11-28T06:07:28.861Z</lastmod>
+    <loc>https://thefortunedays.com/</loc>
+    <lastmod>2025-06-05T06:05:59.000Z</lastmod>
   </url>
 </urlset>
