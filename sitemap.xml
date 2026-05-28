@@ -10,7 +10,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/working-with-array-in-go/</loc>
+    <loc>https://pthethanh.github.io/articles/working-with-array-in-go/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -23,7 +23,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/working-with-map-in-go/</loc>
+    <loc>https://pthethanh.github.io/articles/working-with-map-in-go/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -36,7 +36,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/working-with-slice-in-go/</loc>
+    <loc>https://pthethanh.github.io/articles/working-with-slice-in-go/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -49,7 +49,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/working-with-string-in-go/</loc>
+    <loc>https://pthethanh.github.io/articles/working-with-string-in-go/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -62,22 +62,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/working-with-constant-in-go/</loc>
-    <lastmod>2025-06-24T15:45:38.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-    
-  
-  <url>
-    <loc>https://thefortunedays.com/articles/go-interview-questions/</loc>
+    <loc>https://pthethanh.github.io/articles/working-with-constant-in-go/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -92,7 +77,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/go-interview-structure/</loc>
+    <loc>https://pthethanh.github.io/articles/go-interview-questions/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -107,7 +92,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/go-reading-list/</loc>
+    <loc>https://pthethanh.github.io/articles/go-interview-structure/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -122,7 +107,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/how-we-work-together/</loc>
+    <loc>https://pthethanh.github.io/articles/go-reading-list/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -137,7 +122,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/useful-docker-commands/</loc>
+    <loc>https://pthethanh.github.io/articles/how-we-work-together/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -152,7 +137,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/100-stars/</loc>
+    <loc>https://pthethanh.github.io/articles/useful-docker-commands/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -167,7 +152,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/measure-execution-time/</loc>
+    <loc>https://pthethanh.github.io/articles/100-stars/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -182,7 +167,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/bad-code/</loc>
+    <loc>https://pthethanh.github.io/articles/measure-execution-time/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -197,7 +182,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/golang-name-conventions/</loc>
+    <loc>https://pthethanh.github.io/articles/bad-code/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -212,7 +197,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/golang-interface/</loc>
+    <loc>https://pthethanh.github.io/articles/golang-name-conventions/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -227,7 +212,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/go-interface/</loc>
+    <loc>https://pthethanh.github.io/articles/golang-interface/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -242,7 +227,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/they-dont-even-know-the-fundamentals/</loc>
+    <loc>https://pthethanh.github.io/articles/go-interface/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -257,7 +242,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/effective-options/</loc>
+    <loc>https://pthethanh.github.io/articles/they-dont-even-know-the-fundamentals/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -272,7 +257,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/reading/</loc>
+    <loc>https://pthethanh.github.io/articles/effective-options/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -287,7 +272,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/any/</loc>
+    <loc>https://pthethanh.github.io/articles/reading/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -302,7 +287,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/page-speed/</loc>
+    <loc>https://pthethanh.github.io/articles/any/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -317,7 +302,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/go-generics/</loc>
+    <loc>https://pthethanh.github.io/articles/page-speed/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -332,7 +317,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/the-right-thing/</loc>
+    <loc>https://pthethanh.github.io/articles/go-generics/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -347,7 +332,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/3-lessons/</loc>
+    <loc>https://pthethanh.github.io/articles/the-right-thing/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -362,7 +347,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/dragonfly/</loc>
+    <loc>https://pthethanh.github.io/articles/3-lessons/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -377,7 +362,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/the-bus/</loc>
+    <loc>https://pthethanh.github.io/articles/golang-string-concatenation-performance/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -392,7 +377,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/learning-by-distraction/</loc>
+    <loc>https://pthethanh.github.io/articles/go-map-hash/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -407,7 +392,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/golang-string-concatenation-performance/</loc>
+    <loc>https://pthethanh.github.io/articles/fast-comes-with-a-cost/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -422,7 +407,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/go-map-hash/</loc>
+    <loc>https://pthethanh.github.io/articles/go-private-module/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -437,7 +422,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/fast-comes-with-a-cost/</loc>
+    <loc>https://pthethanh.github.io/articles/go-cancellable-functions/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -452,7 +437,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/go-private-module/</loc>
+    <loc>https://pthethanh.github.io/articles/getting-started-with-apache-spark/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -467,7 +452,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/go-cancellable-functions/</loc>
+    <loc>https://pthethanh.github.io/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -482,7 +467,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/getting-started-with-apache-spark/</loc>
+    <loc>https://pthethanh.github.io/articles/go-multi-modules-repository/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -497,37 +482,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/</loc>
-    <lastmod>2025-06-24T15:45:38.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-    
-  
-  <url>
-    <loc>https://thefortunedays.com/articles/go-multi-modules-repository/</loc>
-    <lastmod>2025-06-24T15:45:38.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-    
-  
-  <url>
-    <loc>https://thefortunedays.com/articles/golang-generic-parameter-type-assertion/</loc>
+    <loc>https://pthethanh.github.io/articles/golang-generic-parameter-type-assertion/</loc>
     <lastmod>2025-06-24T15:45:38.000Z</lastmod>
   </url>
   
@@ -540,8 +495,8 @@
   
   
   <url>
-    <loc>https://thefortunedays.com/posts/</loc>
-    <lastmod>2025-02-06T11:37:06.385Z</lastmod>
+    <loc>https://pthethanh.github.io/about/</loc>
+    <lastmod>2026-05-28T10:27:35.625Z</lastmod>
   </url>
   
   
@@ -553,8 +508,8 @@
   
   
   <url>
-    <loc>https://thefortunedays.com/page-list/</loc>
-    <lastmod>2025-02-06T11:37:06.473Z</lastmod>
+    <loc>https://pthethanh.github.io/posts/</loc>
+    <lastmod>2026-05-28T10:27:35.625Z</lastmod>
   </url>
   
   
@@ -565,11 +520,9 @@
     
   
   
-    
-  
   <url>
-    <loc>https://thefortunedays.com/tags/</loc>
-    <lastmod>2025-06-26T10:30:08.000Z</lastmod>
+    <loc>https://pthethanh.github.io/page-list/</loc>
+    <lastmod>2026-05-28T10:27:35.671Z</lastmod>
   </url>
   
   
@@ -580,11 +533,9 @@
     
   
   
-    
-  
   <url>
-    <loc>https://thefortunedays.com/tags/golang/</loc>
-    <lastmod>2025-06-26T10:30:08.000Z</lastmod>
+    <loc>https://pthethanh.github.io/tags/</loc>
+    <lastmod>2026-05-28T10:27:35.672Z</lastmod>
   </url>
   
   
@@ -595,11 +546,9 @@
     
   
   
-    
-  
   <url>
-    <loc>https://thefortunedays.com/tags/not-ai/</loc>
-    <lastmod>2025-06-26T10:30:08.000Z</lastmod>
+    <loc>https://pthethanh.github.io/tags/golang/</loc>
+    <lastmod>2026-05-28T10:27:35.672Z</lastmod>
   </url>
   
   
@@ -610,11 +559,9 @@
     
   
   
-    
-  
   <url>
-    <loc>https://thefortunedays.com/tags/thoughts/</loc>
-    <lastmod>2025-06-26T10:30:08.000Z</lastmod>
+    <loc>https://pthethanh.github.io/tags/not-ai/</loc>
+    <lastmod>2026-05-28T10:27:35.672Z</lastmod>
   </url>
   
   
@@ -625,11 +572,9 @@
     
   
   
-    
-  
   <url>
-    <loc>https://thefortunedays.com/tags/big-data/</loc>
-    <lastmod>2025-06-26T10:30:08.000Z</lastmod>
+    <loc>https://pthethanh.github.io/tags/thoughts/</loc>
+    <lastmod>2026-05-28T10:27:35.672Z</lastmod>
   </url>
   
   
@@ -640,11 +585,9 @@
     
   
   
-    
-  
   <url>
-    <loc>https://thefortunedays.com/tags/lakehouse/</loc>
-    <lastmod>2025-06-26T10:30:08.000Z</lastmod>
+    <loc>https://pthethanh.github.io/tags/big-data/</loc>
+    <lastmod>2026-05-28T10:27:35.672Z</lastmod>
   </url>
   
   
@@ -658,20 +601,7 @@
     
   
   <url>
-    <loc>https://thefortunedays.com/</loc>
-    <lastmod>2025-06-05T06:05:59.000Z</lastmod>
-  </url>
-  
-  
-  
-  
-  
-  
-    
-  
-  
-  <url>
-    <loc>https://thefortunedays.com/about/</loc>
-    <lastmod>2025-06-26T10:18:08.935Z</lastmod>
+    <loc>https://pthethanh.github.io/</loc>
+    <lastmod>2026-05-28T10:46:37.000Z</lastmod>
   </url>
 </urlset>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>The Fortune Days</title>
+	<title>pthethanh</title>
 	<subtitle>The Fortune Days</subtitle>
 	
-	<link href="https://thefortunedays.com/feed/feed.xml" rel="self"/>
-	<link href="https://thefortunedays.com"/>
+	<link href="https://pthethanh.github.io/feed/feed.xml" rel="self"/>
+	<link href="https://pthethanh.github.io"/>
 	<updated>2024-09-15T07:00:00+07:00</updated>
-	<id>https://thefortunedays.com</id>
+	<id>https://pthethanh.github.io</id>
 	<author>
 		<name>Thanh</name>
 		<email></email>
@@ -14,9 +14,9 @@
 	
 	<entry>
 		<title>Working with array in Go.</title>
-		<link href="https://thefortunedays.com/articles/working-with-array-in-go/"/>
+		<link href="https://pthethanh.github.io/articles/working-with-array-in-go/"/>
 		<updated>2019-09-23T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/working-with-array-in-go/</id>
+		<id>https://pthethanh.github.io/articles/working-with-array-in-go/</id>
 		<content type="html">
 		  &lt;p&gt;Array in Go is just a data structure that hold a collection of elements of any type. Each element can be accessed by its index. Length of array is fixed at compile time and its size is a part of its type.&lt;/p&gt;
 &lt;p&gt;The type [n]T is an array of n values of type T. It can be declared as full declaration statement or in a short-hand format, with or without init values.&lt;/p&gt;
@@ -69,9 +69,9 @@
 	
 	<entry>
 		<title>Working with map in Go.</title>
-		<link href="https://thefortunedays.com/articles/working-with-map-in-go/"/>
+		<link href="https://pthethanh.github.io/articles/working-with-map-in-go/"/>
 		<updated>2019-09-24T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/working-with-map-in-go/</id>
+		<id>https://pthethanh.github.io/articles/working-with-map-in-go/</id>
 		<content type="html">
 		  &lt;p&gt;Map in Go is declared as &lt;code&gt;map[KeyType]ValueType&lt;/code&gt;, where &lt;code&gt;KeyType &lt;/code&gt;can be any type that is &lt;a href=&quot;https://golang.org/ref/spec#Comparison_operators&quot;&gt;comparable&lt;/a&gt;, and &lt;code&gt;ValueType &lt;/code&gt;can be any type, including another map.&lt;/p&gt;
 &lt;p&gt;Map is a reference type like pointers, slice hence it should be initialized by &lt;code&gt;make &lt;/code&gt;before using. It can also be created and initialized by map literals:&lt;/p&gt;
@@ -113,9 +113,9 @@
 	
 	<entry>
 		<title>Working with slice in Go.</title>
-		<link href="https://thefortunedays.com/articles/working-with-slice-in-go/"/>
+		<link href="https://pthethanh.github.io/articles/working-with-slice-in-go/"/>
 		<updated>2019-09-24T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/working-with-slice-in-go/</id>
+		<id>https://pthethanh.github.io/articles/working-with-slice-in-go/</id>
 		<content type="html">
 		  &lt;p&gt;Slice in Go can be considered as dynamic version of array.&lt;/p&gt;
 &lt;p&gt;&lt;code&gt;[]T&lt;/code&gt; is a slice of type &lt;code&gt;T&lt;/code&gt;. Length and capacity of slice can be extended at run-time. This makes slice very flexible and widely used compare to array.&lt;/p&gt;
@@ -174,9 +174,9 @@
 	
 	<entry>
 		<title>Working with string in Go.</title>
-		<link href="https://thefortunedays.com/articles/working-with-string-in-go/"/>
+		<link href="https://pthethanh.github.io/articles/working-with-string-in-go/"/>
 		<updated>2019-09-24T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/working-with-string-in-go/</id>
+		<id>https://pthethanh.github.io/articles/working-with-string-in-go/</id>
 		<content type="html">
 		  &lt;p&gt;String in Go is just an arbitrary slice of bytes. It can be created using string literals, or from a slice of bytes:&lt;/p&gt;
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;str1 &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;This string is in 1 line.&quot;&lt;/span&gt;&lt;br&gt;str2 &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;`This string is in multiple lines.&lt;br&gt;This is the second line.`&lt;/span&gt;&lt;br&gt;str3 &lt;span class=&quot;token operator&quot;&gt;:=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;token char&quot;&gt;&#39;H&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token char&quot;&gt;&#39;e&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token char&quot;&gt;&#39;l&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token char&quot;&gt;&#39;l&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token char&quot;&gt;&#39;o&#39;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -207,9 +207,9 @@
 	
 	<entry>
 		<title>Working with constant in Go</title>
-		<link href="https://thefortunedays.com/articles/working-with-constant-in-go/"/>
+		<link href="https://pthethanh.github.io/articles/working-with-constant-in-go/"/>
 		<updated>2019-09-26T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/working-with-constant-in-go/</id>
+		<id>https://pthethanh.github.io/articles/working-with-constant-in-go/</id>
 		<content type="html">
 		  &lt;p&gt;In Go, only Number, String, Boolean can be constant. &lt;code&gt;const &lt;/code&gt;keyword is used to define constant:&lt;/p&gt;
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;br&gt;	DefaultKey &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;	CountryCodeVN &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;vn&quot;&lt;/span&gt;&lt;br&gt;	CountryCodeUS &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;us&quot;&lt;/span&gt;&lt;br&gt;&lt;br&gt;	DefaultMultiplyFactor &lt;span class=&quot;token builtin&quot;&gt;int64&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;br&gt;	Enable  &lt;span class=&quot;token builtin&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;true&lt;/span&gt;&lt;br&gt;	Disable &lt;span class=&quot;token builtin&quot;&gt;bool&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token boolean&quot;&gt;false&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -240,9 +240,9 @@
 	
 	<entry>
 		<title>Go Interview Questions</title>
-		<link href="https://thefortunedays.com/articles/go-interview-questions/"/>
+		<link href="https://pthethanh.github.io/articles/go-interview-questions/"/>
 		<updated>2020-12-25T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-interview-questions/</id>
+		<id>https://pthethanh.github.io/articles/go-interview-questions/</id>
 		<content type="html">
 		  &lt;p&gt;Learning without testing your knowledge can lead to wrong perception about your expertise level. This article provides you a list of questions for you to evaluate yourself easier.&lt;/p&gt;
 &lt;h2 id=&quot;go-questions&quot;&gt;Go Questions &lt;a class=&quot;direct-link&quot; href=&quot;#go-questions&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -369,9 +369,9 @@
 	
 	<entry>
 		<title>Go Interview Structure</title>
-		<link href="https://thefortunedays.com/articles/go-interview-structure/"/>
+		<link href="https://pthethanh.github.io/articles/go-interview-structure/"/>
 		<updated>2020-12-25T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-interview-structure/</id>
+		<id>https://pthethanh.github.io/articles/go-interview-structure/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: An interview guideline for practicing that increases your chance of passing a Go interview to 97.5% even you&#39;re a young non-native English speaker developer. Note that this structure is designed for my team where I know the interviewer quite well.&lt;/p&gt;
 &lt;p&gt;Answer interview&#39;s questions in a structure fashion has never been easy even with experienced developers. This is even more challenged with non-native English speakers like Vietnamese young developers. Sometime candidates talk too much or too little, or even make bad impression to interviewers by saying things they shouldn&#39;t say,... Those little things often lead to a failed interview.&lt;/p&gt;
@@ -462,9 +462,9 @@
 	
 	<entry>
 		<title>Go Reading List</title>
-		<link href="https://thefortunedays.com/articles/go-reading-list/"/>
+		<link href="https://pthethanh.github.io/articles/go-reading-list/"/>
 		<updated>2020-12-25T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-reading-list/</id>
+		<id>https://pthethanh.github.io/articles/go-reading-list/</id>
 		<content type="html">
 		  &lt;p&gt;Don&#39;t know what resources to read and how to get started might lead to long and challenged journey on learning a new programming language. This article show you a list of articles you should read when learning Go from basic to advanced.&lt;/p&gt;
 &lt;p&gt;The best way to start is reading the top 4 resources of the Beginner section, do some basic exercises and then continue to read the Intermediate and Advanced sections while working on an intermediate project.&lt;/p&gt;
@@ -574,9 +574,9 @@
 	
 	<entry>
 		<title>How We Work Together</title>
-		<link href="https://thefortunedays.com/articles/how-we-work-together/"/>
+		<link href="https://pthethanh.github.io/articles/how-we-work-together/"/>
 		<updated>2020-12-25T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/how-we-work-together/</id>
+		<id>https://pthethanh.github.io/articles/how-we-work-together/</id>
 		<content type="html">
 		  &lt;p&gt;We all want to be successful. And this article does nothing more than providing a guidance on how we should work together to bring success to every single member in our team.&lt;/p&gt;
 &lt;p&gt;Our goal is to help everyone be more efficient at work. We want to help you focusing on the work that matter, achieving your goals and play together as good friends.&lt;/p&gt;
@@ -626,9 +626,9 @@
 	
 	<entry>
 		<title>Useful Docker Commands</title>
-		<link href="https://thefortunedays.com/articles/useful-docker-commands/"/>
+		<link href="https://pthethanh.github.io/articles/useful-docker-commands/"/>
 		<updated>2021-01-06T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/useful-docker-commands/</id>
+		<id>https://pthethanh.github.io/articles/useful-docker-commands/</id>
 		<content type="html">
 		  &lt;p&gt;Just a collection of useful Docker commands&lt;/p&gt;
 &lt;p&gt;List all Docker images&lt;/p&gt;
@@ -654,9 +654,9 @@
 	
 	<entry>
 		<title>100 Stars On GitHub</title>
-		<link href="https://thefortunedays.com/articles/100-stars/"/>
+		<link href="https://pthethanh.github.io/articles/100-stars/"/>
 		<updated>2021-01-15T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/100-stars/</id>
+		<id>https://pthethanh.github.io/articles/100-stars/</id>
 		<content type="html">
 		  &lt;p&gt;After more than 1 year on &lt;a href=&quot;https://github.com/pthethanh&quot;&gt;GitHub&lt;/a&gt;, I&#39;ve gotten more than 100 stars. In this post, I will tell you what I have learnt from that journey. From my journey, I hope that you can learn something and might do something helpful for your career.&lt;/p&gt;
 &lt;h2 id=&quot;shape-your-goals&quot;&gt;Shape Your Goals &lt;a class=&quot;direct-link&quot; href=&quot;#shape-your-goals&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -703,9 +703,9 @@
 	
 	<entry>
 		<title>Measure Execution Time</title>
-		<link href="https://thefortunedays.com/articles/measure-execution-time/"/>
+		<link href="https://pthethanh.github.io/articles/measure-execution-time/"/>
 		<updated>2021-04-19T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/measure-execution-time/</id>
+		<id>https://pthethanh.github.io/articles/measure-execution-time/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Measuring time is a very important step to optimize performance or identify a performance issue. This article shows you how easy implementing it in Go.&lt;/p&gt;
 &lt;p&gt;In Go, the simplest way to measure execution time is using the combination of &lt;code&gt;time.Now()&lt;/code&gt; and &lt;code&gt;time.Since()&lt;/code&gt;. &lt;code&gt;time.Now() &lt;/code&gt;records the current time and &lt;code&gt;time.Since()&lt;/code&gt; calculates the total time since a specific time.&lt;/p&gt;
@@ -754,9 +754,9 @@
 	
 	<entry>
 		<title>Bad Code Is Great</title>
-		<link href="https://thefortunedays.com/articles/bad-code/"/>
+		<link href="https://pthethanh.github.io/articles/bad-code/"/>
 		<updated>2021-05-10T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/bad-code/</id>
+		<id>https://pthethanh.github.io/articles/bad-code/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: People complains a lot about bad code. A lot of &amp;quot;what the food&amp;quot; words come out from a developer when he reviews a bad code. But on the other hand, bad code is a great opportunity for me as a developer in a third world country.&lt;/p&gt;
 &lt;p&gt;For people who don&#39;t know what is a bad code. It&#39;s simply a piece of code that when someone looks at it, it makes them feel uncomfortable and eventually produce a lot of &amp;quot;what the food&amp;quot; or &amp;quot;WTF&amp;quot; or whatever a developer can say when he&#39;s angry. The more &amp;quot;WTF&amp;quot; words, the worse the code.&lt;/p&gt;
@@ -772,9 +772,9 @@
 	
 	<entry>
 		<title>Name Conventions In Go</title>
-		<link href="https://thefortunedays.com/articles/golang-name-conventions/"/>
+		<link href="https://pthethanh.github.io/articles/golang-name-conventions/"/>
 		<updated>2021-08-05T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/golang-name-conventions/</id>
+		<id>https://pthethanh.github.io/articles/golang-name-conventions/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The ground rules for naming in Go are: use mixedCaps, keep it short and be consistent.&lt;/p&gt;
 &lt;p&gt;As a developer, naming is what we do every day, although it is quite easy most of the time, sometime it&#39;s really hard to come up with a good name, especially for fresher developers who are still struggling learning the languages. Some developers end up using &lt;code&gt;i&lt;/code&gt;, &lt;code&gt;j&lt;/code&gt;, &lt;code&gt;v&lt;/code&gt;,... for almost everything. Those are good names in some cases but can be very confusing if being used in an inappropriate context.&lt;/p&gt;
@@ -830,11 +830,11 @@
 	
 	<entry>
 		<title>Interface</title>
-		<link href="https://thefortunedays.com/articles/golang-interface/"/>
+		<link href="https://pthethanh.github.io/articles/golang-interface/"/>
 		<updated>2021-10-27T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/golang-interface/</id>
+		<id>https://pthethanh.github.io/articles/golang-interface/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/img/remote/articles/golang-interface/interface.svg&quot; alt=&quot;Golang Interface&quot;&gt;&lt;/p&gt;
+		  &lt;p&gt;&lt;img src=&quot;https://pthethanh.github.io/img/remote/articles/golang-interface/interface.svg&quot; alt=&quot;Golang Interface&quot;&gt;&lt;/p&gt;
 
 			
 		</content>
@@ -842,11 +842,11 @@
 	
 	<entry>
 		<title>Interface Explained</title>
-		<link href="https://thefortunedays.com/articles/go-interface/"/>
+		<link href="https://pthethanh.github.io/articles/go-interface/"/>
 		<updated>2021-10-28T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-interface/</id>
+		<id>https://pthethanh.github.io/articles/go-interface/</id>
 		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/img/remote/articles/go-interface/go-interface-intro.svg&quot; alt=&quot;What is interface?&quot;&gt;&lt;/p&gt;
+		  &lt;p&gt;&lt;img src=&quot;https://pthethanh.github.io/img/remote/articles/go-interface/go-interface-intro.svg&quot; alt=&quot;What is interface?&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Interface values are stored as eface &amp;amp; iface during runtime. Go keeps track of struct &amp;amp; interface mapping in an internal list called itabTable. This list is built both at compile time and at runtime and will be used for checking if a struct implements an interface.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;Note: this post is to explain the illustration that I have in my previous post &lt;a href=&quot;https://pthethanh.herokuapp.com/blog/articles/golang-interface&quot;&gt;interface{}&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Interface is the most interesting in Go which differentiates it from the other programming languages. Most of us use it a lot in our code but it seems not everybody understands how it works under the hood. In this post I will dig into the code of the runtime a little bit to see how it works. To avoid the complexity, the code shown in this post might hide some detail from the real code.&lt;/p&gt;
@@ -874,12 +874,12 @@
 &lt;p&gt;During runtime, interface values will be stored in an &lt;code&gt;eface&lt;/code&gt; if it&#39;s an empty interface, or in an &lt;code&gt;iface&lt;/code&gt; if it has methods. The &lt;code&gt;_type&lt;/code&gt; holds information of the type of the value the interface is holding, and the &lt;code&gt;data&lt;/code&gt; is a pointer to the real data. In case of the &lt;code&gt;iface&lt;/code&gt;, the &lt;code&gt;itab&lt;/code&gt; holds information of both the interface and its target type, and the &lt;code&gt;fun[0]&lt;/code&gt; indicates whether the type implements the interface or not. fun[0]!=0 means the type implements the interface.&lt;/p&gt;
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; iface &lt;span class=&quot;token keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	tab  &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;itab&lt;br&gt;	data unsafe&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Pointer&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; eface &lt;span class=&quot;token keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	_type &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;_type&lt;br&gt;	data  unsafe&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Pointer&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt; itab &lt;span class=&quot;token keyword&quot;&gt;struct&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	inter &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;interfacetype&lt;br&gt;	_type &lt;span class=&quot;token operator&quot;&gt;*&lt;/span&gt;_type&lt;br&gt;    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token operator&quot;&gt;...&lt;/span&gt;&lt;br&gt;	fun   &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;uintptr&lt;/span&gt; &lt;span class=&quot;token comment&quot;&gt;// variable sized. fun[0]==0 means _type does not implement inter.&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The below figure show how the types are structured in the runtime:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/img/remote/articles/go-interface/go-interface-explained.svg&quot; alt=&quot;Interface Explained&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pthethanh.github.io/img/remote/articles/go-interface/go-interface-explained.svg&quot; alt=&quot;Interface Explained&quot;&gt;&lt;/p&gt;
 &lt;p&gt;So, the &lt;code&gt;itab&lt;/code&gt; is used for holding the mapping between an interface and a struct, and holds information whether the struct implements the interface or not via its property: fun[0]. Let&#39;s take a look at the process of building the itab and the itabTable.&lt;/p&gt;
 &lt;p&gt;Consider the below block of code, where there is a type conversion between an interface and a struct:&lt;/p&gt;
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;var&lt;/span&gt; str fmt&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;Stringer &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;Number&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token number&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The above block of code would trigger a type conversion of runtime code and the method &lt;code&gt;getitab&lt;/code&gt; would be called during that process (see &lt;a href=&quot;https://golang.org/src/runtime/iface.go&quot;&gt;runtime/iface.go&lt;/a&gt;). Basically, getitab would first look for the information in the itabTable, if the information is not there, it would construct a new itab and will store it back to the itabTable for future check. The below figure show how the itab is constructed:&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/img/remote/articles/go-interface/go-itable.svg&quot; alt=&quot;itable&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pthethanh.github.io/img/remote/articles/go-interface/go-itable.svg&quot; alt=&quot;itable&quot;&gt;&lt;/p&gt;
 &lt;p&gt;As we can see in the above figure, Go runtime would scan through the interface and the struct to extract their method definitions and then just simply compare them to see if they match. If the method signatures matched, we can say that the struct implements the interface.&lt;/p&gt;
 &lt;p&gt;The process is exactly the same for both type conversions that happen at compile time and runtime. For more detail on how the check happens, the best place to start with is the method &lt;code&gt;getitab&lt;/code&gt; in &lt;a href=&quot;https://golang.org/src/runtime/iface.go&quot;&gt;runtime/iface.go&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For those who want to debug the Go runtime, the below snip of code is the code that I used for printing the information of the itabTable for debugging purpose:&lt;/p&gt;
@@ -894,9 +894,9 @@
 	
 	<entry>
 		<title>They Don&#39;t Even Know The Fundamentals</title>
-		<link href="https://thefortunedays.com/articles/they-dont-even-know-the-fundamentals/"/>
+		<link href="https://pthethanh.github.io/articles/they-dont-even-know-the-fundamentals/"/>
 		<updated>2021-11-02T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/they-dont-even-know-the-fundamentals/</id>
+		<id>https://pthethanh.github.io/articles/they-dont-even-know-the-fundamentals/</id>
 		<content type="html">
 		  &lt;p&gt;&amp;quot;They don&#39;t even know the fundamentals!&amp;quot;. That&#39;s what I often hear from my colleagues after their trips to universities for interviewing students for their projects. I&#39;ve also experienced this situation myself so many times.&lt;/p&gt;
 &lt;p&gt;A lot of students nowadays just want to work on AI/ML, Blockchain projects. They just simply turn around and never sat down for an interview after knowing that we&#39;re looking for developers who will work on payment gateway, network management system, eCommerce,...&lt;/p&gt;
@@ -911,9 +911,9 @@
 	
 	<entry>
 		<title>Effective Options</title>
-		<link href="https://thefortunedays.com/articles/effective-options/"/>
+		<link href="https://pthethanh.github.io/articles/effective-options/"/>
 		<updated>2021-11-07T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/effective-options/</id>
+		<id>https://pthethanh.github.io/articles/effective-options/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Organizing options in API is very important. We can use setters or builders, but options as functions and options as an interface are better approaches. They are much more beautiful , flexible and easier to use for the end users.&lt;/p&gt;
 &lt;p&gt;When building a library, we normally try to think how the other developers would use our code and try to provide as many APIs as possible. But sometimes, exposing too many APIs would be very confusing. Or even worse, we failed to provide what our users need, but exposing too many APIs that they don&#39;t even need. Hence organizing what we expose and how they should be exposed is really important.&lt;/p&gt;
@@ -977,9 +977,9 @@
 	
 	<entry>
 		<title>Reading</title>
-		<link href="https://thefortunedays.com/articles/reading/"/>
+		<link href="https://pthethanh.github.io/articles/reading/"/>
 		<updated>2022-01-13T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/reading/</id>
+		<id>https://pthethanh.github.io/articles/reading/</id>
 		<content type="html">
 		  &lt;p&gt;When I was a child, I liked reading books so much. I read everything I have around me. It could be a comic I got from my friends or from my teacher. It could be a novel I got from my brothers or even it&#39;s the Bible I got from my parents - that&#39;s why there&#39;s a time my Mother thought I’d liked to be a priest ^_^.&lt;/p&gt;
 &lt;p&gt;I don&#39;t know why I love reading that much. I can stay at home reading from the morning till the afternoon and still not feeling enough. My family was really poor at the time and hence there was no money for buying books, but luckily I got some from friends and teachers. Every time I got a book I tried to read everything in one day and give it back. That was a really great time in my life.&lt;/p&gt;
@@ -997,9 +997,9 @@
 	
 	<entry>
 		<title>any</title>
-		<link href="https://thefortunedays.com/articles/any/"/>
+		<link href="https://pthethanh.github.io/articles/any/"/>
 		<updated>2022-03-23T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/any/</id>
+		<id>https://pthethanh.github.io/articles/any/</id>
 		<content type="html">
 		  &lt;p&gt;The introduction of &lt;code&gt;any&lt;/code&gt;as an alias for&lt;code&gt;interface{}&lt;/code&gt; is one of the most interesting changes in Go 1.18, beside generics and fuzzing.&lt;/p&gt;
 &lt;p&gt;For a long time people complained a lot about the name &lt;code&gt;interface{}&lt;/code&gt; which is quite confusing for beginners, and the introduction of &lt;code&gt;any &lt;/code&gt;completely resolved that issue. According to the Go team, &lt;code&gt;any&lt;/code&gt; is equal to&lt;code&gt; interface{}&lt;/code&gt; in all ways. That means you can replace &lt;code&gt;interface{}&lt;/code&gt; by &lt;code&gt;any &lt;/code&gt;in any case. Any is easier to understand and easier to write as well.&lt;/p&gt;
@@ -1021,9 +1021,9 @@
 	
 	<entry>
 		<title>Page Speed Insights</title>
-		<link href="https://thefortunedays.com/articles/page-speed/"/>
+		<link href="https://pthethanh.github.io/articles/page-speed/"/>
 		<updated>2022-05-12T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/page-speed/</id>
+		<id>https://pthethanh.github.io/articles/page-speed/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: The smaller size of HTML, JS, CSS and Images the better the performance.&lt;/p&gt;
 &lt;p&gt;Web page performance is one of the most important things in web development. The better performance means the better user experiences and the better business.&lt;/p&gt;
@@ -1062,9 +1062,9 @@
 	
 	<entry>
 		<title>Go Generics</title>
-		<link href="https://thefortunedays.com/articles/go-generics/"/>
+		<link href="https://pthethanh.github.io/articles/go-generics/"/>
 		<updated>2022-06-02T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-generics/</id>
+		<id>https://pthethanh.github.io/articles/go-generics/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: Overall, Go generics (also called as type parameters) is good, but not so good. Generics on types &amp;amp; functions are supported, but methods are not - which causes a lot of limitations.&lt;/p&gt;
 &lt;p&gt;This post is just my very first feelings about the generics feature of Go after some simple experimentation, it&#39;s not a full picture of what generics in Go looks like, if you want to see the full picture, check this very long &lt;a href=&quot;https://go.googlesource.com/proposal/+/refs/heads/master/design/43651-type-parameters.md&quot;&gt;spec&lt;/a&gt;.&lt;/p&gt;
@@ -1111,9 +1111,9 @@
 	
 	<entry>
 		<title>The Right Thing</title>
-		<link href="https://thefortunedays.com/articles/the-right-thing/"/>
+		<link href="https://pthethanh.github.io/articles/the-right-thing/"/>
 		<updated>2022-10-06T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/the-right-thing/</id>
+		<id>https://pthethanh.github.io/articles/the-right-thing/</id>
 		<content type="html">
 		  &lt;p&gt;Sometimes it&#39;s hard to know what is the right thing to do. There are just so many things we have not known yet. And with our very limited knowledge, we just cannot find an easy answer for the question &amp;quot;what is the right thing to do&amp;quot;.&lt;/p&gt;
 &lt;p&gt;There are a lot of tools for us to &amp;quot;analyze&amp;quot; but let&#39;s be honest, sometimes even everything is on the table but we still have moments like &amp;quot;something is not right&amp;quot;. And sometimes we have to &amp;quot;just do it&amp;quot; and hope that we made the right decision. But guess what, we never know.&lt;/p&gt;
@@ -1129,9 +1129,9 @@
 	
 	<entry>
 		<title>3 Lessons</title>
-		<link href="https://thefortunedays.com/articles/3-lessons/"/>
+		<link href="https://pthethanh.github.io/articles/3-lessons/"/>
 		<updated>2022-12-23T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/3-lessons/</id>
+		<id>https://pthethanh.github.io/articles/3-lessons/</id>
 		<content type="html">
 		  &lt;p&gt;There are some good lessons in my life but sometimes I just forget them. So maybe putting them here is a good way to remember.&lt;/p&gt;
 &lt;p&gt;The first lesson is there is no such thing called a perfect moment. You gotta do what you need to do at the time you think there is a need. Don&#39;t wait until everything is perfect, because that moment will never come and you will be late for everything.&lt;/p&gt;
@@ -1143,66 +1143,10 @@
 	</entry>
 	
 	<entry>
-		<title>Dragonfly</title>
-		<link href="https://thefortunedays.com/articles/dragonfly/"/>
-		<updated>2022-12-23T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/dragonfly/</id>
-		<content type="html">
-		  &lt;p&gt;The dragonfly bit the shit out of me, I screamed and really scared but tried to keep calm enough to let it continue its job. &amp;quot;Just one more time and I can swim&amp;quot; - I thought.&lt;/p&gt;
-&lt;p&gt;Just one minute earlier, my brother told me &amp;quot;Let the dragonfly bite your belly button, you will be able to swim&amp;quot;. I was really scared but my belief about the power of the dragonfly remained very strong. I believed I could swim, I believed I could explore the big river out there. I felt like a superman, and started swimming for the first time of my life.&lt;/p&gt;
-&lt;p&gt;Although I drank a lot of water that day, it&#39;s amazing how those simple words can give a young boy such courage to try something he had not known yet. And I wonder if there is still something simple and powerful like that for the &amp;quot;adult&amp;quot; me now, so that I have enough courage to explore the unknown out there. The things that are both scary and interesting - just like the river that day.&lt;/p&gt;
-&lt;p&gt;And I wonder if there is still someone like my brother that day, who cared for me enough to say &amp;quot;Just do it, boy!&amp;quot; when he saw me hesitated to do something? I think one must be very lucky to have this kind of sweet memory and having a person care for him/her that much in life. So, I started thinking I&#39;m a lucky one.&lt;/p&gt;
-&lt;p&gt;We&#39;re all lucky at some points in our life, but sometimes we&#39;re so busy to realize. The younger of me was too busy chasing so many &amp;quot;vanity&amp;quot; things that I called &amp;quot;dreams&amp;quot;. So maybe aging is one of my luck, to slow me down so that I have time to review what happened in my life, what I did good, what I did wrong...&lt;/p&gt;
-&lt;p&gt;Having a chance to review what happened in my life makes me feel I&#39;m very lucky. I met a lot of good people who taught and helped me a lot of things about work and life. I will not be who I am today without meeting those people, and I&#39;m very thankful for that. And I think one of the greatest luck I&#39;ve ever had is meeting my wife - a beautiful woman who loves and cares enough to say to me &amp;quot;I love you and I believe you can do it!&amp;quot; every time I need someone beside me.&lt;/p&gt;
-&lt;p&gt;I think I don&#39;t need the power of the dragonfly anymore...&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>The Bus</title>
-		<link href="https://thefortunedays.com/articles/the-bus/"/>
-		<updated>2023-01-02T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/the-bus/</id>
-		<content type="html">
-		  &lt;p&gt;I took my first job as a software developer in Ho Chi Minh city more than 12 years ago. It was the third time I visited the city and yet everything was strange to me. I didn’t know how to drive and didn’t have a motorbike at the time. Hence I went to work by bus for around 2 years before saving enough money to buy my first motorbike.&lt;/p&gt;
-&lt;p&gt;For most people, catching a bus is easy, but for me it was hard. I lived far away from the bus station, hence everyday I had to walk more than 1 kilometer to get there. It took me some days to learn the path to the bus station. At first, I didn’t know how to catch a bus. I didn’t know if I should wave my hand. Or should I stand there and someone on the bus would ask me if I wanted to go. My younger brother showed me how to do it earlier, but I was too nervous to remember anything. Luckily, I was a good learner. After I missed some of them, I saw people waving their hands when the bus came. This was a great success. I finally knew how to catch a bus.&lt;/p&gt;
-&lt;p&gt;I thought if I could catch a bus, there would be no other challenge that could stop me. But I was wrong. I didn’t know when to tell the driver to stop. Everything looked exactly the same through the window. In the first 2 months, there’re a lot of times I had to walk around 1 kilometer back to the company, sometimes even more. The worst time was when I had to go to the other side of the street to catch another bus to go back. I felt so embarrassed.&lt;/p&gt;
-&lt;p&gt;After so many times walking back too far from the company, I decided I needed to find a better way to stop the bus. The first solution was to ask the bus conductor whether the bus was nearby my company. This solution worked quite well when I met good conductors who were happy to help and have a good memory. But sometimes, there were too many people asking and they simply forgot me. Whenever I could not ask the conductor, I turned to asking the people on the bus. Some good people were willing to help but some didn&#39;t. And I also felt ashamed after asking people so many times. Hence, I started thinking of a new solution.&lt;/p&gt;
-&lt;p&gt;The second solution was to try to identify a recognizable target. It could be a colorful building or colorful objects on the street that I could see through the window. This solution worked well most of the time. But sometimes the bus was full of people and it’s hard to see anything through the window. Hence, sometimes I had to go back to solution number one.&lt;/p&gt;
-&lt;p&gt;I tried to develop the skills for around 2 months. And I finally was able to recognize things quite easily. I was even able to recognize the differences between the trees nearby my company with the others. I didn’t need to ask anyone but became a person that other people can ask. And I was happy to do that.&lt;/p&gt;
-&lt;p&gt;Apart from the challenges at the beginning, it was fun taking the bus to work. Once I got onto the bus, I didn’t need to worry about anything. I could spend my time looking at the buildings on the street through the window. I could look at people outside rushing their way to work. I could see a lot of different types of motorbikes, cars on the street - which was amazing to me at the time. I lived the entire of my childhood in the countryside. And I had not had a chance to see those things, hence everything was interesting to me.&lt;/p&gt;
-&lt;p&gt;Even now, I still can imagine my curious face in those days. The good old days...&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Learning By Distraction</title>
-		<link href="https://thefortunedays.com/articles/learning-by-distraction/"/>
-		<updated>2023-01-31T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/learning-by-distraction/</id>
-		<content type="html">
-		  &lt;p&gt;Sometimes, the fear of doing the job is even more than the difficulties of the job itself. Learning English is one of them. In my early years as a software developer, I feared learning English so hard (even now). After struggling speaking English on my first trip to India[1], I felt ashamed and had enough motivation to learn English.&lt;/p&gt;
-&lt;p&gt;But learning English is somewhat burdensome to me. It became more and more heavy until I could not take it anymore. I tried different ways to learn but most of them just last for a few weeks. The more I tried, the more I failed. I finally gave up the plan of active learning, and tried one of the passive methods of learning - what I later called learning by distraction.&lt;/p&gt;
-&lt;p&gt;Instead of learning English, I started reading books about the subjects that I liked. Of course all the books were in English. It’s really hard at the beginning but because it’s the subject that I liked, the enthusiasm for the knowledge kept me going. The first book I read was The 21 Success Secrets Of Self-made Millionaires by Brian Tracy. The book has only 88 pages but it took me 3 months to read, just around 1 page per day. Although I didn’t fully understand everything I read, the book helped me a lot in my work. Mostly because I started to believe in myself more. And that little reward gave me enough motivation to continue to read more and more.&lt;/p&gt;
-&lt;p&gt;Most of the time, I made guesses about what I read. Sometimes, it was because I didn’t have enough vocabulary to understand them. Sometimes, I knew every single word in a sentence, but I was not able to link them together. But I didn’t try to re-read it again and again, I just accepted it and went on. I kept doing it by picking up another book that I was interested in and read again. And by focusing on the content of the book, I gradually forgot the burden of learning English and became better at reading.&lt;/p&gt;
-&lt;p&gt;I think, to learn English, sometimes you don’t even need to think of learning English. But instead, learn something that you are interested in and let your enthusiasm drive you. By the time you become better at the subject, your English will also become better. By keeping reading about the subject, you will gradually build up your vocabulary. The vocabulary will automatically emerge again and again and it will automatically inject into your brain.&lt;/p&gt;
-&lt;p&gt;You might not be better than anyone else around you. And you might not become an expert at English. But at least you will become better than you were before - both at English and the subject that you read.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;[1] I went to India for 2 months for a business trip as a developer in 2011. But my English was bad and I could not communicate with them by speaking. I communicated with people by chatting on Skype. Fortunately, there was a good friend who helped me to translate from normal English to simple English whenever I needed to talk to someone else. And whenever I need to order food, I used my finger to point at the pictures on the menu :))&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>String Concatenation Performance in Go.</title>
-		<link href="https://thefortunedays.com/articles/golang-string-concatenation-performance/"/>
+		<link href="https://pthethanh.github.io/articles/golang-string-concatenation-performance/"/>
 		<updated>2023-04-10T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/golang-string-concatenation-performance/</id>
+		<id>https://pthethanh.github.io/articles/golang-string-concatenation-performance/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: strings.Builder gives very good performance in general, but we can improve it even better.&lt;/p&gt;
 &lt;p&gt;Go string concatenation performance comparison&lt;/p&gt;
@@ -1261,9 +1205,9 @@
 	
 	<entry>
 		<title>Go Map Hash</title>
-		<link href="https://thefortunedays.com/articles/go-map-hash/"/>
+		<link href="https://pthethanh.github.io/articles/go-map-hash/"/>
 		<updated>2023-06-10T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-map-hash/</id>
+		<id>https://pthethanh.github.io/articles/go-map-hash/</id>
 		<content type="html">
 		  &lt;h2 id=&quot;maphash&quot;&gt;maphash &lt;a class=&quot;direct-link&quot; href=&quot;#maphash&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;Map implementation is one of the interesting features in Go, it accepts anything as key, from string to numbers or even complex structs. And the magic thing is it is able to calculate the hash code of the given key effectively without the need to provide any hash code function. I feel this is really interesting and it stimulates my curiosity every single time I use map.&lt;/p&gt;
@@ -1316,9 +1260,9 @@
 	
 	<entry>
 		<title>Fast Comes With A Cost</title>
-		<link href="https://thefortunedays.com/articles/fast-comes-with-a-cost/"/>
+		<link href="https://pthethanh.github.io/articles/fast-comes-with-a-cost/"/>
 		<updated>2023-07-15T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/fast-comes-with-a-cost/</id>
+		<id>https://pthethanh.github.io/articles/fast-comes-with-a-cost/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/pthethanh/image/upload/v1689346704/pthethanh/fast-come-with-a-cost/fast-worg.png&quot; alt=&quot;I did it fast&quot;&gt;&lt;/p&gt;
 &lt;p&gt;I did it fast&lt;/p&gt;
@@ -1332,9 +1276,9 @@
 	
 	<entry>
 		<title>Go Private Module</title>
-		<link href="https://thefortunedays.com/articles/go-private-module/"/>
+		<link href="https://pthethanh.github.io/articles/go-private-module/"/>
 		<updated>2023-09-24T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-private-module/</id>
+		<id>https://pthethanh.github.io/articles/go-private-module/</id>
 		<content type="html">
 		  &lt;p&gt;Sooner or later as a Go developer, you will need to build a module for reusing common code across the applications. If your module is public, that&#39;s quite straight forward, just create a public repository in GitHub or GitLab, make sure &lt;code&gt;go.mod&lt;/code&gt; is defined correctly and you&#39;re ready. But if your module is private, there are some steps that need to be done so that Go Module works correctly. This post is all about initializing and setting up a private Go module.&lt;/p&gt;
 &lt;h2 id=&quot;init-module-with-git-full-qualify-domain-name&quot;&gt;Init Module With Git Full Qualify Domain Name &lt;a class=&quot;direct-link&quot; href=&quot;#init-module-with-git-full-qualify-domain-name&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -1368,9 +1312,9 @@
 	
 	<entry>
 		<title>Cancellable Functions</title>
-		<link href="https://thefortunedays.com/articles/go-cancellable-functions/"/>
+		<link href="https://pthethanh.github.io/articles/go-cancellable-functions/"/>
 		<updated>2023-10-01T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-cancellable-functions/</id>
+		<id>https://pthethanh.github.io/articles/go-cancellable-functions/</id>
 		<content type="html">
 		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: A combination of channel and Context is a very powerful tool for cancellable functions.&lt;/p&gt;
 &lt;p&gt;There are multiple use cases that we might want to create a cancellable function, especially when developing concurrent programs. We might perform some tasks and if they take too long to complete, we just go ahead to cancel them. Or we might want to cancel them based on other conditions. This post is about common ways to create cancellable functions in Go.&lt;/p&gt;
@@ -1404,9 +1348,9 @@
 	
 	<entry>
 		<title>Getting Started With Apache Spark</title>
-		<link href="https://thefortunedays.com/articles/getting-started-with-apache-spark/"/>
+		<link href="https://pthethanh.github.io/articles/getting-started-with-apache-spark/"/>
 		<updated>2024-03-10T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/getting-started-with-apache-spark/</id>
+		<id>https://pthethanh.github.io/articles/getting-started-with-apache-spark/</id>
 		<content type="html">
 		  &lt;p&gt;This blog post is a summary of my presentation on Apache Spark Overview with a basic Kafka streaming application. It includes some basic steps to create and deploy a simple Spark application. This is not a comprehensive tutorial, so for more information, please visit the Apache Spark &lt;a href=&quot;https://spark.apache.org/docs/latest/&quot;&gt;website&lt;/a&gt;.&lt;/p&gt;
 &lt;h2 id=&quot;prerequisite&quot;&gt;Prerequisite &lt;a class=&quot;direct-link&quot; href=&quot;#prerequisite&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -1415,7 +1359,7 @@
 &lt;li&gt;&lt;a href=&quot;https://minikube.sigs.k8s.io/docs/&quot;&gt;Minikube&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;apache-spark-overview&quot;&gt;Apache Spark Overview &lt;a class=&quot;direct-link&quot; href=&quot;#apache-spark-overview&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;https://thefortunedays.com/img/remote/articles/getting-started-with-apache-spark/apache-spark-overview.jpg&quot; alt=&quot;Introduction to Apache Spark&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;https://pthethanh.github.io/img/remote/articles/getting-started-with-apache-spark/apache-spark-overview.jpg&quot; alt=&quot;Introduction to Apache Spark&quot;&gt;&lt;/p&gt;
 &lt;h2 id=&quot;build-spark-application&quot;&gt;Build Spark Application &lt;a class=&quot;direct-link&quot; href=&quot;#build-spark-application&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
 &lt;p&gt;&lt;code&gt;Main.scala&lt;/code&gt;&lt;/p&gt;
 &lt;pre class=&quot;language-scala&quot;&gt;&lt;code class=&quot;language-scala&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;org&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;apache&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;sql&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;SparkSession&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;span class=&quot;token keyword&quot;&gt;object&lt;/span&gt; Main &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token keyword&quot;&gt;def&lt;/span&gt; main&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;args&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; Array&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;Unit&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; spark&lt;span class=&quot;token operator&quot;&gt;:&lt;/span&gt;SparkSession &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; SparkSession&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;builder&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;appName&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;hello-spark&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;getOrCreate&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;token namespace&quot;&gt;spark&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;implicits&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;/span&gt;_&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; kafkaOpts &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; Map&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.bootstrap.servers&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;kafka:9092&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;subscribe&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;test&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.sasl.mechanism&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;PLAIN&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.security.protocol&quot;&lt;/span&gt; &lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;SASL_PLAINTEXT&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token string&quot;&gt;&quot;kafka.sasl.jaas.config&quot;&lt;/span&gt;&lt;span class=&quot;token operator&quot;&gt;-&gt;&lt;/span&gt; &lt;span class=&quot;token triple-quoted-string string&quot;&gt;&quot;&quot;&quot;org.apache.kafka.common.security.plain.PlainLoginModule required username=&quot;user1&quot; password=&quot;kk3gaqZRly&quot;;&quot;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; df &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; spark&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;readStream&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;format&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;kafka&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;options&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;kafkaOpts&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;load&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;&lt;br&gt;    &lt;span class=&quot;token keyword&quot;&gt;val&lt;/span&gt; ds &lt;span class=&quot;token operator&quot;&gt;=&lt;/span&gt; df&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;selectExpr&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;CAST(key AS STRING)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token string&quot;&gt;&quot;CAST(value AS STRING)&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;as&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;br&gt;&lt;br&gt;    ds&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;writeStream&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;format&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;console&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;outputMode&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;append&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token comment&quot;&gt;//.trigger(Trigger.Continuous(1))&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;start&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;      &lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;awaitTermination&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;  &lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
@@ -1485,12 +1429,12 @@
 	
 	<entry>
 		<title>Apache Spark Structured Streaming</title>
-		<link href="https://thefortunedays.com/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/"/>
+		<link href="https://pthethanh.github.io/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/"/>
 		<updated>2024-03-11T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/</id>
+		<id>https://pthethanh.github.io/articles/getting-started-with-apache-spark-structured-streaming-kafka-postgresql/</id>
 		<content type="html">
 		  &lt;p&gt;In this blog post, we&#39;re going to explore features of Apache Spark Structured Streaming by building an application that read structured data from Kafka and then streaming it into PostgresSQL.&lt;/p&gt;
-&lt;p&gt;This blog post is the next session of the previous &lt;a href=&quot;https://thefortunedays.com/articles/getting-started-with-apache-spark/&quot;&gt;Getting Started With Apache Spark&lt;/a&gt;, hence please visit that post for basic setup as we will not repeat them here.&lt;/p&gt;
+&lt;p&gt;This blog post is the next session of the previous &lt;a href=&quot;https://pthethanh.github.io/articles/getting-started-with-apache-spark/&quot;&gt;Getting Started With Apache Spark&lt;/a&gt;, hence please visit that post for basic setup as we will not repeat them here.&lt;/p&gt;
 &lt;p&gt;Note that we will use &lt;code&gt;spark-operator&lt;/code&gt; to deploy our Spark application, hence please make sure you installed the spark-operator accordingly. If you have not done it yet, take a look at it &lt;a href=&quot;https://thefortunedays.com/articles/getting-started-with-apache-spark/#deploy-using-spark-operator&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;Please notice that this blog post&#39;s purpose is to provide steps for those who want to try with Spark streaming, it&#39;s not a comprehensive tutorial. If you expect a comprehensive tutorial please visit Apache Spark guideline.&lt;/p&gt;
 &lt;h2 id=&quot;prerequisite&quot;&gt;Prerequisite &lt;a class=&quot;direct-link&quot; href=&quot;#prerequisite&quot;&gt;#&lt;/a&gt;&lt;/h2&gt;
@@ -1535,9 +1479,9 @@
 	
 	<entry>
 		<title>Versioning Go Modules</title>
-		<link href="https://thefortunedays.com/articles/go-multi-modules-repository/"/>
+		<link href="https://pthethanh.github.io/articles/go-multi-modules-repository/"/>
 		<updated>2024-08-25T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/go-multi-modules-repository/</id>
+		<id>https://pthethanh.github.io/articles/go-multi-modules-repository/</id>
 		<content type="html">
 		  &lt;p&gt;Let assume you want to organize multiple modules in a single Github repository like the case below and would like to version them separately.&lt;br&gt;
 As an example, the &lt;a href=&quot;https://github.com/pthethanh/nano&quot;&gt;nano&lt;/a&gt; project includes different modules: the &lt;code&gt;nano&lt;/code&gt; itself and other sub-modules &lt;code&gt;protoc-gen-nano&lt;/code&gt;, &lt;code&gt;kafka&lt;/code&gt;, &lt;code&gt;cache&lt;/code&gt;.&lt;/p&gt;
@@ -1557,9 +1501,9 @@ As an example, the &lt;a href=&quot;https://github.com/pthethanh/nano&quot;&gt;n
 	
 	<entry>
 		<title>Generic Parameter Type Assertion</title>
-		<link href="https://thefortunedays.com/articles/golang-generic-parameter-type-assertion/"/>
+		<link href="https://pthethanh.github.io/articles/golang-generic-parameter-type-assertion/"/>
 		<updated>2024-09-15T07:00:00+07:00</updated>
-		<id>https://thefortunedays.com/articles/golang-generic-parameter-type-assertion/</id>
+		<id>https://pthethanh.github.io/articles/golang-generic-parameter-type-assertion/</id>
 		<content type="html">
 		  &lt;p&gt;Dynamic type assertion on generic parameter type is not possible at runtime, but there&#39;s a trick to do it by converting the value to &lt;code&gt;any&lt;/code&gt; and do the normal type assertion. This means &lt;code&gt;T.(type)&lt;/code&gt; is not possible, but &lt;code&gt;any(T).(type)&lt;/code&gt; is possible:&lt;/p&gt;
 &lt;pre class=&quot;language-go&quot;&gt;&lt;code class=&quot;language-go&quot;&gt;&lt;span class=&quot;token keyword&quot;&gt;func&lt;/span&gt; checkMe&lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;T any&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;t T&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	&lt;span class=&quot;token keyword&quot;&gt;switch&lt;/span&gt; &lt;span class=&quot;token function&quot;&gt;any&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;t&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token keyword&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;{&lt;/span&gt;&lt;br&gt;	&lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token punctuation&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;token builtin&quot;&gt;byte&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;		&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;[]byte&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;	&lt;span class=&quot;token keyword&quot;&gt;case&lt;/span&gt; &lt;span class=&quot;token builtin&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;		&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;string&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;	&lt;span class=&quot;token keyword&quot;&gt;default&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;:&lt;/span&gt;&lt;br&gt;		&lt;span class=&quot;token function&quot;&gt;println&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;token string&quot;&gt;&quot;other&quot;&lt;/span&gt;&lt;span class=&quot;token punctuation&quot;&gt;)&lt;/span&gt;&lt;br&gt;	&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;token punctuation&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
