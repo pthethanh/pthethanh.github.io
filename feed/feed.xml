@@ -753,24 +753,6 @@
 	</entry>
 	
 	<entry>
-		<title>Bad Code Is Great</title>
-		<link href="https://pthethanh.github.io/articles/bad-code/"/>
-		<updated>2021-05-10T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/bad-code/</id>
-		<content type="html">
-		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: People complains a lot about bad code. A lot of &amp;quot;what the food&amp;quot; words come out from a developer when he reviews a bad code. But on the other hand, bad code is a great opportunity for me as a developer in a third world country.&lt;/p&gt;
-&lt;p&gt;For people who don&#39;t know what is a bad code. It&#39;s simply a piece of code that when someone looks at it, it makes them feel uncomfortable and eventually produce a lot of &amp;quot;what the food&amp;quot; or &amp;quot;WTF&amp;quot; or whatever a developer can say when he&#39;s angry. The more &amp;quot;WTF&amp;quot; words, the worse the code.&lt;/p&gt;
-&lt;p&gt;Some pieces of bad code may even turn a developer into crazy mode and eventually leave the project because he cannot stand for it anymore...&lt;/p&gt;
-&lt;p&gt;Most of the time bad means &amp;quot;bad&amp;quot; and &amp;quot;no opportunity&amp;quot; but in case of &amp;quot;bad code&amp;quot;, it&#39;s a great opportunity for developers in a third world country like me. It means there are some shits in someone&#39;s products and there is a chance they will hire me to &amp;quot;clean that shit&amp;quot;. And this is where I make money from.&lt;/p&gt;
-&lt;p&gt;&amp;quot;Clean that shit&amp;quot; is a terrible job for people in developed country but for me it&#39;s a great opportunity. It means I will have money for taking care of my family. And this is what most of developers in a third world country are looking for, especially during the COVID-19 pandemic - when making money is hard.&lt;/p&gt;
-&lt;p&gt;But actually &amp;quot;clean that shit&amp;quot; is not that bad. It&#39;s not the real dirty thing you can imagine, it&#39;s just a state in your mind and you can clean it with your dedication and hard work, to make it better and prettier. And making something better and prettier is a greatest job ever, not just for people in a third world country but also for people in a developed country.&lt;/p&gt;
-&lt;p&gt;So, what can I say? Be positive, makes money and takes care of your family!&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>Name Conventions In Go</title>
 		<link href="https://pthethanh.github.io/articles/golang-name-conventions/"/>
 		<updated>2021-08-05T07:00:00+07:00</updated>
@@ -893,23 +875,6 @@
 	</entry>
 	
 	<entry>
-		<title>They Don&#39;t Even Know The Fundamentals</title>
-		<link href="https://pthethanh.github.io/articles/they-dont-even-know-the-fundamentals/"/>
-		<updated>2021-11-02T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/they-dont-even-know-the-fundamentals/</id>
-		<content type="html">
-		  &lt;p&gt;&amp;quot;They don&#39;t even know the fundamentals!&amp;quot;. That&#39;s what I often hear from my colleagues after their trips to universities for interviewing students for their projects. I&#39;ve also experienced this situation myself so many times.&lt;/p&gt;
-&lt;p&gt;A lot of students nowadays just want to work on AI/ML, Blockchain projects. They just simply turn around and never sat down for an interview after knowing that we&#39;re looking for developers who will work on payment gateway, network management system, eCommerce,...&lt;/p&gt;
-&lt;p&gt;Some of them were patient enough to sit down for an interview, but still repeat that they wanted to work on AI/ML, Blockchain,... since &amp;quot;it&#39;s the 4.0 revolution now&amp;quot;. To be honest, I&#39;m totally fine with that. Everyone has a dream and that&#39;s OK.&lt;/p&gt;
-&lt;p&gt;But when it came to the technical interview, what I wanted them to do was just &amp;quot;giving a list of numbers, sort them by ascending using an algorithm you knew&amp;quot;. That&#39;s it! Nothing more and nothing less. Sadly, some didn&#39;t even know how to do that! Most of them could explain that we need 2 nested loops and swap numbers if one is bigger than the other. That&#39;s cool! It&#39;s exactly what they have been taught.&lt;/p&gt;
-&lt;p&gt;Everything was great until I asked &amp;quot;could you please show me how to swap 2 numbers using a programming language you&#39;re most familiar with&amp;quot;? This is the question I&#39;ve gotten a lot of &amp;quot;umh&amp;quot; &amp;quot;ah&amp;quot; from them so far. A lot of them failed to answer that simple question! They just know there should be a method &lt;code&gt;swap&lt;/code&gt; and you need to provide 2 numbers and it&#39;s done. Some knew that we can use temporary variable but failed to provide the steps. To be honest, I was very frustrated. If they could answer that simple question, it&#39;s likely they would be hired...but a lot of them failed.&lt;/p&gt;
-&lt;p&gt;I think having a big dream is cool. Universities can &amp;quot;inject&amp;quot; those dreams in to the students&#39; heads. But at the same time, we also need to teach them to know where they are, and need to tell them that they have to start learning the fundamentals first. Without the fundamental knowledge, one just simply cannot do anything bigger.&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>Effective Options</title>
 		<link href="https://pthethanh.github.io/articles/effective-options/"/>
 		<updated>2021-11-07T07:00:00+07:00</updated>
@@ -970,26 +935,6 @@
 &lt;h3 id=&quot;summary&quot;&gt;Summary &lt;a class=&quot;direct-link&quot; href=&quot;#summary&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;All the provided above approaches proved that everyone can write beautiful APIs with just a little effort. Some of you might like &lt;code&gt;builders&lt;/code&gt;, but I would suggest you use &lt;code&gt;options as functions&lt;/code&gt; or &lt;code&gt;options as an interface&lt;/code&gt; since they are more beautiful and more flexible than the previous ones.&lt;/p&gt;
 &lt;p&gt;For more examples, look at packages &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/cache&quot;&gt;cache&lt;/a&gt;, &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/broker&quot;&gt;broker&lt;/a&gt; or &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/server&quot;&gt;server&lt;/a&gt; of my &lt;a href=&quot;https://github.com/pthethanh/micro&quot;&gt;micro&lt;/a&gt; toolkit.&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Reading</title>
-		<link href="https://pthethanh.github.io/articles/reading/"/>
-		<updated>2022-01-13T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/reading/</id>
-		<content type="html">
-		  &lt;p&gt;When I was a child, I liked reading books so much. I read everything I have around me. It could be a comic I got from my friends or from my teacher. It could be a novel I got from my brothers or even it&#39;s the Bible I got from my parents - that&#39;s why there&#39;s a time my Mother thought I’d liked to be a priest ^_^.&lt;/p&gt;
-&lt;p&gt;I don&#39;t know why I love reading that much. I can stay at home reading from the morning till the afternoon and still not feeling enough. My family was really poor at the time and hence there was no money for buying books, but luckily I got some from friends and teachers. Every time I got a book I tried to read everything in one day and give it back. That was a really great time in my life.&lt;/p&gt;
-&lt;p&gt;The great thing about books is they showed me what I&#39;ve not known before. It opened a whole new world I&#39;ve never seen before. Not only knowledge, but also a whole new level of emotion.&lt;/p&gt;
-&lt;p&gt;Even at the time I was still very young, but the books I&#39;ve read gave me multiple beautiful worlds of emotions. That can be a fun moment when I was reading a comic for kids, it can be a sad moment when a boy failed to protect his love. It can also be an inspirational moment when a boy struggled to fight for his future and then finally made a victory over all the obstacles on his journey. Sometimes, a book is also a window to a new world where I can escape reality and live the dream life for a while. It gives me hope and energy to overcome obstacles on my journey to success in real life.&lt;/p&gt;
-&lt;p&gt;Those kinds of emotions when reading are really beautiful. Now I am much older, but still love reading so much. But it’s kind of hard to find the exact excitement as when I was a child. Most of the time I read nowadays is for obtaining knowledge on the field I’m working on. Hence I moved from reading books to reading blogs and articles since they are faster to read and obtain information.&lt;/p&gt;
-&lt;p&gt;I like holding a real book for reading. It gives me full concentration. I like the smell, the color and the moment when touching the paper of the real book. It&#39;s just simply beautiful.&lt;/p&gt;
-&lt;p&gt;There&#39;s a time when I liked to read books in cafes, it&#39;s a nice place to read - with coffee, light music and good views, but holding a real book at a cafe in Vietnam is not a common thing. People will look at you like an alien and hence sometimes it&#39;s very uncomfortable and distracting as well. So later on I switched to reading on a Kindle Paper White which I found is also a good option.&lt;/p&gt;
-&lt;p&gt;I found the Kindle Paper White is a very good device for reading. The design is super cool and the reading experience is nearly like reading a real book except it doesn&#39;t smell like a book. It&#39;s still more distracting compared to real books but much better compared to phones and computers. It&#39;s the greatest device I&#39;ve ever bought.&lt;/p&gt;
-&lt;p&gt;Regardless of reading on what kind of devices, reading is always interesting and I think the joy of reading is the greatest gift I&#39;ve ever been given. Life is still going on and there&#39;s still time for reading....&lt;/p&gt;
 
 			
 		</content>
@@ -1128,21 +1073,6 @@
 	</entry>
 	
 	<entry>
-		<title>3 Lessons</title>
-		<link href="https://pthethanh.github.io/articles/3-lessons/"/>
-		<updated>2022-12-23T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/3-lessons/</id>
-		<content type="html">
-		  &lt;p&gt;There are some good lessons in my life but sometimes I just forget them. So maybe putting them here is a good way to remember.&lt;/p&gt;
-&lt;p&gt;The first lesson is there is no such thing called a perfect moment. You gotta do what you need to do at the time you think there is a need. Don&#39;t wait until everything is perfect, because that moment will never come and you will be late for everything.&lt;/p&gt;
-&lt;p&gt;The second lesson is you are only able to solve a problem if you accept it as what it is. Accept it is a problem, a challenge that you need and only you can solve it. Not your colleagues, not your manager, not anyone else... it must be you. Only when you accept that&#39;s a problem, you will start finding solutions to solve it. If you keep refusing it&#39;s a problem that you are facing, you will not think of any solution and hence the problem remained the same forever.&lt;/p&gt;
-&lt;p&gt;The third lesson is words lie, actions don&#39;t.&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>String Concatenation Performance in Go.</title>
 		<link href="https://pthethanh.github.io/articles/golang-string-concatenation-performance/"/>
 		<updated>2023-04-10T07:00:00+07:00</updated>
@@ -1253,22 +1183,6 @@
 &lt;p&gt;&lt;a href=&quot;https://go.dev/play/p/CTftjsDPNld&quot;&gt;Playground&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;[1] You can take a look at the implementation of map in Go at &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map.go&quot;&gt;map.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map_fast32.go&quot;&gt;map_fast32.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map_fast64.go&quot;&gt;map_fast64.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/map_faststr.go&quot;&gt;map_faststr.go&lt;/a&gt;, &lt;a href=&quot;https://github.com/golang/go/blob/master/src/runtime/alg.go&quot;&gt;alg.go&lt;/a&gt; and some relevant assembly code files can be found in the same run time package.&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Fast Comes With A Cost</title>
-		<link href="https://pthethanh.github.io/articles/fast-comes-with-a-cost/"/>
-		<updated>2023-07-15T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/fast-comes-with-a-cost/</id>
-		<content type="html">
-		  &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/pthethanh/image/upload/v1689346704/pthethanh/fast-come-with-a-cost/fast-worg.png&quot; alt=&quot;I did it fast&quot;&gt;&lt;/p&gt;
-&lt;p&gt;I did it fast&lt;/p&gt;
-&lt;p&gt;A teacher asks his students to do some fast calculation exercises to see who is the fastest one in the class. There is a student who answers all the questions almost instantly. The only problem is that almost all of his answers are wrong. &amp;quot;But I did it fast&amp;quot; - the student said.&lt;/p&gt;
-&lt;p&gt;This story is very similar to software development. When you do it fast, there are details to be missed, hence bugs and technical debts are always behind you - waiting to be paid.&lt;/p&gt;
-&lt;p&gt;All developers know this but sometimes you don&#39;t have any choice and have to go with the flow. The only difference is that sometimes your stakeholders understand it well and always support you whatever it costs. But you&#39;re not always lucky. And when luck is not your friend, let&#39;s hope that you have enough time to pay your debts.&lt;/p&gt;
 
 			
 		</content>
