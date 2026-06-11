@@ -114,13 +114,13 @@ body {
 @media (min-width:1025px) { 
   /* big landscape tablets, laptops, and desktops */ 
   html {
-    font-size: 17px;
+    font-size: 16px;
   }
 }
 @media (min-width:1281px) { 
   /* hi-res laptops and desktops */ 
   html {
-    font-size: 18px;
+    font-size: 17px;
   }
 }
 
