@@ -5,7 +5,7 @@
 	
 	<link href="https://pthethanh.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://pthethanh.github.io"/>
-	<updated>2026-11-06T07:00:00+07:00</updated>
+	<updated>2026-05-29T07:00:00+07:00</updated>
 	<id>https://pthethanh.github.io</id>
 	<author>
 		<name>Thanh</name>
@@ -753,24 +753,6 @@
 	</entry>
 	
 	<entry>
-		<title>Bad Code Is Great</title>
-		<link href="https://pthethanh.github.io/articles/bad-code/"/>
-		<updated>2021-05-10T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/bad-code/</id>
-		<content type="html">
-		  &lt;p&gt;&lt;strong&gt;Summary&lt;/strong&gt;: People complains a lot about bad code. A lot of &amp;quot;what the food&amp;quot; words come out from a developer when he reviews a bad code. But on the other hand, bad code is a great opportunity for me as a developer in a third world country.&lt;/p&gt;
-&lt;p&gt;For people who don&#39;t know what is a bad code. It&#39;s simply a piece of code that when someone looks at it, it makes them feel uncomfortable and eventually produce a lot of &amp;quot;what the food&amp;quot; or &amp;quot;WTF&amp;quot; or whatever a developer can say when he&#39;s angry. The more &amp;quot;WTF&amp;quot; words, the worse the code.&lt;/p&gt;
-&lt;p&gt;Some pieces of bad code may even turn a developer into crazy mode and eventually leave the project because he cannot stand for it anymore...&lt;/p&gt;
-&lt;p&gt;Most of the time bad means &amp;quot;bad&amp;quot; and &amp;quot;no opportunity&amp;quot; but in case of &amp;quot;bad code&amp;quot;, it&#39;s a great opportunity for developers in a third world country like me. It means there are some shits in someone&#39;s products and there is a chance they will hire me to &amp;quot;clean that shit&amp;quot;. And this is where I make money from.&lt;/p&gt;
-&lt;p&gt;&amp;quot;Clean that shit&amp;quot; is a terrible job for people in developed country but for me it&#39;s a great opportunity. It means I will have money for taking care of my family. And this is what most of developers in a third world country are looking for, especially during the COVID-19 pandemic - when making money is hard.&lt;/p&gt;
-&lt;p&gt;But actually &amp;quot;clean that shit&amp;quot; is not that bad. It&#39;s not the real dirty thing you can imagine, it&#39;s just a state in your mind and you can clean it with your dedication and hard work, to make it better and prettier. And making something better and prettier is a greatest job ever, not just for people in a third world country but also for people in a developed country.&lt;/p&gt;
-&lt;p&gt;So, what can I say? Be positive, makes money and takes care of your family!&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>Name Conventions In Go</title>
 		<link href="https://pthethanh.github.io/articles/golang-name-conventions/"/>
 		<updated>2021-08-05T07:00:00+07:00</updated>
@@ -893,23 +875,6 @@
 	</entry>
 	
 	<entry>
-		<title>They Don&#39;t Even Know The Fundamentals</title>
-		<link href="https://pthethanh.github.io/articles/they-dont-even-know-the-fundamentals/"/>
-		<updated>2021-11-02T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/they-dont-even-know-the-fundamentals/</id>
-		<content type="html">
-		  &lt;p&gt;&amp;quot;They don&#39;t even know the fundamentals!&amp;quot;. That&#39;s what I often hear from my colleagues after their trips to universities for interviewing students for their projects. I&#39;ve also experienced this situation myself so many times.&lt;/p&gt;
-&lt;p&gt;A lot of students nowadays just want to work on AI/ML, Blockchain projects. They just simply turn around and never sat down for an interview after knowing that we&#39;re looking for developers who will work on payment gateway, network management system, eCommerce,...&lt;/p&gt;
-&lt;p&gt;Some of them were patient enough to sit down for an interview, but still repeat that they wanted to work on AI/ML, Blockchain,... since &amp;quot;it&#39;s the 4.0 revolution now&amp;quot;. To be honest, I&#39;m totally fine with that. Everyone has a dream and that&#39;s OK.&lt;/p&gt;
-&lt;p&gt;But when it came to the technical interview, what I wanted them to do was just &amp;quot;giving a list of numbers, sort them by ascending using an algorithm you knew&amp;quot;. That&#39;s it! Nothing more and nothing less. Sadly, some didn&#39;t even know how to do that! Most of them could explain that we need 2 nested loops and swap numbers if one is bigger than the other. That&#39;s cool! It&#39;s exactly what they have been taught.&lt;/p&gt;
-&lt;p&gt;Everything was great until I asked &amp;quot;could you please show me how to swap 2 numbers using a programming language you&#39;re most familiar with&amp;quot;? This is the question I&#39;ve gotten a lot of &amp;quot;umh&amp;quot; &amp;quot;ah&amp;quot; from them so far. A lot of them failed to answer that simple question! They just know there should be a method &lt;code&gt;swap&lt;/code&gt; and you need to provide 2 numbers and it&#39;s done. Some knew that we can use temporary variable but failed to provide the steps. To be honest, I was very frustrated. If they could answer that simple question, it&#39;s likely they would be hired...but a lot of them failed.&lt;/p&gt;
-&lt;p&gt;I think having a big dream is cool. Universities can &amp;quot;inject&amp;quot; those dreams in to the students&#39; heads. But at the same time, we also need to teach them to know where they are, and need to tell them that they have to start learning the fundamentals first. Without the fundamental knowledge, one just simply cannot do anything bigger.&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
 		<title>Effective Options</title>
 		<link href="https://pthethanh.github.io/articles/effective-options/"/>
 		<updated>2021-11-07T07:00:00+07:00</updated>
@@ -970,26 +935,6 @@
 &lt;h3 id=&quot;summary&quot;&gt;Summary &lt;a class=&quot;direct-link&quot; href=&quot;#summary&quot;&gt;#&lt;/a&gt;&lt;/h3&gt;
 &lt;p&gt;All the provided above approaches proved that everyone can write beautiful APIs with just a little effort. Some of you might like &lt;code&gt;builders&lt;/code&gt;, but I would suggest you use &lt;code&gt;options as functions&lt;/code&gt; or &lt;code&gt;options as an interface&lt;/code&gt; since they are more beautiful and more flexible than the previous ones.&lt;/p&gt;
 &lt;p&gt;For more examples, look at packages &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/cache&quot;&gt;cache&lt;/a&gt;, &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/broker&quot;&gt;broker&lt;/a&gt; or &lt;a href=&quot;https://github.com/pthethanh/micro/tree/master/server&quot;&gt;server&lt;/a&gt; of my &lt;a href=&quot;https://github.com/pthethanh/micro&quot;&gt;micro&lt;/a&gt; toolkit.&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Reading</title>
-		<link href="https://pthethanh.github.io/articles/reading/"/>
-		<updated>2022-01-13T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/reading/</id>
-		<content type="html">
-		  &lt;p&gt;When I was a child, I liked reading books so much. I read everything I have around me. It could be a comic I got from my friends or from my teacher. It could be a novel I got from my brothers or even it&#39;s the Bible I got from my parents - that&#39;s why there&#39;s a time my Mother thought I’d liked to be a priest ^_^.&lt;/p&gt;
-&lt;p&gt;I don&#39;t know why I love reading that much. I can stay at home reading from the morning till the afternoon and still not feeling enough. My family was really poor at the time and hence there was no money for buying books, but luckily I got some from friends and teachers. Every time I got a book I tried to read everything in one day and give it back. That was a really great time in my life.&lt;/p&gt;
-&lt;p&gt;The great thing about books is they showed me what I&#39;ve not known before. It opened a whole new world I&#39;ve never seen before. Not only knowledge, but also a whole new level of emotion.&lt;/p&gt;
-&lt;p&gt;Even at the time I was still very young, but the books I&#39;ve read gave me multiple beautiful worlds of emotions. That can be a fun moment when I was reading a comic for kids, it can be a sad moment when a boy failed to protect his love. It can also be an inspirational moment when a boy struggled to fight for his future and then finally made a victory over all the obstacles on his journey. Sometimes, a book is also a window to a new world where I can escape reality and live the dream life for a while. It gives me hope and energy to overcome obstacles on my journey to success in real life.&lt;/p&gt;
-&lt;p&gt;Those kinds of emotions when reading are really beautiful. Now I am much older, but still love reading so much. But it’s kind of hard to find the exact excitement as when I was a child. Most of the time I read nowadays is for obtaining knowledge on the field I’m working on. Hence I moved from reading books to reading blogs and articles since they are faster to read and obtain information.&lt;/p&gt;
-&lt;p&gt;I like holding a real book for reading. It gives me full concentration. I like the smell, the color and the moment when touching the paper of the real book. It&#39;s just simply beautiful.&lt;/p&gt;
-&lt;p&gt;There&#39;s a time when I liked to read books in cafes, it&#39;s a nice place to read - with coffee, light music and good views, but holding a real book at a cafe in Vietnam is not a common thing. People will look at you like an alien and hence sometimes it&#39;s very uncomfortable and distracting as well. So later on I switched to reading on a Kindle Paper White which I found is also a good option.&lt;/p&gt;
-&lt;p&gt;I found the Kindle Paper White is a very good device for reading. The design is super cool and the reading experience is nearly like reading a real book except it doesn&#39;t smell like a book. It&#39;s still more distracting compared to real books but much better compared to phones and computers. It&#39;s the greatest device I&#39;ve ever bought.&lt;/p&gt;
-&lt;p&gt;Regardless of reading on what kind of devices, reading is always interesting and I think the joy of reading is the greatest gift I&#39;ve ever been given. Life is still going on and there&#39;s still time for reading....&lt;/p&gt;
 
 			
 		</content>
@@ -1137,62 +1082,6 @@
 &lt;p&gt;The first lesson is there is no such thing called a perfect moment. You gotta do what you need to do at the time you think there is a need. Don&#39;t wait until everything is perfect, because that moment will never come and you will be late for everything.&lt;/p&gt;
 &lt;p&gt;The second lesson is you are only able to solve a problem if you accept it as what it is. Accept it is a problem, a challenge that you need and only you can solve it. Not your colleagues, not your manager, not anyone else... it must be you. Only when you accept that&#39;s a problem, you will start finding solutions to solve it. If you keep refusing it&#39;s a problem that you are facing, you will not think of any solution and hence the problem remained the same forever.&lt;/p&gt;
 &lt;p&gt;The third lesson is words lie, actions don&#39;t.&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Dragonfly</title>
-		<link href="https://pthethanh.github.io/articles/dragonfly/"/>
-		<updated>2022-12-23T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/dragonfly/</id>
-		<content type="html">
-		  &lt;p&gt;The dragonfly bit the shit out of me, I screamed and really scared but tried to keep calm enough to let it continue its job. &amp;quot;Just one more time and I can swim&amp;quot; - I thought.&lt;/p&gt;
-&lt;p&gt;Just one minute earlier, my brother told me &amp;quot;Let the dragonfly bite your belly button, you will be able to swim&amp;quot;. I was really scared but my belief about the power of the dragonfly remained very strong. I believed I could swim, I believed I could explore the big river out there. I felt like a superman, and started swimming for the first time of my life.&lt;/p&gt;
-&lt;p&gt;Although I drank a lot of water that day, it&#39;s amazing how those simple words can give a young boy such courage to try something he had not known yet. And I wonder if there is still something simple and powerful like that for the &amp;quot;adult&amp;quot; me now, so that I have enough courage to explore the unknown out there. The things that are both scary and interesting - just like the river that day.&lt;/p&gt;
-&lt;p&gt;And I wonder if there is still someone like my brother that day, who cared for me enough to say &amp;quot;Just do it, boy!&amp;quot; when he saw me hesitated to do something? I think one must be very lucky to have this kind of sweet memory and having a person care for him/her that much in life. So, I started thinking I&#39;m a lucky one.&lt;/p&gt;
-&lt;p&gt;We&#39;re all lucky at some points in our life, but sometimes we&#39;re so busy to realize. The younger of me was too busy chasing so many &amp;quot;vanity&amp;quot; things that I called &amp;quot;dreams&amp;quot;. So maybe aging is one of my luck, to slow me down so that I have time to review what happened in my life, what I did good, what I did wrong...&lt;/p&gt;
-&lt;p&gt;Having a chance to review what happened in my life makes me feel I&#39;m very lucky. I met a lot of good people who taught and helped me a lot of things about work and life. I will not be who I am today without meeting those people, and I&#39;m very thankful for that. And I think one of the greatest luck I&#39;ve ever had is meeting my wife - a beautiful woman who loves and cares enough to say to me &amp;quot;I love you and I believe you can do it!&amp;quot; every time I need someone beside me.&lt;/p&gt;
-&lt;p&gt;I think I don&#39;t need the power of the dragonfly anymore...&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>The Bus</title>
-		<link href="https://pthethanh.github.io/articles/the-bus/"/>
-		<updated>2023-01-02T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/the-bus/</id>
-		<content type="html">
-		  &lt;p&gt;I took my first job as a software developer in Ho Chi Minh city more than 12 years ago. It was the third time I visited the city and yet everything was strange to me. I didn’t know how to drive and didn’t have a motorbike at the time. Hence I went to work by bus for around 2 years before saving enough money to buy my first motorbike.&lt;/p&gt;
-&lt;p&gt;For most people, catching a bus is easy, but for me it was hard. I lived far away from the bus station, hence everyday I had to walk more than 1 kilometer to get there. It took me some days to learn the path to the bus station. At first, I didn’t know how to catch a bus. I didn’t know if I should wave my hand. Or should I stand there and someone on the bus would ask me if I wanted to go. My younger brother showed me how to do it earlier, but I was too nervous to remember anything. Luckily, I was a good learner. After I missed some of them, I saw people waving their hands when the bus came. This was a great success. I finally knew how to catch a bus.&lt;/p&gt;
-&lt;p&gt;I thought if I could catch a bus, there would be no other challenge that could stop me. But I was wrong. I didn’t know when to tell the driver to stop. Everything looked exactly the same through the window. In the first 2 months, there’re a lot of times I had to walk around 1 kilometer back to the company, sometimes even more. The worst time was when I had to go to the other side of the street to catch another bus to go back. I felt so embarrassed.&lt;/p&gt;
-&lt;p&gt;After so many times walking back too far from the company, I decided I needed to find a better way to stop the bus. The first solution was to ask the bus conductor whether the bus was nearby my company. This solution worked quite well when I met good conductors who were happy to help and have a good memory. But sometimes, there were too many people asking and they simply forgot me. Whenever I could not ask the conductor, I turned to asking the people on the bus. Some good people were willing to help but some didn&#39;t. And I also felt ashamed after asking people so many times. Hence, I started thinking of a new solution.&lt;/p&gt;
-&lt;p&gt;The second solution was to try to identify a recognizable target. It could be a colorful building or colorful objects on the street that I could see through the window. This solution worked well most of the time. But sometimes the bus was full of people and it’s hard to see anything through the window. Hence, sometimes I had to go back to solution number one.&lt;/p&gt;
-&lt;p&gt;I tried to develop the skills for around 2 months. And I finally was able to recognize things quite easily. I was even able to recognize the differences between the trees nearby my company with the others. I didn’t need to ask anyone but became a person that other people can ask. And I was happy to do that.&lt;/p&gt;
-&lt;p&gt;Apart from the challenges at the beginning, it was fun taking the bus to work. Once I got onto the bus, I didn’t need to worry about anything. I could spend my time looking at the buildings on the street through the window. I could look at people outside rushing their way to work. I could see a lot of different types of motorbikes, cars on the street - which was amazing to me at the time. I lived the entire of my childhood in the countryside. And I had not had a chance to see those things, hence everything was interesting to me.&lt;/p&gt;
-&lt;p&gt;Even now, I still can imagine my curious face in those days. The good old days...&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Learning By Distraction</title>
-		<link href="https://pthethanh.github.io/articles/learning-by-distraction/"/>
-		<updated>2023-01-31T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/learning-by-distraction/</id>
-		<content type="html">
-		  &lt;p&gt;Sometimes, the fear of doing the job is even more than the difficulties of the job itself. Learning English is one of them. In my early years as a software developer, I feared learning English so hard (even now). After struggling speaking English on my first trip to India[1], I felt ashamed and had enough motivation to learn English.&lt;/p&gt;
-&lt;p&gt;But learning English is somewhat burdensome to me. It became more and more heavy until I could not take it anymore. I tried different ways to learn but most of them just last for a few weeks. The more I tried, the more I failed. I finally gave up the plan of active learning, and tried one of the passive methods of learning - what I later called learning by distraction.&lt;/p&gt;
-&lt;p&gt;Instead of learning English, I started reading books about the subjects that I liked. Of course all the books were in English. It’s really hard at the beginning but because it’s the subject that I liked, the enthusiasm for the knowledge kept me going. The first book I read was The 21 Success Secrets Of Self-made Millionaires by Brian Tracy. The book has only 88 pages but it took me 3 months to read, just around 1 page per day. Although I didn’t fully understand everything I read, the book helped me a lot in my work. Mostly because I started to believe in myself more. And that little reward gave me enough motivation to continue to read more and more.&lt;/p&gt;
-&lt;p&gt;Most of the time, I made guesses about what I read. Sometimes, it was because I didn’t have enough vocabulary to understand them. Sometimes, I knew every single word in a sentence, but I was not able to link them together. But I didn’t try to re-read it again and again, I just accepted it and went on. I kept doing it by picking up another book that I was interested in and read again. And by focusing on the content of the book, I gradually forgot the burden of learning English and became better at reading.&lt;/p&gt;
-&lt;p&gt;I think, to learn English, sometimes you don’t even need to think of learning English. But instead, learn something that you are interested in and let your enthusiasm drive you. By the time you become better at the subject, your English will also become better. By keeping reading about the subject, you will gradually build up your vocabulary. The vocabulary will automatically emerge again and again and it will automatically inject into your brain.&lt;/p&gt;
-&lt;p&gt;You might not be better than anyone else around you. And you might not become an expert at English. But at least you will become better than you were before - both at English and the subject that you read.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;[1] I went to India for 2 months for a business trip as a developer in 2011. But my English was bad and I could not communicate with them by speaking. I communicated with people by chatting on Skype. Fortunately, there was a good friend who helped me to translate from normal English to simple English whenever I needed to talk to someone else. And whenever I need to order food, I used my finger to point at the pictures on the menu :))&lt;/p&gt;
 
 			
 		</content>
@@ -1610,19 +1499,6 @@ As an example, the &lt;a href=&quot;https://github.com/pthethanh/nano&quot;&gt;n
 &lt;p&gt;The internet is becoming full of content that technically answers questions, but without real experience, personality, or depth behind it.&lt;/p&gt;
 &lt;p&gt;Ironically, articles like this are exactly why human writing still matters.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://orchidfiles.com/im-tired-of-ai-generated-answers/&quot;&gt;https://orchidfiles.com/im-tired-of-ai-generated-answers/&lt;/a&gt;&lt;/p&gt;
-
-			
-		</content>
-	</entry>
-	
-	<entry>
-		<title>Data &amp; AI Transformation</title>
-		<link href="https://pthethanh.github.io/articles/data-ai-transformation-definition/"/>
-		<updated>2026-11-06T07:00:00+07:00</updated>
-		<id>https://pthethanh.github.io/articles/data-ai-transformation-definition/</id>
-		<content type="html">
-		  &lt;p&gt;This is the definition of Data &amp;amp; AI transformation and what it takes to succeed.&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://pthethanh.github.io/img/remote/articles/data-ai-transformation-definitiondefinition/data-ai-transformation-definition.svg&quot; alt=&quot;What does it take to success in Data &amp;amp; AI Transformation&quot;&gt;&lt;/p&gt;
 
 			
 		</content>
