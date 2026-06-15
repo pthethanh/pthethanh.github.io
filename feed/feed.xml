@@ -5,7 +5,7 @@
 	
 	<link href="https://pthethanh.github.io/feed/feed.xml" rel="self"/>
 	<link href="https://pthethanh.github.io"/>
-	<updated>2026-05-29T07:00:00+07:00</updated>
+	<updated>2026-06-11T07:00:00+07:00</updated>
 	<id>https://pthethanh.github.io</id>
 	<author>
 		<name>Thanh</name>
@@ -1499,6 +1499,18 @@ As an example, the &lt;a href=&quot;https://github.com/pthethanh/nano&quot;&gt;n
 &lt;p&gt;The internet is becoming full of content that technically answers questions, but without real experience, personality, or depth behind it.&lt;/p&gt;
 &lt;p&gt;Ironically, articles like this are exactly why human writing still matters.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;https://orchidfiles.com/im-tired-of-ai-generated-answers/&quot;&gt;https://orchidfiles.com/im-tired-of-ai-generated-answers/&lt;/a&gt;&lt;/p&gt;
+
+			
+		</content>
+	</entry>
+	
+	<entry>
+		<title>Data &amp; AI Transformation</title>
+		<link href="https://pthethanh.github.io/articles/data-ai-transformation-definition/"/>
+		<updated>2026-06-11T07:00:00+07:00</updated>
+		<id>https://pthethanh.github.io/articles/data-ai-transformation-definition/</id>
+		<content type="html">
+		  &lt;p&gt;&lt;img src=&quot;https://pthethanh.github.io/img/remote/articles/data-ai-transformation-definitiondefinition/data-ai-transformation-definition.svg&quot; alt=&quot;What does it take to success in Data &amp;amp; AI Transformation&quot;&gt;&lt;/p&gt;
 
 			
 		</content>
